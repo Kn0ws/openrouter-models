@@ -403,15 +403,20 @@ def cmd_fetch(args):
     models = fetch_models()
     path = save_snapshot(models)
     print(f"保存: {os.path.relpath(path, BASE_DIR)}  ({len(models)} モデル)")
-    if prev is not None:
-        d = diff_snapshots(prev, models)
-        print_diff_summary(d)
-        if (d["added"] or d["removed"] or d["changed"]) and not args.no_report:
-            rp = write_report(diff_report_md(d, os.path.basename(snaps[-1]),
-                                             os.path.basename(path)), "diff")
-            print(f"\n差分レポート: {os.path.relpath(rp, BASE_DIR)}")
-    else:
+    if prev is None:
         print("（初回スナップショット。次回 fetch 時から差分を表示します）")
+        return
+    d = diff_snapshots(prev, models)
+    n = len(d["added"]) + len(d["removed"]) + len(d["changed"])
+    if n == 0:
+        os.remove(path)  # 重複スナップショットは破棄（差分追跡を意味あるものに保つ／CIの無駄コミット防止）
+        print("変更なし（スナップショットは破棄しました）")
+        return
+    print_diff_summary(d)
+    if not args.no_report:
+        rp = write_report(diff_report_md(d, os.path.basename(snaps[-1]),
+                                         os.path.basename(path)), "diff")
+        print(f"\n差分レポート: {os.path.relpath(rp, BASE_DIR)}")
 
 
 def cmd_report(args):

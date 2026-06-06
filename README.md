@@ -3,7 +3,7 @@
 [OpenRouter](https://openrouter.ai/) で利用可能な全モデルを **検索・ソートできる静的サイト**。
 データは OpenRouter 公開API（`/api/v1/models`、認証不要）から取得し、**リリース日（新しい順）** で並べています。
 
-🔗 **サイト**: https://kn0ws.github.io/  ←（公開後にここで閲覧）
+🔗 **サイト**: https://kn0ws.github.io/openrouter-models/  ←（公開後にここで閲覧）
 
 ## 機能
 
