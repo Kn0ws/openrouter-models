@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpenRouter Models — 検索可能カタログ</title>
+<meta name="description" content="OpenRouterで利用可能な全モデルを検索・ソートできる静的カタログ。リリース日・価格・コンテキスト長・モダリティで絞り込み。">
+<style>
+  :root{
+    --bg:#0f1115; --panel:#171a21; --panel2:#1d2129; --line:#2a2f3a;
+    --fg:#e6e9ef; --muted:#9aa3b2; --accent:#6ea8fe; --accent2:#7ee0a8;
+    --warn:#ffce6e; --chip:#222732; --radius:12px;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#f6f7f9; --panel:#fff; --panel2:#f0f2f6; --line:#e2e6ee;
+      --fg:#161a22; --muted:#5b6472; --accent:#2563eb; --accent2:#0f9d58;
+      --warn:#b8860b; --chip:#eef1f6; }
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--fg);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
+    font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+  code,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  header{padding:28px 20px 10px;max-width:1280px;margin:0 auto}
+  h1{margin:0 0 4px;font-size:1.5rem;letter-spacing:.2px}
+  .sub{color:var(--muted);font-size:.92rem}
+  .stat{display:inline-block;margin-right:14px}
+  .stat b{color:var(--fg)}
+
+  .toolbar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 82%,transparent);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:12px 20px}
+  .toolbar-inner{max-width:1280px;margin:0 auto;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  input[type=search],select{background:var(--panel);color:var(--fg);border:1px solid var(--line);
+    border-radius:10px;padding:9px 12px;font-size:.92rem;outline:none}
+  input[type=search]{flex:1;min-width:220px}
+  input[type=search]:focus,select:focus{border-color:var(--accent)}
+  select{cursor:pointer}
+  .chip{background:var(--chip);border:1px solid var(--line);color:var(--muted);border-radius:999px;
+    padding:7px 13px;font-size:.84rem;cursor:pointer;user-select:none;white-space:nowrap}
+  .chip.on{background:var(--accent);border-color:var(--accent);color:#fff}
+  .count{color:var(--muted);font-size:.86rem;margin-left:auto}
+
+  main{max-width:1280px;margin:0 auto;padding:16px 20px 60px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:12px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:14px 15px;
+    display:flex;flex-direction:column;gap:9px}
+  .card .top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+  .name{font-weight:650;font-size:1rem;line-height:1.25}
+  .id{font-size:.78rem;color:var(--muted);word-break:break-all}
+  .pbadge{font-size:.72rem;font-weight:600;padding:3px 8px;border-radius:999px;white-space:nowrap;flex-shrink:0}
+  .row{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.83rem;color:var(--muted)}
+  .row b{color:var(--fg);font-weight:600}
+  .tags{display:flex;flex-wrap:wrap;gap:5px}
+  .tag{font-size:.72rem;background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:2px 7px;color:var(--muted)}
+  .tag.free{color:var(--accent2);border-color:var(--accent2)}
+  .tag.cap{color:var(--accent)}
+  .price{font-size:.9rem}
+  .price .in{color:var(--fg);font-weight:600}
+  .price .out{color:var(--warn);font-weight:600}
+  .desc{font-size:.85rem;color:var(--muted);display:none;border-top:1px dashed var(--line);padding-top:9px;margin-top:2px}
+  .card.open .desc{display:block}
+  .more{font-size:.78rem;color:var(--accent);cursor:pointer;align-self:flex-start}
+  .params{margin-top:8px;font-size:.74rem;color:var(--muted)}
+  .empty{text-align:center;color:var(--muted);padding:60px 0}
+  footer{max-width:1280px;margin:0 auto;padding:20px;color:var(--muted);font-size:.82rem;border-top:1px solid var(--line)}
+  kbd{background:var(--panel2);border:1px solid var(--line);border-radius:5px;padding:1px 6px;font-size:.78rem}
+</style>
+</head>
+<body>
+<header>
+  <h1>OpenRouter Models カタログ</h1>
+  <div class="sub" id="meta">読み込み中…</div>
+</header>
+
+<div class="toolbar">
+  <div class="toolbar-inner">
+    <input id="q" type="search" placeholder="検索：モデル名 / ID / 提供元 / 説明文…（ / でフォーカス）" autocomplete="off">
+    <select id="provider"><option value="">全プロバイダ</option></select>
+    <select id="sort">
+      <option value="new">並び順：リリース日 ↓（新しい順）</option>
+      <option value="old">リリース日 ↑（古い順）</option>
+      <option value="pin">入力単価 ↑（安い順）</option>
+      <option value="pind">入力単価 ↓（高い順）</option>
+      <option value="ctx">コンテキスト ↓（長い順）</option>
+      <option value="name">名前 A→Z</option>
+    </select>
+    <span class="chip" data-flt="free">🆓 無料のみ</span>
+    <span class="chip" data-flt="image">🖼️ 画像入力</span>
+    <span class="chip" data-flt="tools">🔧 ツール</span>
+    <span class="chip" data-flt="reasoning">🧠 推論</span>
+    <span class="count" id="count"></span>
+  </div>
+</div>
+
+<main><div class="grid" id="grid"></div><div class="empty" id="empty" hidden>該当モデルなし</div></main>
+
+<footer>
+  データ: <a href="https://openrouter.ai/models" target="_blank" rel="noopener">OpenRouter API</a> /
+  <a href="catalog.md">Markdown版カタログ</a> /
+  価格は $/100万トークン（入力 = プロンプト, <span style="color:var(--warn)">出力</span> = 補完）。
+  「変動」= ルーター系の動的価格。 最終更新: <span id="updated">—</span>
+</footer>
+
+<script>
+const PROVIDER_HUE = s => { let h=0; for(const c of s) h=(h*31+c.charCodeAt(0))%360; return h; };
+const fmtCtx = n => !n ? "—" : n>=1e6 ? (n/1e6).toLocaleString(undefined,{maximumFractionDigits:2})+"M"
+                                      : n>=1e3 ? Math.round(n/1e3)+"K" : ""+n;
+const fmtPrice = v => v==null ? "—" : v<0 ? "変動" : v===0 ? "無料"
+                    : "$"+(v>=1 ? v.toFixed(2) : v.toPrecision(2).replace(/0+$/,"").replace(/\.$/,""));
+const MOD_ICON = {text:"📝",image:"🖼️",audio:"🔊",video:"🎬",file:"📄"};
+const esc = s => (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+let MODELS=[], FILTERS={free:false,image:false,tools:false,reasoning:false};
+
+const $ = id => document.getElementById(id);
+
+fetch("models.json").then(r=>r.json()).then(d=>{
+  MODELS = d.models;
+  $("meta").innerHTML =
+    `<span class="stat"><b>${d.count}</b> モデル</span>`+
+    `<span class="stat"><b>${new Set(MODELS.map(m=>m.provider)).size}</b> プロバイダ</span>`+
+    `<span class="stat">無料 <b>${MODELS.filter(m=>m.free).length}</b></span>`+
+    `<span class="stat">取得 ${d.fetched_at||"—"}</span>`;
+  $("updated").textContent = d.fetched_at || "—";
+  const provs = [...new Set(MODELS.map(m=>m.provider))].sort();
+  for(const p of provs){ const o=document.createElement("option"); o.value=o.textContent=p; $("provider").appendChild(o); }
+  render();
+}).catch(e=>{ $("meta").textContent="models.json の読み込みに失敗しました（ローカルでは http サーバ経由で開いてください）。"+e; });
+
+function modIcons(m){
+  const ins=(m.input_modalities||[]).map(x=>MOD_ICON[x]||"").join("");
+  const outImg=(m.output_modalities||[]).includes("image")?"→🖼️":"";
+  const outAud=(m.output_modalities||[]).includes("audio")?"→🔊":"";
+  return ins+outImg+outAud;
+}
+
+function cardHTML(m){
+  const hue=PROVIDER_HUE(m.provider);
+  const tags=[];
+  if(m.free) tags.push('<span class="tag free">FREE</span>');
+  for(const c of (m.caps||[])) tags.push(`<span class="tag cap">${esc(c)}</span>`);
+  const cache = m.price_cache_read!=null ? ` · キャッシュ読 ${fmtPrice(m.price_cache_read)}` : "";
+  return `<div class="card" data-id="${esc(m.id)}">
+    <div class="top">
+      <div>
+        <div class="name">${esc(m.name)}</div>
+        <div class="id mono">${esc(m.id)}</div>
+      </div>
+      <span class="pbadge" style="background:hsl(${hue} 60% 30%);color:#fff">${esc(m.provider)}</span>
+    </div>
+    <div class="price mono"><span class="in">${fmtPrice(m.price_in)}</span> / <span class="out">${fmtPrice(m.price_out)}</span> <span style="color:var(--muted)">per 1M${cache}</span></div>
+    <div class="row">
+      <span>📅 <b>${m.created_date||"—"}</b></span>
+      <span>ctx <b>${fmtCtx(m.context_length)}</b>${m.max_output?` / 出力 ${fmtCtx(m.max_output)}`:""}</span>
+      <span title="${esc(m.modality||"")}">${modIcons(m)}</span>
+    </div>
+    <div class="tags">${tags.join("")}</div>
+    ${m.description?`<span class="more">詳細 ▾</span><div class="desc">${esc(m.description)}
+      ${m.knowledge_cutoff?`<div class="params">知識カットオフ: ${esc(m.knowledge_cutoff)}</div>`:""}
+      ${m.hugging_face_id?`<div class="params">HF: <code>${esc(m.hugging_face_id)}</code></div>`:""}
+      <div class="params">対応パラメータ: ${(m.supported_parameters||[]).map(esc).join(", ")||"—"}</div>
+    </div>`:""}
+  </div>`;
+}
+
+function render(){
+  const q=$("q").value.trim().toLowerCase();
+  const prov=$("provider").value;
+  const sort=$("sort").value;
+  let list=MODELS.filter(m=>{
+    if(prov && m.provider!==prov) return false;
+    if(FILTERS.free && !m.free) return false;
+    if(FILTERS.image && !(m.input_modalities||[]).includes("image")) return false;
+    if(FILTERS.tools && !(m.caps||[]).some(c=>c.includes("Function"))) return false;
+    if(FILTERS.reasoning && !(m.caps||[]).some(c=>c.includes("Reasoning"))) return false;
+    if(q){ const hay=(m.id+" "+m.name+" "+m.provider+" "+(m.description||"")).toLowerCase();
+           if(!hay.includes(q)) return false; }
+    return true;
+  });
+  const pv=v=>v==null?Infinity:v<0?Infinity:v; // null/変動は末尾
+  const cmp={
+    new:(a,b)=>(b.created||0)-(a.created||0),
+    old:(a,b)=>(a.created||0)-(b.created||0),
+    pin:(a,b)=>pv(a.price_in)-pv(b.price_in),
+    pind:(a,b)=>(b.price_in||0)-(a.price_in||0),
+    ctx:(a,b)=>(b.context_length||0)-(a.context_length||0),
+    name:(a,b)=>a.name.localeCompare(b.name),
+  }[sort];
+  list.sort(cmp);
+  $("count").textContent=`${list.length} / ${MODELS.length} 件`;
+  $("grid").innerHTML=list.map(cardHTML).join("");
+  $("empty").hidden=list.length>0;
+}
+
+// events
+$("q").addEventListener("input",render);
+$("provider").addEventListener("change",render);
+$("sort").addEventListener("change",render);
+document.querySelectorAll(".chip").forEach(c=>c.addEventListener("click",()=>{
+  const k=c.dataset.flt; FILTERS[k]=!FILTERS[k]; c.classList.toggle("on",FILTERS[k]); render();
+}));
+$("grid").addEventListener("click",e=>{
+  const more=e.target.closest(".more"); if(more){ more.closest(".card").classList.toggle("open"); }
+});
+document.addEventListener("keydown",e=>{
+  if(e.key==="/" && document.activeElement!==$("q")){ e.preventDefault(); $("q").focus(); }
+});
+</script>
+</body>
+</html>
