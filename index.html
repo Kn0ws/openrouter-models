@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OpenRouter Models — 検索可能カタログ</title>
-<meta name="description" content="OpenRouterで利用可能な全モデルを検索・ソートできる静的カタログ。リリース日・価格・コンテキスト長・モダリティで絞り込み。">
+<meta name="description" content="OpenRouterで利用可能な全モデルを検索・ソート・モダリティ絞り込みできる静的カタログ。日本語解説つき。リリース日降順。">
 <style>
   :root{
     --bg:#0f1115; --panel:#171a21; --panel2:#1d2129; --line:#2a2f3a;
@@ -19,12 +19,12 @@
   *{box-sizing:border-box}
   html,body{margin:0;background:var(--bg);color:var(--fg);
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
-    font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+    font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
   code,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
   a{color:var(--accent);text-decoration:none}
   a:hover{text-decoration:underline}
 
-  header{padding:28px 20px 10px;max-width:1280px;margin:0 auto}
+  header{padding:26px 20px 8px;max-width:1280px;margin:0 auto}
   h1{margin:0 0 4px;font-size:1.5rem;letter-spacing:.2px}
   .sub{color:var(--muted);font-size:.92rem}
   .stat{display:inline-block;margin-right:14px}
@@ -35,38 +35,47 @@
   .toolbar-inner{max-width:1280px;margin:0 auto;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
   input[type=search],select{background:var(--panel);color:var(--fg);border:1px solid var(--line);
     border-radius:10px;padding:9px 12px;font-size:.92rem;outline:none}
-  input[type=search]{flex:1;min-width:220px}
+  input[type=search]{flex:1;min-width:200px}
   input[type=search]:focus,select:focus{border-color:var(--accent)}
   select{cursor:pointer}
   .chip{background:var(--chip);border:1px solid var(--line);color:var(--muted);border-radius:999px;
     padding:7px 13px;font-size:.84rem;cursor:pointer;user-select:none;white-space:nowrap}
   .chip.on{background:var(--accent);border-color:var(--accent);color:#fff}
-  .count{color:var(--muted);font-size:.86rem;margin-left:auto}
+  .count{color:var(--muted);font-size:.86rem;margin-left:auto;white-space:nowrap}
 
   main{max-width:1280px;margin:0 auto;padding:16px 20px 60px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:12px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(370px,1fr));gap:12px}
   .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:14px 15px;
     display:flex;flex-direction:column;gap:9px}
   .card .top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
   .name{font-weight:650;font-size:1rem;line-height:1.25}
   .id{font-size:.78rem;color:var(--muted);word-break:break-all}
-  .pbadge{font-size:.72rem;font-weight:600;padding:3px 8px;border-radius:999px;white-space:nowrap;flex-shrink:0}
+  .pbadge{font-size:.72rem;font-weight:600;padding:3px 8px;border-radius:999px;white-space:nowrap;flex-shrink:0;color:#fff}
   .row{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.83rem;color:var(--muted)}
   .row b{color:var(--fg);font-weight:600}
+  .modal{font-size:.8rem}
+  .modal .io{font-weight:600;color:var(--accent2)}
   .tags{display:flex;flex-wrap:wrap;gap:5px}
   .tag{font-size:.72rem;background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:2px 7px;color:var(--muted)}
   .tag.free{color:var(--accent2);border-color:var(--accent2)}
   .tag.cap{color:var(--accent)}
+  .tag.gen{color:var(--warn);border-color:var(--warn)}
   .price{font-size:.9rem}
   .price .in{color:var(--fg);font-weight:600}
   .price .out{color:var(--warn);font-weight:600}
-  .desc{font-size:.85rem;color:var(--muted);display:none;border-top:1px dashed var(--line);padding-top:9px;margin-top:2px}
-  .card.open .desc{display:block}
   .more{font-size:.78rem;color:var(--accent);cursor:pointer;align-self:flex-start}
-  .params{margin-top:8px;font-size:.74rem;color:var(--muted)}
+  .detail{display:none;border-top:1px dashed var(--line);padding-top:10px;margin-top:2px;font-size:.86rem}
+  .card.open .detail{display:block}
+  .goodat{background:var(--panel2);border-left:3px solid var(--accent2);border-radius:6px;
+    padding:8px 11px;margin-bottom:9px;color:var(--fg)}
+  .goodat b{color:var(--accent2)}
+  .ja{color:var(--fg);white-space:pre-wrap}
+  details.orig{margin-top:8px}
+  details.orig summary{cursor:pointer;color:var(--muted);font-size:.8rem}
+  details.orig>div{color:var(--muted);font-size:.82rem;white-space:pre-wrap;margin-top:6px}
+  .params{margin-top:9px;font-size:.74rem;color:var(--muted)}
   .empty{text-align:center;color:var(--muted);padding:60px 0}
   footer{max-width:1280px;margin:0 auto;padding:20px;color:var(--muted);font-size:.82rem;border-top:1px solid var(--line)}
-  kbd{background:var(--panel2);border:1px solid var(--line);border-radius:5px;padding:1px 6px;font-size:.78rem}
 </style>
 </head>
 <body>
@@ -77,8 +86,10 @@
 
 <div class="toolbar">
   <div class="toolbar-inner">
-    <input id="q" type="search" placeholder="検索：モデル名 / ID / 提供元 / 説明文…（ / でフォーカス）" autocomplete="off">
+    <input id="q" type="search" placeholder="検索：モデル名 / ID / 提供元 / 説明（ / でフォーカス）" autocomplete="off">
     <select id="provider"><option value="">全プロバイダ</option></select>
+    <select id="inmod"><option value="">入力：すべて</option></select>
+    <select id="outmod"><option value="">出力：すべて</option></select>
     <select id="sort">
       <option value="new">並び順：リリース日 ↓（新しい順）</option>
       <option value="old">リリース日 ↑（古い順）</option>
@@ -88,7 +99,6 @@
       <option value="name">名前 A→Z</option>
     </select>
     <span class="chip" data-flt="free">🆓 無料のみ</span>
-    <span class="chip" data-flt="image">🖼️ 画像入力</span>
     <span class="chip" data-flt="tools">🔧 ツール</span>
     <span class="chip" data-flt="reasoning">🧠 推論</span>
     <span class="count" id="count"></span>
@@ -98,10 +108,10 @@
 <main><div class="grid" id="grid"></div><div class="empty" id="empty" hidden>該当モデルなし</div></main>
 
 <footer>
-  データ: <a href="https://openrouter.ai/models" target="_blank" rel="noopener">OpenRouter API</a> /
-  <a href="catalog.md">Markdown版カタログ</a> /
-  価格は $/100万トークン（入力 = プロンプト, <span style="color:var(--warn)">出力</span> = 補完）。
-  「変動」= ルーター系の動的価格。 最終更新: <span id="updated">—</span>
+  データ: <a href="https://openrouter.ai/models" target="_blank" rel="noopener">OpenRouter</a> /
+  <a href="catalog.md">Markdown版</a> /
+  価格は $/100万トークン（入力 / <span style="color:var(--warn)">出力</span>）。「変動」= 動的価格。
+  日本語解説は元の説明文を要約・翻訳したものです。 最終更新: <span id="updated">—</span>
 </footer>
 
 <script>
@@ -110,77 +120,110 @@ const fmtCtx = n => !n ? "—" : n>=1e6 ? (n/1e6).toLocaleString(undefined,{maxi
                                       : n>=1e3 ? Math.round(n/1e3)+"K" : ""+n;
 const fmtPrice = v => v==null ? "—" : v<0 ? "変動" : v===0 ? "無料"
                     : "$"+(v>=1 ? v.toFixed(2) : v.toPrecision(2).replace(/0+$/,"").replace(/\.$/,""));
-const MOD_ICON = {text:"📝",image:"🖼️",audio:"🔊",video:"🎬",file:"📄"};
+const MOD_JA = {text:"テキスト",image:"画像",audio:"音声",speech:"音声(生成)",video:"動画",
+  file:"ファイル",embeddings:"埋め込み",transcription:"文字起こし",rerank:"リランク"};
+const MOD_ICON = {text:"📝",image:"🖼️",audio:"🔊",speech:"🗣️",video:"🎬",file:"📄",
+  embeddings:"🧬",transcription:"✍️",rerank:"📊"};
+const MOD_RANK = {text:0,image:1,file:2,audio:3,speech:3,video:4,embeddings:5,transcription:6,rerank:7};
 const esc = s => (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const jamods = a => (a||[]).map(x=>MOD_JA[x]||x).join("・");
 
-let MODELS=[], FILTERS={free:false,image:false,tools:false,reasoning:false};
-
+let MODELS=[], TX={}, FILTERS={free:false,tools:false,reasoning:false};
 const $ = id => document.getElementById(id);
 
-fetch("models.json").then(r=>r.json()).then(d=>{
-  MODELS = d.models;
+Promise.all([
+  fetch("models.json").then(r=>r.json()),
+  fetch("translations.json").then(r=>r.ok?r.json():{}).catch(()=>({})),
+]).then(([d,tx])=>{
+  MODELS = d.models; TX = tx||{};
+  const txn = Object.keys(TX).length;
   $("meta").innerHTML =
     `<span class="stat"><b>${d.count}</b> モデル</span>`+
     `<span class="stat"><b>${new Set(MODELS.map(m=>m.provider)).size}</b> プロバイダ</span>`+
     `<span class="stat">無料 <b>${MODELS.filter(m=>m.free).length}</b></span>`+
-    `<span class="stat">取得 ${d.fetched_at||"—"}</span>`;
+    (txn?`<span class="stat">日本語解説 <b>${txn}</b></span>`:"")+
+    `<span class="stat">取得 ${(d.fetched_at||"").slice(0,10)}</span>`;
   $("updated").textContent = d.fetched_at || "—";
-  const provs = [...new Set(MODELS.map(m=>m.provider))].sort();
-  for(const p of provs){ const o=document.createElement("option"); o.value=o.textContent=p; $("provider").appendChild(o); }
-  render();
-}).catch(e=>{ $("meta").textContent="models.json の読み込みに失敗しました（ローカルでは http サーバ経由で開いてください）。"+e; });
 
-function modIcons(m){
-  const ins=(m.input_modalities||[]).map(x=>MOD_ICON[x]||"").join("");
-  const outImg=(m.output_modalities||[]).includes("image")?"→🖼️":"";
-  const outAud=(m.output_modalities||[]).includes("audio")?"→🔊":"";
-  return ins+outImg+outAud;
+  // プロバイダ
+  for(const p of [...new Set(MODELS.map(m=>m.provider))].sort()){
+    const o=document.createElement("option"); o.value=o.textContent=p; $("provider").appendChild(o);
+  }
+  // 入力/出力モダリティ（データから動的生成）
+  const inSet=new Set(), outSet=new Set();
+  MODELS.forEach(m=>{ (m.input_modalities||[]).forEach(x=>inSet.add(x)); (m.output_modalities||[]).forEach(x=>outSet.add(x)); });
+  const addOpts=(sel,set,prefix)=>{
+    [...set].sort((a,b)=>(MOD_RANK[a]??9)-(MOD_RANK[b]??9)).forEach(x=>{
+      const o=document.createElement("option"); o.value=x; o.textContent=`${prefix}${MOD_ICON[x]||""}${MOD_JA[x]||x}`; sel.appendChild(o);
+    });
+  };
+  addOpts($("inmod"),inSet,"入力："); addOpts($("outmod"),outSet,"出力：");
+  render();
+}).catch(e=>{ $("meta").textContent="models.json の読み込みに失敗（http サーバ経由で開いてください）。"+e; });
+
+function genTags(m){
+  const out=m.output_modalities||[]; const t=[];
+  if(out.includes("image")) t.push('<span class="tag gen">🖼️画像生成</span>');
+  if(out.includes("speech")||out.includes("audio")) t.push('<span class="tag gen">🗣️音声生成</span>');
+  if(out.includes("video")) t.push('<span class="tag gen">🎬動画生成</span>');
+  if(out.includes("embeddings")) t.push('<span class="tag gen">🧬埋め込み</span>');
+  if(out.includes("transcription")) t.push('<span class="tag gen">✍️文字起こし</span>');
+  if(out.includes("rerank")) t.push('<span class="tag gen">📊リランク</span>');
+  return t;
 }
 
 function cardHTML(m){
   const hue=PROVIDER_HUE(m.provider);
+  const t=TX[m.id];
   const tags=[];
   if(m.free) tags.push('<span class="tag free">FREE</span>');
+  tags.push(...genTags(m));
   for(const c of (m.caps||[])) tags.push(`<span class="tag cap">${esc(c)}</span>`);
   const cache = m.price_cache_read!=null ? ` · キャッシュ読 ${fmtPrice(m.price_cache_read)}` : "";
+  const inJa=jamods(m.input_modalities), outJa=jamods(m.output_modalities);
+  const detail = `<div class="detail">
+      ${t&&t.good_at?`<div class="goodat"><b>💡 得意なこと・特徴</b><br>${esc(t.good_at)}</div>`:""}
+      ${t&&t.desc_ja?`<div class="ja">${esc(t.desc_ja)}</div>`:(m.description?`<div class="ja">${esc(m.description)}</div>`:"")}
+      ${t&&t.desc_ja&&m.description?`<details class="orig"><summary>原文 (English)</summary><div>${esc(m.description)}</div></details>`:""}
+      ${m.knowledge_cutoff?`<div class="params">知識カットオフ: ${esc(m.knowledge_cutoff)}</div>`:""}
+      ${m.hugging_face_id?`<div class="params">HF: <code>${esc(m.hugging_face_id)}</code></div>`:""}
+      <div class="params">対応パラメータ: ${(m.supported_parameters||[]).map(esc).join(", ")||"—"}</div>
+    </div>`;
   return `<div class="card" data-id="${esc(m.id)}">
     <div class="top">
       <div>
         <div class="name">${esc(m.name)}</div>
         <div class="id mono">${esc(m.id)}</div>
       </div>
-      <span class="pbadge" style="background:hsl(${hue} 60% 30%);color:#fff">${esc(m.provider)}</span>
+      <span class="pbadge" style="background:hsl(${hue} 60% 38%)">${esc(m.provider)}</span>
     </div>
     <div class="price mono"><span class="in">${fmtPrice(m.price_in)}</span> / <span class="out">${fmtPrice(m.price_out)}</span> <span style="color:var(--muted)">per 1M${cache}</span></div>
     <div class="row">
       <span>📅 <b>${m.created_date||"—"}</b></span>
       <span>ctx <b>${fmtCtx(m.context_length)}</b>${m.max_output?` / 出力 ${fmtCtx(m.max_output)}`:""}</span>
-      <span title="${esc(m.modality||"")}">${modIcons(m)}</span>
     </div>
+    <div class="row modal"><span class="io">${inJa||"—"}</span> → <span class="io">${outJa||"—"}</span></div>
     <div class="tags">${tags.join("")}</div>
-    ${m.description?`<span class="more">詳細 ▾</span><div class="desc">${esc(m.description)}
-      ${m.knowledge_cutoff?`<div class="params">知識カットオフ: ${esc(m.knowledge_cutoff)}</div>`:""}
-      ${m.hugging_face_id?`<div class="params">HF: <code>${esc(m.hugging_face_id)}</code></div>`:""}
-      <div class="params">対応パラメータ: ${(m.supported_parameters||[]).map(esc).join(", ")||"—"}</div>
-    </div>`:""}
+    <span class="more">詳細 ▾</span>${detail}
   </div>`;
 }
 
 function render(){
   const q=$("q").value.trim().toLowerCase();
-  const prov=$("provider").value;
-  const sort=$("sort").value;
+  const prov=$("provider").value, inmod=$("inmod").value, outmod=$("outmod").value, sort=$("sort").value;
   let list=MODELS.filter(m=>{
     if(prov && m.provider!==prov) return false;
+    if(inmod && !(m.input_modalities||[]).includes(inmod)) return false;   // 複数対応も含む(部分一致)
+    if(outmod && !(m.output_modalities||[]).includes(outmod)) return false;
     if(FILTERS.free && !m.free) return false;
-    if(FILTERS.image && !(m.input_modalities||[]).includes("image")) return false;
     if(FILTERS.tools && !(m.caps||[]).some(c=>c.includes("Function"))) return false;
     if(FILTERS.reasoning && !(m.caps||[]).some(c=>c.includes("Reasoning"))) return false;
-    if(q){ const hay=(m.id+" "+m.name+" "+m.provider+" "+(m.description||"")).toLowerCase();
+    if(q){ const t=TX[m.id]||{};
+           const hay=(m.id+" "+m.name+" "+m.provider+" "+(m.description||"")+" "+(t.desc_ja||"")+" "+(t.good_at||"")).toLowerCase();
            if(!hay.includes(q)) return false; }
     return true;
   });
-  const pv=v=>v==null?Infinity:v<0?Infinity:v; // null/変動は末尾
+  const pv=v=>v==null?Infinity:v<0?Infinity:v;
   const cmp={
     new:(a,b)=>(b.created||0)-(a.created||0),
     old:(a,b)=>(a.created||0)-(b.created||0),
@@ -195,15 +238,14 @@ function render(){
   $("empty").hidden=list.length>0;
 }
 
-// events
-$("q").addEventListener("input",render);
-$("provider").addEventListener("change",render);
-$("sort").addEventListener("change",render);
+["q","provider","inmod","outmod","sort"].forEach(id=>{
+  $(id).addEventListener(id==="q"?"input":"change",render);
+});
 document.querySelectorAll(".chip").forEach(c=>c.addEventListener("click",()=>{
   const k=c.dataset.flt; FILTERS[k]=!FILTERS[k]; c.classList.toggle("on",FILTERS[k]); render();
 }));
 $("grid").addEventListener("click",e=>{
-  const more=e.target.closest(".more"); if(more){ more.closest(".card").classList.toggle("open"); }
+  const more=e.target.closest(".more"); if(more) more.closest(".card").classList.toggle("open");
 });
 document.addEventListener("keydown",e=>{
   if(e.key==="/" && document.activeElement!==$("q")){ e.preventDefault(); $("q").focus(); }

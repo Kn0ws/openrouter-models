@@ -1,0 +1,46 @@
+name: Update OpenRouter models
+
+on:
+  schedule:
+    - cron: "17 6 * * *"   # 毎日 06:17 UTC（=日本時間 15:17 頃）
+  workflow_dispatch: {}     # 手動実行も可
+
+permissions:
+  contents: write           # GITHUB_TOKEN でリポジトリに push する
+
+concurrency:
+  group: update-models
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Fetch latest models (差分があれば新スナップショットが残る)
+        run: python3 or_models.py fetch
+
+      - name: Detect change
+        id: chk
+        run: |
+          if [ -n "$(git status --porcelain snapshots)" ]; then
+            echo "changed=yes" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=no"  >> "$GITHUB_OUTPUT"
+            echo "変更なし。コミットをスキップします。"
+          fi
+
+      - name: Export site data & commit
+        if: steps.chk.outputs.changed == 'yes'
+        run: |
+          python3 or_models.py export
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "chore: update OpenRouter models ($(date -u +%Y-%m-%d))"
+          git push

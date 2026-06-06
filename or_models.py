@@ -29,7 +29,9 @@ import sys
 import urllib.request
 import urllib.error
 
-API_URL = "https://openrouter.ai/api/v1/models"
+FE_URL = "https://openrouter.ai/api/frontend/models"  # サイトと同じ全モデル(画像/音声/embeddings/動画/rerank等を含む)
+V1_URL = "https://openrouter.ai/api/v1/models"         # 公開API(テキスト出力中心のサブセット)。フォールバック用
+API_URL = FE_URL  # 後方互換
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SNAP_DIR = os.path.join(BASE_DIR, "snapshots")
 REPORT_DIR = os.path.join(BASE_DIR, "reports")
@@ -63,14 +65,102 @@ CAP_MAP = [
 # ----------------------------------------------------------------------------
 # 取得 / 保存 / 読み込み
 # ----------------------------------------------------------------------------
-def fetch_models():
-    req = urllib.request.Request(API_URL, headers={"User-Agent": "or-models-tracker/1.0"})
+# モダリティ表示の正規化順 / 取り込む価格キー
+MOD_ORDER = {"text": 0, "image": 1, "file": 2, "audio": 3, "video": 4}
+PRICE_KEYS = ("prompt", "completion", "input_cache_read", "input_cache_write",
+              "web_search", "image", "audio", "internal_reasoning", "request")
+
+
+def _sortmods(lst):
+    return sorted(set(lst or []), key=lambda x: (MOD_ORDER.get(x, 9), x))
+
+
+def _iso_to_unix(s):
+    if not s:
+        return None
+    try:
+        return int(dt.datetime.fromisoformat(str(s).replace("Z", "+00:00")).timestamp())
+    except (ValueError, TypeError):
+        return None
+
+
+def normalize_frontend(m):
+    """frontend API の1エントリを v1相当の内部スキーマに変換（以降の処理を共通化）"""
+    e = m.get("endpoint") or {}
+    p = e.get("pricing") or {}
+    ins = _sortmods(m.get("input_modalities"))
+    outs = _sortmods(m.get("output_modalities"))
+    params = list(e.get("supported_parameters") or [])
+    if m.get("supports_reasoning") and "reasoning" not in params:
+        params.append("reasoning")
+    # v1 と同じ ID 規約: 非standardバリアントは :free / :thinking 等を付与
+    slug = m.get("slug")
+    variant = e.get("variant") or "standard"
+    mid = slug if variant == "standard" else f"{slug}:{variant}"
+    return {
+        "id": mid,
+        "slug": slug,
+        "variant": variant,
+        "provider_name": e.get("provider_name") or e.get("provider_display_name"),
+        "canonical_slug": m.get("permaslug"),
+        "hugging_face_id": m.get("hf_slug"),
+        "name": m.get("name") or m.get("slug"),
+        "created": _iso_to_unix(m.get("created_at")),
+        "created_at": m.get("created_at"),
+        "updated_at": m.get("updated_at"),
+        "description": (m.get("description") or "").strip(),
+        "context_length": m.get("context_length") or e.get("context_length"),
+        "architecture": {
+            "modality": ("+".join(ins) + "->" + "+".join(outs)) if (ins or outs) else None,
+            "input_modalities": ins,
+            "output_modalities": outs,
+            "tokenizer": m.get("group"),
+            "instruct_type": m.get("instruct_type"),
+        },
+        "pricing": {k: p[k] for k in PRICE_KEYS if k in p},
+        "top_provider": {
+            "context_length": e.get("context_length"),
+            "max_completion_tokens": e.get("max_completion_tokens"),
+            "is_moderated": e.get("moderation_required"),
+        },
+        "supported_parameters": params,
+        "knowledge_cutoff": m.get("knowledge_cutoff"),
+        "supports_reasoning": bool(m.get("supports_reasoning")),
+    }
+
+
+def fetch_models_frontend():
+    req = urllib.request.Request(FE_URL, headers={"User-Agent": "or-models-tracker/1.0"})
+    with urllib.request.urlopen(req, timeout=90) as r:
+        data = json.loads(r.read().decode("utf-8"))
+    arr = data.get("data", data) if isinstance(data, dict) else data
+    # 提供エンドポイントを持ち、無効化/非公開でない = 現在使用可能なモデル
+    servable = [m for m in arr
+                if m.get("slug") and m.get("endpoint")
+                and not (m.get("endpoint") or {}).get("is_disabled")
+                and not m.get("is_private")]
+    out = [normalize_frontend(m) for m in servable]
+    if not out:
+        raise RuntimeError("frontend APIから0件。形式変更の可能性。")
+    return out
+
+
+def fetch_models_v1():
+    req = urllib.request.Request(V1_URL, headers={"User-Agent": "or-models-tracker/1.0"})
     with urllib.request.urlopen(req, timeout=60) as r:
         data = json.loads(r.read().decode("utf-8"))
     models = data.get("data", [])
     if not models:
-        raise RuntimeError("APIから0件。レスポンス形式が変わった可能性。")
+        raise RuntimeError("v1 APIから0件。")
     return models
+
+
+def fetch_models():
+    try:
+        return fetch_models_frontend()
+    except (urllib.error.URLError, RuntimeError, ValueError, KeyError) as ex:
+        print(f"[警告] frontend API取得に失敗 ({ex})。v1 APIにフォールバックします。", file=sys.stderr)
+        return fetch_models_v1()
 
 
 def save_snapshot(models):
@@ -473,6 +563,39 @@ def cmd_export(args):
     print("catalog.md 書き出し完了")
 
 
+def cmd_untranslated(args):
+    """translations.json に未登録のモデルを抽出（差分翻訳用）。untranslated.json に翻訳用データを書き出す。"""
+    snaps = list_snapshots()
+    if not snaps:
+        sys.exit("スナップショットがありません。先に `fetch` を実行してください。")
+    models = load_snapshot(snaps[-1])
+    tx_path = os.path.join(BASE_DIR, "translations.json")
+    tx = {}
+    if os.path.exists(tx_path):
+        with open(tx_path, encoding="utf-8") as f:
+            tx = json.load(f)
+    missing = [m for m in models if m["id"] not in tx]
+    print(f"未翻訳: {len(missing)} / {len(models)}")
+    for m in missing[:60]:
+        print(f"  {m['id']}")
+    if missing:
+        arch = lambda m: m.get("architecture") or {}
+        out = [{
+            "id": m["id"], "name": m.get("name"), "provider": provider_of(m),
+            "io": "+".join(arch(m).get("input_modalities") or []) + " -> "
+                  + "+".join(arch(m).get("output_modalities") or []),
+            "ctx": m.get("context_length"),
+            "price_in": price_num((m.get("pricing") or {}).get("prompt")),
+            "price_out": price_num((m.get("pricing") or {}).get("completion")),
+            "caps": capabilities(m),
+            "desc": (m.get("description") or "")[:1100],
+        } for m in missing]
+        p = os.path.join(BASE_DIR, "untranslated.json")
+        with open(p, "w", encoding="utf-8") as f:
+            json.dump(out, f, ensure_ascii=False, indent=1)
+        print(f"\n翻訳用データ: {os.path.relpath(p, BASE_DIR)}（このファイルを翻訳して translations.json にマージ）")
+
+
 def cmd_list(args):
     snaps = list_snapshots()
     if not snaps:
@@ -513,6 +636,7 @@ def main():
     sub.add_parser("report", help="全モデル詳細レポート生成").set_defaults(func=cmd_report)
     sub.add_parser("new", help="直近2スナップショットの差分").set_defaults(func=cmd_new)
     sub.add_parser("export", help="静的サイト用データ(site/)を書き出し").set_defaults(func=cmd_export)
+    sub.add_parser("untranslated", help="未翻訳モデルを抽出(差分翻訳用)").set_defaults(func=cmd_untranslated)
     sub.add_parser("list", help="スナップショット一覧").set_defaults(func=cmd_list)
 
     p = sub.add_parser("diff", help="2スナップショット間の差分")
