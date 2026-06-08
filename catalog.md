@@ -1,6 +1,6 @@
 # OpenRouter モデルカタログ（全423モデル）
 
-- 取得日時: 2026-06-07T07:41:13
+- 取得日時: 2026-06-08T08:07:05
 - プロバイダ数: 70 / 無料枠あり: 68
 
 ## プロバイダ別サマリ
@@ -18,7 +18,7 @@
 | deepseek | 12 | 0.10 | 0.70 | 1,048,576 |
 | recraft | 11 | 0.00 | 0.00 | 65,536 |
 | minimax | 9 | 0.00 | 0.40 | 1,048,576 |
-| sourceful | 7 | 0.00 | 0.00 | 8,192 |
+| sourceful | 7 | 0.00 | 0.00 | 32,768 |
 | x-ai | 7 | 0.00 | 15.00 | 2,000,000 |
 | cohere | 7 | 0.00 | 2.50 | 256,000 |
 | perplexity | 7 | 0.00 | 3.00 | 200,000 |
@@ -1530,7 +1530,7 @@ See the [launch announcement](https://blog.google/technology/developers/google-g
 - **Provider**: google
 - **Context**: 131K (131,072) tok / max出力 16,384 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.04/1M · 出力 $0.13/1M
+- **Pricing**: 入力 $0.05/1M · 出力 $0.15/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Seed固定
 - **Knowledge cutoff**: 2024-08-31T23:59:59.000Z
 - **登録日**: 2025-03-13
@@ -1560,7 +1560,7 @@ Gemma 3 introduces multimodality, supporting vision-language input and text outp
 - **Provider**: google
 - **Context**: 131K (131,072) tok / max出力 16,384 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.04/1M · 出力 $0.08/1M
+- **Pricing**: 入力 $0.05/1M · 出力 $0.1/1M
 - **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Seed固定
 - **Knowledge cutoff**: 2024-08-31T23:59:59.000Z
 - **登録日**: 2025-03-13
@@ -2107,7 +2107,7 @@ To read more about the model release, [click here](https://ai.meta.com/blog/meta
 - **Provider**: meta-llama
 - **Context**: 131K (131,072) tok / max出力 16,384 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.245/1M · 出力 $0.245/1M
+- **Pricing**: 入力 $0.345/1M · 出力 $0.345/1M
 - **Capabilities**: JSON mode, Seed固定
 - **Knowledge cutoff**: 2023-12-31T23:59:59.000Z
 - **登録日**: 2024-09-25
@@ -2239,7 +2239,7 @@ Maverick features early fusion for native multimodality and a 1 million token co
 - **Provider**: meta-llama
 - **Context**: 10M (10,000,000) tok / max出力 16,384 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.08/1M · 出力 $0.3/1M
+- **Pricing**: 入力 $0.1/1M · 出力 $0.3/1M
 - **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Seed固定
 - **Knowledge cutoff**: 2024-08-31T23:59:59.000Z
 - **登録日**: 2025-04-05
@@ -2932,13 +2932,13 @@ Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art 
 
 - **ID**: `moonshotai/kimi-k2.6`
 - **Provider**: moonshotai
-- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Context**: 262K (262,144) tok / max出力 262,142 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.684/1M · 出力 $3.42/1M · キャッシュ読 $0.144/1M
-- **Capabilities**: Reasoning(思考), Reasoning出力
+- **Pricing**: 入力 $0.68/1M · 出力 $3.41/1M · キャッシュ読 $0.34/1M
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-04-20
 - **HF**: `moonshotai/Kimi-K2.6`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, frequency_penalty, presence_penalty, stop
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, stop, frequency_penalty, presence_penalty, seed, tools, tool_choice, response_format
 
 Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and can convert prompts and visual inputs into production-ready interfaces. Its agent swarm architecture scales to hundreds of parallel sub-agents for autonomous task decomposition - delivering documents, websites, and spreadsheets in a single run without human oversight.
 
@@ -3063,7 +3063,7 @@ Hermes 3 is …
 - **Provider**: nousresearch
 - **Context**: 131K (131,072) tok / max出力 16,384 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.3/1M · 出力 $0.3/1M
+- **Pricing**: 入力 $0.7/1M · 出力 $0.7/1M
 - **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Seed固定
 - **Knowledge cutoff**: 2023-12-31T23:59:59.000Z
 - **登録日**: 2024-08-18
@@ -3118,7 +3118,7 @@ This 70B variant is trained with the expanded post-training corpus (~60B tokens)
 - **Provider**: nvidia
 - **Context**: 131K (131,072) tok / max出力 16,384 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.1/1M · 出力 $0.4/1M
+- **Pricing**: 入力 $0.4/1M · 出力 $0.4/1M
 - **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2024-03-31T00:00:00.000Z
 - **登録日**: 2025-10-10
@@ -4735,7 +4735,7 @@ Qwen3-235B-A22B is a 235B parameter mixture-of-experts (MoE) model developed by 
 - **Provider**: qwen
 - **Context**: 262K (262,144) tok / max出力 16,384 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.071/1M · 出力 $0.1/1M
+- **Pricing**: 入力 $0.09/1M · 出力 $0.1/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Seed固定
 - **Knowledge cutoff**: 2025-06-30T23:59:59.000Z
 - **登録日**: 2025-07-21
@@ -4769,7 +4769,7 @@ The model is instruction-tuned and excels at step-by-step reasoning, tool use, a
 - **Provider**: qwen
 - **Context**: 131K (131,072) tok / max出力 16,384 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.09/1M · 出力 $0.45/1M
+- **Pricing**: 入力 $0.12/1M · 出力 $0.5/1M
 - **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2025-03-31T23:59:59.000Z
 - **登録日**: 2025-04-28
@@ -5228,13 +5228,13 @@ The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid a
 
 - **ID**: `qwen/qwen3.5-9b`
 - **Provider**: qwen
-- **Context**: 262K (262,144) tok / max出力 81,920 tok
+- **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.04/1M · 出力 $0.15/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.1/1M · 出力 $0.15/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-03-10
 - **HF**: `Qwen/Qwen3.5-9B`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, logit_bias, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, frequency_penalty, repetition_penalty, presence_penalty, max_tokens, response_format, structured_outputs, tools, tool_choice
 
 Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified vision-language design with early fusion of multimodal tokens, allowing the model to process and reason across text and images within the same context.
 
@@ -5845,7 +5845,7 @@ Sourceful imposes a 4.5MB request size limit, therefore it is highly recommended
 
 - **ID**: `sourceful/riverflow-v2.5-fast:free`
 - **Provider**: sourceful
-- **Context**: 8K (8,192) tok
+- **Context**: 32K (32,768) tok
 - **Modality**: text+image->image  (in: text,image → out: image)
 - **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
 - **Capabilities**: Reasoning(思考), Reasoning出力
@@ -5862,7 +5862,7 @@ Pricing …
 
 - **ID**: `sourceful/riverflow-v2.5-pro:free`
 - **Provider**: sourceful
-- **Context**: 8K (8,192) tok
+- **Context**: 32K (32,768) tok
 - **Modality**: text+image->image  (in: text,image → out: image)
 - **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
 - **Capabilities**: Reasoning(思考), Reasoning出力
@@ -6552,12 +6552,12 @@ This model always redirects to the latest model in the Google Gemini Pro family.
 
 - **ID**: `~moonshotai/kimi-latest`
 - **Provider**: ~moonshotai
-- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Context**: 262K (262,144) tok / max出力 262,142 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.684/1M · 出力 $3.42/1M · キャッシュ読 $0.144/1M
+- **Pricing**: 入力 $0.68/1M · 出力 $3.41/1M · キャッシュ読 $0.34/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-27
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, frequency_penalty, presence_penalty, stop, top_k, seed, tools, tool_choice, response_format, logit_bias, parallel_tool_calls, structured_outputs, logprobs, top_logprobs, repetition_penalty, min_p, reasoning_effort
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, stop, frequency_penalty, presence_penalty, seed, tools, tool_choice, response_format, logit_bias, parallel_tool_calls, structured_outputs, logprobs, top_logprobs, repetition_penalty, min_p, reasoning_effort
 
 This model always redirects to the latest model in the MoonshotAI Kimi family.
 
