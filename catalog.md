@@ -1,7 +1,7 @@
 # OpenRouter モデルカタログ（全423モデル）
 
-- 取得日時: 2026-06-08T08:07:05
-- プロバイダ数: 70 / 無料枠あり: 68
+- 取得日時: 2026-06-09T07:33:09
+- プロバイダ数: 70 / 無料枠あり: 69
 
 ## プロバイダ別サマリ
 
@@ -54,6 +54,7 @@
 | thenlper | 2 | 0.01 | 0.01 | 8,192 |
 | morph | 2 | 0.80 | 0.90 | 262,144 |
 | inflection | 2 | 2.50 | 2.50 | 8,000 |
+| nex-agi | 1 | 0.00 | 0.00 | 262,144 |
 | perceptron | 1 | 0.15 | 0.15 | 32,768 |
 | openrouter | 1 | 0.00 | 0.00 | 1,048,756 |
 | ~moonshotai | 1 | 0.68 | 0.68 | 262,144 |
@@ -64,7 +65,6 @@
 | inception | 1 | 0.25 | 0.25 | 128,000 |
 | upstage | 1 | 0.15 | 0.15 | 128,000 |
 | writer | 1 | 0.60 | 0.60 | 1,040,000 |
-| nex-agi | 1 | 0.14 | 0.14 | 131,072 |
 | essentialai | 1 | 0.15 | 0.15 | 32,768 |
 | prime-intellect | 1 | 0.20 | 0.20 | 131,072 |
 | allenai | 1 | 0.15 | 0.15 | 65,536 |
@@ -2998,21 +2998,19 @@ Zero Data Retention is enabled for Morph. Learn more about this model in their [
 
 ### ▎nex-agi（1）
 
-#### Nex AGI: DeepSeek V3.1 Nex N1
+#### Nex AGI: Nex-N2-Pro (free)
 
-- **ID**: `nex-agi/deepseek-v3.1-nex-n1`
+- **ID**: `nex-agi/nex-n2-pro:free`
 - **Provider**: nex-agi
-- **Context**: 131K (131,072) tok / max出力 163,840 tok
-- **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.135/1M · 出力 $0.5/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode
-- **登録日**: 2025-12-08
-- **HF**: `nex-agi/DeepSeek-V3.1-Nex-N1`
-- **対応パラメータ**: temperature, top_p, top_k, frequency_penalty, response_format, structured_outputs, tools, tool_choice, max_tokens
+- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Modality**: text+image->text  (in: text,image → out: text)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
+- **登録日**: 2026-06-08
+- **HF**: `nex-agi/Nex-N2-Pro`
+- **対応パラメータ**: reasoning, include_reasoning, tools, tool_choice, structured_outputs, response_format, logprobs, top_p, top_k, temperature, max_tokens
 
-DeepSeek V3.1 Nex-N1 is the flagship release of the Nex-N1 series — a post-trained model designed to highlight agent autonomy, tool use, and real-world productivity. 
-
-Nex-N1 demonstrates competitive performance across all evaluation scenarios, showing particularly strong results in practical coding and HTML generation tasks.
+Nex-N2-Pro is an agentic mixture-of-experts model from Nex AGI, with 17B active parameters out of 397B total. Built on the Qwen3.5 architecture, it accepts text and image input and produces text output, and supports reasoning, function calling, and structured outputs. It is designed for coding, tool use, deep research, and long-horizon agentic workflows, unifying planning, code implementation, debugging, and iteration into a single execution loop.
 
 ### ▎nousresearch（5）
 
@@ -5854,9 +5852,7 @@ Sourceful imposes a 4.5MB request size limit, therefore it is highly recommended
 
 Riverflow V2.5 Fast is the speed-optimized variant of Sourceful's Riverflow 2.5 lineup, best for production deployments and latency-critical workflows.
 
-The Riverflow 2.5 series is a unified text-to-image and image-to-image family that treats generation as a production workflow, using an integrated reasoning model to plan multi-step edits and judge candidates before accepting a result. Reasoning effort is controllable via the reasoning parameter (low/medium/high) - higher levels do more editing passes and apply a stricter internal judge, while lower levels return faster for early exploration. It generates at 1K and 2K resolution (no 4K) and accepts up to 4 input images for editing.
-
-Pricing …
+The Riverflow 2.5 series is a unified text-to-image and image-to-image family that treats generation as a production workflow, using an integrated reasoning model to plan multi-step edits and judge candidates before accepting a result. Riverflow 2.5 combines their reasoning with a mix of open image diffusion models to provide greater accuracy and steerability. Reasoning effort is controllable via the reasoning parameter (low/medium/high) - higher levels do more editing passes and apply a stricter internal judge, while lower levels return …
 
 #### Sourceful: Riverflow V2.5 Pro (free)
 
@@ -5871,9 +5867,7 @@ Pricing …
 
 Riverflow V2.5 Pro is the most powerful variant of Sourceful's Riverflow 2.5 lineup, best for top-tier control and quality-sensitive outputs.
 
-The Riverflow 2.5 series is a unified text-to-image and image-to-image family that treats generation as a production workflow, using an integrated reasoning model to plan multi-step edits and judge candidates before accepting a result. Reasoning effort is controllable via the reasoning parameter (low/medium/high/xhigh) - higher levels do more editing passes and apply a stricter internal judge, with xhigh suited to batch runs that need high repeatability. It generates at 1K, 2K, and 4K resolution and accepts up to 10 input images for editing.
-
-Pricing …
+The Riverflow 2.5 series is a unified text-to-image and image-to-image family that treats generation as a production workflow, using an integrated reasoning model to plan multi-step edits and judge candidates before accepting a result. Riverflow 2.5 combines their reasoning with a mix of closed and open image diffusion models to provide greater accuracy and steerability.Reasoning effort is controllable via the reasoning parameter (low/medium/high/xhigh) - higher levels do more editing passes and apply a stricter internal judge, with xhigh suited to …
 
 ### ▎stepfun（2）
 
