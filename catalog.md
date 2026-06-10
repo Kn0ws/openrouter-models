@@ -1,7 +1,7 @@
 # OpenRouter モデルカタログ（全422モデル）
 
-- 取得日時: 2026-06-10T19:23:40
-- プロバイダ数: 70 / 無料枠あり: 69
+- 取得日時: 2026-06-10T20:02:29
+- プロバイダ数: 70 / 無料枠あり: 26
 
 ## プロバイダ別サマリ
 
@@ -160,7 +160,7 @@ Aion-RP-Llama-3.1-8B ranks the highest in the character evaluation portion of th
 - **Provider**: alibaba
 - **Context**: — tok
 - **Modality**: text+image->video  (in: text,image → out: video)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Text to Video $0.04〜$0.12/second · Image to Video $0.1〜$0.15/second
 - **登録日**: 2026-03-28
 - **対応パラメータ**: max_tokens, temperature, top_p
 
@@ -172,7 +172,7 @@ Alibaba's most advanced video generation model, supporting over 10 visual creati
 - **Provider**: alibaba
 - **Context**: — tok
 - **Modality**: text+image->video  (in: text,image → out: video)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Video Output $0.1/second
 - **登録日**: 2026-04-15
 - **対応パラメータ**: max_tokens, temperature, top_p
 
@@ -666,7 +666,7 @@ ERNIE-4.5-VL-424B-A47B is a multimodal Mixture-of-Experts (MoE) model from Baidu
 - **Provider**: black-forest-labs
 - **Context**: 67K (67,344) tok
 - **Modality**: text+image->image  (in: text,image → out: image)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Input Image $0.06/megapixel · Output Image $0.06/megapixel
 - **Capabilities**: Seed固定
 - **登録日**: 2025-11-25
 - **対応パラメータ**: seed
@@ -682,7 +682,7 @@ We charge $0.06 for each megapixel on both input and output side.
 - **Provider**: black-forest-labs
 - **Context**: 40K (40,960) tok
 - **Modality**: text+image->image  (in: text,image → out: image)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Output Image $0.014/megapixel
 - **Capabilities**: Seed固定
 - **登録日**: 2026-01-15
 - **HF**: `black-forest-labs/FLUX.2-klein-4B`
@@ -698,7 +698,7 @@ Pricing is based on the output image. The first generated megapixel is charged $
 - **Provider**: black-forest-labs
 - **Context**: 46K (46,864) tok
 - **Modality**: text+image->image  (in: text,image → out: image)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Output Image $0.07/megapixel
 - **Capabilities**: Seed固定
 - **登録日**: 2025-12-16
 - **対応パラメータ**: seed
@@ -715,7 +715,7 @@ Output: The first generated megapixel is charged $0.07. Each subsequent megapixe
 - **Provider**: black-forest-labs
 - **Context**: 46K (46,864) tok
 - **Modality**: text+image->image  (in: text,image → out: image)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Output Image $0.03/megapixel
 - **Capabilities**: Seed固定
 - **登録日**: 2025-11-25
 - **対応パラメータ**: seed
@@ -734,7 +734,7 @@ Output: The first megapixel is charged $0.03 and then each subsequent MP will be
 - **Provider**: bytedance
 - **Context**: — tok
 - **Modality**: text+image->video  (in: text,image → out: video)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Video (with audio) $0.0230592〜$0.11664/second · Video (no audio) $0.0115296〜$0.05832/second · Video Tokens (with audio) $2.4e-06/M tokens · Video Tokens (no audio) $1.2e-06/M tokens
 - **登録日**: 2026-03-23
 - **対応パラメータ**: frequency_penalty
 
@@ -746,7 +746,7 @@ ByteDance's next-generation audio-visual generation model with a 4.5B parameter 
 - **Provider**: bytedance
 - **Context**: — tok
 - **Modality**: text+image->video  (in: text,image → out: video)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Video (with audio) $0.067256〜$0.3402/second · Video (no audio) $0.067256〜$0.3402/second · Video Tokens (with audio) $7e-06/M tokens · Video Tokens (no audio) $7e-06/M tokens
 - **登録日**: 2026-04-15
 - **対応パラメータ**: frequency_penalty
 
@@ -758,7 +758,7 @@ Seedance 2.0 is a video generation model from ByteDance. It supports text-to-vid
 - **Provider**: bytedance
 - **Context**: — tok
 - **Modality**: text+image->video  (in: text,image → out: video)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Video (with audio) $0.0538048〜$0.27216/second · Video (no audio) $0.0538048〜$0.27216/second · Video Tokens (with audio) $5.6e-06/M tokens · Video Tokens (no audio) $5.6e-06/M tokens
 - **登録日**: 2026-04-15
 - **対応パラメータ**: frequency_penalty
 
@@ -841,7 +841,7 @@ Seed-2.0-mini targets latency-sensitive, high-concurrency, and cost-sensitive sc
 - **Provider**: bytedance-seed
 - **Context**: 4K (4,096) tok
 - **Modality**: text+image->image  (in: text,image → out: image)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.04/image
 - **登録日**: 2025-12-24
 - **対応パラメータ**: frequency_penalty, max_tokens, temperature, top_p
 
@@ -857,7 +857,7 @@ Pricing is $0.04 per output image, regardless of size.
 - **Provider**: canopylabs
 - **Context**: 4K (4,096) tok
 - **Modality**: text->speech  (in: text → out: speech)
-- **Pricing**: 入力 $7.00/1M · 出力 無料/1M
+- **Pricing**: 入力 $7.00/1M · 出力 無料/1M · Characters $7e-06/M characters
 - **Capabilities**: JSON mode, Seed固定
 - **登録日**: 2026-04-24
 - **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format
@@ -957,7 +957,7 @@ Use of this model is subject to Cohere's [Usage Policy](https://docs.cohere.com/
 - **Provider**: cohere
 - **Context**: 32K (32,768) tok
 - **Modality**: text->rerank  (in: text → out: rerank)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Search units $0.002/search
 - **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Seed固定
 - **登録日**: 2026-04-06
 - **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, seed, response_format, structured_outputs
@@ -970,7 +970,7 @@ Cohere's AI search foundation model for enhancing the relevance of information s
 - **Provider**: cohere
 - **Context**: 32K (32,768) tok
 - **Modality**: text->rerank  (in: text → out: rerank)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Search units $0.0025/search
 - **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Seed固定
 - **登録日**: 2026-04-06
 - **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, seed, response_format, structured_outputs
@@ -983,7 +983,7 @@ Cohere's AI search foundation model for enhancing the relevance of information s
 - **Provider**: cohere
 - **Context**: 4K (4,096) tok
 - **Modality**: text->rerank  (in: text → out: rerank)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Search units $0.001/search
 - **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Seed固定
 - **登録日**: 2026-04-06
 - **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, seed, response_format, structured_outputs
@@ -1231,7 +1231,7 @@ Rnj-1 is an 8B-parameter, dense, open-weight model family developed by Essential
 - **Provider**: google
 - **Context**: — tok
 - **Modality**: audio->transcription  (in: audio → out: transcription)
-- **Pricing**: 入力 $16,000.00/1M · 出力 無料/1M
+- **Pricing**: 入力 $16,000.00/1M · 出力 無料/1M · Audio Minutes $0.016/minute
 - **Capabilities**: JSON mode, Seed固定
 - **登録日**: 2026-05-06
 - **対応パラメータ**: max_tokens, temperature, top_p, seed, response_format
@@ -1344,7 +1344,7 @@ Gemini 2.5 Pro is Google’s state-of-the-art AI model designed for advanced rea
 - **Provider**: google
 - **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
 - **Modality**: text+image+file+audio+video->text  (in: text,image,file,audio,video → out: text)
-- **Pricing**: 入力 $0.5/1M · 出力 $3.00/1M · キャッシュ読 $0.05/1M · キャッシュ書 $0.0833/1M · 推論 $3.00/1M · 画像 $5e-07/枚 · 音声 $1.00/1M · Web検索 $0.014
+- **Pricing**: 入力 $0.5/1M · 出力 $3.00/1M · キャッシュ読 $0.05/1M · キャッシュ書 $0.0833/1M · 推論 $3.00/1M · 画像 $5e-07/枚 · 音声 $1.00/1M · Web検索 $0.014 · Web Search $0.014/request
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2025-12-18
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format, tools, tool_choice, stop, structured_outputs
@@ -1359,7 +1359,7 @@ The model supports a 1M token context window and multimodal inputs including tex
 - **Provider**: google
 - **Context**: 65K (65,536) tok / max出力 32,768 tok
 - **Modality**: text+image->text+image  (in: text,image → out: text,image)
-- **Pricing**: 入力 $2.00/1M · 出力 $12.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $0.375/1M · 推論 $12.00/1M · 画像 $2e-06/枚 · 音声 $2.00/1M · Web検索 $0.014
+- **Pricing**: 入力 $2.00/1M · 出力 $12.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $0.375/1M · 推論 $12.00/1M · 画像 $2e-06/枚 · 音声 $2.00/1M · Web検索 $0.014 · Web Search $0.014/request
 - **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2025-11-21
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format, stop, structured_outputs
@@ -1374,7 +1374,7 @@ It offers industry-leading text rendering in images (including long passages and
 - **Provider**: google
 - **Context**: 131K (131,072) tok / max出力 65,536 tok
 - **Modality**: text+image->text+image  (in: text,image → out: text,image)
-- **Pricing**: 入力 $0.5/1M · 出力 $3.00/1M · Web検索 $0.014
+- **Pricing**: 入力 $0.5/1M · 出力 $3.00/1M · Web検索 $0.014 · Web Search $0.014/request
 - **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-02-27
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format, stop, structured_outputs
@@ -1387,7 +1387,7 @@ Gemini 3.1 Flash Image Preview, a.k.a. "Nano Banana 2," is Google’s latest sta
 - **Provider**: google
 - **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
 - **Modality**: text+image+file+audio+video->text  (in: text,image,file,audio,video → out: text)
-- **Pricing**: 入力 $0.25/1M · 出力 $1.50/1M · キャッシュ読 $0.025/1M · キャッシュ書 $0.0833/1M · 推論 $1.50/1M · 画像 $2.5e-07/枚 · 音声 $0.5/1M · Web検索 $0.014
+- **Pricing**: 入力 $0.25/1M · 出力 $1.50/1M · キャッシュ読 $0.025/1M · キャッシュ書 $0.0833/1M · 推論 $1.50/1M · 画像 $2.5e-07/枚 · 音声 $0.5/1M · Web検索 $0.014 · Web Search $0.014/request
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-05-08
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format, stop, structured_outputs, tools, tool_choice
@@ -1402,7 +1402,7 @@ Supports full thinking levels (minimal, low, medium, high) for fine-grained cost
 - **Provider**: google
 - **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
 - **Modality**: text+image+file+audio+video->text  (in: text,image,file,audio,video → out: text)
-- **Pricing**: 入力 $0.25/1M · 出力 $1.50/1M · キャッシュ読 $0.025/1M · キャッシュ書 $0.0833/1M · 推論 $1.50/1M · 画像 $2.5e-07/枚 · 音声 $0.5/1M · Web検索 $0.014
+- **Pricing**: 入力 $0.25/1M · 出力 $1.50/1M · キャッシュ読 $0.025/1M · キャッシュ書 $0.0833/1M · 推論 $1.50/1M · 画像 $2.5e-07/枚 · 音声 $0.5/1M · Web検索 $0.014 · Web Search $0.014/request
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-03-03
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format, stop, structured_outputs, tool_choice, tools
@@ -1430,7 +1430,7 @@ The headline addition is a system of 200+ inline audio tags (e.g. `[whispers]`, 
 - **Provider**: google
 - **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
 - **Modality**: text+image+file+audio+video->text  (in: text,image,file,audio,video → out: text)
-- **Pricing**: 入力 $2.00/1M · 出力 $12.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $0.375/1M · 推論 $12.00/1M · 画像 $2e-06/枚 · 音声 $2.00/1M · Web検索 $0.014
+- **Pricing**: 入力 $2.00/1M · 出力 $12.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $0.375/1M · 推論 $12.00/1M · 画像 $2e-06/枚 · 音声 $2.00/1M · Web検索 $0.014 · Web Search $0.014/request
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-02-19
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format, tools, tool_choice, stop, structured_outputs
@@ -1458,7 +1458,7 @@ It retains the core strengths of Gemini 3.1 Pro, including multimodal reasoning 
 - **Provider**: google
 - **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
 - **Modality**: text+image+file+audio+video->text  (in: text,image,file,audio,video → out: text)
-- **Pricing**: 入力 $1.50/1M · 出力 $9.00/1M · キャッシュ読 $0.15/1M · キャッシュ書 $0.0833/1M · 推論 $9.00/1M · 画像 $1.5e-06/枚 · 音声 $3.00/1M · Web検索 $0.014
+- **Pricing**: 入力 $1.50/1M · 出力 $9.00/1M · キャッシュ読 $0.15/1M · キャッシュ書 $0.0833/1M · 推論 $9.00/1M · 画像 $1.5e-06/枚 · 音声 $3.00/1M · Web検索 $0.014 · Web Search $0.014/request
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2025-01-01T00:00:00.000Z
 - **登録日**: 2026-05-19
@@ -1649,7 +1649,7 @@ Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supportin
 - **Provider**: google
 - **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
 - **Modality**: text+image->text+audio  (in: text,image → out: text,audio)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Song Generation $0.04/song
 - **Capabilities**: JSON mode, Seed固定
 - **登録日**: 2026-03-31
 - **対応パラメータ**: max_tokens, temperature, top_p, seed, response_format
@@ -1662,7 +1662,7 @@ Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supportin
 - **Provider**: google
 - **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
 - **Modality**: text+image->text+audio  (in: text,image → out: text,audio)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Song Generation $0.08/song
 - **Capabilities**: JSON mode, Seed固定
 - **登録日**: 2026-03-31
 - **対応パラメータ**: max_tokens, temperature, top_p, seed, response_format
@@ -1675,7 +1675,7 @@ Full-length songs are priced at $0.08 per song. Lyria 3 is Google's family of mu
 - **Provider**: google
 - **Context**: — tok
 - **Modality**: text+image->video  (in: text,image → out: video)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Video (with audio) $0.4〜$0.6/second · Video (no audio) $0.2〜$0.4/second
 - **Capabilities**: JSON mode, Seed固定
 - **登録日**: 2026-03-23
 - **対応パラメータ**: max_tokens, temperature, top_p, seed, response_format
@@ -1688,7 +1688,7 @@ Google's state-of-the-art video generation model, built for maximum visual fidel
 - **Provider**: google
 - **Context**: — tok
 - **Modality**: text+image->video  (in: text,image → out: video)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Video (with audio) $0.1〜$0.3/second · Video (no audio) $0.08〜$0.25/second
 - **Capabilities**: JSON mode, Seed固定
 - **登録日**: 2026-04-24
 - **対応パラメータ**: max_tokens, temperature, top_p, seed, response_format
@@ -1701,7 +1701,7 @@ Google's mid-tier video generation model balancing speed and quality. Veo 3.1 Fa
 - **Provider**: google
 - **Context**: — tok
 - **Modality**: text+image->video  (in: text,image → out: video)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Video (with audio) $0.05〜$0.08/second · Video (no audio) $0.03〜$0.05/second
 - **Capabilities**: JSON mode, Seed固定
 - **登録日**: 2026-04-24
 - **対応パラメータ**: max_tokens, temperature, top_p, seed, response_format
@@ -1733,7 +1733,7 @@ One of the highest performing and most popular fine-tunes of Llama 2 13B, with r
 - **Provider**: hexgrad
 - **Context**: 4K (4,096) tok
 - **Modality**: text->speech  (in: text → out: speech)
-- **Pricing**: 入力 $0.62/1M · 出力 無料/1M
+- **Pricing**: 入力 $0.62/1M · 出力 無料/1M · Characters $6.2e-07/M characters
 - **Capabilities**: JSON mode, Seed固定
 - **登録日**: 2026-04-24
 - **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format
@@ -1937,7 +1937,7 @@ KAT-Coder-Pro V2 is the latest high-performance model in KwaiKAT’s KAT-Coder s
 - **Provider**: kwaivgi
 - **Context**: — tok
 - **Modality**: text+image->video  (in: text,image → out: video)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Video (with audio) $0.168/second · Video (no audio) $0.112/second
 - **登録日**: 2026-04-30
 - **対応パラメータ**: max_tokens, temperature, top_p
 
@@ -1949,7 +1949,7 @@ Kling v3.0 Pro is Kuaishou's premium video generation model, offering higher vis
 - **Provider**: kwaivgi
 - **Context**: — tok
 - **Modality**: text+image->video  (in: text,image → out: video)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Video (with audio) $0.126/second · Video (no audio) $0.084/second
 - **登録日**: 2026-04-30
 - **対応パラメータ**: max_tokens, temperature, top_p
 
@@ -1961,7 +1961,7 @@ Kling v3.0 Standard is a video generation model from Kuaishou. It supports text-
 - **Provider**: kwaivgi
 - **Context**: — tok
 - **Modality**: text+image->video  (in: text,image → out: video)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Video Output $0.112/second
 - **登録日**: 2026-04-21
 - **対応パラメータ**: max_tokens, temperature, top_p
 
@@ -2306,7 +2306,7 @@ Microsoft's MAI-Image-2.5 is a high-quality image generation model available via
 - **Provider**: microsoft
 - **Context**: — tok
 - **Modality**: audio->transcription  (in: audio → out: transcription)
-- **Pricing**: 入力 $360,000.00/1M · 出力 無料/1M
+- **Pricing**: 入力 $360,000.00/1M · 出力 無料/1M · Audio Hours $0.36/hour
 - **登録日**: 2026-06-03
 - **対応パラメータ**: max_tokens, temperature, top_p, max_completion_tokens
 
@@ -2318,7 +2318,7 @@ MAI-Transcribe 1.5 is Microsoft's fast transcription model powered by Azure AI S
 - **Provider**: microsoft
 - **Context**: — tok
 - **Modality**: text->speech  (in: text → out: speech)
-- **Pricing**: 入力 $22.00/1M · 出力 無料/1M
+- **Pricing**: 入力 $22.00/1M · 出力 無料/1M · Characters $2.2e-05/M characters
 - **登録日**: 2026-06-03
 - **対応パラメータ**: max_tokens, temperature, top_p, max_completion_tokens
 
@@ -2386,7 +2386,7 @@ To read more about the model release, [click here](https://wizardlm.github.io/Wi
 - **Provider**: minimax
 - **Context**: — tok
 - **Modality**: text+image->video  (in: text,image → out: video)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Video Output $0.0817/second
 - **登録日**: 2026-04-21
 - **対応パラメータ**: max_tokens, temperature, top_p
 
@@ -2832,7 +2832,7 @@ See benchmarks on the launch announcement [here](https://mistral.ai/news/mixtral
 - **Provider**: mistralai
 - **Context**: — tok
 - **Modality**: audio->transcription  (in: audio → out: transcription)
-- **Pricing**: 入力 $3,000.00/1M · 出力 無料/1M
+- **Pricing**: 入力 $3,000.00/1M · 出力 無料/1M · Audio Minutes $0.003/minute
 - **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Seed固定
 - **登録日**: 2026-05-16
 - **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, response_format, structured_outputs
@@ -2845,7 +2845,7 @@ Voxtral Mini Transcribe is Mistral's speech-to-text model, derived from the Voxt
 - **Provider**: mistralai
 - **Context**: 4K (4,096) tok
 - **Modality**: text->speech  (in: text → out: speech)
-- **Pricing**: 入力 $16.00/1M · 出力 無料/1M
+- **Pricing**: 入力 $16.00/1M · 出力 無料/1M · Characters $1.6e-05/M characters
 - **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Seed固定
 - **登録日**: 2026-04-19
 - **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, response_format, structured_outputs
@@ -2858,7 +2858,7 @@ Voxtral Mini TTS is Mistral's text-to-speech model featuring zero-shot voice clo
 - **Provider**: mistralai
 - **Context**: 32K (32,000) tok
 - **Modality**: text+file+audio->text  (in: text,file,audio → out: text)
-- **Pricing**: 入力 $0.1/1M · 出力 $0.3/1M · キャッシュ読 $0.01/1M · 音声 $100.00/1M
+- **Pricing**: 入力 $0.1/1M · 出力 $0.3/1M · キャッシュ読 $0.01/1M · 音声 $100.00/1M · Input Audio $0.0001/minute
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Seed固定
 - **登録日**: 2025-10-30
 - **HF**: `mistralai/Voxtral-Small-24B-2507`
@@ -3343,7 +3343,7 @@ The model's reasoning capabilities can be controlled via a system prompt. If the
 - **Provider**: nvidia
 - **Context**: — tok
 - **Modality**: audio->transcription  (in: audio → out: transcription)
-- **Pricing**: 入力 $1,500.00/1M · 出力 無料/1M
+- **Pricing**: 入力 $1,500.00/1M · 出力 無料/1M · Audio Minutes $0.0015/minute
 - **登録日**: 2026-05-27
 - **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, repetition_penalty, logit_bias, min_p
 
@@ -3619,7 +3619,7 @@ Check out the [launch announcement](https://openai.com/index/gpt-4o-mini-advanci
 - **Provider**: openai
 - **Context**: 128K (128,000) tok / max出力 16,384 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.15/1M · 出力 $0.6/1M · Web検索 $0.0275
+- **Pricing**: 入力 $0.15/1M · 出力 $0.6/1M · Web検索 $0.0275 · Web Search $0.0275/request
 - **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Web検索
 - **Knowledge cutoff**: 2023-10-31T23:59:59.000Z
 - **登録日**: 2025-03-13
@@ -3646,7 +3646,7 @@ GPT-4o Mini Transcribe is OpenAI's smaller, cost-efficient speech-to-text model 
 - **Provider**: openai
 - **Context**: 128K (128,000) tok / max出力 16,384 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $2.50/1M · 出力 $10.00/1M · Web検索 $0.035
+- **Pricing**: 入力 $2.50/1M · 出力 $10.00/1M · Web検索 $0.035 · Web Search $0.035/request
 - **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Web検索
 - **Knowledge cutoff**: 2023-10-31T23:59:59.000Z
 - **登録日**: 2025-03-13
@@ -4319,7 +4319,7 @@ Despite its smaller size, o4-mini exhibits high accuracy in STEM tasks, visual p
 - **Provider**: openai
 - **Context**: — tok
 - **Modality**: text+image->video  (in: text,image → out: video)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Video Output $0.3〜$0.5/second
 - **Capabilities**: logprobs
 - **登録日**: 2026-03-23
 - **対応パラメータ**: stop, frequency_penalty, presence_penalty, logit_bias, logprobs, top_logprobs
@@ -4371,7 +4371,7 @@ text-embedding-ada-002 is OpenAI's legacy text embedding model.
 - **Provider**: openai
 - **Context**: — tok
 - **Modality**: audio->transcription  (in: audio → out: transcription)
-- **Pricing**: 入力 $6,000.00/1M · 出力 無料/1M
+- **Pricing**: 入力 $6,000.00/1M · 出力 無料/1M · Audio Minutes $0.006/minute
 - **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, logprobs, Seed固定
 - **登録日**: 2026-04-28
 - **対応パラメータ**: seed, max_tokens, response_format, structured_outputs, temperature, top_p, stop, frequency_penalty, presence_penalty, logit_bias, logprobs, top_logprobs
@@ -4384,7 +4384,7 @@ Whisper is OpenAI's open-source automatic speech recognition model, available vi
 - **Provider**: openai
 - **Context**: — tok
 - **Modality**: audio->transcription  (in: audio → out: transcription)
-- **Pricing**: 入力 $1,500.00/1M · 出力 無料/1M
+- **Pricing**: 入力 $1,500.00/1M · 出力 無料/1M · Audio Minutes $0.0015/minute
 - **登録日**: 2026-05-01
 - **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, repetition_penalty, logit_bias, min_p
 
@@ -4396,7 +4396,7 @@ Whisper Large V3 is OpenAI's open-source automatic speech recognition model offe
 - **Provider**: openai
 - **Context**: — tok
 - **Modality**: audio->transcription  (in: audio → out: transcription)
-- **Pricing**: 入力 $40,000.00/1M · 出力 無料/1M
+- **Pricing**: 入力 $40,000.00/1M · 出力 無料/1M · Audio Hours $0.04/hour
 - **Capabilities**: JSON mode, Seed固定
 - **登録日**: 2026-05-01
 - **対応パラメータ**: max_tokens, temperature, top_p, stop, seed, response_format
@@ -4471,7 +4471,7 @@ pplx-embed-v1 -4B is one of Perplexity's state-of-the-art text embedding models 
 - **Provider**: perplexity
 - **Context**: 127K (127,072) tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $1.00/1M · 出力 $1.00/1M · Web検索 $0.005
+- **Pricing**: 入力 $1.00/1M · 出力 $1.00/1M · Web検索 $0.005 · Web Search $0.005/request
 - **Capabilities**: Web検索
 - **登録日**: 2025-01-28
 - **対応パラメータ**: max_tokens, temperature, top_p, top_k, frequency_penalty, presence_penalty, web_search_options
@@ -4484,7 +4484,7 @@ Sonar is lightweight, affordable, fast, and simple to use — now featuring cita
 - **Provider**: perplexity
 - **Context**: 128K (128,000) tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $2.00/1M · 出力 $8.00/1M · 推論 $3.00/1M · Web検索 $0.005
+- **Pricing**: 入力 $2.00/1M · 出力 $8.00/1M · 推論 $3.00/1M · Web検索 $0.005 · Web Search $0.005/request
 - **Capabilities**: Reasoning(思考), Reasoning出力, Web検索
 - **登録日**: 2025-03-07
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, frequency_penalty, presence_penalty, web_search_options
@@ -4501,7 +4501,7 @@ Notes on Pricing ([Source](https://docs.perplexity.ai/guides/pricing#detailed-pr
 - **Provider**: perplexity
 - **Context**: 200K (200,000) tok / max出力 8,000 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $3.00/1M · 出力 $15.00/1M · Web検索 $0.005
+- **Pricing**: 入力 $3.00/1M · 出力 $15.00/1M · Web検索 $0.005 · Web Search $0.005/request
 - **Capabilities**: Web検索
 - **登録日**: 2025-03-07
 - **対応パラメータ**: max_tokens, temperature, top_p, top_k, frequency_penalty, presence_penalty, web_search_options
@@ -4516,7 +4516,7 @@ For enterprises seeking more advanced capabilities, the Sonar Pro API can handle
 - **Provider**: perplexity
 - **Context**: 200K (200,000) tok / max出力 8,000 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $3.00/1M · 出力 $15.00/1M · Web検索 $0.018
+- **Pricing**: 入力 $3.00/1M · 出力 $15.00/1M · Web検索 $0.018 · Web Search $0.018/request
 - **Capabilities**: Structured outputs(JSONスキーマ), Reasoning(思考), Reasoning出力, Web検索
 - **登録日**: 2025-10-31
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, frequency_penalty, presence_penalty, web_search_options, structured_outputs
@@ -4531,7 +4531,7 @@ Sonar Pro Search adds autonomous, multi-step reasoning to Sonar Pro. So, instead
 - **Provider**: perplexity
 - **Context**: 128K (128,000) tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $2.00/1M · 出力 $8.00/1M · Web検索 $0.005
+- **Pricing**: 入力 $2.00/1M · 出力 $8.00/1M · Web検索 $0.005 · Web Search $0.005/request
 - **Capabilities**: Reasoning(思考), Reasoning出力, Web検索
 - **登録日**: 2025-03-07
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, frequency_penalty, presence_penalty, web_search_options
@@ -4861,7 +4861,7 @@ Qwen3-8B is a dense 8.2B parameter causal language model from the Qwen3 series, 
 - **Provider**: qwen
 - **Context**: — tok
 - **Modality**: audio->transcription  (in: audio → out: transcription)
-- **Pricing**: 入力 $35.00/1M · 出力 無料/1M
+- **Pricing**: 入力 $35.00/1M · 出力 無料/1M · Audio Seconds $3.5e-05/second
 - **Capabilities**: JSON mode, Seed固定
 - **登録日**: 2026-05-14
 - **対応パラメータ**: max_tokens, temperature, top_p, seed, presence_penalty, response_format
@@ -5393,7 +5393,7 @@ Qwen3.7-Plus is a cost-effective model in Alibaba's Qwen3.7 series. It supports 
 - **Provider**: recraft
 - **Context**: 65K (65,536) tok
 - **Modality**: text+image->image  (in: text,image → out: image)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.04/image
 - **登録日**: 2026-05-08
 
 Recraft V3 is an image generation model from Recraft. It supports text and image inputs with image output at ~1K resolution across multiple aspect ratios.
@@ -5408,7 +5408,7 @@ Note: only one input image is supported.
 - **Provider**: recraft
 - **Context**: 65K (65,536) tok
 - **Modality**: text+image->image  (in: text,image → out: image)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.04/image
 - **登録日**: 2026-05-08
 
 Recraft V4 is an image generation model from Recraft. It supports text and image inputs with image output at ~1K resolution across multiple aspect ratios. It delivers stronger compositional judgment, color coherence, and legible embedded text compared to V3, making it suited for infographics, signage, and packaging.
@@ -5423,7 +5423,7 @@ Note: only one input image is supported.
 - **Provider**: recraft
 - **Context**: 65K (65,536) tok
 - **Modality**: text+image->image  (in: text,image → out: image)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.25/image
 - **登録日**: 2026-05-08
 
 Recraft V4 Pro is an image generation model from Recraft. It supports text and image inputs with image output at ~2K resolution across multiple aspect ratios, double the resolution of V4. It offers higher fidelity and detail density than V4, suited for production use cases where image quality is a priority.
@@ -5438,7 +5438,7 @@ Note: only one input image is supported.
 - **Provider**: recraft
 - **Context**: 65K (65,536) tok
 - **Modality**: text+image->image  (in: text,image → out: image)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.3/image
 - **登録日**: 2026-05-14
 
 Recraft V4 Pro Vector is the vector (SVG) variant of Recraft V4 Pro. It supports text and image inputs and produces vector image output across multiple aspect ratios at the higher fidelity Pro tier. Output is delivered as SVG, suitable for icons, logos, and other graphics that need to scale cleanly. V4 Pro offers higher fidelity and detail density than V4, with stronger compositional judgment, color coherence, and legible embedded text compared to V3.
@@ -5451,7 +5451,7 @@ Supports the following `image_config` parameters: `strength` (controls how much 
 - **Provider**: recraft
 - **Context**: 65K (65,536) tok
 - **Modality**: text+image->image  (in: text,image → out: image)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.08/image
 - **登録日**: 2026-05-14
 
 Recraft V4 Vector is the vector (SVG) variant of Recraft V4. It supports text and image inputs and produces vector image output across multiple aspect ratios. Compared to the raster V4, output is delivered as SVG, suitable for icons, logos, and other graphics that need to scale cleanly. V4 delivers stronger compositional judgment, color coherence, and legible embedded text compared to V3.
@@ -5464,7 +5464,7 @@ Supports the following `image_config` parameters: `strength` (controls how much 
 - **Provider**: recraft
 - **Context**: 65K (65,536) tok
 - **Modality**: text+image->image  (in: text,image → out: image)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.04/image
 - **登録日**: 2026-05-14
 
 Recraft V4.1 is an image generation model from Recraft tuned for high aesthetics. It supports text and image inputs with image output at ~1K resolution across multiple aspect ratios, with typical generation around 10 seconds. Compared to V4, photorealism feels more natural with quieter backgrounds and more purposeful lighting, 3D rendering and soft gradients are smoother, and the model follows shorter prompts more reliably.
@@ -5477,7 +5477,7 @@ Suited for exploration, concept work, and everyday creative work where speed and
 - **Provider**: recraft
 - **Context**: 65K (65,536) tok
 - **Modality**: text+image->image  (in: text,image → out: image)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.25/image
 - **登録日**: 2026-05-14
 
 Recraft V4.1 Pro is an image generation model from Recraft tuned for high aesthetics. It supports text and image inputs with image output at ~2K resolution across multiple aspect ratios - double the resolution of V4.1 - with typical generation around 30 seconds. It shares the V4.1 visual sensibility at higher fidelity and detail density, with more natural photorealism, smoother 3D rendering and gradients, and stronger short-prompt adherence than V4 Pro.
@@ -5490,7 +5490,7 @@ Suited for production work where image quality is the priority and the idea bene
 - **Provider**: recraft
 - **Context**: 65K (65,536) tok
 - **Modality**: text+image->image  (in: text,image → out: image)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.3/image
 - **登録日**: 2026-05-14
 
 Recraft V4.1 Pro Vector is the vector (SVG) variant of Recraft V4.1 Pro, tuned for high aesthetics. It supports text and image inputs and produces higher-resolution SVG image output across multiple aspect ratios, with typical generation around 20 seconds. Output scales cleanly, making it suitable for icons, logos, and other graphics. V4.1 brings more personality to text and illustrations, smoother gradients, and stronger short-prompt adherence compared to V4 Pro.
@@ -5503,7 +5503,7 @@ Suited for higher-resolution illustration work and production graphics where out
 - **Provider**: recraft
 - **Context**: 65K (65,536) tok
 - **Modality**: text+image->image  (in: text,image → out: image)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.04/image
 - **登録日**: 2026-05-14
 
 Recraft V4.1 Utility is a general-purpose image generation model from Recraft. It supports text and image inputs with image output at ~1K resolution across multiple aspect ratios, with typical generation around 10 seconds. The Utility line is designed for restraint as the aesthetic choice - flat lighting, front-facing composition, and simple, controlled scenes - making it a practical fit for product imagery, mockups, and structured visuals where the high-aesthetic V4.1 line would be too expressive.
@@ -5516,7 +5516,7 @@ V4.1 improvements over V4 include more natural object understanding, sharper moc
 - **Provider**: recraft
 - **Context**: 65K (65,536) tok
 - **Modality**: text+image->image  (in: text,image → out: image)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.25/image
 - **登録日**: 2026-05-14
 
 Recraft V4.1 Utility Pro is a general-purpose image generation model from Recraft. It supports text and image inputs with image output at ~2K resolution across multiple aspect ratios — double the resolution of V4.1 Utility - with typical generation around 20 seconds. Like V4.1 Utility, it is designed for restraint as the aesthetic choice - flat lighting, front-facing composition, and simple, controlled scenes - at higher fidelity for production use cases.
@@ -5529,7 +5529,7 @@ V4.1 improvements over V4 Pro include more natural object understanding, sharper
 - **Provider**: recraft
 - **Context**: 65K (65,536) tok
 - **Modality**: text+image->image  (in: text,image → out: image)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.08/image
 - **登録日**: 2026-05-14
 
 Recraft V4.1 Vector is the vector (SVG) variant of Recraft V4.1, tuned for high aesthetics. It supports text and image inputs and produces SVG image output across multiple aspect ratios, with typical generation around 13 seconds. Output scales cleanly, making it suitable for icons, logos, and other graphics. V4.1 brings more personality to text and illustrations, smoother gradients, and stronger short-prompt adherence compared to V4.
@@ -5754,7 +5754,7 @@ The paraphrase-MiniLM-L6-v2 embedding model converts sentences and short paragra
 - **Provider**: sesame
 - **Context**: 4K (4,096) tok
 - **Modality**: text->speech  (in: text → out: speech)
-- **Pricing**: 入力 $7.00/1M · 出力 無料/1M
+- **Pricing**: 入力 $7.00/1M · 出力 無料/1M · Characters $7e-06/M characters
 - **Capabilities**: JSON mode, Seed固定
 - **登録日**: 2026-04-24
 - **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format
@@ -5769,7 +5769,7 @@ CSM 1B is a conversational speech model from Sesame. It accepts text input and p
 - **Provider**: sourceful
 - **Context**: 8K (8,192) tok
 - **Modality**: text+image->image  (in: text,image → out: image)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.02〜$0.04/image · Font Input $0.03/font · Super Resolution $0.2/reference
 - **登録日**: 2026-02-03
 
 Riverflow V2 Fast is the fastest variant of Sourceful's Riverflow 2.0 lineup, best for production deployments and latency-critical workflows.
@@ -5792,7 +5792,7 @@ Note: …
 - **Provider**: sourceful
 - **Context**: 8K (8,192) tok
 - **Modality**: text+image->image  (in: text,image → out: image)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.03/image
 - **登録日**: 2025-12-09
 
 Riverflow V2 Fast Preview is the fastest variant of Sourceful's Riverflow V2 preview lineup. This preview version exceeds the performance of Riverflow 1 Family and is Sourceful's first unified text-to-image and image-to-image model family.
@@ -5807,7 +5807,7 @@ Sourceful imposes a 4.5MB request size limit, therefore it is highly recommended
 - **Provider**: sourceful
 - **Context**: 8K (8,192) tok
 - **Modality**: text+image->image  (in: text,image → out: image)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.075/image
 - **登録日**: 2025-12-09
 
 Riverflow V2 Max Preview is the most powerful variant of Sourceful's Riverflow V2 preview lineup. This preview version exceeds the performance of Riverflow 1 Family and is Sourceful's first unified text-to-image and image-to-image model family.
@@ -5822,7 +5822,7 @@ Sourceful imposes a 4.5MB request size limit, therefore it is highly recommended
 - **Provider**: sourceful
 - **Context**: 8K (8,192) tok
 - **Modality**: text+image->image  (in: text,image → out: image)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.15〜$0.33/image · Font Input $0.03/font · Super Resolution $0.2/reference
 - **登録日**: 2026-02-03
 
 Riverflow V2 Pro is the most powerful variant of Sourceful's Riverflow 2.0 lineup, best for top-tier control and perfect text rendering.
@@ -5845,7 +5845,7 @@ Note: Sourceful imposes a 4.5MB request …
 - **Provider**: sourceful
 - **Context**: 8K (8,192) tok
 - **Modality**: text+image->image  (in: text,image → out: image)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.035/image
 - **登録日**: 2025-12-09
 
 Riverflow V2 Standard Preview is the standard variant of Sourceful's Riverflow V2 preview lineup. This preview version exceeds the performance of Riverflow 1 Family and is Sourceful's first unified text-to-image and image-to-image model family.
@@ -5860,7 +5860,7 @@ Sourceful imposes a 4.5MB request size limit, therefore it is highly recommended
 - **Provider**: sourceful
 - **Context**: 32K (32,768) tok
 - **Modality**: text+image->image  (in: text,image → out: image)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.02〜$0.03/image
 - **Capabilities**: Reasoning(思考), Reasoning出力
 - **登録日**: 2026-06-04
 - **対応パラメータ**: reasoning, include_reasoning
@@ -5875,7 +5875,7 @@ The Riverflow 2.5 series is a unified text-to-image and image-to-image family th
 - **Provider**: sourceful
 - **Context**: 32K (32,768) tok
 - **Modality**: text+image->image  (in: text,image → out: image)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.24〜$0.79/image
 - **Capabilities**: Reasoning(思考), Reasoning出力
 - **登録日**: 2026-06-04
 - **対応パラメータ**: reasoning, include_reasoning
@@ -6178,7 +6178,7 @@ Grok Build 0.1 is xAI’s fast coding model trained specifically for agentic sof
 - **Provider**: x-ai
 - **Context**: 65K (65,536) tok
 - **Modality**: text+image->image  (in: text,image → out: image)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M · 画像 $0.01/枚  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · 画像 $0.01/枚 · Image Output $0.05〜$0.07/image · Image Input $0.01/image
 - **Capabilities**: JSON mode, logprobs, Seed固定
 - **登録日**: 2026-05-19
 - **対応パラメータ**: max_tokens, temperature, top_p, seed, logprobs, top_logprobs, response_format, stop, frequency_penalty, presence_penalty
@@ -6193,7 +6193,7 @@ The model emphasizes realistic detail — natural lighting and physics, accurate
 - **Provider**: x-ai
 - **Context**: — tok
 - **Modality**: text+image->video  (in: text,image → out: video)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Video Output $0.05〜$0.07/second · Image Input $0.002/image
 - **Capabilities**: JSON mode, logprobs, Seed固定
 - **登録日**: 2026-05-19
 - **対応パラメータ**: max_tokens, temperature, top_p, seed, logprobs, top_logprobs, response_format, stop, frequency_penalty, presence_penalty
@@ -6208,7 +6208,7 @@ The model supports three generation modes: text-to-video from a prompt alone, im
 - **Provider**: x-ai
 - **Context**: 15K (15,000) tok
 - **Modality**: text->speech  (in: text → out: speech)
-- **Pricing**: 入力 $15.00/1M · 出力 無料/1M
+- **Pricing**: 入力 $15.00/1M · 出力 無料/1M · Characters $1.5e-05/M characters
 - **Capabilities**: JSON mode, logprobs, Seed固定
 - **登録日**: 2026-05-15
 - **対応パラメータ**: max_tokens, temperature, top_p, seed, logprobs, top_logprobs, response_format, stop, frequency_penalty, presence_penalty
@@ -6419,7 +6419,7 @@ GLM-5.1 delivers a major leap in coding capability, with particularly significan
 - **Provider**: zyphra
 - **Context**: 4K (4,096) tok
 - **Modality**: text->speech  (in: text → out: speech)
-- **Pricing**: 入力 $7.00/1M · 出力 無料/1M
+- **Pricing**: 入力 $7.00/1M · 出力 無料/1M · Characters $7e-06/M characters
 - **Capabilities**: JSON mode, Seed固定
 - **登録日**: 2026-04-24
 - **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format
@@ -6432,7 +6432,7 @@ Zonos v0.1 Hybrid is a text-to-speech model from Zyphra built on a hybrid archit
 - **Provider**: zyphra
 - **Context**: 4K (4,096) tok
 - **Modality**: text->speech  (in: text → out: speech)
-- **Pricing**: 入力 $7.00/1M · 出力 無料/1M
+- **Pricing**: 入力 $7.00/1M · 出力 無料/1M · Characters $7e-06/M characters
 - **Capabilities**: JSON mode, Seed固定
 - **登録日**: 2026-04-24
 - **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format
@@ -6501,7 +6501,7 @@ This model always redirects to the latest model in the Anthropic Claude Sonnet f
 - **Provider**: ~google
 - **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
 - **Modality**: text+image+file+audio+video->text  (in: text,image,file,audio,video → out: text)
-- **Pricing**: 入力 $1.50/1M · 出力 $9.00/1M · キャッシュ読 $0.15/1M · キャッシュ書 $0.0833/1M · 推論 $9.00/1M · 画像 $1.5e-06/枚 · 音声 $3.00/1M · Web検索 $0.014
+- **Pricing**: 入力 $1.50/1M · 出力 $9.00/1M · キャッシュ読 $0.15/1M · キャッシュ書 $0.0833/1M · 推論 $9.00/1M · 画像 $1.5e-06/枚 · 音声 $3.00/1M · Web検索 $0.014 · Web Search $0.014/request
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2025-01-01T00:00:00.000Z
 - **登録日**: 2026-04-28
@@ -6515,7 +6515,7 @@ This model always redirects to the latest model in the Google Gemini Flash famil
 - **Provider**: ~google
 - **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
 - **Modality**: text+image+file+audio+video->text  (in: text,image,file,audio,video → out: text)
-- **Pricing**: 入力 $2.00/1M · 出力 $12.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $0.375/1M · 推論 $12.00/1M · 画像 $2e-06/枚 · 音声 $2.00/1M · Web検索 $0.014
+- **Pricing**: 入力 $2.00/1M · 出力 $12.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $0.375/1M · 推論 $12.00/1M · 画像 $2e-06/枚 · 音声 $2.00/1M · Web検索 $0.014 · Web Search $0.014/request
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-04-28
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format, tools, tool_choice, stop, structured_outputs

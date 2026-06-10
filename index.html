@@ -110,7 +110,7 @@
 <footer>
   データ: <a href="https://openrouter.ai/models" target="_blank" rel="noopener">OpenRouter</a> /
   <a href="catalog.md">Markdown版</a> /
-  価格は $/100万トークン（入力 / <span style="color:var(--warn)">出力</span>）。「変動」= 動的価格。
+  価格は $/100万トークン（入力 / <span style="color:var(--warn)">出力</span>）。画像・動画生成などは単位あたり価格（/枚・/秒 等）。「変動」= 動的価格。
   日本語解説は元の説明文を要約・翻訳したものです。 最終更新: <span id="updated">—</span>
 </footer>
 
@@ -127,6 +127,30 @@ const MOD_ICON = {text:"📝",image:"🖼️",audio:"🔊",speech:"🗣️",vide
 const MOD_RANK = {text:0,image:1,file:2,audio:3,speech:3,video:4,embeddings:5,transcription:6,rerank:7};
 const esc = s => (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const jamods = a => (a||[]).map(x=>MOD_JA[x]||x).join("・");
+// 単位課金SKU（画像/動画生成等）の日本語化
+const UNIT_JA = {"/image":"/枚","/second":"/秒","/search":"/検索","/song":"/曲","/megapixel":"/MP",
+  "/font":"/書体","/reference":"/枚","/M tokens":"/1M tok","/request":"/回","/minute":"/分","/hour":"/時間"};
+const SKU_JA = {"Image Output":"画像","Output Image":"画像","Image Input":"入力画像","Input Image":"入力画像",
+  "Video Output":"動画","Video (with audio)":"動画(音声あり)","Video (no audio)":"動画(音声なし)",
+  "Text to Video":"テキスト→動画","Image to Video":"画像→動画","Search units":"検索","Song Generation":"楽曲",
+  "Font Input":"フォント入力","Super Resolution":"超解像","Web Search":"Web検索",
+  "Audio Minutes":"音声","Audio Seconds":"音声","Audio Hours":"音声"};
+function priceHTML(m){
+  const units=(m.price_units||[]).filter(u=>u.price>0 && u.unit!=="/M tokens");
+  const unitsHTML=units.map(u=>{
+    let v=fmtPrice(u.price);
+    if(u.tiers&&u.tiers.length){
+      const ps=u.tiers.map(t=>t.price), lo=Math.min(...ps), hi=Math.max(...ps);
+      v=hi>lo?fmtPrice(lo)+"〜"+fmtPrice(hi):fmtPrice(lo);
+    }
+    return `<span style="color:var(--muted)">${esc(SKU_JA[u.label]||u.label)}</span> <span class="out">${v}</span><span style="color:var(--muted)">${esc(UNIT_JA[u.unit]||u.unit||"")}</span>`;
+  }).join(" · ");
+  if(units.length && !m.price_in && !m.price_out)  // 単位課金のみ(画像/動画生成等)
+    return `<div class="price mono">${unitsHTML}</div>`;
+  const cache = m.price_cache_read!=null ? ` · キャッシュ読 ${fmtPrice(m.price_cache_read)}` : "";
+  const tok = `<span class="in">${fmtPrice(m.price_in)}</span> / <span class="out">${fmtPrice(m.price_out)}</span> <span style="color:var(--muted)">per 1M${cache}</span>`;
+  return `<div class="price mono">${tok}${units.length?" · "+unitsHTML:""}</div>`;
+}
 
 let MODELS=[], TX={}, FILTERS={free:false,tools:false,reasoning:false};
 const $ = id => document.getElementById(id);
@@ -179,7 +203,6 @@ function cardHTML(m){
   if(m.free) tags.push('<span class="tag free">FREE</span>');
   tags.push(...genTags(m));
   for(const c of (m.caps||[])) tags.push(`<span class="tag cap">${esc(c)}</span>`);
-  const cache = m.price_cache_read!=null ? ` · キャッシュ読 ${fmtPrice(m.price_cache_read)}` : "";
   const inJa=jamods(m.input_modalities), outJa=jamods(m.output_modalities);
   const detail = `<div class="detail">
       ${t&&t.good_at?`<div class="goodat"><b>💡 得意なこと・特徴</b><br>${esc(t.good_at)}</div>`:""}
@@ -197,7 +220,7 @@ function cardHTML(m){
       </div>
       <span class="pbadge" style="background:hsl(${hue} 60% 38%)">${esc(m.provider)}</span>
     </div>
-    <div class="price mono"><span class="in">${fmtPrice(m.price_in)}</span> / <span class="out">${fmtPrice(m.price_out)}</span> <span style="color:var(--muted)">per 1M${cache}</span></div>
+    ${priceHTML(m)}
     <div class="row">
       <span>📅 <b>${m.created_date||"—"}</b></span>
       <span>ctx <b>${fmtCtx(m.context_length)}</b>${m.max_output?` / 出力 ${fmtCtx(m.max_output)}`:""}</span>

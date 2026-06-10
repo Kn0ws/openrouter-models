@@ -46,6 +46,10 @@ WATCH_FIELDS = {
     "price_cache_read": lambda m: (m.get("pricing") or {}).get("input_cache_read"),
     "price_cache_write": lambda m: (m.get("pricing") or {}).get("input_cache_write"),
     "supported_parameters": lambda m: sorted(m.get("supported_parameters") or []),
+    # price_ プレフィックスを避ける（diff表示で per_million 変換されるのはトークン単価のみ）
+    "unit_pricing": lambda m: [(u.get("label"), u.get("price"),
+                                tuple((t.get("label"), t.get("price")) for t in u.get("tiers") or []))
+                               for u in (m.get("pricing") or {}).get("units") or []],
 }
 
 # supported_parameters -> 人間向けケイパビリティ表記
@@ -84,10 +88,31 @@ def _iso_to_unix(s):
         return None
 
 
+def _norm_units(dp):
+    """display_pricing（画像/動画/検索等の単位課金SKU）を簡約化して保持。
+    2026-06頃からトークン価格0＋単位課金のみのモデルが増えた（無料と誤判定しないため必須）"""
+    out = []
+    for d in dp or []:
+        price = _f(d.get("price"))
+        if d.get("kind") != "unit" or price is None:
+            continue
+        ent = {"label": d.get("sku_label"), "price": price, "unit": d.get("unitLabel")}
+        tiers = [{"label": t.get("sku_label"), "price": _f(t.get("price"))}
+                 for t in (d.get("tiers") or []) if _f(t.get("price")) is not None]
+        if tiers:
+            ent["tiers"] = tiers
+        out.append(ent)
+    return out
+
+
 def normalize_frontend(m):
     """frontend API の1エントリを v1相当の内部スキーマに変換（以降の処理を共通化）"""
     e = m.get("endpoint") or {}
     p = e.get("pricing") or {}
+    pricing = {k: p[k] for k in PRICE_KEYS if k in p}
+    units = _norm_units(p.get("display_pricing"))
+    if units:
+        pricing["units"] = units
     ins = _sortmods(m.get("input_modalities"))
     outs = _sortmods(m.get("output_modalities"))
     params = list(e.get("supported_parameters") or [])
@@ -117,7 +142,7 @@ def normalize_frontend(m):
             "tokenizer": m.get("group"),
             "instruct_type": m.get("instruct_type"),
         },
-        "pricing": {k: p[k] for k in PRICE_KEYS if k in p},
+        "pricing": pricing,
         "top_provider": {
             "context_length": e.get("context_length"),
             "max_completion_tokens": e.get("max_completion_tokens"),
@@ -240,8 +265,14 @@ def provider_of(model):
 
 
 def is_free(model):
+    if model["id"].endswith(":free"):
+        return True
     p = model.get("pricing") or {}
-    return model["id"].endswith(":free") or (_f(p.get("prompt")) == 0 and _f(p.get("completion")) == 0)
+    # トークン単価が0でも単位課金(units: /枚・/秒等)があれば有料
+    vals = [_f(v) for k, v in p.items() if k != "units"]
+    vals += [u.get("price") for u in p.get("units") or []]
+    vals = [v for v in vals if v is not None]
+    return bool(vals) and all(v == 0 for v in vals)
 
 
 def fmt_ctx(n):
@@ -330,6 +361,17 @@ def model_detail_md(m, level=3):
         price_bits.append(f"音声 {per_million(p['audio'])}/1M")
     if p.get("web_search") and _f(p.get("web_search")):
         price_bits.append(f"Web検索 {raw_usd(p['web_search'])}")
+    for u in p.get("units") or []:
+        if not u.get("price"):
+            continue
+        tiers = u.get("tiers") or []
+        if tiers:
+            lo = min(t["price"] for t in tiers)
+            hi = max(t["price"] for t in tiers)
+            val = f"${lo:g}" + (f"〜${hi:g}" if hi > lo else "")
+        else:
+            val = f"${u['price']:g}"
+        price_bits.append(f"{u.get('label')} {val}{u.get('unit') or ''}")
     lines.append(f"- **Pricing**: {' · '.join(price_bits)}"
                  + ("  🆓" if is_free(m) else ""))
 
@@ -445,6 +487,7 @@ def export_site_data(models, fetched_at=""):
             "price_cache_write": price_num(p.get("input_cache_write")),
             "price_image": _f(p.get("image")) or None,
             "price_web_search": _f(p.get("web_search")) or None,
+            "price_units": p.get("units") or None,
             "free": is_free(m),
             "caps": capabilities(m),
             "supported_parameters": m.get("supported_parameters") or [],
