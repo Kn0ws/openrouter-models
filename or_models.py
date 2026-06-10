@@ -29,7 +29,7 @@ import sys
 import urllib.request
 import urllib.error
 
-FE_URL = "https://openrouter.ai/api/frontend/models"  # サイトと同じ全モデル(画像/音声/embeddings/動画/rerank等を含む)
+FE_URL = "https://openrouter.ai/api/frontend/v1/catalog/models"  # サイトと同じ全モデル(画像/音声/embeddings/動画/rerank等を含む)。旧 /api/frontend/models は2026-06頃廃止(404)
 V1_URL = "https://openrouter.ai/api/v1/models"         # 公開API(テキスト出力中心のサブセット)。フォールバック用
 API_URL = FE_URL  # 後方互換
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -491,6 +491,10 @@ def cmd_fetch(args):
     prev = load_snapshot(snaps[-1]) if snaps else None
     print(f"取得中: {API_URL}")
     models = fetch_models()
+    # 急減ガード: API変更やv1フォールバック時に縮小カタログを正として保存・コミットしない
+    if prev is not None and not args.force and len(models) < len(prev) * 0.85:
+        sys.exit(f"[異常] モデル数が {len(prev)} → {len(models)} に急減（15%超の減少）。"
+                 f"API変更/フォールバックの可能性が高いため保存しません。--force で強制保存。")
     path = save_snapshot(models)
     print(f"保存: {os.path.relpath(path, BASE_DIR)}  ({len(models)} モデル)")
     if prev is None:
@@ -631,6 +635,7 @@ def main():
 
     p = sub.add_parser("fetch", help="最新取得 + 差分表示")
     p.add_argument("--no-report", action="store_true", help="差分レポートmdを生成しない")
+    p.add_argument("--force", action="store_true", help="モデル数が急減していても保存する")
     p.set_defaults(func=cmd_fetch)
 
     sub.add_parser("report", help="全モデル詳細レポート生成").set_defaults(func=cmd_report)

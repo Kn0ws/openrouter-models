@@ -1,7 +1,7 @@
 # OpenRouter Models カタログ
 
 [OpenRouter](https://openrouter.ai/) で **現在使用可能な全モデル**（チャットだけでなく画像生成・音声・動画・埋め込み・rerank も含む）を **検索・ソート・絞り込みできる静的サイト**。
-データは OpenRouter のフロントエンドAPI（`/api/frontend/models`、認証不要）から取得し、提供エンドポイントを持つモデルのみを **リリース日（新しい順）** で並べています。※公開APIの `/api/v1/models` はテキスト出力中心のサブセットで画像生成系等が欠落するため、こちらを採用（v1へのフォールバック付き）。
+データは OpenRouter のフロントエンドAPI（`/api/frontend/v1/catalog/models`、認証不要）から取得し、提供エンドポイントを持つモデルのみを **リリース日（新しい順）** で並べています。※公開APIの `/api/v1/models` はテキスト出力中心のサブセットで画像生成系等が欠落するため、こちらを採用（v1へのフォールバック付き）。
 
 🔗 **サイト**: https://kn0ws.github.io/openrouter-models/  ←（公開後にここで閲覧）
 
