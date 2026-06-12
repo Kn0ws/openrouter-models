@@ -1,6 +1,6 @@
-# OpenRouter モデルカタログ（全421モデル）
+# OpenRouter モデルカタログ（全420モデル）
 
-- 取得日時: 2026-06-11T08:01:41
+- 取得日時: 2026-06-12T07:56:52
 - プロバイダ数: 70 / 無料枠あり: 25
 
 ## プロバイダ別サマリ
@@ -12,9 +12,9 @@
 | google | 34 | 0.00 | 16,000.00 | 1,048,756 |
 | mistralai | 23 | 0.02 | 3,000.00 | 262,144 |
 | anthropic | 16 | 0.25 | 30.00 | 1,000,000 |
-| nvidia | 15 | 0.00 | 1,500.00 | 1,000,000 |
+| nvidia | 14 | 0.00 | 1,500.00 | 1,000,000 |
 | meta-llama | 14 | 0.00 | 0.51 | 10,000,000 |
-| deepseek | 12 | 0.10 | 0.70 | 1,048,576 |
+| deepseek | 12 | 0.10 | 0.80 | 1,048,576 |
 | recraft | 11 | 0.00 | 0.00 | 65,536 |
 | z-ai | 10 | 0.06 | 1.20 | 262,144 |
 | minimax | 9 | 0.00 | 0.40 | 1,048,576 |
@@ -23,7 +23,7 @@
 | cohere | 7 | 0.00 | 2.50 | 256,000 |
 | perplexity | 7 | 0.00 | 3.00 | 200,000 |
 | microsoft | 6 | 0.07 | 360,000.00 | 131,072 |
-| moonshotai | 5 | 0.35 | 0.68 | 262,144 |
+| moonshotai | 5 | 0.35 | 0.67 | 262,144 |
 | bytedance-seed | 5 | 0.00 | 0.25 | 262,144 |
 | amazon | 5 | 0.04 | 2.50 | 1,000,000 |
 | sentence-transformers | 5 | 0.01 | 0.01 | 8,192 |
@@ -57,7 +57,7 @@
 | nex-agi | 1 | 0.00 | 0.00 | 262,144 |
 | perceptron | 1 | 0.15 | 0.15 | 32,768 |
 | openrouter | 1 | 0.00 | 0.00 | 1,048,756 |
-| ~moonshotai | 1 | 0.68 | 0.68 | 262,144 |
+| ~moonshotai | 1 | 0.67 | 0.67 | 262,144 |
 | sesame | 1 | 7.00 | 7.00 | 4,096 |
 | canopylabs | 1 | 7.00 | 7.00 | 4,096 |
 | hexgrad | 1 | 0.62 | 0.62 | 4,096 |
@@ -1097,14 +1097,14 @@ Fully open-source model.
 
 - **ID**: `deepseek/deepseek-r1-distill-llama-70b`
 - **Provider**: deepseek
-- **Context**: 131K (131,072) tok / max出力 16,384 tok
+- **Context**: 128K (128,000) tok / max出力 8,192 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.7/1M · 出力 $0.8/1M
-- **Capabilities**: JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.8/1M · 出力 $0.8/1M
+- **Capabilities**: Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2024-07-31T23:59:59.000Z
 - **登録日**: 2025-01-23
 - **HF**: `deepseek-ai/DeepSeek-R1-Distill-Llama-70B`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, logit_bias
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty
 
 DeepSeek R1 Distill Llama 70B is a distilled large language model based on [Llama-3.3-70B-Instruct](/meta-llama/llama-3.3-70b-instruct), using outputs from [DeepSeek R1](/deepseek/deepseek-r1). The model combines advanced distillation techniques to achieve high performance across multiple benchmarks, including:
 
@@ -1179,13 +1179,13 @@ The model was trained under conditions aligned with V3.1-Terminus to enable dire
 
 - **ID**: `deepseek/deepseek-v4-flash`
 - **Provider**: deepseek
-- **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
+- **Context**: 1.04858M (1,048,576) tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.0983/1M · 出力 $0.1966/1M · キャッシュ読 $0.0197/1M
-- **Capabilities**: Reasoning(思考), Reasoning出力
+- **Pricing**: 入力 $0.098/1M · 出力 $0.196/1M · キャッシュ読 $0.02/1M
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-04-24
 - **HF**: `deepseek-ai/DeepSeek-V4-Flash`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, stop
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, tools, tool_choice, response_format
 
 DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and high-throughput workloads, while maintaining strong reasoning and coding performance.
 
@@ -1619,13 +1619,13 @@ Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from G
 
 - **ID**: `google/gemma-4-31b-it`
 - **Provider**: google
-- **Context**: 262K (262,144) tok / max出力 8,192 tok
+- **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.12/1M · 出力 $0.36/1M · キャッシュ読 $0.09/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
+- **Pricing**: 入力 $0.12/1M · 出力 $0.35/1M · キャッシュ読 $0.09/1M
+- **Capabilities**: Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-04-02
 - **HF**: `google/gemma-4-31B-it`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, repetition_penalty, frequency_penalty, presence_penalty, stop, seed
 
 Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function calling, and multilingual support across 140+ languages. Strong on coding, reasoning, and document understanding tasks. Apache 2.0 license.
 
@@ -2492,11 +2492,11 @@ MiniMax-M2.5 is a SOTA large language model designed for real-world productivity
 - **Provider**: minimax
 - **Context**: 204K (204,800) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.27/1M · 出力 $1.08/1M · キャッシュ読 $0.054/1M
+- **Pricing**: 入力 $0.25/1M · 出力 $1.00/1M · キャッシュ読 $0.05/1M
 - **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-03-18
 - **HF**: `MiniMaxAI/MiniMax-M2.7`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice, response_format
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, logit_bias, tools, tool_choice
 
 MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates advanced agentic capabilities through multi-agent collaboration, enabling it to plan, execute, and refine complex tasks across dynamic environments.
 
@@ -2934,13 +2934,13 @@ Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art 
 
 - **ID**: `moonshotai/kimi-k2.6`
 - **Provider**: moonshotai
-- **Context**: 262K (262,144) tok / max出力 262,142 tok
+- **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.68/1M · 出力 $3.41/1M · キャッシュ読 $0.34/1M
-- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.67/1M · 出力 $3.39/1M · キャッシュ読 $0.14/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-04-20
 - **HF**: `moonshotai/Kimi-K2.6`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, stop, frequency_penalty, presence_penalty, seed, tools, tool_choice, response_format
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, top_p, frequency_penalty, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
 
 Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and can convert prompts and visual inputs into production-ready interfaces. Its agent swarm architecture scales to hundreds of parallel sub-agents for autonomous task decomposition - delivering documents, websites, and spreadsheets in a single run without human oversight.
 
@@ -3096,7 +3096,7 @@ Hermes 4 70B is a hybrid reasoning model from Nous Research, built on Meta-Llama
 
 This 70B variant is trained with the expanded post-training corpus (~60B tokens) emphasizing verified reasoning data, leading to improvements in mathematics, coding, STEM, logic, and structured outputs while maintaining …
 
-### ▎nvidia（15）
+### ▎nvidia（14）
 
 #### NVIDIA: Llama 3.3 Nemotron Super 49B V1.5
 
@@ -3288,23 +3288,6 @@ NVIDIA Nemotron Nano 2 VL is a 12-billion-parameter open multimodal reasoning mo
 The model supports inputs of text and multi-image documents, producing natural-language outputs. It is trained on high-quality NVIDIA-curated synthetic datasets optimized for optical-character recognition, chart reasoning, and multimodal comprehension.
 
 Nemotron Nano 2 VL achieves leading results on OCRBench v2 and scores ≈ 74 average across MMMU, …
-
-#### NVIDIA: Nemotron Nano 9B V2
-
-- **ID**: `nvidia/nemotron-nano-9b-v2`
-- **Provider**: nvidia
-- **Context**: 131K (131,072) tok / max出力 16,384 tok
-- **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.04/1M · 出力 $0.16/1M
-- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
-- **Knowledge cutoff**: 2025-03-31T23:59:59.000Z
-- **登録日**: 2025-09-05
-- **HF**: `nvidia/NVIDIA-Nemotron-Nano-9B-v2`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, tools, tool_choice, logit_bias
-
-NVIDIA-Nemotron-Nano-9B-v2 is a large language model (LLM) trained from scratch by NVIDIA, and designed as a unified model for both reasoning and non-reasoning tasks. It responds to user queries and tasks by first generating a reasoning trace and then concluding with a final response. 
-
-The model's reasoning capabilities can be controlled via a system prompt. If the user prefers the model to provide its final answer without intermediate reasoning traces, it can be configured to do so.
 
 #### NVIDIA: Nemotron Nano 9B V2 (free)
 
@@ -4688,13 +4671,14 @@ Qwen Plus 0728, based on the Qwen3 foundation model, is a 1 million context hybr
 
 - **ID**: `qwen/qwen2.5-vl-72b-instruct`
 - **Provider**: qwen
-- **Context**: 131K (131,072) tok
+- **Context**: 131K (131,072) tok / max出力 128,000 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.25/1M · 出力 $0.75/1M
+- **Pricing**: 入力 $0.8/1M · 出力 $1.00/1M · キャッシュ読 $0.4/1M
+- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Seed固定
 - **Knowledge cutoff**: 2024-06-30T23:59:59.000Z
 - **登録日**: 2025-02-01
 - **HF**: `Qwen/Qwen2.5-VL-72B-Instruct`
-- **対応パラメータ**: max_tokens
+- **対応パラメータ**: max_tokens, temperature, top_p, frequency_penalty, presence_penalty, repetition_penalty, seed, stop, top_k, logit_bias, structured_outputs, response_format
 
 Qwen2.5-VL is proficient in recognizing common objects such as flowers, birds, fish, and insects. It is also highly capable of analyzing texts, charts, icons, graphics, and layouts within images.
 
@@ -5364,7 +5348,7 @@ Qwen3.7-Max is the flagship model in Alibaba's Qwen3.7 series. It supports text 
 - **Provider**: qwen
 - **Context**: 1M (1,000,000) tok / max出力 65,536 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.4/1M · 出力 $1.60/1M · キャッシュ読 $0.08/1M · キャッシュ書 $0.5/1M
+- **Pricing**: 入力 $0.32/1M · 出力 $1.28/1M · キャッシュ読 $0.064/1M · キャッシュ書 $0.4/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-06-03
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, presence_penalty, response_format, logprobs, top_logprobs, tools, tool_choice, structured_outputs
@@ -6514,12 +6498,12 @@ This model always redirects to the latest model in the Google Gemini Pro family.
 
 - **ID**: `~moonshotai/kimi-latest`
 - **Provider**: ~moonshotai
-- **Context**: 262K (262,144) tok / max出力 262,142 tok
+- **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.68/1M · 出力 $3.41/1M · キャッシュ読 $0.34/1M
+- **Pricing**: 入力 $0.67/1M · 出力 $3.39/1M · キャッシュ読 $0.14/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-27
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, stop, frequency_penalty, presence_penalty, seed, tools, tool_choice, response_format, logit_bias, parallel_tool_calls, structured_outputs, logprobs, top_logprobs, min_p, repetition_penalty, reasoning_effort
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, top_p, frequency_penalty, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, top_k, stop, presence_penalty, seed, logit_bias, parallel_tool_calls, repetition_penalty, min_p, reasoning_effort
 
 This model always redirects to the latest model in the MoonshotAI Kimi family.
 
