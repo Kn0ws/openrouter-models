@@ -1,6 +1,6 @@
 # OpenRouter モデルカタログ（全420モデル）
 
-- 取得日時: 2026-06-12T07:56:52
+- 取得日時: 2026-06-13T07:35:01
 - プロバイダ数: 70 / 無料枠あり: 25
 
 ## プロバイダ別サマリ
@@ -13,7 +13,7 @@
 | mistralai | 23 | 0.02 | 3,000.00 | 262,144 |
 | anthropic | 16 | 0.25 | 30.00 | 1,000,000 |
 | nvidia | 14 | 0.00 | 1,500.00 | 1,000,000 |
-| meta-llama | 14 | 0.00 | 0.51 | 10,000,000 |
+| meta-llama | 13 | 0.00 | 0.51 | 10,000,000 |
 | deepseek | 12 | 0.10 | 0.80 | 1,048,576 |
 | recraft | 11 | 0.00 | 0.00 | 65,536 |
 | z-ai | 10 | 0.06 | 1.20 | 262,144 |
@@ -22,8 +22,8 @@
 | x-ai | 7 | 0.00 | 15.00 | 2,000,000 |
 | cohere | 7 | 0.00 | 2.50 | 256,000 |
 | perplexity | 7 | 0.00 | 3.00 | 200,000 |
+| moonshotai | 6 | 0.38 | 0.95 | 262,144 |
 | microsoft | 6 | 0.07 | 360,000.00 | 131,072 |
-| moonshotai | 5 | 0.35 | 0.67 | 262,144 |
 | bytedance-seed | 5 | 0.00 | 0.25 | 262,144 |
 | amazon | 5 | 0.04 | 2.50 | 1,000,000 |
 | sentence-transformers | 5 | 0.01 | 0.01 | 8,192 |
@@ -57,7 +57,7 @@
 | nex-agi | 1 | 0.00 | 0.00 | 262,144 |
 | perceptron | 1 | 0.15 | 0.15 | 32,768 |
 | openrouter | 1 | 0.00 | 0.00 | 1,048,756 |
-| ~moonshotai | 1 | 0.67 | 0.67 | 262,144 |
+| ~moonshotai | 1 | 0.68 | 0.68 | 262,144 |
 | sesame | 1 | 7.00 | 7.00 | 4,096 |
 | canopylabs | 1 | 7.00 | 7.00 | 4,096 |
 | hexgrad | 1 | 0.62 | 0.62 | 4,096 |
@@ -1027,7 +1027,7 @@ For model details, please visit [the DeepSeek-V3 repo](https://github.com/deepse
 
 - **ID**: `deepseek/deepseek-chat-v3-0324`
 - **Provider**: deepseek
-- **Context**: 131K (131,072) tok / max出力 16,384 tok
+- **Context**: 163K (163,840) tok / max出力 16,384 tok
 - **Modality**: text->text  (in: text → out: text)
 - **Pricing**: 入力 $0.2/1M · 出力 $0.77/1M · キャッシュ読 $0.135/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Seed固定
@@ -2026,7 +2026,7 @@ LFM2.5-1.2B-Thinking is a lightweight reasoning-focused model optimized for agen
 
 An attempt to recreate Claude-style verbosity, but don't expect the same level of coherence or memory. Meant for use in roleplay/narrative situations.
 
-### ▎meta-llama（14）
+### ▎meta-llama（13）
 
 #### Meta: Llama 3 70B Instruct
 
@@ -2251,23 +2251,6 @@ Maverick features early fusion for native multimodality and a 1 million token co
 Llama 4 Scout 17B Instruct (16E) is a mixture-of-experts (MoE) language model developed by Meta, activating 17 billion parameters out of a total of 109B. It supports native multimodal input (text and image) and multilingual output (text and code) across 12 supported languages. Designed for assistant-style interaction and visual reasoning, Scout uses 16 experts per forward pass and features a context length of 10 million tokens, with a training corpus of ~40 trillion tokens.
 
 Built for high efficiency and local or commercial deployment, Llama 4 Scout incorporates early fusion for seamless modality integration. It is instruction-tuned for use in multilingual chat, captioning, and image …
-
-#### Llama Guard 3 8B
-
-- **ID**: `meta-llama/llama-guard-3-8b`
-- **Provider**: meta-llama
-- **Context**: 131K (131,072) tok / max出力 131,072 tok
-- **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.484/1M · 出力 $0.03/1M
-- **Capabilities**: Seed固定
-- **Knowledge cutoff**: 2023-12-31T23:59:59.000Z
-- **登録日**: 2025-02-12
-- **HF**: `meta-llama/Llama-Guard-3-8B`
-- **対応パラメータ**: max_tokens, temperature, top_p, top_k, seed, repetition_penalty, frequency_penalty, presence_penalty, min_p, stop, logit_bias
-
-Llama Guard 3 is a Llama-3.1-8B pretrained model, fine-tuned for content safety classification. Similar to previous versions, it can be used to classify content in both LLM inputs (prompt classification) and in LLM responses (response classification). It acts as an LLM – it generates text in its output that indicates whether a given prompt or response is safe or unsafe, and if unsafe, it also lists the content categories violated.
-
-Llama Guard 3 was aligned to safeguard against the MLCommons standardized hazards taxonomy and designed to support Llama 3.1 capabilities. Specifically, it provides content moderation in 8 languages, and was optimized to support safety and security for search and …
 
 #### Meta: Llama Guard 4 12B
 
@@ -2511,6 +2494,7 @@ Trained for production-grade performance, M2.7 handles workflows such as live de
 - **Pricing**: 入力 $0.3/1M · 出力 $1.20/1M · キャッシュ読 $0.06/1M
 - **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-05-31
+- **HF**: `MiniMaxAI/Minimax-M3`
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, response_format, tool_choice, tools
 
 MiniMax-M3 is a multimodal foundation model from MiniMax. It supports text, image, and video inputs with text output, a 1M-token context window, and is suited for long-horizon agentic work, coding, and tool use. It is built on MiniMax Sparse Attention (MSA), which replaces full attention with KV-block selection to cut per-token compute at long context — roughly 1/20 the cost of the previous generation at 1M tokens, with substantially faster prefill and decode while retaining quality across most tasks.
@@ -2866,7 +2850,7 @@ Voxtral Mini TTS is Mistral's text-to-speech model featuring zero-shot voice clo
 
 Voxtral Small is an enhancement of Mistral Small 3, incorporating state-of-the-art audio input capabilities while retaining best-in-class text performance. It excels at speech transcription, translation and audio understanding. Input audio is priced at $100 per million seconds.
 
-### ▎moonshotai（5）
+### ▎moonshotai（6）
 
 #### MoonshotAI: Kimi K2 0711
 
@@ -2922,7 +2906,7 @@ It sets new open-source benchmarks on HLE, BrowseComp, …
 - **Provider**: moonshotai
 - **Context**: 262K (262,144) tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.35/1M · 出力 $1.89/1M
+- **Pricing**: 入力 $0.375/1M · 出力 $2.02/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-01-27
 - **HF**: `moonshotai/Kimi-K2.5`
@@ -2934,15 +2918,29 @@ Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art 
 
 - **ID**: `moonshotai/kimi-k2.6`
 - **Provider**: moonshotai
-- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Context**: 262K (262,144) tok / max出力 262,142 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.67/1M · 出力 $3.39/1M · キャッシュ読 $0.14/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
+- **Pricing**: 入力 $0.68/1M · 出力 $3.41/1M · キャッシュ読 $0.34/1M
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-04-20
 - **HF**: `moonshotai/Kimi-K2.6`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, top_p, frequency_penalty, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, stop, frequency_penalty, presence_penalty, seed, tools, tool_choice, response_format
 
 Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and can convert prompts and visual inputs into production-ready interfaces. Its agent swarm architecture scales to hundreds of parallel sub-agents for autonomous task decomposition - delivering documents, websites, and spreadsheets in a single run without human oversight.
+
+#### MoonshotAI: Kimi K2.7 Code
+
+- **ID**: `moonshotai/kimi-k2.7-code`
+- **Provider**: moonshotai
+- **Context**: 262K (262,144) tok
+- **Modality**: text+image+video->text  (in: text,image,video → out: text)
+- **Pricing**: 入力 $0.95/1M · 出力 $4.00/1M · キャッシュ読 $0.19/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
+- **登録日**: 2026-06-12
+- **HF**: `moonshotai/Kimi-K2.7-Code`
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, stop, frequency_penalty, presence_penalty, structured_outputs, response_format, tool_choice, tools
+
+MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of-experts architecture that accepts text, image and video input, and it always operates in a thinking mode, preserving full reasoning content across multi-turn conversations. With a 256K-token context window, it targets long-horizon coding, agentic task decomposition, and multi-turn dialogue. The model activates 32B parameters out of roughly 1T total.
 
 ### ▎morph（2）
 
@@ -5264,13 +5262,13 @@ Qwen3.5 Plus (April 2026) is a large-scale multimodal language model from Alibab
 
 - **ID**: `qwen/qwen3.6-27b`
 - **Provider**: qwen
-- **Context**: 262K (262,144) tok / max出力 131,072 tok
+- **Context**: 262K (262,144) tok / max出力 262,140 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.289/1M · 出力 $2.40/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $0.2885/1M · 出力 $3.17/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-04-27
 - **HF**: `Qwen/Qwen3.6-27B`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, stop, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, seed, logit_bias, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, stop, frequency_penalty, presence_penalty, seed, tools, structured_outputs, response_format, tool_choice
 
 Qwen3.6 27B is a dense 27-billion-parameter language model from the Qwen Team at Alibaba, released in April 2026. It features hybrid multimodal capabilities — accepting text, image, and video inputs — and supports a 262,144-token context window.
 
@@ -5879,6 +5877,7 @@ Step 3.5 Flash is StepFun's most capable open-source foundation model. Built on 
 - **Pricing**: 入力 $0.2/1M · 出力 $1.15/1M · キャッシュ読 $0.04/1M
 - **Capabilities**: Function calling, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-05-28
+- **HF**: `stepfun-ai/Step-3.7-Flash`
 - **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, tools, top_p, stop, frequency_penalty, logprobs, top_logprobs, response_format, structured_outputs
 
 Step 3.7 Flash is StepFun's latest high-efficiency multimodal Mixture-of-Experts model. It pairs a 196B-parameter language backbone with a vision encoder for native image and video understanding, activating roughly 11B parameters per token. The model supports a 256K context window and exposes selectable reasoning levels (high/medium/low), letting callers trade off speed, cost, and depth of reasoning.
@@ -6498,12 +6497,12 @@ This model always redirects to the latest model in the Google Gemini Pro family.
 
 - **ID**: `~moonshotai/kimi-latest`
 - **Provider**: ~moonshotai
-- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Context**: 262K (262,144) tok / max出力 262,142 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.67/1M · 出力 $3.39/1M · キャッシュ読 $0.14/1M
+- **Pricing**: 入力 $0.68/1M · 出力 $3.41/1M · キャッシュ読 $0.34/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-27
-- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, top_p, frequency_penalty, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, top_k, stop, presence_penalty, seed, logit_bias, parallel_tool_calls, repetition_penalty, min_p, reasoning_effort
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, stop, frequency_penalty, presence_penalty, seed, tools, tool_choice, response_format, structured_outputs, logit_bias, parallel_tool_calls, logprobs, top_logprobs, min_p, repetition_penalty, reasoning_effort
 
 This model always redirects to the latest model in the MoonshotAI Kimi family.
 
