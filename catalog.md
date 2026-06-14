@@ -1,6 +1,6 @@
 # OpenRouter モデルカタログ（全420モデル）
 
-- 取得日時: 2026-06-13T07:35:01
+- 取得日時: 2026-06-14T07:53:42
 - プロバイダ数: 70 / 無料枠あり: 25
 
 ## プロバイダ別サマリ
@@ -14,7 +14,7 @@
 | anthropic | 16 | 0.25 | 30.00 | 1,000,000 |
 | nvidia | 14 | 0.00 | 1,500.00 | 1,000,000 |
 | meta-llama | 13 | 0.00 | 0.51 | 10,000,000 |
-| deepseek | 12 | 0.10 | 0.80 | 1,048,576 |
+| deepseek | 12 | 0.09 | 0.80 | 1,048,576 |
 | recraft | 11 | 0.00 | 0.00 | 65,536 |
 | z-ai | 10 | 0.06 | 1.20 | 262,144 |
 | minimax | 9 | 0.00 | 0.40 | 1,048,576 |
@@ -22,7 +22,7 @@
 | x-ai | 7 | 0.00 | 15.00 | 2,000,000 |
 | cohere | 7 | 0.00 | 2.50 | 256,000 |
 | perplexity | 7 | 0.00 | 3.00 | 200,000 |
-| moonshotai | 6 | 0.38 | 0.95 | 262,144 |
+| moonshotai | 6 | 0.38 | 0.75 | 262,144 |
 | microsoft | 6 | 0.07 | 360,000.00 | 131,072 |
 | bytedance-seed | 5 | 0.00 | 0.25 | 262,144 |
 | amazon | 5 | 0.04 | 2.50 | 1,000,000 |
@@ -1179,13 +1179,13 @@ The model was trained under conditions aligned with V3.1-Terminus to enable dire
 
 - **ID**: `deepseek/deepseek-v4-flash`
 - **Provider**: deepseek
-- **Context**: 1.04858M (1,048,576) tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.098/1M · 出力 $0.196/1M · キャッシュ読 $0.02/1M
-- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.09/1M · 出力 $0.18/1M · キャッシュ読 $0.02/1M
+- **Capabilities**: Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-04-24
 - **HF**: `deepseek-ai/DeepSeek-V4-Flash`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, tools, tool_choice, response_format
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, logit_bias
 
 DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and high-throughput workloads, while maintaining strong reasoning and coding performance.
 
@@ -2932,15 +2932,15 @@ Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-h
 
 - **ID**: `moonshotai/kimi-k2.7-code`
 - **Provider**: moonshotai
-- **Context**: 262K (262,144) tok
-- **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.95/1M · 出力 $4.00/1M · キャッシュ読 $0.19/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
+- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Modality**: text+image->text  (in: text,image → out: text)
+- **Pricing**: 入力 $0.75/1M · 出力 $3.50/1M · キャッシュ読 $0.16/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-06-12
 - **HF**: `moonshotai/Kimi-K2.7-Code`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, stop, frequency_penalty, presence_penalty, structured_outputs, response_format, tool_choice, tools
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, frequency_penalty, top_p, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
 
-MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of-experts architecture that accepts text, image and video input, and it always operates in a thinking mode, preserving full reasoning content across multi-turn conversations. With a 256K-token context window, it targets long-horizon coding, agentic task decomposition, and multi-turn dialogue. The model activates 32B parameters out of roughly 1T total.
+MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of-experts architecture that accepts text and image input, and it always operates in a thinking mode, preserving full reasoning content across multi-turn conversations. With a 256K-token context window, it targets long-horizon coding, agentic task decomposition, and multi-turn dialogue. The model activates 32B parameters out of roughly 1T total.
 
 ### ▎morph（2）
 
