@@ -1,6 +1,6 @@
-# OpenRouter モデルカタログ（全424モデル）
+# OpenRouter モデルカタログ（全423モデル）
 
-- 取得日時: 2026-06-19T08:14:36
+- 取得日時: 2026-06-20T07:37:08
 - プロバイダ数: 70 / 無料枠あり: 26
 
 ## プロバイダ別サマリ
@@ -13,7 +13,7 @@
 | mistralai | 23 | 0.02 | 3,000.00 | 262,144 |
 | anthropic | 16 | 0.25 | 30.00 | 1,000,000 |
 | nvidia | 14 | 0.00 | 1,500.00 | 1,000,000 |
-| meta-llama | 13 | 0.00 | 0.51 | 10,000,000 |
+| meta-llama | 12 | 0.00 | 0.40 | 10,000,000 |
 | z-ai | 11 | 0.06 | 1.20 | 1,048,576 |
 | recraft | 11 | 0.00 | 0.00 | 65,536 |
 | deepseek | 11 | 0.09 | 0.80 | 1,048,576 |
@@ -22,7 +22,7 @@
 | sourceful | 7 | 0.00 | 0.00 | 32,768 |
 | x-ai | 7 | 0.00 | 15.00 | 2,000,000 |
 | perplexity | 7 | 0.00 | 3.00 | 200,000 |
-| moonshotai | 6 | 0.38 | 0.74 | 262,144 |
+| moonshotai | 6 | 0.38 | 0.67 | 262,144 |
 | microsoft | 6 | 0.07 | 360,000.00 | 131,072 |
 | bytedance-seed | 5 | 0.00 | 0.25 | 262,144 |
 | amazon | 5 | 0.04 | 2.50 | 1,000,000 |
@@ -46,7 +46,7 @@
 | ~openai | 2 | 0.75 | 5.00 | 1,050,000 |
 | ~google | 2 | 1.50 | 2.00 | 1,048,576 |
 | zyphra | 2 | 7.00 | 7.00 | 4,096 |
-| tencent | 2 | 0.07 | 0.14 | 262,144 |
+| tencent | 2 | 0.06 | 0.14 | 262,144 |
 | xiaomi | 2 | 0.14 | 0.43 | 1,048,576 |
 | alibaba | 2 | 0.00 | 0.00 | 0 |
 | rekaai | 2 | 0.10 | 0.10 | 65,536 |
@@ -579,7 +579,7 @@ This model is optimized for agentic workflows and performs best when reasoning i
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2025-12-01
 - **HF**: `arcee-ai/Trinity-Mini`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, top_p, tool_choice, tools, response_format, structured_outputs, stop, max_completion_tokens, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, top_k, top_p, tool_choice, tools, response_format, structured_outputs, logprobs, top_logprobs, stop, max_completion_tokens
 
 Trinity Mini is a 26B-parameter (3B active) sparse mixture-of-experts language model featuring 128 experts with 8 active per token. Engineered for efficient reasoning over long contexts (131k) with robust function calling and multi-step agent workflows.
 
@@ -2058,26 +2058,7 @@ LFM2.5-1.2B-Thinking is a lightweight reasoning-focused model optimized for agen
 
 An attempt to recreate Claude-style verbosity, but don't expect the same level of coherence or memory. Meant for use in roleplay/narrative situations.
 
-### ▎meta-llama（13）
-
-#### Meta: Llama 3 70B Instruct
-
-- **ID**: `meta-llama/llama-3-70b-instruct`
-- **Provider**: meta-llama
-- **Context**: 8K (8,192) tok / max出力 8,000 tok
-- **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.51/1M · 出力 $0.74/1M
-- **Capabilities**: Structured outputs(JSONスキーマ), logprobs, Seed固定
-- **Knowledge cutoff**: 2023-12-31T23:59:59.000Z
-- **登録日**: 2024-04-18
-- **HF**: `meta-llama/Meta-Llama-3-70B-Instruct`
-- **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, structured_outputs, logprobs, top_logprobs
-
-Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 70B instruct-tuned version was optimized for high quality dialogue usecases.
-
-It has demonstrated strong performance compared to leading closed-source models in human evaluations.
-
-To read more about the model release, [click here](https://ai.meta.com/blog/meta-llama-3/). Usage of this model is subject to [Meta's Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/).
+### ▎meta-llama（12）
 
 #### Meta: Llama 3 8B Instruct
 
@@ -2965,13 +2946,13 @@ Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-h
 
 - **ID**: `moonshotai/kimi-k2.7-code`
 - **Provider**: moonshotai
-- **Context**: 262K (262,144) tok / max出力 16,384 tok
+- **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.74/1M · 出力 $3.50/1M · キャッシュ読 $0.15/1M
-- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.612/1M · 出力 $3.07/1M · キャッシュ読 $0.1296/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-06-12
 - **HF**: `moonshotai/Kimi-K2.7-Code`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, logit_bias, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, frequency_penalty, top_p, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
 
 MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of-experts architecture that accepts text and image input, and it always operates in a thinking mode, preserving full reasoning content across multi-turn conversations. With a 256K-token context window, it targets long-horizon coding, agentic task decomposition, and multi-turn dialogue. The model activates 32B parameters out of roughly 1T total.
 
@@ -4144,10 +4125,10 @@ gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the A
 - **Context**: 131K (131,072) tok / max出力 65,536 tok
 - **Modality**: text->text  (in: text → out: text)
 - **Pricing**: 入力 $0.075/1M · 出力 $0.3/1M · キャッシュ読 $0.0375/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2025-10-29
 - **HF**: `openai/gpt-oss-safeguard-20b`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, response_format, tools, tool_choice, structured_outputs, frequency_penalty, presence_penalty, logit_bias
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, seed, response_format, tools, tool_choice, structured_outputs
 
 gpt-oss-safeguard-20b is a safety reasoning model from OpenAI built upon gpt-oss-20b. This open-weight, 21B-parameter Mixture-of-Experts (MoE) model offers lower latency for safety tasks like content classification, LLM filtering, and trust & safety labeling.
 
@@ -4388,6 +4369,7 @@ Whisper is OpenAI's open-source automatic speech recognition model, available vi
 - **Modality**: audio->transcription  (in: audio → out: transcription)
 - **Pricing**: 入力 $1,500.00/1M · 出力 無料/1M · Audio Minutes $0.0015/minute
 - **登録日**: 2026-05-01
+- **HF**: `openai/whisper-large-v3`
 - **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, repetition_penalty, logit_bias, min_p
 
 Whisper Large V3 is OpenAI's open-source automatic speech recognition model offering both audio transcription and translation. It supports 99+ languages and accepts common audio formats including mp3, mp4, wav, webm, flac, and ogg. With 1,550M parameters, it achieves a 10.3% word error rate and is well-suited for noise-robust, multilingual transcription in demanding conditions. Supports timestamp granularities at word and segment levels.
@@ -4401,6 +4383,7 @@ Whisper Large V3 is OpenAI's open-source automatic speech recognition model offe
 - **Pricing**: 入力 $40,000.00/1M · 出力 無料/1M · Audio Hours $0.04/hour
 - **Capabilities**: JSON mode, Seed固定
 - **登録日**: 2026-05-01
+- **HF**: `openai/whisper-large-v3-turbo`
 - **対応パラメータ**: max_tokens, temperature, top_p, stop, seed, response_format
 
 Whisper Large V3 Turbo is an optimized version of OpenAI's Whisper Large V3 speech recognition model, designed for speed and cost efficiency. It supports transcription across 99+ languages with a 12% word error rate, and accepts common audio formats including mp3, mp4, wav, webm, flac, and ogg. Achieves real-time speed factors up to 216x, making it well-suited for latency-sensitive and high-throughput transcription workloads.
@@ -4551,10 +4534,10 @@ Sonar Reasoning Pro is a premier reasoning model powered by DeepSeek R1 with Cha
 - **Context**: 262K (262,144) tok / max出力 32,768 tok
 - **Modality**: text->text  (in: text → out: text)
 - **Pricing**: 入力 $0.2/1M · 出力 $0.4/1M · キャッシュ読 $0.1/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), Reasoning(思考), Reasoning出力
+- **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-04-28
 - **HF**: `poolside/Laguna-M.1`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, tools, tool_choice, structured_outputs
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, tools, tool_choice
 
 Laguna M.1 is the flagship coding agent model from [Poolside](https://poolside.ai/), optimized for complex software engineering tasks. Designed for agentic coding workflows, it supports tool calling and reasoning, with a 256K context window and up to 32K output tokens. Quantized to NVFP4 for efficient inference.
 
@@ -4583,10 +4566,10 @@ Laguna M.1 is designed for software engineering and agentic coding use cases, an
 - **Context**: 262K (262,144) tok / max出力 32,768 tok
 - **Modality**: text->text  (in: text → out: text)
 - **Pricing**: 入力 $0.1/1M · 出力 $0.2/1M · キャッシュ読 $0.05/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
+- **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-04-28
 - **HF**: `poolside/Laguna-XS.2`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, tools, tool_choice, response_format, structured_outputs
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, tools, tool_choice
 
 Laguna XS.2 is the second-generation model in the XS size class from [Poolside](https://poolside.ai/), their efficient coding agent series. It combines tool calling and reasoning capabilities with a compact footprint, offering a 256K context window and up to 32K output tokens. Quantized to FP8 for fast, cost-efficient agentic coding workflows.
 
@@ -4617,10 +4600,10 @@ Laguna XS.2 is designed for software engineering and agentic coding use cases, a
 - **Context**: 131K (131,072) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
 - **Pricing**: 入力 $0.2/1M · 出力 $1.10/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2025-11-27
 - **HF**: `PrimeIntellect/INTELLECT-3-FP8`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, frequency_penalty, presence_penalty, top_k, repetition_penalty, tools, tool_choice, response_format, structured_outputs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, logit_bias, tools, tool_choice, response_format, structured_outputs, repetition_penalty
 
 INTELLECT-3 is a 106B-parameter Mixture-of-Experts model (12B active) post-trained from GLM-4.5-Air-Base using supervised fine-tuning (SFT) followed by large-scale reinforcement learning (RL). It offers state-of-the-art performance for its size across math, code, science, and general reasoning, consistently outperforming many larger frontier models. Designed for strong multi-step problem solving, it maintains high accuracy on structured tasks while remaining efficient at inference thanks to its MoE architecture.
 
@@ -5530,7 +5513,7 @@ Suited for production work where image quality is the priority and the idea bene
 - **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.3/image
 - **登録日**: 2026-05-13
 
-Recraft V4.1 Pro Vector is the vector (SVG) variant of Recraft V4.1 Pro, tuned for high aesthetics. It supports text and image inputs and produces higher-resolution SVG image output across multiple aspect ratios, with typical generation around 20 seconds. Output scales cleanly, making it suitable for icons, logos, and other graphics. V4.1 brings more personality to text and illustrations, smoother gradients, and stronger short-prompt adherence compared to V4 Pro.
+Recraft V4.1 Pro Vector is the vector (SVG) variant of Recraft V4.1 Pro, tuned for high aesthetics. It supports text and image inputs and produces higher-resolution SVG image output across multiple aspect ratios, with typical generation around 15 seconds. Output scales cleanly, making it suitable for icons, logos, and other graphics. V4.1 brings more personality to text and illustrations, smoother gradients, and stronger short-prompt adherence compared to V4 Pro.
 
 Suited for higher-resolution illustration work and production graphics where output should be designed rather than photographed. Supports the following `image_config` parameters: `strength` (controls how much the output deviates …
 
@@ -5569,7 +5552,7 @@ V4.1 improvements over V4 Pro include more natural object understanding, sharper
 - **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.08/image
 - **登録日**: 2026-05-13
 
-Recraft V4.1 Vector is the vector (SVG) variant of Recraft V4.1, tuned for high aesthetics. It supports text and image inputs and produces SVG image output across multiple aspect ratios, with typical generation around 13 seconds. Output scales cleanly, making it suitable for icons, logos, and other graphics. V4.1 brings more personality to text and illustrations, smoother gradients, and stronger short-prompt adherence compared to V4.
+Recraft V4.1 Vector is the vector (SVG) variant of Recraft V4.1, tuned for high aesthetics. It supports text and image inputs and produces SVG image output across multiple aspect ratios, with typical generation around 10 seconds. Output scales cleanly, making it suitable for icons, logos, and other graphics. V4.1 brings more personality to text and illustrations, smoother gradients, and stronger short-prompt adherence compared to V4.
 
 Suited for everyday illustration work where output should be designed rather than photographed. Supports the following `image_config` parameters: `strength` (controls how much the output deviates from the source image), `rgb_colors` (sets a color palette), and …
 
@@ -5596,11 +5579,11 @@ Reka Edge is an extremely efficient 7B multimodal vision-language model that acc
 - **Context**: 65K (65,536) tok / max出力 65,536 tok
 - **Modality**: text->text  (in: text → out: text)
 - **Pricing**: 入力 $0.1/1M · 出力 $0.2/1M
-- **Capabilities**: Reasoning(思考), Reasoning出力, Seed固定
+- **Capabilities**: Structured outputs(JSONスキーマ), Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2025-01-31T00:00:00.000Z
 - **登録日**: 2025-03-12
 - **HF**: `RekaAI/reka-flash-3`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, max_tokens, stop, seed, frequency_penalty, presence_penalty
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, max_tokens, stop, seed, frequency_penalty, presence_penalty, structured_outputs
 
 Reka Flash 3 is a general-purpose, instruction-tuned large language model with 21 billion parameters, developed by Reka. It excels at general chat, coding tasks, instruction-following, and function calling. Featuring a 32K context length and optimized through reinforcement learning (RLOO), it provides competitive performance comparable to proprietary models within a smaller parameter footprint. Ideal for low-latency, local, or on-device deployments, Reka Flash 3 is compact, supports efficient quantization (down to 11GB at 4-bit precision), and employs explicit reasoning tags ("<reasoning>") to indicate its internal thought process.
 
@@ -5617,7 +5600,7 @@ Reka Flash 3 is primarily an English model with limited …
 - **Pricing**: 入力 $0.85/1M · 出力 $1.25/1M
 - **Capabilities**: Seed固定
 - **登録日**: 2025-09-26
-- **対応パラメータ**: max_tokens, stop, seed
+- **対応パラメータ**: stop, seed, max_tokens
 
 Relace Apply 3 is a specialized code-patching LLM that merges AI-suggested edits straight into your source files. It can apply updates from GPT-4o, Claude, and others into your files at 10,000 tokens/sec on average.
 
@@ -5637,7 +5620,7 @@ Zero Data Retention is enabled for Relace. Learn more about this model in their 
 - **Pricing**: 入力 $1.00/1M · 出力 $3.00/1M
 - **Capabilities**: Function calling, Tool choice, JSON mode, Seed固定
 - **登録日**: 2025-12-08
-- **対応パラメータ**: max_tokens, stop, temperature, top_p, seed, tools, tool_choice, response_format
+- **対応パラメータ**: tools, tool_choice, response_format, temperature, top_p, stop, seed, max_tokens
 
 The relace-search model uses 4-12 `view_file` and `grep` tools in parallel to explore a codebase and return relevant files to the user request. 
 
@@ -5993,13 +5976,13 @@ Hunyuan-A13B is a 13B active parameter Mixture-of-Experts (MoE) language model d
 
 - **ID**: `tencent/hy3-preview`
 - **Provider**: tencent
-- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Context**: 262K (262,144) tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.066/1M · 出力 $0.26/1M · キャッシュ読 $0.029/1M
-- **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力
+- **Pricing**: 入力 $0.063/1M · 出力 $0.21/1M · キャッシュ読 $0.021/1M
+- **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-04-22
 - **HF**: `tencent/Hy3-preview`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, frequency_penalty, tools, tool_choice, stop, presence_penalty, max_tokens
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, tool_choice, tools
 
 Hy3 preview is a high-efficiency Mixture-of-Experts model from Tencent designed for agentic workflows and production use. It supports configurable reasoning levels across disabled, low, and high modes, allowing it to balance speed and depth depending on the task, while delivering strong code generation and reliable performance across multi-step, real-world workflows.
 
@@ -6292,11 +6275,11 @@ MiMo-V2.5-Pro is Xiaomi’s flagship model, delivering strong performance in gen
 - **Context**: 131K (131,072) tok / max出力 98,304 tok
 - **Modality**: text->text  (in: text → out: text)
 - **Pricing**: 入力 $0.6/1M · 出力 $2.20/1M · キャッシュ読 $0.11/1M
-- **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力, Seed固定
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力
 - **Knowledge cutoff**: 2024-12-31T23:59:59.000Z
 - **登録日**: 2025-07-25
 - **HF**: `zai-org/GLM-4.5`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, response_format, max_tokens, temperature, top_p, tools, tool_choice, top_k
 
 GLM-4.5 is our latest flagship foundation model, purpose-built for agent-based applications. It leverages a Mixture-of-Experts (MoE) architecture and supports a context length of up to 128k tokens. GLM-4.5 delivers significantly enhanced capabilities in reasoning, code generation, and agent alignment. It supports a hybrid inference mode with two options, a "thinking mode" designed for complex reasoning and tool use, and a "non-thinking mode" optimized for instant responses. Users can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)
 
