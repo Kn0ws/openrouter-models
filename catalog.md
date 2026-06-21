@@ -1,6 +1,6 @@
 # OpenRouter モデルカタログ（全423モデル）
 
-- 取得日時: 2026-06-20T07:37:08
+- 取得日時: 2026-06-21T07:56:33
 - プロバイダ数: 70 / 無料枠あり: 26
 
 ## プロバイダ別サマリ
@@ -22,7 +22,7 @@
 | sourceful | 7 | 0.00 | 0.00 | 32,768 |
 | x-ai | 7 | 0.00 | 15.00 | 2,000,000 |
 | perplexity | 7 | 0.00 | 3.00 | 200,000 |
-| moonshotai | 6 | 0.38 | 0.67 | 262,144 |
+| moonshotai | 6 | 0.38 | 0.66 | 262,144 |
 | microsoft | 6 | 0.07 | 360,000.00 | 131,072 |
 | bytedance-seed | 5 | 0.00 | 0.25 | 262,144 |
 | amazon | 5 | 0.04 | 2.50 | 1,000,000 |
@@ -57,7 +57,7 @@
 | nex-agi | 1 | 0.00 | 0.00 | 262,144 |
 | perceptron | 1 | 0.15 | 0.15 | 32,768 |
 | openrouter | 1 | 0.00 | 0.00 | 1,048,756 |
-| ~moonshotai | 1 | 0.67 | 0.67 | 262,144 |
+| ~moonshotai | 1 | 0.66 | 0.66 | 262,144 |
 | sesame | 1 | 7.00 | 7.00 | 4,096 |
 | canopylabs | 1 | 7.00 | 7.00 | 4,096 |
 | hexgrad | 1 | 0.62 | 0.62 | 4,096 |
@@ -383,10 +383,10 @@ Read more at the [blog post here](https://www.anthropic.com/news/claude-4)
 - **Context**: 200K (200,000) tok / max出力 32,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
 - **Pricing**: 入力 $15.00/1M · 出力 $75.00/1M · キャッシュ読 $1.50/1M · キャッシュ書 $18.75/1M · Web検索 $0.01
-- **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **Knowledge cutoff**: 2025-01-31T00:00:00.000Z
 - **登録日**: 2025-08-05
-- **対応パラメータ**: max_tokens, top_p, temperature, stop, reasoning, include_reasoning, tools, tool_choice
+- **対応パラメータ**: max_tokens, temperature, stop, reasoning, include_reasoning, tools, tool_choice, structured_outputs, response_format
 
 Claude Opus 4.1 is an updated version of Anthropic’s flagship model, offering improved performance in coding, reasoning, and agentic tasks. It achieves 74.5% on SWE-bench Verified and shows notable gains in multi-file code refactoring, debugging precision, and detail-oriented reasoning. The model supports extended thinking up to 64K tokens and is optimized for tasks involving research, data analysis, and tool-assisted reasoning.
 
@@ -557,13 +557,13 @@ Coder‑Large is a 32 B‑parameter offspring of Qwen 2.5‑Instruct that ha
 
 - **ID**: `arcee-ai/trinity-large-thinking`
 - **Provider**: arcee-ai
-- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Context**: 262K (262,144) tok / max出力 80,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.22/1M · 出力 $0.85/1M · キャッシュ読 $0.06/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $0.25/1M · 出力 $0.8/1M · キャッシュ読 $0.06/1M
+- **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-04-01
 - **HF**: `arcee-ai/Trinity-Large-Thinking`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, frequency_penalty, presence_penalty, repetition_penalty, seed, stop, top_k, logit_bias, structured_outputs, response_format, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_k, top_p, tools, tool_choice
 
 Trinity Large Thinking is a powerful open source reasoning model from the team at Arcee AI. It shows strong performance in PinchBench, agentic workloads, and reasoning tasks. Launch video: https://youtu.be/Gc82AXLa0Rg?si=4RLn6WBz33qT--B7
 
@@ -1402,12 +1402,12 @@ Gemini 3.1 Flash Image, a.k.a. "Nano Banana 2," is Google’s latest state of th
 
 - **ID**: `google/gemini-3.1-flash-image-preview`
 - **Provider**: google
-- **Context**: 131K (131,072) tok / max出力 65,536 tok
+- **Context**: 131K (131,072) tok / max出力 32,768 tok
 - **Modality**: text+image->text+image  (in: text,image → out: text,image)
 - **Pricing**: 入力 $0.5/1M · 出力 $3.00/1M · Web検索 $0.014 · Web Search $0.014/request
-- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Capabilities**: JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-02-26
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format, structured_outputs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format
 
 Gemini 3.1 Flash Image Preview, a.k.a. "Nano Banana 2," is Google’s latest state of the art image generation and editing model, delivering Pro-level visual quality at Flash speed. It combines advanced contextual understanding with fast, cost-efficient inference, making complex image generation and iterative edits significantly more accessible. Aspect ratios can be controlled with the [image_config API Parameter](https://openrouter.ai/docs/features/multimodal/image-generation#image-aspect-ratio-configuration)
 
@@ -2932,13 +2932,13 @@ Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art 
 
 - **ID**: `moonshotai/kimi-k2.6`
 - **Provider**: moonshotai
-- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Context**: 262K (262,144) tok / max出力 262,142 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.67/1M · 出力 $3.50/1M · キャッシュ読 $0.2/1M
+- **Pricing**: 入力 $0.66/1M · 出力 $3.50/1M · キャッシュ読 $0.33/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-20
 - **HF**: `moonshotai/Kimi-K2.6`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, top_p, stop, frequency_penalty, logit_bias, parallel_tool_calls, presence_penalty, seed, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, stop, frequency_penalty, presence_penalty, seed, tools, tool_choice, response_format, structured_outputs, logprobs, top_logprobs
 
 Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and can convert prompts and visual inputs into production-ready interfaces. Its agent swarm architecture scales to hundreds of parallel sub-agents for autonomous task decomposition - delivering documents, websites, and spreadsheets in a single run without human oversight.
 
@@ -6406,13 +6406,13 @@ GLM-5 Turbo is a new model from Z.ai designed for fast inference and strong perf
 
 - **ID**: `z-ai/glm-5.1`
 - **Provider**: z-ai
-- **Context**: 202K (202,752) tok
+- **Context**: 202K (202,752) tok / max出力 65,535 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.98/1M · 出力 $3.08/1M · キャッシュ読 $0.182/1M
-- **Capabilities**: Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $0.98/1M · 出力 $3.08/1M · キャッシュ読 $0.49/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-04-07
 - **HF**: `zai-org/GLM-5.1`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, structured_outputs, tools, tool_choice, response_format
 
 GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on a single task for more than 8 hours, autonomously planning, executing, and improving itself throughout the process, ultimately delivering complete, engineering-grade results.
 
@@ -6549,12 +6549,12 @@ This model always redirects to the latest model in the Google Gemini Pro family.
 
 - **ID**: `~moonshotai/kimi-latest`
 - **Provider**: ~moonshotai
-- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Context**: 262K (262,144) tok / max出力 262,142 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.67/1M · 出力 $3.50/1M · キャッシュ読 $0.2/1M
+- **Pricing**: 入力 $0.66/1M · 出力 $3.50/1M · キャッシュ読 $0.33/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-27
-- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, top_p, stop, frequency_penalty, logit_bias, parallel_tool_calls, presence_penalty, seed, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, top_k, min_p, repetition_penalty
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, stop, frequency_penalty, presence_penalty, seed, tools, tool_choice, response_format, structured_outputs, logprobs, top_logprobs, logit_bias, parallel_tool_calls, min_p, repetition_penalty
 
 This model always redirects to the latest model in the MoonshotAI Kimi family.
 
