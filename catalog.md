@@ -1,6 +1,6 @@
 # OpenRouter モデルカタログ（全423モデル）
 
-- 取得日時: 2026-06-21T07:56:33
+- 取得日時: 2026-06-22T08:29:27
 - プロバイダ数: 70 / 無料枠あり: 26
 
 ## プロバイダ別サマリ
@@ -11,7 +11,7 @@
 | qwen | 52 | 0.00 | 35.00 | 1,048,576 |
 | google | 36 | 0.00 | 16,000.00 | 1,048,756 |
 | mistralai | 23 | 0.02 | 3,000.00 | 262,144 |
-| anthropic | 16 | 0.25 | 30.00 | 1,000,000 |
+| anthropic | 15 | 0.25 | 30.00 | 1,000,000 |
 | nvidia | 14 | 0.00 | 1,500.00 | 1,000,000 |
 | meta-llama | 12 | 0.00 | 0.40 | 10,000,000 |
 | z-ai | 11 | 0.06 | 1.20 | 1,048,576 |
@@ -41,6 +41,7 @@
 | liquid | 3 | 0.00 | 0.03 | 128,000 |
 | intfloat | 3 | 0.01 | 0.01 | 8,192 |
 | baai | 3 | 0.01 | 0.01 | 8,192 |
+| nex-agi | 2 | 0.00 | 0.50 | 262,144 |
 | stepfun | 2 | 0.09 | 0.20 | 262,144 |
 | ibm-granite | 2 | 0.02 | 0.05 | 131,072 |
 | ~openai | 2 | 0.75 | 5.00 | 1,050,000 |
@@ -54,7 +55,6 @@
 | thenlper | 2 | 0.01 | 0.01 | 8,192 |
 | morph | 2 | 0.80 | 0.90 | 262,144 |
 | inflection | 2 | 2.50 | 2.50 | 8,000 |
-| nex-agi | 1 | 0.00 | 0.00 | 262,144 |
 | perceptron | 1 | 0.15 | 0.15 | 32,768 |
 | openrouter | 1 | 0.00 | 0.00 | 1,048,756 |
 | ~moonshotai | 1 | 0.66 | 0.66 | 262,144 |
@@ -291,7 +291,7 @@ This is a series of models designed to replicate the prose quality of the Claude
 
 The model is fine-tuned on top of [Qwen2.5 72B](https://openrouter.ai/qwen/qwen-2.5-72b-instruct).
 
-### ▎anthropic（16）
+### ▎anthropic（15）
 
 #### Anthropic: Claude 3 Haiku
 
@@ -311,24 +311,6 @@ near-instant responsiveness. Quick and accurate targeted performance.
 See the launch announcement and benchmark results [here](https://www.anthropic.com/news/claude-3-haiku)
 
 #multimodal
-
-#### Anthropic: Claude 3.5 Haiku
-
-- **ID**: `anthropic/claude-3.5-haiku`
-- **Provider**: anthropic
-- **Context**: 200K (200,000) tok / max出力 8,192 tok
-- **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.8/1M · 出力 $4.00/1M · キャッシュ読 $0.08/1M · キャッシュ書 $1.00/1M · Web検索 $0.01
-- **Capabilities**: Function calling, Tool choice
-- **Knowledge cutoff**: 2024-07-31T23:59:59.000Z
-- **登録日**: 2024-11-04
-- **対応パラメータ**: max_tokens, temperature, top_p, top_k, stop, tools, tool_choice
-
-Claude 3.5 Haiku features offers enhanced capabilities in speed, coding accuracy, and tool use. Engineered to excel in real-time applications, it delivers quick response times that are essential for dynamic tasks such as chat interactions and immediate coding suggestions.
-
-This makes it highly suitable for environments that demand both speed and precision, such as software development, customer service bots, and data management systems.
-
-This model is currently pointing to [Claude 3.5 Haiku (2024-10-22)](/anthropic/claude-3-5-haiku-20241022).
 
 #### Anthropic: Claude Fable 5
 
@@ -2932,13 +2914,13 @@ Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art 
 
 - **ID**: `moonshotai/kimi-k2.6`
 - **Provider**: moonshotai
-- **Context**: 262K (262,144) tok / max出力 262,142 tok
+- **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.66/1M · 出力 $3.50/1M · キャッシュ読 $0.33/1M
+- **Pricing**: 入力 $0.66/1M · 出力 $3.41/1M · キャッシュ読 $0.144/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-20
 - **HF**: `moonshotai/Kimi-K2.6`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, stop, frequency_penalty, presence_penalty, seed, tools, tool_choice, response_format, structured_outputs, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
 
 Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and can convert prompts and visual inputs into production-ready interfaces. Its agent swarm architecture scales to hundreds of parallel sub-agents for autonomous task decomposition - delivering documents, websites, and spreadsheets in a single run without human oversight.
 
@@ -2997,19 +2979,33 @@ The model requires the prompt to be in the following format:
 
 Zero Data Retention is enabled for Morph. Learn more about this model in their [documentation](https://docs.morphllm.com/quickstart)
 
-### ▎nex-agi（1）
+### ▎nex-agi（2）
+
+#### Nex AGI: Nex-N2-Pro
+
+- **ID**: `nex-agi/nex-n2-pro`
+- **Provider**: nex-agi
+- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Modality**: text+image->text  (in: text,image → out: text)
+- **Pricing**: 入力 $0.5/1M · 出力 $2.50/1M · キャッシュ読 $0.25/1M
+- **Capabilities**: Reasoning(思考), Reasoning出力, logprobs
+- **登録日**: 2026-06-08
+- **HF**: `nex-agi/Nex-N2-Pro`
+- **対応パラメータ**: reasoning, include_reasoning, top_p, top_k, temperature, max_tokens, logprobs, top_logprobs
+
+Nex-N2-Pro is an agentic mixture-of-experts model from Nex AGI, with 17B active parameters out of 397B total. Built on the Qwen3.5 architecture, it accepts text and image input and produces text output, and supports reasoning, function calling, and structured outputs. It is designed for coding, tool use, deep research, and long-horizon agentic workflows, unifying planning, code implementation, debugging, and iteration into a single execution loop.
 
 #### Nex AGI: Nex-N2-Pro (free)
 
 - **ID**: `nex-agi/nex-n2-pro:free`
 - **Provider**: nex-agi
-- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Context**: 262K (262,144) tok / max出力 256,000 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
 - **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-06-08
 - **HF**: `nex-agi/Nex-N2-Pro`
-- **対応パラメータ**: reasoning, include_reasoning, tools, tool_choice, structured_outputs, response_format, logprobs, top_p, top_k, temperature, max_tokens
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, frequency_penalty, max_tokens, tool_choice, tools, response_format
 
 Nex-N2-Pro is an agentic mixture-of-experts model from Nex AGI, with 17B active parameters out of 397B total. Built on the Qwen3.5 architecture, it accepts text and image input and produces text output, and supports reasoning, function calling, and structured outputs. It is designed for coding, tool use, deep research, and long-horizon agentic workflows, unifying planning, code implementation, debugging, and iteration into a single execution loop.
 
@@ -6420,13 +6416,13 @@ GLM-5.1 delivers a major leap in coding capability, with particularly significan
 
 - **ID**: `z-ai/glm-5.2`
 - **Provider**: z-ai
-- **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 32,768 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $1.20/1M · 出力 $4.10/1M · キャッシュ読 $0.2/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $1.00/1M · 出力 $4.00/1M · キャッシュ読 $0.18/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-06-16
 - **HF**: `zai-org/GLM-5.2`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, logit_bias, structured_outputs, response_format, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, logit_bias, structured_outputs, tools, tool_choice
 
 GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering, and complex multi-step automation.
 
@@ -6549,12 +6545,12 @@ This model always redirects to the latest model in the Google Gemini Pro family.
 
 - **ID**: `~moonshotai/kimi-latest`
 - **Provider**: ~moonshotai
-- **Context**: 262K (262,144) tok / max出力 262,142 tok
+- **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.66/1M · 出力 $3.50/1M · キャッシュ読 $0.33/1M
+- **Pricing**: 入力 $0.66/1M · 出力 $3.41/1M · キャッシュ読 $0.144/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-27
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, stop, frequency_penalty, presence_penalty, seed, tools, tool_choice, response_format, structured_outputs, logprobs, top_logprobs, logit_bias, parallel_tool_calls, min_p, repetition_penalty
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, logit_bias, parallel_tool_calls
 
 This model always redirects to the latest model in the MoonshotAI Kimi family.
 
