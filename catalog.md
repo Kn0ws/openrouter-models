@@ -1,7 +1,7 @@
 # OpenRouter モデルカタログ（全423モデル）
 
-- 取得日時: 2026-06-22T08:29:27
-- プロバイダ数: 70 / 無料枠あり: 26
+- 取得日時: 2026-06-23T07:32:40
+- プロバイダ数: 70 / 無料枠あり: 25
 
 ## プロバイダ別サマリ
 
@@ -13,8 +13,8 @@
 | mistralai | 23 | 0.02 | 3,000.00 | 262,144 |
 | anthropic | 15 | 0.25 | 30.00 | 1,000,000 |
 | nvidia | 14 | 0.00 | 1,500.00 | 1,000,000 |
+| z-ai | 12 | 0.06 | 1.20 | 1,048,576 |
 | meta-llama | 12 | 0.00 | 0.40 | 10,000,000 |
-| z-ai | 11 | 0.06 | 1.20 | 1,048,576 |
 | recraft | 11 | 0.00 | 0.00 | 65,536 |
 | deepseek | 11 | 0.09 | 0.80 | 1,048,576 |
 | minimax | 9 | 0.00 | 0.40 | 1,048,576 |
@@ -22,7 +22,7 @@
 | sourceful | 7 | 0.00 | 0.00 | 32,768 |
 | x-ai | 7 | 0.00 | 15.00 | 2,000,000 |
 | perplexity | 7 | 0.00 | 3.00 | 200,000 |
-| moonshotai | 6 | 0.38 | 0.66 | 262,144 |
+| moonshotai | 6 | 0.38 | 0.68 | 262,144 |
 | microsoft | 6 | 0.07 | 360,000.00 | 131,072 |
 | bytedance-seed | 5 | 0.00 | 0.25 | 262,144 |
 | amazon | 5 | 0.04 | 2.50 | 1,000,000 |
@@ -41,7 +41,6 @@
 | liquid | 3 | 0.00 | 0.03 | 128,000 |
 | intfloat | 3 | 0.01 | 0.01 | 8,192 |
 | baai | 3 | 0.01 | 0.01 | 8,192 |
-| nex-agi | 2 | 0.00 | 0.50 | 262,144 |
 | stepfun | 2 | 0.09 | 0.20 | 262,144 |
 | ibm-granite | 2 | 0.02 | 0.05 | 131,072 |
 | ~openai | 2 | 0.75 | 5.00 | 1,050,000 |
@@ -55,6 +54,7 @@
 | thenlper | 2 | 0.01 | 0.01 | 8,192 |
 | morph | 2 | 0.80 | 0.90 | 262,144 |
 | inflection | 2 | 2.50 | 2.50 | 8,000 |
+| nex-agi | 1 | 0.50 | 0.50 | 262,144 |
 | perceptron | 1 | 0.15 | 0.15 | 32,768 |
 | openrouter | 1 | 0.00 | 0.00 | 1,048,756 |
 | ~moonshotai | 1 | 0.66 | 0.66 | 262,144 |
@@ -2930,11 +2930,11 @@ Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-h
 - **Provider**: moonshotai
 - **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.612/1M · 出力 $3.07/1M · キャッシュ読 $0.1296/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
+- **Pricing**: 入力 $0.68/1M · 出力 $3.41/1M · キャッシュ読 $0.144/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-06-12
 - **HF**: `moonshotai/Kimi-K2.7-Code`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, frequency_penalty, top_p, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens
 
 MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of-experts architecture that accepts text and image input, and it always operates in a thinking mode, preserving full reasoning content across multi-turn conversations. With a 256K-token context window, it targets long-horizon coding, agentic task decomposition, and multi-turn dialogue. The model activates 32B parameters out of roughly 1T total.
 
@@ -2979,7 +2979,7 @@ The model requires the prompt to be in the following format:
 
 Zero Data Retention is enabled for Morph. Learn more about this model in their [documentation](https://docs.morphllm.com/quickstart)
 
-### ▎nex-agi（2）
+### ▎nex-agi（1）
 
 #### Nex AGI: Nex-N2-Pro
 
@@ -2992,20 +2992,6 @@ Zero Data Retention is enabled for Morph. Learn more about this model in their [
 - **登録日**: 2026-06-08
 - **HF**: `nex-agi/Nex-N2-Pro`
 - **対応パラメータ**: reasoning, include_reasoning, top_p, top_k, temperature, max_tokens, logprobs, top_logprobs
-
-Nex-N2-Pro is an agentic mixture-of-experts model from Nex AGI, with 17B active parameters out of 397B total. Built on the Qwen3.5 architecture, it accepts text and image input and produces text output, and supports reasoning, function calling, and structured outputs. It is designed for coding, tool use, deep research, and long-horizon agentic workflows, unifying planning, code implementation, debugging, and iteration into a single execution loop.
-
-#### Nex AGI: Nex-N2-Pro (free)
-
-- **ID**: `nex-agi/nex-n2-pro:free`
-- **Provider**: nex-agi
-- **Context**: 262K (262,144) tok / max出力 256,000 tok
-- **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
-- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力
-- **登録日**: 2026-06-08
-- **HF**: `nex-agi/Nex-N2-Pro`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, frequency_penalty, max_tokens, tool_choice, tools, response_format
 
 Nex-N2-Pro is an agentic mixture-of-experts model from Nex AGI, with 17B active parameters out of 397B total. Built on the Qwen3.5 architecture, it accepts text and image input and produces text output, and supports reasoning, function calling, and structured outputs. It is designed for coding, tool use, deep research, and long-horizon agentic workflows, unifying planning, code implementation, debugging, and iteration into a single execution loop.
 
@@ -6262,7 +6248,7 @@ MiMo-V2.5 is a native omnimodal model by Xiaomi. It delivers Pro-level agentic p
 
 MiMo-V2.5-Pro is Xiaomi’s flagship model, delivering strong performance in general agentic capabilities, complex software engineering, and long-horizon tasks, with top rankings on benchmarks such as ClawEval, GDPVal, and SWE-bench Pro. It can independently and autonomously complete professional tasks that would take human experts days or weeks, involving more than a thousand tool calls. Its context length of up to 1M makes it well suited for integration with a wide range of agent frameworks.
 
-### ▎z-ai（11）
+### ▎z-ai（12）
 
 #### Z.ai: GLM 4.5
 
@@ -6416,17 +6402,30 @@ GLM-5.1 delivers a major leap in coding capability, with particularly significan
 
 - **ID**: `z-ai/glm-5.2`
 - **Provider**: z-ai
-- **Context**: 1.04858M (1,048,576) tok / max出力 32,768 tok
+- **Context**: 1.04858M (1,048,576) tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $1.00/1M · 出力 $4.00/1M · キャッシュ読 $0.18/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.98/1M · 出力 $3.08/1M · キャッシュ読 $0.182/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-06-16
 - **HF**: `zai-org/GLM-5.2`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, logit_bias, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, structured_outputs, response_format, tools, tool_choice, logprobs, top_logprobs
 
 GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering, and complex multi-step automation.
 
 Reasoning efforts `high` and `xhigh` are supported; `xhigh` maps to max reasoning. It is particularly strong at coding and tool use across long-running tasks, able to maintain engineering context and follow standards consistently through a full development workflow, from requirements to multi-platform deployment, in a single task.
+
+#### Z.ai: GLM 5V Turbo
+
+- **ID**: `z-ai/glm-5v-turbo`
+- **Provider**: z-ai
+- **Context**: 202K (202,752) tok / max出力 131,072 tok
+- **Modality**: text+image+video->text  (in: text,image,video → out: text)
+- **Pricing**: 入力 $1.20/1M · 出力 $4.00/1M · キャッシュ読 $0.24/1M
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力
+- **登録日**: 2026-04-01
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, tools, tool_choice, response_format, top_k
+
+GLM-5V-Turbo is Z.ai’s first native multimodal agent foundation model, built for vision-based coding and agent-driven tasks. It natively handles image, video, and text inputs, excels at long-horizon planning, complex coding, and task execution, and works seamlessly with agents to complete the full loop of “perceive → plan → execute“.
 
 ### ▎zyphra（2）
 
