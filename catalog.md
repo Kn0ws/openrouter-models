@@ -1,6 +1,6 @@
 # OpenRouter モデルカタログ（全427モデル）
 
-- 取得日時: 2026-06-26T07:36:09
+- 取得日時: 2026-06-27T07:23:36
 - プロバイダ数: 69 / 無料枠あり: 25
 
 ## プロバイダ別サマリ
@@ -1159,7 +1159,7 @@ DeepSeek-V3.1 Terminus is an update to [DeepSeek V3.1](/deepseek/deepseek-chat-v
 - **Provider**: deepseek
 - **Context**: 131K (131,072) tok / max出力 64,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.2288/1M · 出力 $0.3432/1M
+- **Pricing**: 入力 $0.2288/1M · 出力 $0.3432/1M · キャッシュ読 $0.0229/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2025-12-01
 - **HF**: `deepseek-ai/DeepSeek-V3.2`
@@ -5330,7 +5330,7 @@ Qwen3.5 Plus (April 2026) is a large-scale multimodal language model from Alibab
 - **Provider**: qwen
 - **Context**: 262K (262,144) tok / max出力 262,140 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.2885/1M · 出力 $3.17/1M
+- **Pricing**: 入力 $0.2885/1M · 出力 $2.65/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-27
 - **HF**: `Qwen/Qwen3.6-27B`
