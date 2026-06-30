@@ -1,6 +1,6 @@
-# OpenRouter モデルカタログ（全427モデル）
+# OpenRouter モデルカタログ（全426モデル）
 
-- 取得日時: 2026-06-29T08:08:07
+- 取得日時: 2026-06-30T07:36:36
 - プロバイダ数: 69 / 無料枠あり: 25
 
 ## プロバイダ別サマリ
@@ -11,8 +11,8 @@
 | qwen | 52 | 0.00 | 35.00 | 1,048,576 |
 | google | 36 | 0.00 | 16,000.00 | 1,048,756 |
 | mistralai | 23 | 0.02 | 3,000.00 | 262,144 |
-| anthropic | 15 | 0.25 | 30.00 | 1,000,000 |
 | nvidia | 14 | 0.00 | 1,500.00 | 1,000,000 |
+| anthropic | 14 | 0.25 | 30.00 | 1,000,000 |
 | z-ai | 12 | 0.06 | 1.20 | 1,048,576 |
 | meta-llama | 12 | 0.00 | 0.40 | 10,000,000 |
 | recraft | 11 | 0.00 | 0.00 | 65,536 |
@@ -42,7 +42,7 @@
 | liquid | 3 | 0.00 | 0.03 | 128,000 |
 | intfloat | 3 | 0.01 | 0.01 | 8,192 |
 | baai | 3 | 0.01 | 0.01 | 8,192 |
-| stepfun | 2 | 0.09 | 0.20 | 262,144 |
+| stepfun | 2 | 0.10 | 0.20 | 262,144 |
 | ibm-granite | 2 | 0.02 | 0.05 | 131,072 |
 | ~openai | 2 | 0.75 | 5.00 | 1,050,000 |
 | ~google | 2 | 1.50 | 2.00 | 1,048,576 |
@@ -316,7 +316,7 @@ This is a series of models designed to replicate the prose quality of the Claude
 
 The model is fine-tuned on top of [Qwen2.5 72B](https://openrouter.ai/qwen/qwen-2.5-72b-instruct).
 
-### ▎anthropic（15）
+### ▎anthropic（14）
 
 #### Anthropic: Claude 3 Haiku
 
@@ -426,21 +426,6 @@ Opus 4.5 supports advanced tool use, extended context management, …
 Opus 4.6 is Anthropic’s strongest model for coding and long-running professional tasks. It is built for agents that operate across entire workflows rather than single prompts, making it especially effective for large codebases, complex refactors, and multi-step debugging that unfolds over time. The model shows deeper contextual understanding, stronger problem decomposition, and greater reliability on hard engineering tasks than prior generations.
 
 Beyond coding, Opus 4.6 excels at sustained knowledge work. It produces near-production-ready documents, plans, and analyses in a single pass, and maintains coherence across very long outputs and extended sessions. This makes it a strong default …
-
-#### Anthropic: Claude Opus 4.6 (Fast)
-
-- **ID**: `anthropic/claude-opus-4.6-fast`
-- **Provider**: anthropic
-- **Context**: 1M (1,000,000) tok / max出力 128,000 tok
-- **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $30.00/1M · 出力 $150.00/1M · キャッシュ読 $3.00/1M · キャッシュ書 $37.50/1M · Web検索 $0.01
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
-- **登録日**: 2026-04-07
-- **対応パラメータ**: max_tokens, top_p, temperature, stop, reasoning, include_reasoning, tool_choice, tools, structured_outputs, response_format, verbosity
-
-Fast-mode variant of [Opus 4.6](/anthropic/claude-opus-4.6) - identical capabilities with higher output speed at premium 6x pricing.
-
-Learn more in Anthropic's docs: https://platform.claude.com/docs/en/build-with-claude/fast-mode
 
 #### Anthropic: Claude Opus 4.7
 
@@ -2861,7 +2846,7 @@ Voxtral Small is an enhancement of Mistral Small 3, incorporating state-of-the-a
 
 - **ID**: `moonshotai/kimi-k2`
 - **Provider**: moonshotai
-- **Context**: 131K (131,072) tok / max出力 32,768 tok
+- **Context**: 131K (131,072) tok / max出力 100,352 tok
 - **Modality**: text->text  (in: text → out: text)
 - **Pricing**: 入力 $0.57/1M · 出力 $2.30/1M
 - **Capabilities**: Function calling, Tool choice, Seed固定
@@ -2876,7 +2861,7 @@ Kimi K2 Instruct is a large-scale Mixture-of-Experts (MoE) language model develo
 
 - **ID**: `moonshotai/kimi-k2-0905`
 - **Provider**: moonshotai
-- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Context**: 262K (262,144) tok / max出力 100,352 tok
 - **Modality**: text->text  (in: text → out: text)
 - **Pricing**: 入力 $0.6/1M · 出力 $2.50/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Seed固定
@@ -5593,11 +5578,11 @@ Reka Edge is an extremely efficient 7B multimodal vision-language model that acc
 - **Context**: 65K (65,536) tok / max出力 65,536 tok
 - **Modality**: text->text  (in: text → out: text)
 - **Pricing**: 入力 $0.1/1M · 出力 $0.2/1M
-- **Capabilities**: Structured outputs(JSONスキーマ), Reasoning(思考), Reasoning出力, Seed固定
+- **Capabilities**: Structured outputs(JSONスキーマ), Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **Knowledge cutoff**: 2025-01-31T00:00:00.000Z
 - **登録日**: 2025-03-12
 - **HF**: `RekaAI/reka-flash-3`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, max_tokens, stop, seed, frequency_penalty, presence_penalty, structured_outputs
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, max_tokens, stop, seed, frequency_penalty, presence_penalty, structured_outputs, logprobs, top_logprobs
 
 Reka Flash 3 is a general-purpose, instruction-tuned large language model with 21 billion parameters, developed by Reka. It excels at general chat, coding tasks, instruction-following, and function calling. Featuring a 32K context length and optimized through reinforcement learning (RLOO), it provides competitive performance comparable to proprietary models within a smaller parameter footprint. Ideal for low-latency, local, or on-device deployments, Reka Flash 3 is compact, supports efficient quantization (down to 11GB at 4-bit precision), and employs explicit reasoning tags ("<reasoning>") to indicate its internal thought process.
 
@@ -5941,13 +5926,13 @@ The Riverflow 2.5 series is a unified text-to-image and image-to-image family th
 
 - **ID**: `stepfun/step-3.5-flash`
 - **Provider**: stepfun
-- **Context**: 262K (262,144) tok / max出力 16,384 tok
+- **Context**: 262K (262,144) tok / max出力 65,536 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.09/1M · 出力 $0.3/1M · キャッシュ読 $0.02/1M
-- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.1/1M · 出力 $0.3/1M
+- **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-01-29
 - **HF**: `stepfun-ai/Step-3.5-Flash`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, logit_bias, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, frequency_penalty, tools, tool_choice, max_tokens
 
 Step 3.5 Flash is StepFun's most capable open-source foundation model. Built on a sparse Mixture of Experts (MoE) architecture, it selectively activates only 11B of its 196B parameters per token. It is a reasoning model that is incredibly speed efficient even at long contexts.
 
@@ -6439,11 +6424,11 @@ GLM-5 Turbo is a new model from Z.ai designed for fast inference and strong perf
 - **Provider**: z-ai
 - **Context**: 202K (202,752) tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.98/1M · 出力 $3.08/1M · キャッシュ読 $0.182/1M
-- **Capabilities**: Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $0.975/1M · 出力 $4.30/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-04-07
 - **HF**: `zai-org/GLM-5.1`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
 
 GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on a single task for more than 8 hours, autonomously planning, executing, and improving itself throughout the process, ultimately delivering complete, engineering-grade results.
 
@@ -6451,13 +6436,13 @@ GLM-5.1 delivers a major leap in coding capability, with particularly significan
 
 - **ID**: `z-ai/glm-5.2`
 - **Provider**: z-ai
-- **Context**: 1.04858M (1,048,576) tok / max出力 32,768 tok
+- **Context**: 1.04858M (1,048,576) tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.95/1M · 出力 $3.00/1M · キャッシュ読 $0.18/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.94/1M · 出力 $3.00/1M · キャッシュ読 $0.18/1M
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-06-16
 - **HF**: `zai-org/GLM-5.2`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, logit_bias, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, frequency_penalty, logit_bias, max_tokens, presence_penalty, seed, stop, temperature, top_p, response_format, tools, tool_choice
 
 GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering, and complex multi-step automation.
 
