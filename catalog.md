@@ -1,7 +1,7 @@
-# OpenRouter モデルカタログ（全426モデル）
+# OpenRouter モデルカタログ（全423モデル）
 
-- 取得日時: 2026-06-30T07:36:36
-- プロバイダ数: 69 / 無料枠あり: 25
+- 取得日時: 2026-07-01T07:48:53
+- プロバイダ数: 68 / 無料枠あり: 24
 
 ## プロバイダ別サマリ
 
@@ -9,27 +9,27 @@
 |---|--:|--:|--:|--:|
 | openai | 74 | 0.00 | 40,000.00 | 1,050,000 |
 | qwen | 52 | 0.00 | 35.00 | 1,048,576 |
-| google | 36 | 0.00 | 16,000.00 | 1,048,756 |
+| google | 37 | 0.00 | 16,000.00 | 1,048,756 |
 | mistralai | 23 | 0.02 | 3,000.00 | 262,144 |
+| anthropic | 15 | 0.25 | 30.00 | 1,000,000 |
 | nvidia | 14 | 0.00 | 1,500.00 | 1,000,000 |
-| anthropic | 14 | 0.25 | 30.00 | 1,000,000 |
 | z-ai | 12 | 0.06 | 1.20 | 1,048,576 |
 | meta-llama | 12 | 0.00 | 0.40 | 10,000,000 |
 | recraft | 11 | 0.00 | 0.00 | 65,536 |
-| deepseek | 11 | 0.09 | 0.80 | 1,048,576 |
+| deepseek | 11 | 0.10 | 0.80 | 1,048,576 |
 | minimax | 9 | 0.00 | 0.40 | 1,048,576 |
 | cohere | 8 | 0.00 | 2.50 | 256,000 |
-| sourceful | 7 | 0.00 | 0.00 | 32,768 |
 | x-ai | 7 | 0.00 | 15.00 | 2,000,000 |
 | perplexity | 7 | 0.00 | 3.00 | 200,000 |
 | moonshotai | 6 | 0.38 | 0.74 | 262,144 |
-| microsoft | 6 | 0.07 | 360,000.00 | 131,072 |
+| microsoft | 5 | 0.07 | 360,000.00 | 65,536 |
 | bytedance-seed | 5 | 0.00 | 0.25 | 262,144 |
 | amazon | 5 | 0.04 | 2.50 | 1,000,000 |
 | sentence-transformers | 5 | 0.01 | 0.01 | 8,192 |
 | nousresearch | 5 | 0.00 | 1.00 | 131,072 |
 | alibaba | 4 | 0.00 | 0.00 | 0 |
 | ~anthropic | 4 | 1.00 | 10.00 | 1,000,000 |
+| sourceful | 4 | 0.00 | 0.00 | 32,768 |
 | poolside | 4 | 0.00 | 0.20 | 262,144 |
 | bytedance | 4 | 0.00 | 0.10 | 128,000 |
 | arcee-ai | 4 | 0.04 | 0.75 | 262,144 |
@@ -57,7 +57,6 @@
 | sakana | 1 | 5.00 | 5.00 | 1,000,000 |
 | nex-agi | 1 | 0.25 | 0.25 | 262,144 |
 | perceptron | 1 | 0.15 | 0.15 | 32,768 |
-| openrouter | 1 | 0.00 | 0.00 | 1,048,756 |
 | ~moonshotai | 1 | 0.55 | 0.55 | 262,144 |
 | sesame | 1 | 7.00 | 7.00 | 4,096 |
 | canopylabs | 1 | 7.00 | 7.00 | 4,096 |
@@ -316,7 +315,7 @@ This is a series of models designed to replicate the prose quality of the Claude
 
 The model is fine-tuned on top of [Qwen2.5 72B](https://openrouter.ai/qwen/qwen-2.5-72b-instruct).
 
-### ▎anthropic（14）
+### ▎anthropic（15）
 
 #### Anthropic: Claude 3 Haiku
 
@@ -529,6 +528,19 @@ Sonnet 4.5 also introduces stronger agentic capabilities, including improved too
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, stop, tools, tool_choice, structured_outputs, response_format, verbosity
 
 Sonnet 4.6 is Anthropic's most capable Sonnet-class model yet, with frontier performance across coding, agents, and professional work. It excels at iterative development, complex codebase navigation, end-to-end project management with memory, polished document creation, and confident computer use for web QA and workflow automation.
+
+#### Anthropic: Claude Sonnet 5
+
+- **ID**: `anthropic/claude-sonnet-5`
+- **Provider**: anthropic
+- **Context**: 1M (1,000,000) tok / max出力 128,000 tok
+- **Modality**: text+image+file->text  (in: text,image,file → out: text)
+- **Pricing**: 入力 $2.00/1M · 出力 $10.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $2.50/1M · Web検索 $0.01
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
+- **登録日**: 2026-06-30
+- **対応パラメータ**: max_tokens, stop, reasoning, include_reasoning, tools, tool_choice, structured_outputs, response_format, verbosity
+
+Sonnet 5 is Anthropic's most capable Sonnet-class model, with frontier performance across coding, agents, and professional work. It supports adaptive thinking with selectable reasoning effort levels (low, medium, high, max, and x-high), a 1M-token context window, and text, image, and file inputs. Sonnet 5 uses an updated tokenizer and includes real-time cyber safeguards that block certain high-risk dual-use activities.
 
 ### ▎arcee-ai（4）
 
@@ -1173,13 +1185,13 @@ The model was trained under conditions aligned with V3.1-Terminus to enable dire
 
 - **ID**: `deepseek/deepseek-v4-flash`
 - **Provider**: deepseek
-- **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
+- **Context**: 1.04858M (1,048,576) tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.09/1M · 出力 $0.18/1M · キャッシュ読 $0.02/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $0.098/1M · 出力 $0.196/1M · キャッシュ読 $0.02/1M
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-04-24
 - **HF**: `deepseek-ai/DeepSeek-V4-Flash`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, logit_bias, response_format, logprobs, top_logprobs, tools, tool_choice, structured_outputs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, tools, tool_choice, response_format
 
 DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and high-throughput workloads, while maintaining strong reasoning and coding performance.
 
@@ -1201,7 +1213,7 @@ DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6
 
 Built on the same architecture as DeepSeek V4 Flash, it introduces a hybrid attention system for efficient long-context processing. Reasoning efforts `high` and `xhigh` are supported; `xhigh` maps to max reasoning. It is well suited for complex workloads such as full-codebase analysis, multi-step automation, and large-scale information synthesis, where both …
 
-### ▎google（36）
+### ▎google（37）
 
 #### Google: Chirp 3
 
@@ -1401,6 +1413,22 @@ Gemini 3.1 Flash Image Preview, a.k.a. "Nano Banana 2," is Google’s latest sta
 Gemini 3.1 Flash Lite is Google’s GA high-efficiency multimodal model optimized for low-latency, high-volume workloads. It supports text, image, video, audio, and PDF inputs, and is designed for lightweight agentic workflows, simple data extraction, and applications where responsiveness and API cost are the primary constraints.
 
 Supports full thinking levels (minimal, low, medium, high) for fine-grained cost/performance trade-offs. Priced at half the cost of Gemini 3 Flash.
+
+#### Google: Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image)
+
+- **ID**: `google/gemini-3.1-flash-lite-image`
+- **Provider**: google
+- **Context**: 65K (65,536) tok / max出力 66,000 tok
+- **Modality**: text+image->text+image  (in: text,image → out: text,image)
+- **Pricing**: 入力 $0.25/1M · 出力 $1.50/1M · Web検索 $0.014
+- **Capabilities**: JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Knowledge cutoff**: 2025-01-01T00:00:00.000Z
+- **登録日**: 2026-06-30
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format
+
+Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image) is Google's fastest, most cost-efficient Gemini image model, built for high-velocity developer pipelines and rapid-fire visual exploration. It delivers text-to-image generation in roughly 4 seconds — about 2.7× faster than Gemini 3.1 Flash Image — while keeping the character consistency, precise editing, and real-world knowledge of the Nano Banana family.
+
+A single drop-in API handles text-to-image, image editing, and multi-image composition. As a multimodal model it also returns text alongside images. Outputs are generated at 1K resolution across 14 aspect ratios and carry an invisible SynthID watermark so they can be identified as …
 
 #### Google: Gemini 3.1 Flash Lite Preview
 
@@ -2259,7 +2287,7 @@ Llama Guard 4 is a Llama 4 Scout-derived multimodal pretrained model, fine-tuned
 
 Llama Guard 4 was aligned to safeguard against the standardized MLCommons hazards taxonomy and designed to support multimodal Llama 4 capabilities. Specifically, it combines features from previous Llama Guard models, providing content moderation …
 
-### ▎microsoft（6）
+### ▎microsoft（5）
 
 #### Microsoft: MAI-Image-2.5
 
@@ -2315,20 +2343,6 @@ MAI-Voice-2 is a high-fidelity, expressive text-to-speech model from Microsoft, 
 At 14 billion parameters, it was trained on a mix of high-quality synthetic datasets, data from curated websites, and academic materials. It has undergone careful improvement to follow instructions accurately and maintain strong safety standards. It works best with English language inputs.
 
 For more information, please see [Phi-4 Technical Report](https://arxiv.org/pdf/2412.08905)
-
-#### Microsoft: Phi 4 Mini Instruct
-
-- **ID**: `microsoft/phi-4-mini-instruct`
-- **Provider**: microsoft
-- **Context**: 131K (131,072) tok / max出力 128,000 tok
-- **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.08/1M · 出力 $0.35/1M · キャッシュ読 $0.08/1M
-- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, logprobs, Seed固定
-- **登録日**: 2025-10-17
-- **HF**: `microsoft/Phi-4-mini-instruct`
-- **対応パラメータ**: structured_outputs, response_format, max_tokens, temperature, top_p, top_k, repetition_penalty, frequency_penalty, presence_penalty, stop, seed, logprobs, top_logprobs
-
-Phi-4-mini-instruct is a lightweight open model built upon synthetic data and filtered publicly available websites - with a focus on high-quality, reasoning dense data. The model belongs to the Phi-4 model family and supports 128K token context length. The model underwent an enhancement process, incorporating both supervised fine-tuning and direct preference optimization to support precise instruction adherence and robust safety measures.
 
 #### WizardLM-2 8x22B
 
@@ -4403,23 +4417,6 @@ Whisper Large V3 is OpenAI's open-source automatic speech recognition model offe
 
 Whisper Large V3 Turbo is an optimized version of OpenAI's Whisper Large V3 speech recognition model, designed for speed and cost efficiency. It supports transcription across 99+ languages with a 12% word error rate, and accepts common audio formats including mp3, mp4, wav, webm, flac, and ogg. Achieves real-time speed factors up to 216x, making it well-suited for latency-sensitive and high-throughput transcription workloads.
 
-### ▎openrouter（1）
-
-#### Owl Alpha
-
-- **ID**: `openrouter/owl-alpha`
-- **Provider**: openrouter
-- **Context**: 1.04876M (1,048,756) tok / max出力 262,144 tok
-- **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
-- **Capabilities**: Function calling, Structured outputs(JSONスキーマ), JSON mode, Seed固定
-- **登録日**: 2026-04-28
-- **対応パラメータ**: max_tokens, temperature, top_p, top_k, frequency_penalty, presence_penalty, repetition_penalty, seed, logit_bias, stop, tools, response_format, structured_outputs
-
-Owl Alpha is a high-performance foundation model designed for agentic workloads. Natively supports tool use, and long-context tasks, with strong performance in code generation, automated workflows, and complex instruction execution. Compatible with Claude Code, OpenClaw, and other mainstream productivity tools.
-
-Note: Prompts and completions may be logged by the provider and used to improve the model.
-
 ### ▎perceptron（1）
 
 #### Perceptron: Perceptron Mk1
@@ -4782,14 +4779,14 @@ Compared to its base variant, this version delivers significant gains in knowled
 
 - **ID**: `qwen/qwen3-235b-a22b-thinking-2507`
 - **Provider**: qwen
-- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Context**: 262K (262,144) tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.1/1M · 出力 $0.1/1M · キャッシュ読 $0.1/1M
-- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $0.1495/1M · 出力 $1.50/1M
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2025-06-30T23:59:59.000Z
 - **登録日**: 2025-07-25
 - **HF**: `Qwen/Qwen3-235B-A22B-Thinking-2507`
-- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, max_tokens, temperature, top_p, top_k, repetition_penalty, frequency_penalty, presence_penalty, stop, seed, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, presence_penalty, response_format, tools, tool_choice
 
 Qwen3-235B-A22B-Thinking-2507 is a high-performance, open-weight Mixture-of-Experts (MoE) language model optimized for complex reasoning tasks. It activates 22B of its 235B parameters per forward pass and natively supports up to 262,144 tokens of context. This "thinking-only" variant enhances structured logical reasoning, mathematics, science, and long-form generation, showing strong benchmark performance across AIME, SuperGPQA, LiveCodeBench, and MMLU-Redux. It enforces a special reasoning mode (</think>) and is designed for high-token outputs (up to 81,920 tokens) in challenging domains.
 
@@ -5315,7 +5312,7 @@ Qwen3.5 Plus (April 2026) is a large-scale multimodal language model from Alibab
 - **Provider**: qwen
 - **Context**: 262K (262,144) tok / max出力 262,140 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.2596/1M · 出力 $2.39/1M
+- **Pricing**: 入力 $0.285/1M · 出力 $2.40/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-27
 - **HF**: `Qwen/Qwen3.6-27B`
@@ -5797,7 +5794,7 @@ The paraphrase-MiniLM-L6-v2 embedding model converts sentences and short paragra
 
 CSM 1B is a conversational speech model from Sesame. It accepts text input and produces English speech output, with voice options spanning conversational and read-speech styles. At 1B parameters, it is suited for dialogue-oriented applications such as voice assistants and interactive agents.
 
-### ▎sourceful（7）
+### ▎sourceful（4）
 
 #### Sourceful: Riverflow V2 Fast
 
@@ -5822,36 +5819,6 @@ See the image generation docs for details: https://openrouter.ai/docs/features/m
 
 Note: …
 
-#### Sourceful: Riverflow V2 Fast Preview
-
-- **ID**: `sourceful/riverflow-v2-fast-preview`
-- **Provider**: sourceful
-- **Context**: 8K (8,192) tok
-- **Modality**: text+image->image  (in: text,image → out: image)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.03/image
-- **登録日**: 2025-12-08
-
-Riverflow V2 Fast Preview is the fastest variant of Sourceful's Riverflow V2 preview lineup. This preview version exceeds the performance of Riverflow 1 Family and is Sourceful's first unified text-to-image and image-to-image model family.
-
-Pricing is $0.03 per output image, regardless of size.
-
-Sourceful imposes a 4.5MB request size limit, therefore it is highly recommended to pass image URLs instead of Base64 data.
-
-#### Sourceful: Riverflow V2 Max Preview
-
-- **ID**: `sourceful/riverflow-v2-max-preview`
-- **Provider**: sourceful
-- **Context**: 8K (8,192) tok
-- **Modality**: text+image->image  (in: text,image → out: image)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.075/image
-- **登録日**: 2025-12-08
-
-Riverflow V2 Max Preview is the most powerful variant of Sourceful's Riverflow V2 preview lineup. This preview version exceeds the performance of Riverflow 1 Family and is Sourceful's first unified text-to-image and image-to-image model family.
-
-Pricing is $0.075 per output image, regardless of size.
-
-Sourceful imposes a 4.5MB request size limit, therefore it is highly recommended to pass image URLs instead of Base64 data.
-
 #### Sourceful: Riverflow V2 Pro
 
 - **ID**: `sourceful/riverflow-v2-pro`
@@ -5874,21 +5841,6 @@ Additional features:
 See the image generation docs for details: https://openrouter.ai/docs/features/multimodal/image-generation
 
 Note: Sourceful imposes a 4.5MB request …
-
-#### Sourceful: Riverflow V2 Standard Preview
-
-- **ID**: `sourceful/riverflow-v2-standard-preview`
-- **Provider**: sourceful
-- **Context**: 8K (8,192) tok
-- **Modality**: text+image->image  (in: text,image → out: image)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.035/image
-- **登録日**: 2025-12-08
-
-Riverflow V2 Standard Preview is the standard variant of Sourceful's Riverflow V2 preview lineup. This preview version exceeds the performance of Riverflow 1 Family and is Sourceful's first unified text-to-image and image-to-image model family.
-
-Pricing is $0.035 per output image, regardless of size.
-
-Sourceful imposes a 4.5MB request size limit, therefore it is highly recommended to pass image URLs instead of Base64 data.
 
 #### Sourceful: Riverflow V2.5 Fast
 
@@ -6436,13 +6388,13 @@ GLM-5.1 delivers a major leap in coding capability, with particularly significan
 
 - **ID**: `z-ai/glm-5.2`
 - **Provider**: z-ai
-- **Context**: 1.04858M (1,048,576) tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 32,768 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.94/1M · 出力 $3.00/1M · キャッシュ読 $0.18/1M
-- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.93/1M · 出力 $3.00/1M · キャッシュ読 $0.18/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-06-16
 - **HF**: `zai-org/GLM-5.2`
-- **対応パラメータ**: reasoning, include_reasoning, frequency_penalty, logit_bias, max_tokens, presence_penalty, seed, stop, temperature, top_p, response_format, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, logit_bias, structured_outputs, tools, tool_choice
 
 GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering, and complex multi-step automation.
 
@@ -6536,10 +6488,10 @@ This model always redirects to the latest model in the Claude Opus family.
 - **Provider**: ~anthropic
 - **Context**: 1M (1,000,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $3.00/1M · 出力 $15.00/1M · キャッシュ読 $0.3/1M · キャッシュ書 $3.75/1M · Web検索 $0.01
+- **Pricing**: 入力 $2.00/1M · 出力 $10.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $2.50/1M · Web検索 $0.01
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-04-27
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, stop, tools, tool_choice, structured_outputs, response_format, verbosity, max_completion_tokens
+- **対応パラメータ**: max_tokens, stop, reasoning, include_reasoning, tools, tool_choice, structured_outputs, response_format, verbosity, max_completion_tokens
 
 This model always redirects to the latest model in the Anthropic Claude Sonnet family.
 
@@ -6583,7 +6535,7 @@ This model always redirects to the latest model in the Google Gemini Pro family.
 - **Pricing**: 入力 $0.55/1M · 出力 $3.20/1M · キャッシュ読 $0.11/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-27
-- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, top_p, frequency_penalty, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, top_k, min_p, presence_penalty, repetition_penalty, stop, seed, logit_bias, parallel_tool_calls
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, top_p, frequency_penalty, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, stop, logit_bias, parallel_tool_calls, presence_penalty, seed, top_k, min_p, repetition_penalty
 
 This model always redirects to the latest model in the MoonshotAI Kimi family.
 
