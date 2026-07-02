@@ -1,6 +1,6 @@
 # OpenRouter モデルカタログ（全423モデル）
 
-- 取得日時: 2026-07-01T07:48:53
+- 取得日時: 2026-07-02T07:26:30
 - プロバイダ数: 68 / 無料枠あり: 24
 
 ## プロバイダ別サマリ
@@ -16,7 +16,7 @@
 | z-ai | 12 | 0.06 | 1.20 | 1,048,576 |
 | meta-llama | 12 | 0.00 | 0.40 | 10,000,000 |
 | recraft | 11 | 0.00 | 0.00 | 65,536 |
-| deepseek | 11 | 0.10 | 0.80 | 1,048,576 |
+| deepseek | 11 | 0.09 | 0.80 | 1,048,576 |
 | minimax | 9 | 0.00 | 0.40 | 1,048,576 |
 | cohere | 8 | 0.00 | 2.50 | 256,000 |
 | x-ai | 7 | 0.00 | 15.00 | 2,000,000 |
@@ -345,7 +345,7 @@ See the launch announcement and benchmark results [here](https://www.anthropic.c
 - **Pricing**: 入力 $10.00/1M · 出力 $50.00/1M · キャッシュ読 $1.00/1M · キャッシュ書 $12.50/1M · Web検索 $0.01
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-06-09
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, stop, tool_choice, tools, structured_outputs, response_format, verbosity
+- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, max_tokens, max_completion_tokens, tools, tool_choice, response_format, verbosity, stop
 
 Claude Fable 5 is a Mythos-class model from Anthropic, built for autonomous knowledge work and coding. It supports text, image, and file inputs with text output, with reasoning support and a 1M-token context window. It is suited for long-running, complex, and asynchronous tasks that previously required frequent human check-ins.
 
@@ -1050,7 +1050,7 @@ For model details, please visit [the DeepSeek-V3 repo](https://github.com/deepse
 - **Provider**: deepseek
 - **Context**: 163K (163,840) tok / max出力 16,384 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.2/1M · 出力 $0.77/1M · キャッシュ読 $0.135/1M
+- **Pricing**: 入力 $0.24/1M · 出力 $0.9/1M · キャッシュ読 $0.135/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Seed固定
 - **Knowledge cutoff**: 2024-07-31T23:59:59.000Z
 - **登録日**: 2025-03-24
@@ -1185,13 +1185,13 @@ The model was trained under conditions aligned with V3.1-Terminus to enable dire
 
 - **ID**: `deepseek/deepseek-v4-flash`
 - **Provider**: deepseek
-- **Context**: 1.04858M (1,048,576) tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 16,384 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.098/1M · 出力 $0.196/1M · キャッシュ読 $0.02/1M
-- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.09/1M · 出力 $0.18/1M · キャッシュ読 $0.018/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-04-24
 - **HF**: `deepseek-ai/DeepSeek-V4-Flash`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, tools, tool_choice, response_format
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, tools, tool_choice, structured_outputs, logit_bias
 
 DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and high-throughput workloads, while maintaining strong reasoning and coding performance.
 
@@ -2417,13 +2417,13 @@ Trained via a custom reinforcement learning pipeline (CISPO), M1 excels in long-
 
 - **ID**: `minimax/minimax-m2`
 - **Provider**: minimax
-- **Context**: 204K (204,800) tok / max出力 196,608 tok
+- **Context**: 204K (204,800) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.255/1M · 出力 $1.00/1M · キャッシュ読 $0.03/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.255/1M · 出力 $1.02/1M
+- **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力
 - **登録日**: 2025-10-23
 - **HF**: `MiniMaxAI/MiniMax-M2`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, seed, logit_bias, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, tool_choice, tools
 
 MiniMax-M2 is a compact, high-efficiency large language model optimized for end-to-end coding and agentic workflows. With 10 billion activated parameters (230 billion total), it delivers near-frontier intelligence across general reasoning, tool use, and multi-step task execution while maintaining low latency and deployment efficiency.
 
@@ -2445,13 +2445,13 @@ MiniMax M2-her is a dialogue-first large language model built for immersive role
 
 - **ID**: `minimax/minimax-m2.1`
 - **Provider**: minimax
-- **Context**: 204K (204,800) tok / max出力 196,608 tok
+- **Context**: 204K (204,800) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.29/1M · 出力 $0.95/1M · キャッシュ読 $0.03/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.3/1M · 出力 $1.20/1M · キャッシュ読 $0.03/1M
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2025-12-23
 - **HF**: `MiniMaxAI/MiniMax-M2.1`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, logit_bias, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice, response_format
 
 MiniMax-M2.1 is a lightweight, state-of-the-art large language model optimized for coding, agentic workflows, and modern application development. With only 10 billion activated parameters, it delivers a major jump in real-world capability while maintaining exceptional latency, scalability, and cost efficiency.
 
@@ -2892,13 +2892,13 @@ This update improves agentic coding with higher accuracy and better generalizati
 
 - **ID**: `moonshotai/kimi-k2-thinking`
 - **Provider**: moonshotai
-- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Context**: 262K (262,144) tok / max出力 100,352 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.6/1M · 出力 $2.50/1M · キャッシュ読 $0.6/1M
+- **Pricing**: 入力 $0.6/1M · 出力 $2.50/1M · キャッシュ読 $0.15/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2025-11-06
 - **HF**: `moonshotai/Kimi-K2-Thinking`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, logit_bias, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice, response_format, structured_outputs
 
 Kimi K2 Thinking is Moonshot AI’s most advanced open reasoning model to date, extending the K2 series into agentic, long-horizon reasoning. Built on the trillion-parameter Mixture-of-Experts (MoE) architecture introduced in Kimi K2, it activates 32 billion parameters per forward pass and supports 256 k-token context windows. The model is optimized for persistent step-by-step thought, dynamic tool invocation, and complex reasoning workflows that span hundreds of turns. It interleaves step-by-step reasoning with tool use, enabling autonomous research, coding, and writing that can persist for hundreds of sequential actions without drift.
 
@@ -4828,14 +4828,14 @@ Qwen3-30B-A3B-Instruct-2507 is a 30.5B-parameter mixture-of-experts language mod
 
 - **ID**: `qwen/qwen3-30b-a3b-thinking-2507`
 - **Provider**: qwen
-- **Context**: 131K (131,072) tok / max出力 131,072 tok
+- **Context**: 131K (131,072) tok / max出力 32,768 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.08/1M · 出力 $0.4/1M · キャッシュ読 $0.08/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $0.13/1M · 出力 $1.56/1M
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2025-06-30T23:59:59.000Z
 - **登録日**: 2025-08-28
 - **HF**: `Qwen/Qwen3-30B-A3B-Thinking-2507`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, logit_bias, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, presence_penalty, response_format, tools, tool_choice
 
 Qwen3-30B-A3B-Thinking-2507 is a 30B parameter Mixture-of-Experts reasoning model optimized for complex tasks requiring extended multi-step thinking. The model is designed specifically for “thinking mode,” where internal reasoning traces are separated from final answers.
 
@@ -4862,12 +4862,12 @@ Qwen3-32B is a dense 32.8B parameter causal language model from the Qwen3 series
 - **Provider**: qwen
 - **Context**: 131K (131,072) tok / max出力 8,192 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.05/1M · 出力 $0.4/1M · キャッシュ読 $0.05/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.117/1M · 出力 $0.455/1M
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2025-03-31T23:59:59.000Z
 - **登録日**: 2025-04-28
 - **HF**: `Qwen/Qwen3-8B`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, logit_bias, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, presence_penalty, response_format, tools, tool_choice
 
 Qwen3-8B is a dense 8.2B parameter causal language model from the Qwen3 series, designed for both reasoning-heavy tasks and efficient dialogue. It supports seamless switching between "thinking" mode for math, coding, and logical inference, and "non-thinking" mode for general conversation. The model is fine-tuned for instruction-following, agent integration, creative writing, and multilingual use across 100+ languages and dialects. It natively supports a 32K token context window and can extend to 131K tokens with YaRN scaling.
 
@@ -6452,7 +6452,7 @@ Zonos v0.1 Transformer is a text-to-speech model from Zyphra built on a pure tra
 - **Pricing**: 入力 $10.00/1M · 出力 $50.00/1M · キャッシュ読 $1.00/1M · キャッシュ書 $12.50/1M · Web検索 $0.01
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-06-09
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, stop, tool_choice, tools, structured_outputs, response_format, verbosity, max_completion_tokens
+- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, max_tokens, max_completion_tokens, tools, tool_choice, response_format, verbosity, stop
 
 This model always redirects to the latest model in the Claude Fable family.
 
