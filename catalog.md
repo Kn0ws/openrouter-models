@@ -1,6 +1,6 @@
 # OpenRouter モデルカタログ（全425モデル）
 
-- 取得日時: 2026-07-05T07:25:25
+- 取得日時: 2026-07-06T07:52:09
 - プロバイダ数: 68 / 無料枠あり: 25
 
 ## プロバイダ別サマリ
@@ -6422,7 +6422,7 @@ GLM-5.1 delivers a major leap in coding capability, with particularly significan
 - **Provider**: z-ai
 - **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.728/1M · 出力 $2.29/1M · キャッシュ読 $0.1352/1M
+- **Pricing**: 入力 $0.686/1M · 出力 $2.16/1M · キャッシュ読 $0.1274/1M
 - **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-06-16
 - **HF**: `zai-org/GLM-5.2`
