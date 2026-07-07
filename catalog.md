@@ -1,7 +1,7 @@
-# OpenRouter モデルカタログ（全425モデル）
+# OpenRouter モデルカタログ（全428モデル）
 
-- 取得日時: 2026-07-06T07:52:09
-- プロバイダ数: 68 / 無料枠あり: 25
+- 取得日時: 2026-07-07T07:27:34
+- プロバイダ数: 68 / 無料枠あり: 26
 
 ## プロバイダ別サマリ
 
@@ -28,6 +28,7 @@
 | amazon | 5 | 0.04 | 2.50 | 1,000,000 |
 | sentence-transformers | 5 | 0.01 | 0.01 | 8,192 |
 | nousresearch | 5 | 0.00 | 1.00 | 131,072 |
+| tencent | 4 | 0.00 | 0.20 | 262,144 |
 | alibaba | 4 | 0.00 | 0.00 | 0 |
 | ~anthropic | 4 | 1.00 | 10.00 | 1,000,000 |
 | sourceful | 4 | 0.00 | 0.00 | 32,768 |
@@ -42,12 +43,12 @@
 | liquid | 3 | 0.00 | 0.03 | 128,000 |
 | intfloat | 3 | 0.01 | 0.01 | 8,192 |
 | baai | 3 | 0.01 | 0.01 | 8,192 |
+| nex-agi | 2 | 0.02 | 0.25 | 262,144 |
 | stepfun | 2 | 0.10 | 0.20 | 262,144 |
 | ibm-granite | 2 | 0.02 | 0.05 | 131,072 |
 | ~openai | 2 | 0.75 | 5.00 | 1,050,000 |
 | ~google | 2 | 1.50 | 2.00 | 1,048,576 |
 | zyphra | 2 | 7.00 | 7.00 | 4,096 |
-| tencent | 2 | 0.06 | 0.14 | 262,144 |
 | xiaomi | 2 | 0.10 | 0.43 | 1,048,576 |
 | rekaai | 2 | 0.10 | 0.10 | 65,536 |
 | relace | 2 | 0.85 | 1.00 | 256,000 |
@@ -55,7 +56,6 @@
 | morph | 2 | 0.80 | 0.90 | 262,144 |
 | inflection | 2 | 2.50 | 2.50 | 8,000 |
 | sakana | 1 | 5.00 | 5.00 | 1,000,000 |
-| nex-agi | 1 | 0.25 | 0.25 | 262,144 |
 | perceptron | 1 | 0.15 | 0.15 | 32,768 |
 | ~moonshotai | 1 | 0.66 | 0.66 | 262,144 |
 | sesame | 1 | 7.00 | 7.00 | 4,096 |
@@ -343,9 +343,9 @@ See the launch announcement and benchmark results [here](https://www.anthropic.c
 - **Context**: 1M (1,000,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
 - **Pricing**: 入力 $10.00/1M · 出力 $50.00/1M · キャッシュ読 $1.00/1M · キャッシュ書 $12.50/1M · Web検索 $0.01
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-06-09
-- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, max_tokens, max_completion_tokens, tools, tool_choice, response_format, verbosity, stop
+- **対応パラメータ**: max_tokens, stop, reasoning, include_reasoning, tool_choice, tools, response_format, verbosity
 
 Claude Fable 5 is a Mythos-class model from Anthropic, built for autonomous knowledge work and coding. It supports text, image, and file inputs with text output, with reasoning support and a 1M-token context window. It is suited for long-running, complex, and asynchronous tasks that previously required frequent human check-ins.
 
@@ -463,9 +463,9 @@ Learn more in Anthropic's docs: https://platform.claude.com/docs/en/build-with-c
 - **Context**: 1M (1,000,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
 - **Pricing**: 入力 $5.00/1M · 出力 $25.00/1M · キャッシュ読 $0.5/1M · キャッシュ書 $6.25/1M · Web検索 $0.01
-- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-05-27
-- **対応パラメータ**: max_tokens, stop, reasoning, include_reasoning, tool_choice, tools, response_format, verbosity
+- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, max_tokens, temperature, max_completion_tokens, tools, tool_choice, response_format, verbosity, stop
 
 Claude Opus 4.8 is Anthropic's most capable generally available model in the Opus family. It supports text, image, and file inputs with text output, with reasoning support and a 1M-token context window. It is suited for highly autonomous agents, long-horizon agentic work, knowledge work, and memory-driven tasks where coherence over extended sessions matters.
 
@@ -538,7 +538,7 @@ Sonnet 4.6 is Anthropic's most capable Sonnet-class model yet, with frontier per
 - **Pricing**: 入力 $2.00/1M · 出力 $10.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $2.50/1M · Web検索 $0.01
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-06-30
-- **対応パラメータ**: max_tokens, stop, reasoning, include_reasoning, tools, tool_choice, structured_outputs, response_format, verbosity
+- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, max_tokens, max_completion_tokens, tools, tool_choice, response_format, verbosity, stop
 
 Sonnet 5 is Anthropic's most capable Sonnet-class model, with frontier performance across coding, agents, and professional work. It supports adaptive thinking with selectable reasoning effort levels (low, medium, high, max, and x-high), a 1M-token context window, and text, image, and file inputs. Sonnet 5 uses an updated tokenizer and includes real-time cyber safeguards that block certain high-risk dual-use activities.
 
@@ -2165,14 +2165,14 @@ Usage of …
 
 - **ID**: `meta-llama/llama-3.2-3b-instruct`
 - **Provider**: meta-llama
-- **Context**: 131K (131,072) tok / max出力 80,000 tok
+- **Context**: 131K (131,072) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.0509/1M · 出力 $0.335/1M
-- **Capabilities**: logprobs, Seed固定
+- **Pricing**: 入力 $0.05/1M · 出力 $0.33/1M
+- **Capabilities**: Structured outputs(JSONスキーマ), logprobs, Seed固定
 - **Knowledge cutoff**: 2023-12-31T23:59:59.000Z
 - **登録日**: 2024-09-25
 - **HF**: `meta-llama/Llama-3.2-3B-Instruct`
-- **対応パラメータ**: max_tokens, temperature, top_p, top_k, seed, repetition_penalty, frequency_penalty, presence_penalty, min_p, stop, logit_bias, logprobs, top_logprobs
+- **対応パラメータ**: max_tokens, temperature, top_p, frequency_penalty, presence_penalty, repetition_penalty, seed, stop, top_k, logit_bias, structured_outputs, logprobs, top_logprobs
 
 Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it supports eight languages, including English, Spanish, and Hindi, and is adaptable for additional languages.
 
@@ -2910,7 +2910,7 @@ It sets new open-source benchmarks on HLE, BrowseComp, …
 - **Provider**: moonshotai
 - **Context**: 262K (262,144) tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.375/1M · 出力 $2.02/1M
+- **Pricing**: 入力 $0.375/1M · 出力 $2.02/1M · キャッシュ読 $0.203/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-01-27
 - **HF**: `moonshotai/Kimi-K2.5`
@@ -2987,7 +2987,21 @@ The model requires the prompt to be in the following format:
 
 Zero Data Retention is enabled for Morph. Learn more about this model in their [documentation](https://docs.morphllm.com/quickstart)
 
-### ▎nex-agi（1）
+### ▎nex-agi（2）
+
+#### Nex AGI: Nex-N2-Mini
+
+- **ID**: `nex-agi/nex-n2-mini`
+- **Provider**: nex-agi
+- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Modality**: text+image->text  (in: text,image → out: text)
+- **Pricing**: 入力 $0.025/1M · 出力 $0.1/1M · キャッシュ読 $0.0025/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
+- **登録日**: 2026-06-24
+- **HF**: `nex-agi/Nex-N2-Mini`
+- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, top_p, top_k, temperature, max_tokens, logprobs, top_logprobs, tools, tool_choice
+
+Nex-N2-Mini is an open-source agentic mixture-of-experts model from Nex AGI, the smaller sibling in the Nex-N2 series. It accepts text and image input and is built for coding, tool use, deep research, and long-horizon agentic workflows, with a 262K-token context window and native reasoning support.
 
 #### Nex AGI: Nex-N2-Pro
 
@@ -5277,7 +5291,7 @@ The Qwen3.5 Series 35B-A3B is a native vision-language model designed with a hyb
 - **Provider**: qwen
 - **Context**: 256K (256,000) tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.385/1M · 出力 $2.45/1M
+- **Pricing**: 入力 $0.385/1M · 出力 $2.45/1M · キャッシュ読 $0.111/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-02-16
 - **HF**: `Qwen/Qwen3.5-397B-A17B`
@@ -5955,7 +5969,7 @@ As the world of LLMs advances, our router gets smarter, ensuring you always bene
 
 This model is configured for a simple, flat rate per response here on OpenRouter. It's powered by the full routing engine from [Switchpoint AI](https://www.switchpoint.dev).
 
-### ▎tencent（2）
+### ▎tencent（4）
 
 #### Tencent: Hunyuan A13B Instruct
 
@@ -5972,6 +5986,22 @@ This model is configured for a simple, flat rate per response here on OpenRouter
 
 Hunyuan-A13B is a 13B active parameter Mixture-of-Experts (MoE) language model developed by Tencent, with a total parameter count of 80B and support for reasoning via Chain-of-Thought. It offers competitive benchmark performance across mathematics, science, coding, and multi-turn reasoning tasks, while maintaining high inference efficiency via Grouped Query Attention (GQA) and quantization support (FP8, GPTQ, etc.).
 
+#### Tencent: Hy3
+
+- **ID**: `tencent/hy3`
+- **Provider**: tencent
+- **Context**: 262K (262,144) tok / max出力 131,072 tok
+- **Modality**: text->text  (in: text → out: text)
+- **Pricing**: 入力 $0.2/1M · 出力 $0.8/1M · キャッシュ読 $0.5/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), Reasoning(思考), Reasoning出力, Seed固定
+- **登録日**: 2026-07-06
+- **HF**: `tencent/Hy3`
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, logit_bias, tools, tool_choice, structured_outputs
+
+Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort: a direct no-think mode by default, plus low and high chain-of-thought modes for complex math, coding, and multi-step problems. With a 256K context window, Hy3 targets long-horizon tasks, including improved coreference resolution, multi-turn constraint tracking, and stable tool-calling that generalizes across agent scaffoldings.
+
+Tencent positions it as a reliable, cost-effective option across coding, document processing, financial analysis, game development, and frontend …
+
 #### Tencent: Hy3 preview
 
 - **ID**: `tencent/hy3-preview`
@@ -5985,6 +6015,22 @@ Hunyuan-A13B is a 13B active parameter Mixture-of-Experts (MoE) language model d
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, tool_choice, tools
 
 Hy3 preview is a high-efficiency Mixture-of-Experts model from Tencent designed for agentic workflows and production use. It supports configurable reasoning levels across disabled, low, and high modes, allowing it to balance speed and depth depending on the task, while delivering strong code generation and reliable performance across multi-step, real-world workflows.
+
+#### Tencent: Hy3 (free)
+
+- **ID**: `tencent/hy3:free`
+- **Provider**: tencent
+- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Modality**: text->text  (in: text → out: text)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力
+- **登録日**: 2026-07-06
+- **HF**: `tencent/Hy3`
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, frequency_penalty, max_tokens, tools, tool_choice
+
+Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort: a direct no-think mode by default, plus low and high chain-of-thought modes for complex math, coding, and multi-step problems. With a 256K context window, Hy3 targets long-horizon tasks, including improved coreference resolution, multi-turn constraint tracking, and stable tool-calling that generalizes across agent scaffoldings.
+
+Tencent positions it as a reliable, cost-effective option across coding, document processing, financial analysis, game development, and frontend …
 
 ### ▎thedrummer（4）
 
@@ -6244,7 +6290,7 @@ Grok Voice TTS 1.0 is a text-to-speech model from xAI. It converts text into spo
 - **Provider**: xiaomi
 - **Context**: 1.04858M (1,048,576) tok
 - **Modality**: text+image+audio+video->text  (in: text,image,audio,video → out: text)
-- **Pricing**: 入力 $0.105/1M · 出力 $0.28/1M
+- **Pricing**: 入力 $0.105/1M · 出力 $0.28/1M · キャッシュ読 $0.028/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-04-22
 - **HF**: `XiaomiMiMo/MiMo-V2.5`
@@ -6422,7 +6468,7 @@ GLM-5.1 delivers a major leap in coding capability, with particularly significan
 - **Provider**: z-ai
 - **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.686/1M · 出力 $2.16/1M · キャッシュ読 $0.1274/1M
+- **Pricing**: 入力 $0.9086/1M · 出力 $2.86/1M · キャッシュ読 $0.1687/1M
 - **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-06-16
 - **HF**: `zai-org/GLM-5.2`
@@ -6484,7 +6530,7 @@ Zonos v0.1 Transformer is a text-to-speech model from Zyphra built on a pure tra
 - **Pricing**: 入力 $10.00/1M · 出力 $50.00/1M · キャッシュ読 $1.00/1M · キャッシュ書 $12.50/1M · Web検索 $0.01
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-06-09
-- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, max_tokens, max_completion_tokens, tools, tool_choice, response_format, verbosity, stop
+- **対応パラメータ**: max_tokens, stop, reasoning, include_reasoning, tool_choice, tools, response_format, verbosity, structured_outputs, max_completion_tokens
 
 This model always redirects to the latest model in the Claude Fable family.
 
@@ -6510,7 +6556,7 @@ This model always redirects to the latest model in the Anthropic Claude Haiku fa
 - **Pricing**: 入力 $5.00/1M · 出力 $25.00/1M · キャッシュ読 $0.5/1M · キャッシュ書 $6.25/1M · Web検索 $0.01
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-04-21
-- **対応パラメータ**: max_tokens, stop, reasoning, include_reasoning, tool_choice, tools, response_format, verbosity, structured_outputs
+- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, max_tokens, temperature, max_completion_tokens, tools, tool_choice, response_format, verbosity, stop
 
 This model always redirects to the latest model in the Claude Opus family.
 
@@ -6523,7 +6569,7 @@ This model always redirects to the latest model in the Claude Opus family.
 - **Pricing**: 入力 $2.00/1M · 出力 $10.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $2.50/1M · Web検索 $0.01
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-04-27
-- **対応パラメータ**: max_tokens, stop, reasoning, include_reasoning, tools, tool_choice, structured_outputs, response_format, verbosity, max_completion_tokens
+- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, max_tokens, max_completion_tokens, tools, tool_choice, response_format, verbosity, stop
 
 This model always redirects to the latest model in the Anthropic Claude Sonnet family.
 
