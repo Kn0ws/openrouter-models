@@ -1,6 +1,6 @@
-# OpenRouter モデルカタログ（全432モデル）
+# OpenRouter モデルカタログ（全430モデル）
 
-- 取得日時: 2026-07-10T11:36:29
+- 取得日時: 2026-07-11T07:00:22
 - プロバイダ数: 68 / 無料枠あり: 25
 
 ## プロバイダ別サマリ
@@ -14,9 +14,9 @@
 | anthropic | 15 | 0.25 | 30.00 | 1,000,000 |
 | nvidia | 14 | 0.00 | 1,500.00 | 1,000,000 |
 | z-ai | 12 | 0.06 | 1.20 | 1,048,576 |
-| meta-llama | 12 | 0.00 | 0.40 | 10,000,000 |
 | recraft | 11 | 0.00 | 0.00 | 65,536 |
-| deepseek | 11 | 0.09 | 0.80 | 1,048,576 |
+| deepseek | 11 | 0.08 | 0.80 | 1,048,576 |
+| meta-llama | 11 | 0.00 | 0.40 | 10,000,000 |
 | minimax | 9 | 0.00 | 0.40 | 1,048,576 |
 | x-ai | 8 | 0.00 | 15.00 | 2,000,000 |
 | cohere | 8 | 0.00 | 2.50 | 256,000 |
@@ -34,12 +34,12 @@
 | ~anthropic | 4 | 1.00 | 10.00 | 1,000,000 |
 | sourceful | 4 | 0.00 | 0.00 | 32,768 |
 | bytedance | 4 | 0.00 | 0.10 | 128,000 |
-| arcee-ai | 4 | 0.04 | 0.75 | 262,144 |
 | black-forest-labs | 4 | 0.00 | 0.00 | 67,344 |
 | thedrummer | 4 | 0.25 | 0.55 | 131,072 |
 | sao10k | 4 | 0.04 | 3.00 | 131,072 |
 | inclusionai | 3 | 0.01 | 0.07 | 262,144 |
 | kwaivgi | 3 | 0.00 | 0.00 | 0 |
+| arcee-ai | 3 | 0.25 | 0.75 | 262,144 |
 | intfloat | 3 | 0.01 | 0.01 | 8,192 |
 | baai | 3 | 0.01 | 0.01 | 8,192 |
 | nex-agi | 2 | 0.02 | 0.25 | 262,144 |
@@ -541,7 +541,7 @@ Sonnet 4.6 is Anthropic's most capable Sonnet-class model yet, with frontier per
 
 Sonnet 5 is Anthropic's most capable Sonnet-class model, with frontier performance across coding, agents, and professional work. It supports adaptive thinking with selectable reasoning effort levels (low, medium, high, max, and x-high), a 1M-token context window, and text, image, and file inputs. Sonnet 5 uses an updated tokenizer and includes real-time cyber safeguards that block certain high-risk dual-use activities.
 
-### ▎arcee-ai（4）
+### ▎arcee-ai（3）
 
 #### Arcee AI: Coder Large
 
@@ -571,20 +571,6 @@ Coder‑Large is a 32 B‑parameter offspring of Qwen 2.5‑Instruct that ha
 Trinity Large Thinking is a powerful open source reasoning model from the team at Arcee AI. It shows strong performance in PinchBench, agentic workloads, and reasoning tasks. Launch video: https://youtu.be/Gc82AXLa0Rg?si=4RLn6WBz33qT--B7
 
 This model is optimized for agentic workflows and performs best when reasoning is preserved (aka interleaved thinking). Learn how to preserve reasoning in our docs: https://openrouter.ai/docs/guides/best-practices/reasoning-tokens#preserving-reasoning
-
-#### Arcee AI: Trinity Mini
-
-- **ID**: `arcee-ai/trinity-mini`
-- **Provider**: arcee-ai
-- **Context**: 131K (131,072) tok / max出力 131,072 tok
-- **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.045/1M · 出力 $0.15/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
-- **登録日**: 2025-12-01
-- **HF**: `arcee-ai/Trinity-Mini`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, top_k, top_p, tool_choice, tools, response_format, structured_outputs, logprobs, top_logprobs, stop, max_completion_tokens
-
-Trinity Mini is a 26B-parameter (3B active) sparse mixture-of-experts language model featuring 128 experts with 8 active per token. Engineered for efficient reasoning over long contexts (131k) with robust function calling and multi-step agent workflows.
 
 #### Arcee AI: Virtuoso Large
 
@@ -1170,7 +1156,7 @@ DeepSeek-V3.1 Terminus is an update to [DeepSeek V3.1](/deepseek/deepseek-chat-v
 - **Provider**: deepseek
 - **Context**: 131K (131,072) tok / max出力 64,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.2288/1M · 出力 $0.3432/1M · キャッシュ読 $0.0229/1M
+- **Pricing**: 入力 $0.2145/1M · 出力 $0.3217/1M · キャッシュ読 $0.0215/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2025-12-01
 - **HF**: `deepseek-ai/DeepSeek-V3.2`
@@ -1199,13 +1185,13 @@ The model was trained under conditions aligned with V3.1-Terminus to enable dire
 
 - **ID**: `deepseek/deepseek-v4-flash`
 - **Provider**: deepseek
-- **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 384,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.09/1M · 出力 $0.18/1M · キャッシュ読 $0.018/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.077/1M · 出力 $0.154/1M · キャッシュ読 $0.0154/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-04-24
 - **HF**: `deepseek-ai/DeepSeek-V4-Flash`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, tools, tool_choice, structured_outputs, logit_bias
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, frequency_penalty, stop, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
 
 DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and high-throughput workloads, while maintaining strong reasoning and coding performance.
 
@@ -2048,26 +2034,7 @@ LFM2.5-1.2B-Thinking is a lightweight reasoning-focused model optimized for agen
 
 An attempt to recreate Claude-style verbosity, but don't expect the same level of coherence or memory. Meant for use in roleplay/narrative situations.
 
-### ▎meta-llama（12）
-
-#### Meta: Llama 3 8B Instruct
-
-- **ID**: `meta-llama/llama-3-8b-instruct`
-- **Provider**: meta-llama
-- **Context**: 8K (8,192) tok
-- **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.14/1M · 出力 $0.14/1M
-- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode
-- **Knowledge cutoff**: 2023-12-31T23:59:59.000Z
-- **登録日**: 2024-04-18
-- **HF**: `meta-llama/Meta-Llama-3-8B-Instruct`
-- **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, repetition_penalty, logit_bias, min_p, response_format, structured_outputs
-
-Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 8B instruct-tuned version was optimized for high quality dialogue usecases.
-
-It has demonstrated strong performance compared to leading closed-source models in human evaluations.
-
-To read more about the model release, [click here](https://ai.meta.com/blog/meta-llama-3/). Usage of this model is subject to [Meta's Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/).
+### ▎meta-llama（11）
 
 #### Meta: Llama 3.1 70B Instruct
 
@@ -4130,9 +4097,9 @@ A cost-efficient version of GPT Audio. The new snapshot features an upgraded dec
 - **Context**: 400K (400,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
 - **Pricing**: 入力 $5.00/1M · 出力 $30.00/1M · キャッシュ読 $0.5/1M · Web検索 $0.01
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, logprobs, Seed固定
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Seed固定
 - **登録日**: 2026-05-05
-- **対応パラメータ**: seed, max_tokens, response_format, structured_outputs, stop, frequency_penalty, presence_penalty, logit_bias, logprobs, top_logprobs, tools, tool_choice
+- **対応パラメータ**: seed, max_tokens, response_format, structured_outputs, tools, tool_choice
 
 GPT Chat Latest points to OpenAI's stable API alias `chat-latest` that always resolves to the latest Instant chat model used in ChatGPT. As OpenAI rolls out new Instant model updates in the future, they are routed behind this slug automatically.
 
@@ -6504,13 +6471,13 @@ GLM-5.1 delivers a major leap in coding capability, with particularly significan
 
 - **ID**: `z-ai/glm-5.2`
 - **Provider**: z-ai
-- **Context**: 1.04858M (1,048,576) tok / max出力 101,376 tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.54/1M · 出力 $1.76/1M · キャッシュ読 $0.1/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $0.406/1M · 出力 $1.28/1M · キャッシュ読 $0.0754/1M
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-06-16
 - **HF**: `zai-org/GLM-5.2`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, frequency_penalty, logit_bias, min_p, presence_penalty, repetition_penalty, seed, stop, top_k, top_p, response_format, structured_outputs, logprobs, top_logprobs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice, response_format
 
 GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering, and complex multi-step automation.
 
