@@ -1,6 +1,6 @@
 # OpenRouter モデルカタログ（全430モデル）
 
-- 取得日時: 2026-07-11T07:00:22
+- 取得日時: 2026-07-12T07:08:30
 - プロバイダ数: 68 / 無料枠あり: 25
 
 ## プロバイダ別サマリ
@@ -2891,11 +2891,11 @@ Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-h
 - **Provider**: moonshotai
 - **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.72/1M · 出力 $3.49/1M · キャッシュ読 $0.159/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
+- **Pricing**: 入力 $0.72/1M · 出力 $3.50/1M · キャッシュ読 $0.15/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-06-12
 - **HF**: `moonshotai/Kimi-K2.7-Code`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, frequency_penalty, top_p, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, top_p, stop, frequency_penalty, logit_bias, parallel_tool_calls, presence_penalty, reasoning_effort, seed, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
 
 MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of-experts architecture that accepts text and image input, and it always operates in a thinking mode, preserving full reasoning content across multi-turn conversations. With a 256K-token context window, it targets long-horizon coding, agentic task decomposition, and multi-turn dialogue. The model activates 32B parameters out of roughly 1T total.
 
@@ -4774,14 +4774,14 @@ Qwen Plus 0728, based on the Qwen3 foundation model, is a 1 million context hybr
 
 - **ID**: `qwen/qwen2.5-vl-72b-instruct`
 - **Provider**: qwen
-- **Context**: 131K (131,072) tok / max出力 128,000 tok
+- **Context**: 131K (131,072) tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.8/1M · 出力 $1.00/1M · キャッシュ読 $0.4/1M
+- **Pricing**: 入力 $0.25/1M · 出力 $0.75/1M
 - **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, logprobs, Seed固定
 - **Knowledge cutoff**: 2024-06-30T23:59:59.000Z
 - **登録日**: 2025-02-01
 - **HF**: `Qwen/Qwen2.5-VL-72B-Instruct`
-- **対応パラメータ**: max_tokens, temperature, top_p, frequency_penalty, presence_penalty, repetition_penalty, seed, stop, top_k, logit_bias, structured_outputs, response_format, logprobs, top_logprobs
+- **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, logit_bias, logprobs, top_logprobs, response_format, structured_outputs
 
 Qwen2.5-VL is proficient in recognizing common objects such as flowers, birds, fish, and insects. It is also highly capable of analyzing texts, charts, icons, graphics, and layouts within images.
 
@@ -6473,7 +6473,7 @@ GLM-5.1 delivers a major leap in coding capability, with particularly significan
 - **Provider**: z-ai
 - **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.406/1M · 出力 $1.28/1M · キャッシュ読 $0.0754/1M
+- **Pricing**: 入力 $0.42/1M · 出力 $1.32/1M · キャッシュ読 $0.078/1M
 - **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-06-16
 - **HF**: `zai-org/GLM-5.2`
