@@ -1,6 +1,6 @@
-# OpenRouter モデルカタログ（全429モデル）
+# OpenRouter モデルカタログ（全428モデル）
 
-- 取得日時: 2026-07-14T06:58:53
+- 取得日時: 2026-07-15T07:01:10
 - プロバイダ数: 67 / 無料枠あり: 22
 
 ## プロバイダ別サマリ
@@ -36,13 +36,13 @@
 | bytedance | 4 | 0.00 | 0.10 | 128,000 |
 | black-forest-labs | 4 | 0.00 | 0.00 | 67,344 |
 | thedrummer | 4 | 0.25 | 0.55 | 131,072 |
-| sao10k | 4 | 0.04 | 3.00 | 131,072 |
 | kwaipilot | 3 | 0.15 | 0.74 | 256,000 |
 | inclusionai | 3 | 0.01 | 0.07 | 262,144 |
 | kwaivgi | 3 | 0.00 | 0.00 | 0 |
 | arcee-ai | 3 | 0.25 | 0.75 | 262,144 |
 | intfloat | 3 | 0.01 | 0.01 | 8,192 |
 | baai | 3 | 0.01 | 0.01 | 8,192 |
+| sao10k | 3 | 0.04 | 0.85 | 131,072 |
 | nex-agi | 2 | 0.02 | 0.25 | 262,144 |
 | stepfun | 2 | 0.10 | 0.20 | 262,144 |
 | ibm-granite | 2 | 0.02 | 0.05 | 131,072 |
@@ -1432,7 +1432,7 @@ Gemini 3.1 Flash Lite Preview is Google's high-efficiency model optimized for hi
 
 - **ID**: `google/gemini-3.1-flash-tts-preview`
 - **Provider**: google
-- **Context**: 8K (8,192) tok
+- **Context**: 32K (32,768) tok / max出力 16,384 tok
 - **Modality**: text->speech  (in: text → out: speech)
 - **Pricing**: 入力 $1.00/1M · 出力 $20.00/1M
 - **Capabilities**: JSON mode, Seed固定
@@ -1639,13 +1639,13 @@ Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from G
 
 - **ID**: `google/gemma-4-31b-it`
 - **Provider**: google
-- **Context**: 262K (262,144) tok / max出力 8,192 tok
+- **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.06/1M · 出力 $0.35/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $0.12/1M · 出力 $0.35/1M · キャッシュ読 $0.09/1M
+- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-02
 - **HF**: `google/gemma-4-31B-it`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, stop, seed, top_p, top_k, min_p, top_a, response_format, tools, tool_choice, structured_outputs, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, repetition_penalty, frequency_penalty, presence_penalty, stop, seed, response_format, structured_outputs, logprobs, top_logprobs
 
 Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function calling, and multilingual support across 140+ languages. Strong on coding, reasoning, and document understanding tasks. Apache 2.0 license.
 
@@ -1947,6 +1947,8 @@ The multilingual-e5-large embedding model encodes sentences, paragraphs, and doc
 - **登録日**: 2026-07-10
 - **対応パラメータ**: max_tokens, temperature, top_p, frequency_penalty, stop, presence_penalty, tools, tool_choice, response_format, structured_outputs, logprobs, top_logprobs
 
+KAT-Coder-Air V2.5 is a flagship-level Agentic Coding model that can directly hand over an entire issue or an entire business workflow to it, allowing it to autonomously locate and make modifications, and complete the entire process in the actual repository. At the same time, it seamlessly integrates multiple experts to fully retain the front-end aesthetic generation capability of V2.
+
 #### Kwaipilot: KAT-Coder-Pro V2
 
 - **ID**: `kwaipilot/kat-coder-pro-v2`
@@ -1970,6 +1972,8 @@ KAT-Coder-Pro V2 is the latest high-performance model in KwaiKAT’s KAT-Coder s
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, logprobs
 - **登録日**: 2026-07-10
 - **対応パラメータ**: max_tokens, temperature, top_p, frequency_penalty, stop, presence_penalty, tools, tool_choice, response_format, structured_outputs, logprobs, top_logprobs
+
+KAT-Coder-Pro V2.5 is a flagship-level Agentic Coding model that can directly hand over an entire issue or an entire business workflow to it, allowing it to autonomously locate and make modifications, and complete the entire process in the actual repository. At the same time, it seamlessly integrates multiple experts to fully retain the front-end aesthetic generation capability of V2.
 
 ### ▎kwaivgi（3）
 
@@ -5674,7 +5678,7 @@ Fugu Ultra is the higher-performance model in Sakana AI's Fugu family. Rather th
 
 Fugu Ultra prioritizes answer quality on complex, multi-step reasoning, coding, and agentic workflows. It supports configurable reasoning effort, tool calling, and built-in web search. Orchestration tokens consumed by the system are billed as standard input/output tokens.
 
-### ▎sao10k（4）
+### ▎sao10k（3）
 
 #### Sao10K: Llama 3 8B Lunaris
 
@@ -5694,21 +5698,6 @@ Lunaris 8B is a versatile generalist and roleplaying model based on Llama 3. It'
 Created by [Sao10k](https://huggingface.co/Sao10k), this model aims to offer an improved experience over Stheno v3.2, with enhanced creativity and logical reasoning.
 
 For best results, use with Llama 3 Instruct context template, temperature 1.4, and min_p 0.1.
-
-#### Sao10K: Llama 3.1 70B Hanami x1
-
-- **ID**: `sao10k/l3.1-70b-hanami-x1`
-- **Provider**: sao10k
-- **Context**: 16K (16,000) tok
-- **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $3.00/1M · 出力 $3.00/1M
-- **Capabilities**: Structured outputs(JSONスキーマ), Seed固定
-- **Knowledge cutoff**: 2023-12-31T23:59:59.000Z
-- **登録日**: 2025-01-08
-- **HF**: `Sao10K/L3.1-70B-Hanami-x1`
-- **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, logit_bias, top_k, min_p, seed, structured_outputs
-
-This is [Sao10K](/sao10k)'s experiment over [Euryale v2.2](/sao10k/l3.1-euryale-70b).
 
 #### Sao10K: Llama 3.1 Euryale 70B v2.2
 
@@ -6406,13 +6395,13 @@ As a 30B-class SOTA model, GLM-4.7-Flash offers a new option that balances perfo
 
 - **ID**: `z-ai/glm-5`
 - **Provider**: z-ai
-- **Context**: 202K (202,752) tok
+- **Context**: 202K (202,752) tok / max出力 128,000 tok
 - **Modality**: text->text  (in: text → out: text)
 - **Pricing**: 入力 $0.6/1M · 出力 $1.92/1M · キャッシュ読 $0.12/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-02-11
 - **HF**: `zai-org/GLM-5`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, tools, tool_choice, structured_outputs, response_format
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, frequency_penalty, tool_choice, tools, stop, response_format, structured_outputs, logprobs, top_logprobs
 
 GLM-5 is Z.ai’s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows. Built for expert developers, it delivers production-grade performance on large-scale programming tasks, rivaling leading closed-source models. With advanced agentic planning, deep backend reasoning, and iterative self-correction, GLM-5 moves beyond code generation to full-system construction and autonomous execution.
 
@@ -6420,12 +6409,12 @@ GLM-5 is Z.ai’s flagship open-source foundation model engineered for complex s
 
 - **ID**: `z-ai/glm-5-turbo`
 - **Provider**: z-ai
-- **Context**: 262K (262,144) tok / max出力 131,072 tok
+- **Context**: 202K (202,752) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
 - **Pricing**: 入力 $1.20/1M · 出力 $4.00/1M · キャッシュ読 $0.24/1M
-- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-03-15
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, logit_bias, response_format, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, tools, tool_choice, response_format, top_k
 
 GLM-5 Turbo is a new model from Z.ai designed for fast inference and strong performance in agent-driven environments such as OpenClaw scenarios. It is deeply optimized for real-world agent workflows involving long execution chains, with improved complex instruction decomposition, tool use, scheduled and persistent execution, and overall stability across extended tasks.
 
@@ -6449,7 +6438,7 @@ GLM-5.1 delivers a major leap in coding capability, with particularly significan
 - **Provider**: z-ai
 - **Context**: 1.04858M (1,048,576) tok / max出力 128,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.9282/1M · 出力 $2.92/1M · キャッシュ読 $0.1724/1M
+- **Pricing**: 入力 $0.8946/1M · 出力 $2.81/1M · キャッシュ読 $0.1661/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-06-16
 - **HF**: `zai-org/GLM-5.2`
