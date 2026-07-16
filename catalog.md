@@ -1,6 +1,6 @@
-# OpenRouter モデルカタログ（全428モデル）
+# OpenRouter モデルカタログ（全427モデル）
 
-- 取得日時: 2026-07-15T07:01:10
+- 取得日時: 2026-07-16T07:06:07
 - プロバイダ数: 67 / 無料枠あり: 22
 
 ## プロバイダ別サマリ
@@ -39,17 +39,17 @@
 | kwaipilot | 3 | 0.15 | 0.74 | 256,000 |
 | inclusionai | 3 | 0.01 | 0.07 | 262,144 |
 | kwaivgi | 3 | 0.00 | 0.00 | 0 |
-| arcee-ai | 3 | 0.25 | 0.75 | 262,144 |
 | intfloat | 3 | 0.01 | 0.01 | 8,192 |
 | baai | 3 | 0.01 | 0.01 | 8,192 |
 | sao10k | 3 | 0.04 | 0.85 | 131,072 |
 | nex-agi | 2 | 0.02 | 0.25 | 262,144 |
-| stepfun | 2 | 0.10 | 0.20 | 262,144 |
+| stepfun | 2 | 0.10 | 0.19 | 262,144 |
 | ibm-granite | 2 | 0.02 | 0.05 | 131,072 |
 | ~openai | 2 | 0.75 | 5.00 | 1,050,000 |
 | ~google | 2 | 1.50 | 2.00 | 1,048,576 |
 | zyphra | 2 | 7.00 | 7.00 | 4,096 |
-| xiaomi | 2 | 0.10 | 0.43 | 1,048,576 |
+| xiaomi | 2 | 0.10 | 0.35 | 1,050,000 |
+| arcee-ai | 2 | 0.25 | 0.75 | 262,144 |
 | rekaai | 2 | 0.10 | 0.10 | 65,536 |
 | relace | 2 | 0.85 | 1.00 | 256,000 |
 | thenlper | 2 | 0.01 | 0.01 | 8,192 |
@@ -540,20 +540,7 @@ Sonnet 4.6 is Anthropic's most capable Sonnet-class model yet, with frontier per
 
 Sonnet 5 is Anthropic's most capable Sonnet-class model, with frontier performance across coding, agents, and professional work. It supports adaptive thinking with selectable reasoning effort levels (low, medium, high, max, and x-high), a 1M-token context window, and text, image, and file inputs. Sonnet 5 uses an updated tokenizer and includes real-time cyber safeguards that block certain high-risk dual-use activities.
 
-### ▎arcee-ai（3）
-
-#### Arcee AI: Coder Large
-
-- **ID**: `arcee-ai/coder-large`
-- **Provider**: arcee-ai
-- **Context**: 32K (32,768) tok
-- **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.5/1M · 出力 $0.8/1M
-- **Knowledge cutoff**: 2025-03-31T23:59:59.000Z
-- **登録日**: 2025-05-05
-- **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, repetition_penalty, logit_bias, min_p
-
-Coder‑Large is a 32 B‑parameter offspring of Qwen 2.5‑Instruct that has been further trained on permissively‑licensed GitHub, CodeSearchNet and synthetic bug‑fix corpora. It supports a 32k context window, enabling multi‑file refactoring or long diff review in a single call, and understands 30‑plus programming languages with special attention to TypeScript, Go and Terraform. Internal benchmarks show 5–8 pt gains over CodeLlama‑34 B‑Python on HumanEval and competitive BugFix scores thanks to a reinforcement pass that rewards compilable output. The model emits structured explanations alongside code blocks by default, making it suitable for educational tooling as well as production copilot …
+### ▎arcee-ai（2）
 
 #### Arcee AI: Trinity Large Thinking
 
@@ -733,7 +720,7 @@ ByteDance's next-generation audio-visual generation model with a 4.5B parameter 
 - **ID**: `bytedance/seedance-2.0`
 - **Provider**: bytedance
 - **Context**: — tok
-- **Modality**: text+image->video  (in: text,image → out: video)
+- **Modality**: text+image+video->video  (in: text,image,video → out: video)
 - **Pricing**: 入力 無料/1M · 出力 無料/1M · Video (with audio) $0.067256〜$1.3608/second · Video (no audio) $0.067256〜$1.3608/second · Video Tokens (with audio) $7e-06/M tokens · Video Tokens (no audio) $7e-06/M tokens
 - **登録日**: 2026-04-15
 - **対応パラメータ**: frequency_penalty
@@ -745,7 +732,7 @@ Seedance 2.0 is a video generation model from ByteDance. It supports text-to-vid
 - **ID**: `bytedance/seedance-2.0-fast`
 - **Provider**: bytedance
 - **Context**: — tok
-- **Modality**: text+image->video  (in: text,image → out: video)
+- **Modality**: text+image+video->video  (in: text,image,video → out: video)
 - **Pricing**: 入力 無料/1M · 出力 無料/1M · Video (with audio) $0.0538048〜$1.08864/second · Video (no audio) $0.0538048〜$1.08864/second · Video Tokens (with audio) $5.6e-06/M tokens · Video Tokens (no audio) $5.6e-06/M tokens
 - **登録日**: 2026-04-15
 - **対応パラメータ**: frequency_penalty
@@ -2465,7 +2452,7 @@ Trained as a native multimodal model on interleaved data and tuned for multi-tur
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Seed固定
 - **Knowledge cutoff**: 2025-03-31T23:59:59.000Z
 - **登録日**: 2025-08-01
-- **対応パラメータ**: structured_outputs, response_format, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, tools, tool_choice
+- **対応パラメータ**: structured_outputs, response_format, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, prediction, tools, tool_choice
 
 Mistral's cutting-edge language model for coding released end of July 2025. Codestral specializes in low-latency, high-frequency tasks such as fill-in-the-middle (FIM), code correction and test generation.
 
@@ -3498,7 +3485,7 @@ For benchmarking against other models, it was briefly called …
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Web検索, logprobs, Seed固定
 - **Knowledge cutoff**: 2023-10-31T23:59:59.000Z
 - **登録日**: 2024-11-20
-- **対応パラメータ**: seed, max_tokens, response_format, structured_outputs, temperature, top_p, stop, frequency_penalty, presence_penalty, web_search_options, logit_bias, logprobs, top_logprobs, tools, tool_choice
+- **対応パラメータ**: seed, max_tokens, response_format, structured_outputs, temperature, top_p, stop, frequency_penalty, presence_penalty, web_search_options, logit_bias, logprobs, top_logprobs, prediction, tools, tool_choice
 
 The 2024-11-20 version of GPT-4o offers a leveled-up creative writing ability with more natural, engaging, and tailored writing to improve relevance & readability. It’s also better at working with uploaded files, providing deeper insights & more thorough responses.
 
@@ -3536,7 +3523,7 @@ Check out the [launch announcement](https://openai.com/index/gpt-4o-mini-advanci
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Web検索, logprobs, Seed固定
 - **Knowledge cutoff**: 2023-10-31T23:59:59.000Z
 - **登録日**: 2024-07-18
-- **対応パラメータ**: seed, max_tokens, response_format, structured_outputs, temperature, top_p, stop, frequency_penalty, presence_penalty, web_search_options, logit_bias, logprobs, top_logprobs, tools, tool_choice
+- **対応パラメータ**: seed, max_tokens, response_format, structured_outputs, temperature, top_p, stop, frequency_penalty, presence_penalty, web_search_options, logit_bias, logprobs, top_logprobs, prediction, tools, tool_choice
 
 GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs.
 
@@ -5347,13 +5334,13 @@ Qwen3.5 Plus (April 2026) is a large-scale multimodal language model from Alibab
 
 - **ID**: `qwen/qwen3.6-27b`
 - **Provider**: qwen
-- **Context**: 262K (262,144) tok / max出力 131,072 tok
+- **Context**: 262K (262,144) tok / max出力 262,140 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.289/1M · 出力 $2.40/1M
+- **Pricing**: 入力 $0.2822/1M · 出力 $2.38/1M · キャッシュ読 $0.1411/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-27
 - **HF**: `Qwen/Qwen3.6-27B`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, stop, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, seed, logit_bias, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, stop, frequency_penalty, presence_penalty, seed, tools, structured_outputs, response_format, tool_choice, logprobs, top_logprobs
 
 Qwen3.6 27B is a dense 27-billion-parameter language model from the Qwen Team at Alibaba, released in April 2026. It features hybrid multimodal capabilities — accepting text, image, and video inputs — and supports a 262,144-token context window.
 
@@ -5363,13 +5350,13 @@ The model is designed for agentic coding and reasoning tasks, with particular st
 
 - **ID**: `qwen/qwen3.6-35b-a3b`
 - **Provider**: qwen
-- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Context**: 262K (262,144) tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.14/1M · 出力 $1.00/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $0.13/1M · 出力 $1.00/1M
+- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-04-27
 - **HF**: `Qwen/Qwen3.6-35B-A3B`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, stop, frequency_penalty, presence_penalty, repetition_penalty, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, frequency_penalty, logit_bias, max_tokens, presence_penalty, seed, stop, temperature, top_p, response_format, structured_outputs
 
 Qwen3.6-35B-A3B is an open-weight multimodal model from Alibaba Cloud with 35 billion total parameters and 3 billion active parameters per token. It uses a hybrid sparse mixture-of-experts architecture combining Gated DeltaNet linear attention with standard gated attention layers, enabling efficient inference at a fraction of the compute cost. The model supports a 262K token native context window (extensible to 1M via YaRN) and accepts text, image, and video inputs. It includes integrated thinking mode with reasoning traces preserved across multi-turn conversations, function calling, and structured output. Released under the Apache 2.0 license.
 
@@ -5418,7 +5405,7 @@ Qwen 3.6 Plus builds on a hybrid architecture that combines efficient linear att
 - **Provider**: qwen
 - **Context**: 1M (1,000,000) tok / max出力 65,536 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $1.25/1M · 出力 $3.75/1M · キャッシュ読 $0.25/1M · キャッシュ書 $1.56/1M
+- **Pricing**: 入力 $1.48/1M · 出力 $4.42/1M · キャッシュ読 $0.295/1M · キャッシュ書 $1.84/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-05-21
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, presence_penalty, response_format, tools, tool_choice, structured_outputs, logprobs, top_logprobs
@@ -5914,13 +5901,13 @@ Step 3.5 Flash is StepFun's most capable open-source foundation model. Built on 
 
 - **ID**: `stepfun/step-3.7-flash`
 - **Provider**: stepfun
-- **Context**: 256K (256,000) tok / max出力 256,000 tok
+- **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.2/1M · 出力 $1.15/1M · キャッシュ読 $0.04/1M
+- **Pricing**: 入力 $0.19/1M · 出力 $1.14/1M · キャッシュ読 $0.03/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-05-28
 - **HF**: `stepfun-ai/Step-3.7-Flash`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, tools, top_p, stop, frequency_penalty, logprobs, top_logprobs, response_format, structured_outputs, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, top_p, frequency_penalty, stop, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
 
 Step 3.7 Flash is StepFun's latest high-efficiency multimodal Mixture-of-Experts model. It pairs a 196B-parameter language backbone with a vision encoder for native image and video understanding, activating roughly 11B parameters per token. The model supports a 256K context window and exposes selectable reasoning levels (high/medium/low), letting callers trade off speed, cost, and depth of reasoning.
 
@@ -6272,13 +6259,13 @@ MiMo-V2.5 is a native omnimodal model by Xiaomi. It delivers Pro-level agentic p
 
 - **ID**: `xiaomi/mimo-v2.5-pro`
 - **Provider**: xiaomi
-- **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
+- **Context**: 1.05M (1,050,000) tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.435/1M · 出力 $0.87/1M · キャッシュ読 $0.0036/1M
-- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力
+- **Pricing**: 入力 $0.348/1M · 出力 $0.696/1M · キャッシュ読 $0.003/1M
+- **Capabilities**: JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-04-22
 - **HF**: `XiaomiMiMo/MiMo-V2.5-Pro`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, response_format, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format
 
 MiMo-V2.5-Pro is Xiaomi’s flagship model, delivering strong performance in general agentic capabilities, complex software engineering, and long-horizon tasks, with top rankings on benchmarks such as ClawEval, GDPVal, and SWE-bench Pro. It can independently and autonomously complete professional tasks that would take human experts days or weeks, involving more than a thousand tool calls. Its context length of up to 1M makes it well suited for integration with a wide range of agent frameworks.
 
@@ -6436,13 +6423,13 @@ GLM-5.1 delivers a major leap in coding capability, with particularly significan
 
 - **ID**: `z-ai/glm-5.2`
 - **Provider**: z-ai
-- **Context**: 1.04858M (1,048,576) tok / max出力 128,000 tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 32,768 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.8946/1M · 出力 $2.81/1M · キャッシュ読 $0.1661/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
+- **Pricing**: 入力 $0.93/1M · 出力 $3.00/1M · キャッシュ読 $0.18/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-06-16
 - **HF**: `zai-org/GLM-5.2`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, frequency_penalty, stop, tool_choice, tools, response_format, structured_outputs, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, logit_bias, structured_outputs, tools, tool_choice
 
 GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering, and complex multi-step automation.
 
