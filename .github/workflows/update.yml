@@ -39,6 +39,16 @@ jobs:
         if: steps.chk.outputs.changed == 'yes'
         run: |
           python3 or_models.py export
+          # 未翻訳モデルを検知してジョブサマリに表示（翻訳自体は手動: LLMが必要なため）
+          untr=$(python3 or_models.py untranslated) || true
+          echo "$untr"
+          {
+            echo "### OpenRouter モデル更新 ($(date -u +%Y-%m-%d))"
+            echo '```'
+            echo "$untr" | grep -E '未翻訳:|^  [~a-z]' || true
+            echo '```'
+            echo "未翻訳が残る場合は、ローカルで \`untranslated.json\` を翻訳し \`translations.json\` にマージしてください。"
+          } >> "$GITHUB_STEP_SUMMARY"
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A

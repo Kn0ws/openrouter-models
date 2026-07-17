@@ -301,7 +301,9 @@ def created_date(model):
     if not ts:
         return "—"
     try:
-        return dt.datetime.fromtimestamp(ts).strftime("%Y-%m-%d")
+        # UTC固定（created はUTC基準のunix秒）。ローカルTZ依存にすると
+        # 実行環境(UTCのCI / JSTの手元)で日付が1日ずれ、models.jsonが毎回書き換わる
+        return dt.datetime.fromtimestamp(ts, dt.timezone.utc).strftime("%Y-%m-%d")
     except (OverflowError, OSError, ValueError):
         return "—"
 
