@@ -1,7 +1,7 @@
 # OpenRouter モデルカタログ（全433モデル）
 
-- 取得日時: 2026-07-17T07:03:18
-- プロバイダ数: 69 / 無料枠あり: 22
+- 取得日時: 2026-07-18T06:56:28
+- プロバイダ数: 70 / 無料枠あり: 23
 
 ## プロバイダ別サマリ
 
@@ -17,7 +17,7 @@
 | minimax | 11 | 0.00 | 100.00 | 1,048,576 |
 | recraft | 11 | 0.00 | 0.00 | 65,536 |
 | deepseek | 11 | 0.09 | 0.80 | 1,048,576 |
-| meta-llama | 11 | 0.00 | 0.40 | 10,000,000 |
+| meta-llama | 10 | 0.00 | 0.40 | 10,000,000 |
 | x-ai | 8 | 0.00 | 15.00 | 2,000,000 |
 | cohere | 8 | 0.00 | 2.50 | 256,000 |
 | moonshotai | 7 | 0.38 | 3.00 | 1,048,576 |
@@ -57,6 +57,7 @@
 | cognitivecomputations | 2 | 0.00 | 0.20 | 128,000 |
 | morph | 2 | 0.80 | 0.90 | 262,144 |
 | inflection | 2 | 2.50 | 2.50 | 8,000 |
+| thinkingmachines | 1 | 1.00 | 1.00 | 1,048,576 |
 | meta | 1 | 1.25 | 1.25 | 1,048,576 |
 | ~x-ai | 1 | 2.00 | 2.00 | 500,000 |
 | sakana | 1 | 5.00 | 5.00 | 1,000,000 |
@@ -73,7 +74,7 @@
 | ai21 | 1 | 2.00 | 2.00 | 256,000 |
 | baidu | 1 | 0.42 | 0.42 | 131,072 |
 | anthracite-org | 1 | 3.00 | 3.00 | 32,768 |
-| mancer | 1 | 0.75 | 0.75 | 8,000 |
+| mancer | 1 | 0.50 | 0.50 | 8,000 |
 | undi95 | 1 | 0.45 | 0.45 | 6,144 |
 | gryphe | 1 | 0.06 | 0.06 | 4,096 |
 
@@ -2034,7 +2035,7 @@ Kling Video O1 is a video generation model from Kuaishou. It supports text and i
 - **Provider**: mancer
 - **Context**: 8K (8,000) tok / max出力 2,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.75/1M · 出力 $1.00/1M
+- **Pricing**: 入力 $0.5/1M · 出力 $0.75/1M
 - **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, logprobs, Seed固定
 - **Knowledge cutoff**: 2023-06-30T23:59:59.000Z
 - **登録日**: 2023-08-02
@@ -2059,7 +2060,7 @@ Muse Spark 1.1 is a multimodal reasoning model from Meta, built for agentic task
 
 The model is designed to orchestrate multi-agent workflows, acting as either a main agent that plans and delegates or as a subagent, and generalizes zero-shot to new tools, MCP servers, and custom skills. It supports structured output, parallel function calling, built-in search with citations, and configurable reasoning effort. Meta reports strong performance on real-world coding across large codebases, computer-use workflows, and visual-to-code generation.
 
-### ▎meta-llama（11）
+### ▎meta-llama（10）
 
 #### Meta: Llama 3.1 70B Instruct
 
@@ -2098,25 +2099,6 @@ Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flav
 It has demonstrated strong performance compared to leading closed-source models in human evaluations.
 
 To read more about the model release, [click here](https://ai.meta.com/blog/meta-llama-3-1/). Usage of this model is subject to [Meta's Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/).
-
-#### Meta: Llama 3.2 11B Vision Instruct
-
-- **ID**: `meta-llama/llama-3.2-11b-vision-instruct`
-- **Provider**: meta-llama
-- **Context**: 131K (131,072) tok / max出力 16,384 tok
-- **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.345/1M · 出力 $0.345/1M
-- **Capabilities**: JSON mode, Seed固定
-- **Knowledge cutoff**: 2023-12-31T23:59:59.000Z
-- **登録日**: 2024-09-25
-- **HF**: `meta-llama/Llama-3.2-11B-Vision-Instruct`
-- **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, logit_bias
-
-Llama 3.2 11B Vision is a multimodal model with 11 billion parameters, designed to handle tasks combining visual and textual data. It excels in tasks such as image captioning and visual question answering, bridging the gap between language generation and visual reasoning. Pre-trained on a massive dataset of image-text pairs, it performs well in complex, high-accuracy image analysis.
-
-Its ability to integrate visual understanding with language processing makes it an ideal solution for industries requiring comprehensive visual-linguistic AI applications, such as content creation, AI-driven customer service, and research.
-
-Click here for the [original model …
 
 #### Meta: Llama 3.2 1B Instruct
 
@@ -2703,14 +2685,14 @@ The model excels in domains such as coding, STEM reasoning, and enterprise adapt
 
 - **ID**: `mistralai/mistral-nemo`
 - **Provider**: mistralai
-- **Context**: 131K (131,072) tok / max出力 16,384 tok
+- **Context**: 131K (131,072) tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.019/1M · 出力 $0.03/1M
-- **Capabilities**: JSON mode, Seed固定
+- **Pricing**: 入力 $0.018/1M · 出力 $0.03/1M
+- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Seed固定
 - **Knowledge cutoff**: 2024-04-30T23:59:59.000Z
 - **登録日**: 2024-07-19
 - **HF**: `mistralai/Mistral-Nemo-Instruct-2407`
-- **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, logit_bias
+- **対応パラメータ**: frequency_penalty, logit_bias, max_tokens, presence_penalty, seed, stop, temperature, top_p, response_format, structured_outputs
 
 A 12B parameter model with a 128k token context length built by Mistral in collaboration with NVIDIA.
 
@@ -3132,21 +3114,6 @@ This 70B variant is trained with the expanded post-training corpus (~60B tokens)
 
 ### ▎nvidia（14）
 
-#### NVIDIA: Llama 3.3 Nemotron Super 49B V1.5
-
-- **ID**: `nvidia/llama-3.3-nemotron-super-49b-v1.5`
-- **Provider**: nvidia
-- **Context**: 131K (131,072) tok / max出力 16,384 tok
-- **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.4/1M · 出力 $0.4/1M
-- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
-- **Knowledge cutoff**: 2024-03-31T00:00:00.000Z
-- **登録日**: 2025-10-10
-- **HF**: `nvidia/Llama-3_3-Nemotron-Super-49B-v1_5`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, tools, tool_choice, logit_bias
-
-Llama-3.3-Nemotron-Super-49B-v1.5 is a 49B-parameter, English-centric reasoning/chat model derived from Meta’s Llama-3.3-70B-Instruct with a 128K context. It’s post-trained for agentic workflows (RAG, tool calling) via SFT across math, code, science, and multi-turn chat, followed by multiple RL stages; Reward-aware Preference Optimization (RPO) for alignment, RL with Verifiable Rewards (RLVR) for step-wise reasoning, and iterative DPO to refine tool-use behavior. A distillation-driven Neural Architecture Search (“Puzzle”) replaces some attention blocks and varies FFN widths to shrink memory footprint and improve throughput, enabling single-GPU (H100/H200) deployment while preserving …
-
 #### NVIDIA: Llama Nemotron Embed VL 1B V2 (free)
 
 - **ID**: `nvidia/llama-nemotron-embed-vl-1b-v2:free`
@@ -3173,6 +3140,19 @@ The Llama Nemotron Embed VL 1B V2 embedding model is optimized for multimodal qu
 - **対応パラメータ**: temperature, max_tokens, seed, top_p
 
 Llama Nemotron Rerank VL 1B V2 is a 1.7B multimodal reranking model from NVIDIA. It evaluates the relevance of document images and text against user queries, designed for vision RAG pipelines handling charts, tables, infographics, and mixed-media documents. Functions as a cross-encoder that accepts text queries paired with image, text, or combined document inputs, delivering approximately 6-7% recall improvements over embedding-only baselines on visual document retrieval benchmarks.
+
+#### NVIDIA: Nemotron 3 Embed 1B (free)
+
+- **ID**: `nvidia/nemotron-3-embed-1b:free`
+- **Provider**: nvidia
+- **Context**: 16K (16,384) tok
+- **Modality**: text->embeddings  (in: text → out: embeddings)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Capabilities**: Seed固定
+- **登録日**: 2026-07-16
+- **対応パラメータ**: temperature, max_tokens, seed, top_p
+
+NVIDIA Nemotron 3 Embed 1B is an open text embedding model from NVIDIA, optimized for high-throughput, low-latency retrieval. It is suited for enterprise search, RAG, code retrieval, and agentic retrieval workflows, retaining more than 95% of the 8B model’s accuracy in a smaller deployment footprint.
 
 #### NVIDIA: Nemotron 3 Nano 30B A3B
 
@@ -6016,13 +5996,13 @@ Hunyuan-A13B is a 13B active parameter Mixture-of-Experts (MoE) language model d
 
 - **ID**: `tencent/hy3`
 - **Provider**: tencent
-- **Context**: 262K (262,144) tok
+- **Context**: 262K (262,144) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
 - **Pricing**: 入力 $0.14/1M · 出力 $0.58/1M · キャッシュ読 $0.035/1M
-- **Capabilities**: JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-07-06
 - **HF**: `tencent/Hy3`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, logit_bias, structured_outputs, tools, tool_choice
 
 Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort: a direct no-think mode by default, plus low and high chain-of-thought modes for complex math, coding, and multi-step problems. With a 256K context window, Hy3 targets long-horizon tasks, including improved coreference resolution, multi-turn constraint tracking, and stable tool-calling that generalizes across agent scaffoldings.
 
@@ -6155,20 +6135,36 @@ The gte-base embedding model encodes English sentences and paragraphs into a 768
 
 The gte-large embedding model converts English sentences, paragraphs and moderate-length documents into a 1024-dimensional dense vector space, delivering high-quality semantic embeddings optimized for information retrieval, semantic textual similarity, reranking and clustering tasks. Trained via multi-stage contrastive learning on a large domain-diverse relevance corpus, it offers excellent performance across general-purpose embedding use-cases.
 
+### ▎thinkingmachines（1）
+
+#### Thinking Machines: Inkling
+
+- **ID**: `thinkingmachines/inkling`
+- **Provider**: thinkingmachines
+- **Context**: 1.04858M (1,048,576) tok
+- **Modality**: text+image+audio->text  (in: text,image,audio → out: text)
+- **Pricing**: 入力 $1.00/1M · 出力 $4.05/1M · キャッシュ読 $0.17/1M
+- **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力
+- **登録日**: 2026-07-17
+- **HF**: `thinkingmachines/Inkling`
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, repetition_penalty, logit_bias, min_p, tools, tool_choice
+
+Inkling is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 41B active parameters out of 975B total. It is designed for general-purpose reasoning, coding, agentic and tool-use systems, retrieval-augmented generation, instruction following, and multilingual conversational applications. Its native image and audio understanding supports multimodal analysis alongside text.
+
 ### ▎undi95（1）
 
 #### ReMM SLERP 13B
 
 - **ID**: `undi95/remm-slerp-l2-13b`
 - **Provider**: undi95
-- **Context**: 6K (6,144) tok / max出力 4,096 tok
+- **Context**: 6K (6,144) tok / max出力 2,048 tok
 - **Modality**: text->text  (in: text → out: text)
 - **Pricing**: 入力 $0.45/1M · 出力 $0.65/1M
 - **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, logprobs, Seed固定
 - **Knowledge cutoff**: 2023-06-30T23:59:59.000Z
 - **登録日**: 2023-07-22
 - **HF**: `Undi95/ReMM-SLERP-L2-13B`
-- **対応パラメータ**: structured_outputs, response_format, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, logprobs, top_logprobs, repetition_penalty, seed
+- **対応パラメータ**: response_format, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, logit_bias, top_k, min_p, seed, top_a, logprobs, top_logprobs, structured_outputs
 
 A recreation trial of the original MythoMax-L2-B13 but with updated models. #merge
 
@@ -6505,13 +6501,13 @@ GLM-5.1 delivers a major leap in coding capability, with particularly significan
 
 - **ID**: `z-ai/glm-5.2`
 - **Provider**: z-ai
-- **Context**: 1.04858M (1,048,576) tok / max出力 32,768 tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 128,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.93/1M · 出力 $3.00/1M · キャッシュ読 $0.18/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.3423/1M · 出力 $1.08/1M · キャッシュ読 $0.0636/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-06-16
 - **HF**: `zai-org/GLM-5.2`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, logit_bias, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, frequency_penalty, stop, tool_choice, tools, response_format, structured_outputs, logprobs, top_logprobs
 
 GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering, and complex multi-step automation.
 
