@@ -627,6 +627,11 @@ def cmd_untranslated(args):
     print(f"未翻訳: {len(missing)} / {len(models)}")
     for m in missing[:60]:
         print(f"  {m['id']}")
+    # 孤児翻訳（削除済みモデルの残存訳）も可視化。モデル復活の可能性があるため自動削除はしない
+    live = {m["id"] for m in models}
+    orphans = [k for k in tx if k not in live]
+    if orphans:
+        print(f"（孤児翻訳: {len(orphans)} 件 — 現行カタログに無いモデルの残存訳。不要なら translations.json から手動削除）")
     if missing:
         arch = lambda m: m.get("architecture") or {}
         out = [{
@@ -643,6 +648,25 @@ def cmd_untranslated(args):
         with open(p, "w", encoding="utf-8") as f:
             json.dump(out, f, ensure_ascii=False, indent=1)
         print(f"\n翻訳用データ: {os.path.relpath(p, BASE_DIR)}（このファイルを翻訳して translations.json にマージ）")
+
+
+def cmd_prune(args):
+    """古いスナップショットを削除（直近 keep_days 日分を保持。最新は必ず残す）。
+    毎日1個増える履歴の肥大化を防ぐ。削除分もgit履歴には残るので復元可能。"""
+    snaps = list_snapshots()
+    if len(snaps) <= 1:
+        print("スナップショットが1個以下。何もしません。")
+        return
+    cutoff = (dt.datetime.now() - dt.timedelta(days=args.keep_days)).strftime("%Y%m%d-%H%M%S")
+    removed = []
+    for s in snaps[:-1]:  # 最新は差分比較に必要なので必ず保持
+        tag = os.path.basename(s)[len("models-"):-len(".json")]
+        if tag < cutoff:
+            os.remove(s)
+            removed.append(os.path.basename(s))
+    print(f"削除 {len(removed)} 個 / 残り {len(list_snapshots())} 個（keep {args.keep_days}日）")
+    for r in removed:
+        print(f"  - {r}")
 
 
 def cmd_list(args):
@@ -688,6 +712,10 @@ def main():
     sub.add_parser("export", help="静的サイト用データ(site/)を書き出し").set_defaults(func=cmd_export)
     sub.add_parser("untranslated", help="未翻訳モデルを抽出(差分翻訳用)").set_defaults(func=cmd_untranslated)
     sub.add_parser("list", help="スナップショット一覧").set_defaults(func=cmd_list)
+
+    p = sub.add_parser("prune", help="古いスナップショットを間引く(直近N日を保持)")
+    p.add_argument("--keep-days", type=int, default=30, help="保持する日数(既定30)")
+    p.set_defaults(func=cmd_prune)
 
     p = sub.add_parser("diff", help="2スナップショット間の差分")
     p.add_argument("old"); p.add_argument("new")

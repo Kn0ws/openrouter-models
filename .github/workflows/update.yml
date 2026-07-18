@@ -39,6 +39,7 @@ jobs:
         if: steps.chk.outputs.changed == 'yes'
         run: |
           python3 or_models.py export
+          python3 or_models.py prune --keep-days 30   # 古いスナップショットを間引く(30日ローリング)
           # 未翻訳モデルを検知してジョブサマリに表示（翻訳自体は手動: LLMが必要なため）
           untr=$(python3 or_models.py untranslated) || true
           echo "$untr"
