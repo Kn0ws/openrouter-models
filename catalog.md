@@ -1,6 +1,6 @@
 # OpenRouter モデルカタログ（全433モデル）
 
-- 取得日時: 2026-07-18T22:11:15
+- 取得日時: 2026-07-19T07:08:18
 - プロバイダ数: 70 / 無料枠あり: 23
 
 ## プロバイダ別サマリ
@@ -44,7 +44,7 @@
 | sao10k | 3 | 0.04 | 0.85 | 131,072 |
 | deepgram | 2 | 30.00 | 4,300.00 | 0 |
 | nex-agi | 2 | 0.02 | 0.25 | 262,144 |
-| stepfun | 2 | 0.10 | 0.19 | 262,144 |
+| stepfun | 2 | 0.10 | 0.20 | 262,144 |
 | ibm-granite | 2 | 0.02 | 0.05 | 131,072 |
 | ~openai | 2 | 0.75 | 5.00 | 1,050,000 |
 | ~google | 2 | 1.50 | 2.00 | 1,048,576 |
@@ -2271,7 +2271,7 @@ Microsoft's MAI-Image-2.5 is a high-quality image generation model available via
 - **登録日**: 2026-06-02
 - **対応パラメータ**: max_tokens, temperature, top_p, max_completion_tokens
 
-MAI-Transcribe 1.5 is Microsoft's fast transcription model powered by Azure AI Speech. It supports 100+ BCP-47 locales with automatic language detection, automatic punctuation, and duration-based per-second billing. Uses the Azure Speech fast transcription API (v2025-10-15).
+MAI-Transcribe 1.5 is a multilingual speech-to-text model from Microsoft AI. It is suited for captions, call transcription, subtitling, accessibility, and other voice-enabled applications, with reliable transcription across 43 languages, diverse accents, and noisy real-world audio. It supports automatic language identification and keyword biasing for domain-specific terminology, and improves long-form transcription speed over MAI-Transcribe-1. Speaker diarization is not supported.
 
 #### Microsoft: MAI-Voice-2
 
@@ -2283,7 +2283,7 @@ MAI-Transcribe 1.5 is Microsoft's fast transcription model powered by Azure AI S
 - **登録日**: 2026-06-02
 - **対応パラメータ**: max_tokens, temperature, top_p, max_completion_tokens
 
-MAI-Voice-2 is a high-fidelity, expressive text-to-speech model from Microsoft, powered by Azure AI Speech. It synthesizes natural-sounding speech across 10+ languages with support for expressive SSML styles (cheerful, sad, excited, etc.) and speed control (0.5×–2×). Voice names follow the Azure locale format (e.g., en-US-Harper:MAI-Voice-2). Output is available in MP3 and PCM at 24 kHz.
+MAI-Voice-2 is an expressive text-to-speech model from Microsoft. It is suited for conversational assistants, media narration, accessibility, education, and other long-form voice applications. It supports 15 languages across 18 locales, fine-grained control of tone and delivery, multi-speaker generation, and voice prompting from short audio clips without fine-tuning. The model prioritizes naturalness and expressivity over latency-critical generation.
 
 #### Microsoft: Phi 4
 
@@ -5963,13 +5963,13 @@ Step 3.5 Flash is StepFun's most capable open-source foundation model. Built on 
 
 - **ID**: `stepfun/step-3.7-flash`
 - **Provider**: stepfun
-- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Context**: 256K (256,000) tok / max出力 256,000 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.19/1M · 出力 $1.14/1M · キャッシュ読 $0.03/1M
+- **Pricing**: 入力 $0.2/1M · 出力 $1.15/1M · キャッシュ読 $0.04/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-05-28
 - **HF**: `stepfun-ai/Step-3.7-Flash`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, top_p, frequency_penalty, stop, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, tools, top_p, stop, frequency_penalty, logprobs, top_logprobs, response_format, structured_outputs, tool_choice
 
 Step 3.7 Flash is StepFun's latest high-efficiency multimodal Mixture-of-Experts model. It pairs a 196B-parameter language backbone with a vision encoder for native image and video understanding, activating roughly 11B parameters per token. The model supports a 256K context window and exposes selectable reasoning levels (high/medium/low), letting callers trade off speed, cost, and depth of reasoning.
 
@@ -6254,7 +6254,7 @@ It supports a 1 million token context window with no output token limit, making 
 - **Provider**: x-ai
 - **Context**: 500K (500,000) tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $2.00/1M · 出力 $6.00/1M · キャッシュ読 $0.5/1M · Web検索 $0.005
+- **Pricing**: 入力 $2.00/1M · 出力 $6.00/1M · キャッシュ読 $0.3/1M · Web検索 $0.005
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-07-08
 - **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, max_tokens, temperature, top_p, seed, logprobs, top_logprobs, stop, frequency_penalty, presence_penalty, tools, tool_choice
@@ -6503,7 +6503,7 @@ GLM-5.1 delivers a major leap in coding capability, with particularly significan
 - **Provider**: z-ai
 - **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.2968/1M · 出力 $0.9328/1M · キャッシュ読 $0.0551/1M
+- **Pricing**: 入力 $0.2786/1M · 出力 $0.8756/1M · キャッシュ読 $0.0517/1M
 - **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-06-16
 - **HF**: `zai-org/GLM-5.2`
@@ -6690,7 +6690,7 @@ This model always redirects to the latest model in the OpenAI GPT Mini family.
 - **Provider**: ~x-ai
 - **Context**: 500K (500,000) tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $2.00/1M · 出力 $6.00/1M · キャッシュ読 $0.5/1M · Web検索 $0.005
+- **Pricing**: 入力 $2.00/1M · 出力 $6.00/1M · キャッシュ読 $0.3/1M · Web検索 $0.005
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-07-08
 - **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, max_tokens, temperature, top_p, seed, logprobs, top_logprobs, stop, frequency_penalty, presence_penalty, tools, tool_choice
