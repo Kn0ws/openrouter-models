@@ -1,14 +1,14 @@
-# OpenRouter モデルカタログ（全433モデル）
+# OpenRouter モデルカタログ（全427モデル）
 
-- 取得日時: 2026-07-19T07:08:18
-- プロバイダ数: 70 / 無料枠あり: 23
+- 取得日時: 2026-07-20T07:22:16
+- プロバイダ数: 70 / 無料枠あり: 17
 
 ## プロバイダ別サマリ
 
 | Provider | モデル数 | 最安入力($/1M) | 最高入力($/1M) | 最大Context |
 |---|--:|--:|--:|--:|
 | openai | 79 | 0.00 | 40,000.00 | 1,050,000 |
-| qwen | 52 | 0.00 | 35.00 | 1,048,576 |
+| qwen | 50 | 0.01 | 35.00 | 1,048,576 |
 | google | 36 | 0.00 | 16,000.00 | 1,048,756 |
 | mistralai | 23 | 0.02 | 3,000.00 | 262,144 |
 | anthropic | 15 | 0.25 | 30.00 | 1,000,000 |
@@ -17,16 +17,15 @@
 | minimax | 11 | 0.00 | 100.00 | 1,048,576 |
 | recraft | 11 | 0.00 | 0.00 | 65,536 |
 | deepseek | 11 | 0.09 | 0.80 | 1,048,576 |
-| meta-llama | 10 | 0.00 | 0.40 | 10,000,000 |
 | x-ai | 8 | 0.00 | 15.00 | 2,000,000 |
 | cohere | 8 | 0.00 | 2.50 | 256,000 |
+| meta-llama | 8 | 0.02 | 0.40 | 10,000,000 |
 | moonshotai | 7 | 0.38 | 3.00 | 1,048,576 |
 | perplexity | 7 | 0.00 | 3.00 | 200,000 |
 | microsoft | 5 | 0.07 | 360,000.00 | 65,536 |
 | bytedance-seed | 5 | 0.00 | 0.25 | 262,144 |
 | amazon | 5 | 0.04 | 2.50 | 1,000,000 |
 | sentence-transformers | 5 | 0.01 | 0.01 | 8,192 |
-| nousresearch | 5 | 0.00 | 1.00 | 131,072 |
 | aion-labs | 4 | 0.70 | 3.00 | 131,072 |
 | tencent | 4 | 0.00 | 0.14 | 262,144 |
 | poolside | 4 | 0.00 | 0.20 | 262,144 |
@@ -36,6 +35,7 @@
 | bytedance | 4 | 0.00 | 0.10 | 128,000 |
 | black-forest-labs | 4 | 0.00 | 0.00 | 67,344 |
 | thedrummer | 4 | 0.25 | 0.55 | 131,072 |
+| nousresearch | 4 | 0.13 | 1.00 | 131,072 |
 | kwaipilot | 3 | 0.15 | 0.74 | 256,000 |
 | inclusionai | 3 | 0.01 | 0.07 | 262,144 |
 | kwaivgi | 3 | 0.00 | 0.00 | 0 |
@@ -54,7 +54,6 @@
 | rekaai | 2 | 0.10 | 0.10 | 65,536 |
 | relace | 2 | 0.85 | 1.00 | 256,000 |
 | thenlper | 2 | 0.01 | 0.01 | 8,192 |
-| cognitivecomputations | 2 | 0.00 | 0.20 | 128,000 |
 | morph | 2 | 0.80 | 0.90 | 262,144 |
 | inflection | 2 | 2.50 | 2.50 | 8,000 |
 | thinkingmachines | 1 | 1.00 | 1.00 | 1,048,576 |
@@ -72,6 +71,7 @@
 | allenai | 1 | 0.15 | 0.15 | 65,536 |
 | deepcogito | 1 | 1.25 | 1.25 | 128,000 |
 | ai21 | 1 | 2.00 | 2.00 | 256,000 |
+| cognitivecomputations | 1 | 0.20 | 0.20 | 128,000 |
 | baidu | 1 | 0.42 | 0.42 | 131,072 |
 | anthracite-org | 1 | 3.00 | 3.00 | 32,768 |
 | mancer | 1 | 0.50 | 0.50 | 8,000 |
@@ -723,7 +723,7 @@ ByteDance's next-generation audio-visual generation model with a 4.5B parameter 
 - **ID**: `bytedance/seedance-2.0`
 - **Provider**: bytedance
 - **Context**: — tok
-- **Modality**: text+image+video->video  (in: text,image,video → out: video)
+- **Modality**: text+image+audio+video->video  (in: text,image,audio,video → out: video)
 - **Pricing**: 入力 無料/1M · 出力 無料/1M · Video (with audio) $0.067256〜$1.3608/second · Video (no audio) $0.067256〜$1.3608/second · Video Tokens (with audio) $7e-06/M tokens · Video Tokens (no audio) $7e-06/M tokens
 - **登録日**: 2026-04-15
 - **対応パラメータ**: frequency_penalty
@@ -735,7 +735,7 @@ Seedance 2.0 is a video generation model from ByteDance. It supports text-to-vid
 - **ID**: `bytedance/seedance-2.0-fast`
 - **Provider**: bytedance
 - **Context**: — tok
-- **Modality**: text+image+video->video  (in: text,image,video → out: video)
+- **Modality**: text+image+audio+video->video  (in: text,image,audio,video → out: video)
 - **Pricing**: 入力 無料/1M · 出力 無料/1M · Video (with audio) $0.0538048〜$1.08864/second · Video (no audio) $0.0538048〜$1.08864/second · Video Tokens (with audio) $5.6e-06/M tokens · Video Tokens (no audio) $5.6e-06/M tokens
 - **登録日**: 2026-04-15
 - **対応パラメータ**: frequency_penalty
@@ -842,7 +842,7 @@ Pricing is $0.04 per output image, regardless of size.
 
 Orpheus 3B is an English text-to-speech model from Canopy Labs, fine-tuned for natural prosody and expressive delivery. It offers 7 preset voices and is suited for narration, voice assistants, and interactive applications where naturalistic speech is a priority.
 
-### ▎cognitivecomputations（2）
+### ▎cognitivecomputations（1）
 
 #### Venice: Uncensored
 
@@ -856,21 +856,6 @@ Orpheus 3B is an English text-to-speech model from Canopy Labs, fine-tuned for n
 - **登録日**: 2025-07-09
 - **HF**: `cognitivecomputations/Dolphin-Mistral-24B-Venice-Edition`
 - **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, response_format
-
-Venice Uncensored Dolphin Mistral 24B Venice Edition is a fine-tuned variant of Mistral-Small-24B-Instruct-2501, developed by dphn.ai in collaboration with Venice.ai. This model is designed as an “uncensored” instruct-tuned LLM, preserving user control over alignment, system prompts, and behavior. Intended for advanced and unrestricted use cases, Venice Uncensored emphasizes steerability and transparent behavior, removing default safety and alignment layers typically found in mainstream assistant models.
-
-#### Venice: Uncensored (free)
-
-- **ID**: `cognitivecomputations/dolphin-mistral-24b-venice-edition:free`
-- **Provider**: cognitivecomputations
-- **Context**: 32K (32,768) tok
-- **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
-- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode
-- **Knowledge cutoff**: 2024-04-30T23:59:59.000Z
-- **登録日**: 2025-07-09
-- **HF**: `cognitivecomputations/Dolphin-Mistral-24B-Venice-Edition`
-- **対応パラメータ**: structured_outputs, response_format, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k
 
 Venice Uncensored Dolphin Mistral 24B Venice Edition is a fine-tuned variant of Mistral-Small-24B-Instruct-2501, developed by dphn.ai in collaboration with Venice.ai. This model is designed as an “uncensored” instruct-tuned LLM, preserving user control over alignment, system prompts, and behavior. Intended for advanced and unrestricted use cases, Venice Uncensored emphasizes steerability and transparent behavior, removing default safety and alignment layers typically found in mainstream assistant models.
 
@@ -1642,10 +1627,10 @@ Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from G
 - **Context**: 262K (262,144) tok / max出力 32,768 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
 - **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-03
 - **HF**: `google/gemma-4-26B-A4B-it`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, response_format, structured_outputs, logprobs, top_logprobs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, response_format, structured_outputs, logprobs, top_logprobs
 
 Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at a fraction of the compute cost. Supports multimodal input including text, images, and video (up to 60s at 1fps). Features a 256K token context window, native function calling, configurable thinking/reasoning mode, and structured output support. Released under Apache 2.0.
 
@@ -2060,7 +2045,7 @@ Muse Spark 1.1 is a multimodal reasoning model from Meta, built for agentic task
 
 The model is designed to orchestrate multi-agent workflows, acting as either a main agent that plans and delegates or as a subagent, and generalizes zero-shot to new tools, MCP servers, and custom skills. It supports structured output, parallel function calling, built-in search with citations, and configurable reasoning effort. Meta reports strong performance on real-world coding across large codebases, computer-use workflows, and visual-to-code generation.
 
-### ▎meta-llama（10）
+### ▎meta-llama（8）
 
 #### Meta: Llama 3.1 70B Instruct
 
@@ -2140,24 +2125,6 @@ Trained on 9 trillion tokens, the Llama 3.2 3B model excels in instruction-follo
 
 Click here for the [original model …
 
-#### Meta: Llama 3.2 3B Instruct (free)
-
-- **ID**: `meta-llama/llama-3.2-3b-instruct:free`
-- **Provider**: meta-llama
-- **Context**: 131K (131,072) tok
-- **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
-- **Knowledge cutoff**: 2023-12-31T23:59:59.000Z
-- **登録日**: 2024-09-25
-- **HF**: `meta-llama/Llama-3.2-3B-Instruct`
-- **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k
-
-Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it supports eight languages, including English, Spanish, and Hindi, and is adaptable for additional languages.
-
-Trained on 9 trillion tokens, the Llama 3.2 3B model excels in instruction-following, complex reasoning, and tool use. Its balanced performance makes it ideal for applications needing accuracy and efficiency in text generation across multilingual settings.
-
-Click here for the [original model …
-
 #### Meta: Llama 3.3 70B Instruct
 
 - **ID**: `meta-llama/llama-3.3-70b-instruct`
@@ -2170,25 +2137,6 @@ Click here for the [original model …
 - **登録日**: 2024-12-06
 - **HF**: `meta-llama/Llama-3.3-70B-Instruct`
 - **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, tools, tool_choice, logit_bias
-
-The Meta Llama 3.3 multilingual large language model (LLM) is a pretrained and instruction tuned generative model in 70B (text in/text out). The Llama 3.3 instruction tuned text only model is optimized for multilingual dialogue use cases and outperforms many of the available open source and closed chat models on common industry benchmarks.
-
-Supported languages: English, German, French, Italian, Portuguese, Hindi, Spanish, and Thai.
-
-[Model Card](https://github.com/meta-llama/llama-models/blob/main/models/llama3_3/MODEL_CARD.md)
-
-#### Meta: Llama 3.3 70B Instruct (free)
-
-- **ID**: `meta-llama/llama-3.3-70b-instruct:free`
-- **Provider**: meta-llama
-- **Context**: 131K (131,072) tok
-- **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
-- **Capabilities**: Function calling, Tool choice
-- **Knowledge cutoff**: 2023-12-31T23:59:59.000Z
-- **登録日**: 2024-12-06
-- **HF**: `meta-llama/Llama-3.3-70B-Instruct`
-- **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, tools, tool_choice
 
 The Meta Llama 3.3 multilingual large language model (LLM) is a pretrained and instruction tuned generative model in 70B (text in/text out). The Llama 3.3 instruction tuned text only model is optimized for multilingual dialogue use cases and outperforms many of the available open source and closed chat models on common industry benchmarks.
 
@@ -2943,8 +2891,6 @@ MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 fa
 
 Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at navigating large repositories, using tools, debugging, and iterating against images, logs, tests, and runtime feedback. Its architecture uses KDA and Attention Residuals for computational efficiency.
 
-Note: reasoning effort currently supports only the `max` level (default); more levels are coming soon. See Moonshot AI's official docs [here](https://platform.kimi.ai/docs/guide/kimi-k3-quickstart#thinking-effort)
-
 ### ▎morph（2）
 
 #### Morph: Morph V3 Fast
@@ -3016,7 +2962,7 @@ Nex-N2-Mini is an open-source agentic mixture-of-experts model from Nex AGI, the
 
 Nex-N2-Pro is an agentic mixture-of-experts model from Nex AGI, with 17B active parameters out of 397B total. Built on the Qwen3.5 architecture, it accepts text and image input and produces text output, and supports reasoning, function calling, and structured outputs. It is designed for coding, tool use, deep research, and long-horizon agentic workflows, unifying planning, code implementation, debugging, and iteration into a single execution loop.
 
-### ▎nousresearch（5）
+### ▎nousresearch（4）
 
 #### Nous: Hermes 3 405B Instruct
 
@@ -3030,26 +2976,6 @@ Nex-N2-Pro is an agentic mixture-of-experts model from Nex AGI, with 17B active 
 - **登録日**: 2024-08-16
 - **HF**: `NousResearch/Hermes-3-Llama-3.1-405B`
 - **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, logit_bias, structured_outputs
-
-Hermes 3 is a generalist language model with many improvements over Hermes 2, including advanced agentic capabilities, much better roleplaying, reasoning, multi-turn conversation, long context coherence, and improvements across the board.
-
-Hermes 3 405B is a frontier-level, full-parameter finetune of the Llama-3.1 405B foundation model, focused on aligning LLMs to the user, with powerful steering capabilities and control given to the end user.
-
-The Hermes 3 series builds and expands on the Hermes 2 set of capabilities, including more powerful and reliable function calling and structured output capabilities, generalist assistant capabilities, and improved code generation skills.
-
-Hermes 3 is …
-
-#### Nous: Hermes 3 405B Instruct (free)
-
-- **ID**: `nousresearch/hermes-3-llama-3.1-405b:free`
-- **Provider**: nousresearch
-- **Context**: 131K (131,072) tok
-- **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
-- **Knowledge cutoff**: 2023-12-31T23:59:59.000Z
-- **登録日**: 2024-08-16
-- **HF**: `NousResearch/Hermes-3-Llama-3.1-405B`
-- **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k
 
 Hermes 3 is a generalist language model with many improvements over Hermes 2, including advanced agentic capabilities, much better roleplaying, reasoning, multi-turn conversation, long context coherence, and improvements across the board.
 
@@ -4689,7 +4615,7 @@ Laguna XS 2.1 is the latest coding agent model in the 33B-A3B category from [Poo
 
 Laguna XS 2.1 is designed for software engineering and agentic coding use cases, and you are responsible for confirming that it is appropriate for your intended application. Laguna XS 2.1 is subject to the [OpenMDW-1.1 License](https://openmdw.ai/license/1-1/), and should be used consistently with Poolside's …
 
-### ▎qwen（52）
+### ▎qwen（50）
 
 #### Qwen2.5 72B Instruct
 
@@ -5050,23 +4976,6 @@ The model is trained with a strong agentic focus and performs reliably on long-h
 
 Qwen3 Coder Plus is Alibaba's proprietary version of the Open Source Qwen3 Coder 480B A35B. It is a powerful coding agent model specializing in autonomous programming via tool calling and environment interaction, combining coding proficiency with versatile general-purpose abilities.
 
-#### Qwen: Qwen3 Coder 480B A35B (free)
-
-- **ID**: `qwen/qwen3-coder:free`
-- **Provider**: qwen
-- **Context**: 1.04858M (1,048,576) tok / max出力 262,000 tok
-- **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
-- **Capabilities**: Function calling, Tool choice
-- **Knowledge cutoff**: 2025-06-30T23:59:59.000Z
-- **登録日**: 2025-07-23
-- **HF**: `Qwen/Qwen3-Coder-480B-A35B-Instruct`
-- **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, tools, tool_choice
-
-Qwen3-Coder-480B-A35B-Instruct is a Mixture-of-Experts (MoE) code generation model developed by the Qwen team. It is optimized for agentic coding tasks such as function calling, tool use, and long-context reasoning over repositories. The model features 480 billion total parameters, with 35 billion active per forward pass (8 out of 160 experts).
-
-Pricing for the Alibaba endpoints varies by context length. Once a request is greater than 128k input tokens, the higher pricing is used.
-
 #### Qwen: Qwen3 Embedding 4B
 
 - **ID**: `qwen/qwen3-embedding-4b`
@@ -5134,23 +5043,6 @@ Qwen3-Max-Thinking is the flagship reasoning model in the Qwen3 series, designed
 - **登録日**: 2025-09-11
 - **HF**: `Qwen/Qwen3-Next-80B-A3B-Instruct`
 - **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, tools, tool_choice, logit_bias, structured_outputs
-
-Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-Next series optimized for fast, stable responses without “thinking” traces. It targets complex tasks across reasoning, code generation, knowledge QA, and multilingual use, while remaining robust on alignment and formatting. Compared with prior Qwen3 instruct variants, it focuses on higher throughput and stability on ultra-long inputs and multi-turn dialogues, making it well-suited for RAG, tool use, and agentic workflows that require consistent final answers rather than visible chain-of-thought.
-
-The model employs scaling-efficient training and decoding to improve parameter efficiency and inference speed, and has …
-
-#### Qwen: Qwen3 Next 80B A3B Instruct (free)
-
-- **ID**: `qwen/qwen3-next-80b-a3b-instruct:free`
-- **Provider**: qwen
-- **Context**: 262K (262,144) tok
-- **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode
-- **Knowledge cutoff**: 2025-09-30T23:59:59.000Z
-- **登録日**: 2025-09-11
-- **HF**: `Qwen/Qwen3-Next-80B-A3B-Instruct`
-- **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, tools, tool_choice, structured_outputs, response_format
 
 Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-Next series optimized for fast, stable responses without “thinking” traces. It targets complex tasks across reasoning, code generation, knowledge QA, and multilingual use, while remaining robust on alignment and formatting. Compared with prior Qwen3 instruct variants, it focuses on higher throughput and stability on ultra-long inputs and multi-turn dialogues, making it well-suited for RAG, tool use, and agentic workflows that require consistent final answers rather than visible chain-of-thought.
 
@@ -6501,13 +6393,13 @@ GLM-5.1 delivers a major leap in coding capability, with particularly significan
 
 - **ID**: `z-ai/glm-5.2`
 - **Provider**: z-ai
-- **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.2786/1M · 出力 $0.8756/1M · キャッシュ読 $0.0517/1M
-- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.2478/1M · 出力 $0.826/1M · キャッシュ読 $0.0413/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-06-16
 - **HF**: `zai-org/GLM-5.2`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice, response_format
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
 
 GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering, and complex multi-step automation.
 
