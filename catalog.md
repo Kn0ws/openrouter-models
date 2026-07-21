@@ -1,7 +1,7 @@
-# OpenRouter モデルカタログ（全427モデル）
+# OpenRouter モデルカタログ（全431モデル）
 
-- 取得日時: 2026-07-20T07:22:16
-- プロバイダ数: 70 / 無料枠あり: 17
+- 取得日時: 2026-07-21T07:09:50
+- プロバイダ数: 72 / 無料枠あり: 16
 
 ## プロバイダ別サマリ
 
@@ -17,7 +17,7 @@
 | minimax | 11 | 0.00 | 100.00 | 1,048,576 |
 | recraft | 11 | 0.00 | 0.00 | 65,536 |
 | deepseek | 11 | 0.09 | 0.80 | 1,048,576 |
-| x-ai | 8 | 0.00 | 15.00 | 2,000,000 |
+| x-ai | 9 | 0.00 | 15.00 | 2,000,000 |
 | cohere | 8 | 0.00 | 2.50 | 256,000 |
 | meta-llama | 8 | 0.02 | 0.40 | 10,000,000 |
 | moonshotai | 7 | 0.38 | 3.00 | 1,048,576 |
@@ -27,7 +27,6 @@
 | amazon | 5 | 0.04 | 2.50 | 1,000,000 |
 | sentence-transformers | 5 | 0.01 | 0.01 | 8,192 |
 | aion-labs | 4 | 0.70 | 3.00 | 131,072 |
-| tencent | 4 | 0.00 | 0.14 | 262,144 |
 | poolside | 4 | 0.00 | 0.20 | 262,144 |
 | alibaba | 4 | 0.00 | 0.00 | 0 |
 | ~anthropic | 4 | 1.00 | 10.00 | 1,000,000 |
@@ -36,7 +35,9 @@
 | black-forest-labs | 4 | 0.00 | 0.00 | 67,344 |
 | thedrummer | 4 | 0.25 | 0.55 | 131,072 |
 | nousresearch | 4 | 0.13 | 1.00 | 131,072 |
+| krea | 3 | 0.00 | 0.00 | 0 |
 | kwaipilot | 3 | 0.15 | 0.74 | 256,000 |
+| tencent | 3 | 0.06 | 0.14 | 262,144 |
 | inclusionai | 3 | 0.01 | 0.07 | 262,144 |
 | kwaivgi | 3 | 0.00 | 0.00 | 0 |
 | intfloat | 3 | 0.01 | 0.01 | 8,192 |
@@ -50,12 +51,13 @@
 | ~google | 2 | 1.50 | 2.00 | 1,048,576 |
 | zyphra | 2 | 7.00 | 7.00 | 4,096 |
 | xiaomi | 2 | 0.10 | 0.35 | 1,050,000 |
-| arcee-ai | 2 | 0.25 | 0.75 | 262,144 |
+| arcee-ai | 2 | 0.22 | 0.75 | 262,144 |
 | rekaai | 2 | 0.10 | 0.10 | 65,536 |
 | relace | 2 | 0.85 | 1.00 | 256,000 |
 | thenlper | 2 | 0.01 | 0.01 | 8,192 |
 | morph | 2 | 0.80 | 0.90 | 262,144 |
 | inflection | 2 | 2.50 | 2.50 | 8,000 |
+| meituan | 1 | 0.30 | 0.30 | 1,048,756 |
 | thinkingmachines | 1 | 1.00 | 1.00 | 1,048,576 |
 | meta | 1 | 1.25 | 1.25 | 1,048,576 |
 | ~x-ai | 1 | 2.00 | 2.00 | 500,000 |
@@ -549,13 +551,13 @@ Sonnet 5 is Anthropic's most capable Sonnet-class model, with frontier performan
 
 - **ID**: `arcee-ai/trinity-large-thinking`
 - **Provider**: arcee-ai
-- **Context**: 262K (262,144) tok / max出力 80,000 tok
+- **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.25/1M · 出力 $0.8/1M · キャッシュ読 $0.06/1M
-- **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力
+- **Pricing**: 入力 $0.22/1M · 出力 $0.85/1M · キャッシュ読 $0.06/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-01
 - **HF**: `arcee-ai/Trinity-Large-Thinking`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_k, top_p, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, frequency_penalty, presence_penalty, repetition_penalty, seed, stop, top_k, logit_bias, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
 
 Trinity Large Thinking is a powerful open source reasoning model from the team at Arcee AI. It shows strong performance in PinchBench, agentic workloads, and reasoning tasks. Launch video: https://youtu.be/Gc82AXLa0Rg?si=4RLn6WBz33qT--B7
 
@@ -1933,6 +1935,41 @@ The e5-large-v2 embedding model maps English sentences, paragraphs, and document
 
 The multilingual-e5-large embedding model encodes sentences, paragraphs, and documents across over 90 languages into a 1024-dimensional dense vector space, delivering robust semantic embeddings optimized for multilingual retrieval, cross-language similarity, and large-scale data search.
 
+### ▎krea（3）
+
+#### Krea: Krea 2 Large
+
+- **ID**: `krea/krea-2-large`
+- **Provider**: krea
+- **Context**: — tok
+- **Modality**: text+image->image  (in: text,image → out: image)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.06/image · Image Output (style references) $0.065/image · Image Output (moodboards) $0.07/image
+- **登録日**: 2026-07-20
+
+Krea 2 Large is Krea's high-capability image generation model, more than twice the size of Krea 2 Medium. Its lighter post-training gives images a rawer, more textured, and flexible character, making it particularly suited for photorealism, expressive artistic styles, motion blur, grain, and low-dynamic-range looks.
+
+#### Krea: Krea 2 Medium
+
+- **ID**: `krea/krea-2-medium`
+- **Provider**: krea
+- **Context**: — tok
+- **Modality**: text+image->image  (in: text,image → out: image)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.03/image · Image Output (style references) $0.035/image · Image Output (moodboards) $0.04/image
+- **登録日**: 2026-07-20
+
+Krea 2 Medium is Krea's balanced, cost-efficient image generation model and a practical starting point for a broad range of use cases. Its extensive post-training supports stable, consistent generations, with particular strengths in illustration, anime, painting, and other expressive artistic styles.
+
+#### Krea: Krea 2 Medium Turbo
+
+- **ID**: `krea/krea-2-medium-turbo`
+- **Provider**: krea
+- **Context**: — tok
+- **Modality**: text+image->image  (in: text,image → out: image)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.015/image · Image Output (style references) $0.0175/image · Image Output (moodboards) $0.02/image
+- **登録日**: 2026-07-20
+
+Krea 2 Medium Turbo is a distilled, speed-focused variant of Krea 2 Medium from Krea. It is designed for rapid iteration and graphic design exploration where fast generation is the priority.
+
 ### ▎kwaipilot（3）
 
 #### Kwaipilot: KAT-Coder-Air V2.5
@@ -2027,6 +2064,22 @@ Kling Video O1 is a video generation model from Kuaishou. It supports text and i
 - **対応パラメータ**: response_format, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, logit_bias, top_k, min_p, seed, top_a, logprobs, top_logprobs, structured_outputs
 
 An attempt to recreate Claude-style verbosity, but don't expect the same level of coherence or memory. Meant for use in roleplay/narrative situations.
+
+### ▎meituan（1）
+
+#### Meituan: LongCat 2.0
+
+- **ID**: `meituan/longcat-2.0`
+- **Provider**: meituan
+- **Context**: 1.04876M (1,048,756) tok / max出力 262,144 tok
+- **Modality**: text->text  (in: text → out: text)
+- **Pricing**: 入力 $0.3/1M · 出力 $1.20/1M · キャッシュ読 $0.006/1M
+- **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力, Seed固定
+- **登録日**: 2026-07-20
+- **HF**: `meituan-longcat/LongCat-2.0`
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, seed, logit_bias, stop, tools, tool_choice
+
+LongCat 2.0 is a sparse mixture-of-experts language model from Meituan, with 48B active parameters out of 1.6T total. It is suited for coding, repository-level changes, long-horizon problem solving, and agentic workflows.
 
 ### ▎meta（1）
 
@@ -3071,7 +3124,7 @@ Llama Nemotron Rerank VL 1B V2 is a 1.7B multimodal reranking model from NVIDIA.
 
 - **ID**: `nvidia/nemotron-3-embed-1b:free`
 - **Provider**: nvidia
-- **Context**: 16K (16,384) tok
+- **Context**: 32K (32,768) tok
 - **Modality**: text->embeddings  (in: text → out: embeddings)
 - **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
 - **Capabilities**: Seed固定
@@ -5867,7 +5920,7 @@ Step 3.7 Flash is StepFun's latest high-efficiency multimodal Mixture-of-Experts
 
 Designed for coding, agentic workflows, structured outputs, and long-context productivity tasks.
 
-### ▎tencent（4）
+### ▎tencent（3）
 
 #### Tencent: Hunyuan A13B Instruct
 
@@ -5888,13 +5941,13 @@ Hunyuan-A13B is a 13B active parameter Mixture-of-Experts (MoE) language model d
 
 - **ID**: `tencent/hy3`
 - **Provider**: tencent
-- **Context**: 262K (262,144) tok / max出力 131,072 tok
+- **Context**: 262K (262,144) tok / max出力 128,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.14/1M · 出力 $0.58/1M · キャッシュ読 $0.035/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.132/1M · 出力 $0.528/1M · キャッシュ読 $0.033/1M
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-07-06
 - **HF**: `tencent/Hy3`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, logit_bias, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, temperature, stop, max_completion_tokens, reasoning_effort, max_tokens, response_format, tools, tool_choice
 
 Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort: a direct no-think mode by default, plus low and high chain-of-thought modes for complex math, coding, and multi-step problems. With a 256K context window, Hy3 targets long-horizon tasks, including improved coreference resolution, multi-turn constraint tracking, and stable tool-calling that generalizes across agent scaffoldings.
 
@@ -5913,22 +5966,6 @@ Tencent positions it as a reliable, cost-effective option across coding, documen
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, tool_choice, tools
 
 Hy3 preview is a high-efficiency Mixture-of-Experts model from Tencent designed for agentic workflows and production use. It supports configurable reasoning levels across disabled, low, and high modes, allowing it to balance speed and depth depending on the task, while delivering strong code generation and reliable performance across multi-step, real-world workflows.
-
-#### Tencent: Hy3 (free)
-
-- **ID**: `tencent/hy3:free`
-- **Provider**: tencent
-- **Context**: 262K (262,144) tok / max出力 262,144 tok
-- **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), Reasoning(思考), Reasoning出力, Seed固定
-- **登録日**: 2026-07-06
-- **HF**: `tencent/Hy3`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice, structured_outputs
-
-Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort: a direct no-think mode by default, plus low and high chain-of-thought modes for complex math, coding, and multi-step problems. With a 256K context window, Hy3 targets long-horizon tasks, including improved coreference resolution, multi-turn constraint tracking, and stable tool-calling that generalizes across agent scaffoldings.
-
-Tencent positions it as a reliable, cost-effective option across coding, document processing, financial analysis, game development, and frontend …
 
 ### ▎thedrummer（4）
 
@@ -6089,7 +6126,7 @@ Solar Pro 3 is Upstage's powerful Mixture-of-Experts (MoE) language model. With 
 
 Palmyra X5 is Writer's most advanced model, purpose-built for building and scaling AI agents across the enterprise. It delivers industry-leading speed and efficiency on context windows up to 1 million tokens, powered by a novel transformer architecture and hybrid attention mechanisms. This enables faster inference and expanded memory for processing large volumes of enterprise data, critical for scaling AI agents.
 
-### ▎x-ai（8）
+### ▎x-ai（9）
 
 #### xAI: Grok 4.20
 
@@ -6195,6 +6232,19 @@ The model emphasizes realistic detail — natural lighting and physics, accurate
 Grok Imagine Video is xAI's fast, text-, image-, and reference-conditioned video generation model. It produces short videos (1–15 seconds, 24 fps) at 480p or 720p across seven aspect ratios - 1:1, 16:9, 9:16, 4:3, 3:4, 3:2, and 2:3.
 
 The model supports three generation modes: text-to-video from a prompt alone, image-to-video that animates a still input, and reference-to-video that grounds the output in up to seven reference images for consistent characters, styles, or settings.
+
+#### xAI: Grok Imagine Video 1.5
+
+- **ID**: `x-ai/grok-imagine-video-1.5`
+- **Provider**: x-ai
+- **Context**: — tok
+- **Modality**: text+image->video  (in: text,image → out: video)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Video Output $0.08〜$0.25/second · Image Input $0.01/image
+- **Capabilities**: JSON mode, logprobs, Seed固定
+- **登録日**: 2026-07-20
+- **対応パラメータ**: max_tokens, temperature, top_p, seed, logprobs, top_logprobs, response_format, stop, frequency_penalty, presence_penalty
+
+Grok Imagine Video 1.5 is an image-to-video generation model from xAI. It animates a starting image with an optional text prompt that can direct subject and camera motion, pacing, atmosphere, and physical behavior, while maintaining visual continuity across the clip. It can generate synchronized sound effects, ambience, and dialogue alongside the video.
 
 #### xAI: Grok Voice TTS 1.0
 
@@ -6393,13 +6443,13 @@ GLM-5.1 delivers a major leap in coding capability, with particularly significan
 
 - **ID**: `z-ai/glm-5.2`
 - **Provider**: z-ai
-- **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
+- **Context**: 1.04858M (1,048,576) tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.2478/1M · 出力 $0.826/1M · キャッシュ読 $0.0413/1M
+- **Pricing**: 入力 $0.924/1M · 出力 $2.90/1M · キャッシュ読 $0.1716/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-06-16
 - **HF**: `zai-org/GLM-5.2`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, structured_outputs, response_format, tools, tool_choice, logprobs, top_logprobs
 
 GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering, and complex multi-step automation.
 
