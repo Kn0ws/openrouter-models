@@ -1,14 +1,14 @@
-# OpenRouter モデルカタログ（全435モデル）
+# OpenRouter モデルカタログ（全441モデル）
 
-- 取得日時: 2026-07-23T07:08:55
-- プロバイダ数: 72 / 無料枠あり: 17
+- 取得日時: 2026-07-24T09:03:38
+- プロバイダ数: 72 / 無料枠あり: 18
 
 ## プロバイダ別サマリ
 
 | Provider | モデル数 | 最安入力($/1M) | 最高入力($/1M) | 最大Context |
 |---|--:|--:|--:|--:|
 | openai | 79 | 0.00 | 40,000.00 | 1,050,000 |
-| qwen | 50 | 0.01 | 35.00 | 1,000,000 |
+| qwen | 52 | 0.01 | 35.00 | 1,000,000 |
 | google | 38 | 0.00 | 16,000.00 | 1,048,576 |
 | mistralai | 23 | 0.02 | 3,000.00 | 262,144 |
 | anthropic | 15 | 0.25 | 30.00 | 1,000,000 |
@@ -17,16 +17,17 @@
 | minimax | 11 | 0.00 | 100.00 | 1,048,576 |
 | recraft | 11 | 0.00 | 0.00 | 65,536 |
 | deepseek | 11 | 0.09 | 0.80 | 1,048,576 |
-| x-ai | 9 | 0.00 | 15.00 | 2,000,000 |
+| x-ai | 10 | 0.00 | 100,000.00 | 2,000,000 |
 | cohere | 8 | 0.00 | 2.50 | 256,000 |
 | meta-llama | 8 | 0.02 | 0.40 | 1,310,720 |
+| microsoft | 7 | 0.07 | 360,000.00 | 65,535 |
 | moonshotai | 7 | 0.38 | 3.00 | 1,048,576 |
 | perplexity | 7 | 0.00 | 3.00 | 200,000 |
 | poolside | 6 | 0.00 | 0.20 | 1,048,576 |
-| microsoft | 5 | 0.07 | 360,000.00 | 65,535 |
 | bytedance-seed | 5 | 0.00 | 0.25 | 262,144 |
 | amazon | 5 | 0.04 | 2.50 | 1,000,000 |
 | sentence-transformers | 5 | 0.01 | 0.01 | 512 |
+| inclusionai | 4 | 0.00 | 0.07 | 262,144 |
 | aion-labs | 4 | 0.70 | 3.00 | 131,072 |
 | alibaba | 4 | 0.00 | 0.00 | 0 |
 | ~anthropic | 4 | 1.00 | 10.00 | 1,000,000 |
@@ -38,7 +39,6 @@
 | krea | 3 | 0.00 | 0.00 | 0 |
 | kwaipilot | 3 | 0.15 | 0.74 | 262,144 |
 | tencent | 3 | 0.06 | 0.14 | 262,144 |
-| inclusionai | 3 | 0.01 | 0.07 | 262,144 |
 | kwaivgi | 3 | 0.00 | 0.00 | 0 |
 | intfloat | 3 | 0.01 | 0.01 | 512 |
 | baai | 3 | 0.01 | 0.01 | 8,194 |
@@ -58,7 +58,7 @@
 | morph | 2 | 0.80 | 0.90 | 262,144 |
 | inflection | 2 | 2.50 | 2.50 | 8,000 |
 | meituan | 1 | 0.30 | 0.30 | 1,048,756 |
-| thinkingmachines | 1 | 1.00 | 1.00 | 524,288 |
+| thinkingmachines | 1 | 1.00 | 1.00 | 1,048,576 |
 | meta | 1 | 1.25 | 1.25 | 1,048,576 |
 | ~x-ai | 1 | 2.00 | 2.00 | 500,000 |
 | sakana | 1 | 5.00 | 5.00 | 1,000,000 |
@@ -1836,7 +1836,7 @@ Mercury 2 is an extremely fast reasoning LLM, and the first reasoning diffusion 
 Instead of generating tokens sequentially, Mercury 2 produces and refines multiple tokens in parallel, achieving >1,000 tokens/sec on standard GPUs. Mercury 2 is 5x+ faster than leading speed-optimized LLMs like Claude 4.5 Haiku and GPT 5 Mini, at a fraction of the cost. 
 Mercury 2 supports tunable reasoning levels, 128K context, native tool use, and schema-aligned JSON output. Built for coding workflows where latency compounds, real-time voice/search, and agent loops. OpenAI API compatible. Read more in the [blog post](https://www.inceptionlabs.ai/blog/introducing-mercury-2).
 
-### ▎inclusionai（3）
+### ▎inclusionai（4）
 
 #### inclusionAI: Ling-2.6-1T
 
@@ -1865,6 +1865,21 @@ The model achieves state-of-the-art results on benchmarks such as AIME26 and SWE
 - **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice, structured_outputs, response_format, logprobs, top_logprobs
 
 Ling-2.6-flash is an instant (instruct) model from inclusionAI with 104B total parameters and 7.4B active parameters, designed for real-world agents that require fast responses, strong execution, and high token efficiency. It delivers performance comparable to state-of-the-art models at a similar scale while significantly reducing token usage across coding, document processing, and lightweight agent workflows.
+
+#### Ling-3.0-flash (free)
+
+- **ID**: `inclusionai/ling-3.0-flash:free`
+- **Provider**: inclusionai
+- **Context**: 262K (262,144) tok / max出力 32,768 tok
+- **Modality**: text->text  (in: text → out: text)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **登録日**: 2026-07-23
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice, logprobs, top_logprobs
+
+*Ling-3.0-flash* is a *124B-parameter Mixture-of-Experts (MoE) model*, with approximately *5.1B parameters activated per token*.
+
+The model is designed with *token efficiency and production-scale agentic inference* as key priorities, enabling developers to complete more useful work within constrained token, latency, and serving-cost budgets.
 
 #### inclusionAI: Ring-2.6-1T
 
@@ -2274,7 +2289,7 @@ Llama Guard 4 is a Llama 4 Scout-derived multimodal pretrained model, fine-tuned
 
 Llama Guard 4 was aligned to safeguard against the standardized MLCommons hazards taxonomy and designed to support multimodal Llama 4 capabilities. Specifically, it combines features from previous Llama Guard models, providing content moderation …
 
-### ▎microsoft（5）
+### ▎microsoft（7）
 
 #### Microsoft: MAI-Image-2.5
 
@@ -2284,6 +2299,18 @@ Llama Guard 4 was aligned to safeguard against the standardized MLCommons hazard
 - **Modality**: text+image->image  (in: text,image → out: image)
 - **Pricing**: 入力 $5.00/1M · 出力 無料/1M
 - **登録日**: 2026-06-02
+- **対応パラメータ**: max_tokens, temperature, max_completion_tokens
+
+Microsoft's MAI-Image-2.5 is a high-quality image generation model available via Azure AI Foundry. It produces photorealistic and artistic images from text prompts with support for various aspect ratios.
+
+#### Microsoft: MAI-Image-2.5 Pro
+
+- **ID**: `microsoft/mai-image-2.5-pro`
+- **Provider**: microsoft
+- **Context**: 4K (4,096) tok / max出力 1,024 tok
+- **Modality**: text+image->image  (in: text,image → out: image)
+- **Pricing**: 入力 $5.00/1M · 出力 無料/1M
+- **登録日**: 2026-07-23
 - **対応パラメータ**: max_tokens, temperature, max_completion_tokens
 
 Microsoft's MAI-Image-2.5 is a high-quality image generation model available via Azure AI Foundry. It produces photorealistic and artistic images from text prompts with support for various aspect ratios.
@@ -2311,6 +2338,18 @@ MAI-Transcribe 1.5 is a multilingual speech-to-text model from Microsoft AI. It 
 - **対応パラメータ**: max_tokens, temperature, top_p, max_completion_tokens
 
 MAI-Voice-2 is an expressive text-to-speech model from Microsoft. It is suited for conversational assistants, media narration, accessibility, education, and other long-form voice applications. It supports 15 languages across 18 locales, fine-grained control of tone and delivery, multi-speaker generation, and voice prompting from short audio clips without fine-tuning. The model prioritizes naturalness and expressivity over latency-critical generation.
+
+#### Microsoft: MAI-Voice-2-Flash
+
+- **ID**: `microsoft/mai-voice-2-flash`
+- **Provider**: microsoft
+- **Context**: — tok
+- **Modality**: text->speech  (in: text → out: speech)
+- **Pricing**: 入力 $15.00/1M · 出力 無料/1M · Characters $1.5e-05/M characters
+- **登録日**: 2026-07-23
+- **対応パラメータ**: max_tokens, temperature, top_p, max_completion_tokens
+
+MAI-Voice-2-Flash is a low-latency text-to-speech model from Microsoft for voice agents, assistants, call centers, accessibility, narration, and other interactive applications. It generates expressive 24 kHz mono speech across 15 languages and 18 locales, with fine-grained control over tone and delivery. Voice prompting and cloning require Microsoft-approved access and appropriate speaker consent.
 
 #### Microsoft: Phi 4
 
@@ -4726,7 +4765,7 @@ Laguna XS 2.1 is the latest coding agent model in the 33B-A3B category from [Poo
 
 Laguna XS 2.1 is designed for software engineering and agentic coding use cases, and you are responsible for confirming that it is appropriate for your intended application. Laguna XS 2.1 is subject to the [OpenMDW-1.1 License](https://openmdw.ai/license/1-1/), and should be used consistently with Poolside's …
 
-### ▎qwen（50）
+### ▎qwen（52）
 
 #### Qwen2.5 72B Instruct
 
@@ -4793,6 +4832,32 @@ Qwen2.5-Coder is the latest series of Code-Specific Qwen large language models (
 - A more comprehensive foundation for real-world applications such as **Code Agents**. Not only enhancing coding capabilities but also maintaining its strengths in mathematics and general competencies.
 
 To read more about its evaluation results, check out [Qwen 2.5 Coder's blog](https://qwenlm.github.io/blog/qwen2.5-coder-family/).
+
+#### Qwen: Qwen-Audio-3.0-TTS Flash
+
+- **ID**: `qwen/qwen-audio-3.0-tts-flash`
+- **Provider**: qwen
+- **Context**: — tok
+- **Modality**: text->speech  (in: text → out: speech)
+- **Pricing**: 入力 $15.00/1M · 出力 無料/1M · Characters $1.5e-05/M characters
+- **Capabilities**: JSON mode, Seed固定
+- **登録日**: 2026-07-23
+- **対応パラメータ**: max_tokens, temperature, top_p, seed, presence_penalty, response_format
+
+Qwen-Audio-3.0-TTS Flash is Alibaba's fast, cost-efficient text-to-speech model, generating spoken audio from text via the DashScope Speech Synthesizer API.
+
+#### Qwen: Qwen-Audio-3.0-TTS Plus
+
+- **ID**: `qwen/qwen-audio-3.0-tts-plus`
+- **Provider**: qwen
+- **Context**: — tok
+- **Modality**: text->speech  (in: text → out: speech)
+- **Pricing**: 入力 $20.00/1M · 出力 無料/1M · Characters $2e-05/M characters
+- **Capabilities**: JSON mode, Seed固定
+- **登録日**: 2026-07-23
+- **対応パラメータ**: max_tokens, temperature, top_p, seed, presence_penalty, response_format
+
+Qwen-Audio-3.0-TTS Plus is Alibaba's higher-quality text-to-speech model, generating spoken audio from text via the DashScope Speech Synthesizer API.
 
 #### Qwen: Qwen-Plus
 
@@ -5399,13 +5464,13 @@ Qwen3.5 Plus (April 2026) is a large-scale multimodal language model from Alibab
 
 - **ID**: `qwen/qwen3.6-27b`
 - **Provider**: qwen
-- **Context**: 262K (262,144) tok / max出力 131,072 tok
+- **Context**: 262K (262,144) tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.289/1M · 出力 $2.40/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $0.288/1M · 出力 $2.40/1M
+- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-27
 - **HF**: `Qwen/Qwen3.6-27B`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, stop, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, seed, logit_bias, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, frequency_penalty, logit_bias, max_tokens, presence_penalty, seed, stop, temperature, top_p, logprobs, top_logprobs, response_format, structured_outputs
 
 Qwen3.6 27B is a dense 27-billion-parameter language model from the Qwen Team at Alibaba, released in April 2026. It features hybrid multimodal capabilities — accepting text, image, and video inputs — and supports a 262,144-token context window.
 
@@ -6128,13 +6193,13 @@ The gte-large embedding model converts English sentences, paragraphs and moderat
 
 - **ID**: `thinkingmachines/inkling`
 - **Provider**: thinkingmachines
-- **Context**: 524K (524,288) tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 16,384 tok
 - **Modality**: text+image+audio->text  (in: text,image,audio → out: text)
 - **Pricing**: 入力 $1.00/1M · 出力 $4.05/1M · キャッシュ読 $0.17/1M
-- **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力
+- **Capabilities**: Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-07-17
 - **HF**: `thinkingmachines/Inkling`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, repetition_penalty, logit_bias, min_p, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, logit_bias
 
 Inkling is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 41B active parameters out of 975B total. It is designed for general-purpose reasoning, coding, agentic and tool-use systems, retrieval-augmented generation, instruction following, and multilingual conversational applications. Its native image and audio understanding supports multimodal analysis alongside text.
 
@@ -6184,7 +6249,7 @@ Solar Pro 3 is Upstage's powerful Mixture-of-Experts (MoE) language model. With 
 
 Palmyra X5 is Writer's most advanced model, purpose-built for building and scaling AI agents across the enterprise. It delivers industry-leading speed and efficiency on context windows up to 1 million tokens, powered by a novel transformer architecture and hybrid attention mechanisms. This enables faster inference and expanded memory for processing large volumes of enterprise data, critical for scaling AI agents.
 
-### ▎x-ai（9）
+### ▎x-ai（10）
 
 #### xAI: Grok 4.20
 
@@ -6303,6 +6368,19 @@ The model supports three generation modes: text-to-video from a prompt alone, im
 - **対応パラメータ**: max_tokens, temperature, top_p, seed, logprobs, top_logprobs, response_format, stop, frequency_penalty, presence_penalty
 
 Grok Imagine Video 1.5 is an image-to-video generation model from xAI. It animates a starting image with an optional text prompt that can direct subject and camera motion, pacing, atmosphere, and physical behavior, while maintaining visual continuity across the clip. It can generate synchronized sound effects, ambience, and dialogue alongside the video.
+
+#### xAI: Grok STT 1.0
+
+- **ID**: `x-ai/grok-stt-1.0`
+- **Provider**: x-ai
+- **Context**: — tok
+- **Modality**: audio->transcription  (in: audio → out: transcription)
+- **Pricing**: 入力 $100,000.00/1M · 出力 無料/1M · Audio Hours $0.1/hour
+- **Capabilities**: JSON mode, logprobs, Seed固定
+- **登録日**: 2026-07-23
+- **対応パラメータ**: max_tokens, temperature, top_p, seed, logprobs, top_logprobs, response_format, stop, frequency_penalty, presence_penalty
+
+Grok STT is xAI's speech-to-text model, available via the REST /v1/stt endpoint. It supports transcription with word-level timestamps, optional speaker diarization, and multichannel audio.
 
 #### xAI: Grok Voice TTS 1.0
 
