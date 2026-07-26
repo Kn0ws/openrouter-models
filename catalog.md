@@ -1,6 +1,6 @@
 # OpenRouter モデルカタログ（全443モデル）
 
-- 取得日時: 2026-07-25T23:00:46
+- 取得日時: 2026-07-26T07:10:21
 - プロバイダ数: 72 / 無料枠あり: 18
 
 ## プロバイダ別サマリ
@@ -348,7 +348,7 @@ See the launch announcement and benchmark results [here](https://www.anthropic.c
 - **Pricing**: 入力 $10.00/1M · 出力 $50.00/1M · キャッシュ読 $1.00/1M · キャッシュ書 $12.50/1M · Web検索 $0.01
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-06-09
-- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, max_tokens, max_completion_tokens, tools, tool_choice, response_format, verbosity, stop
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, stop, tool_choice, tools, response_format, verbosity, structured_outputs
 
 Claude Fable 5 is a Mythos-class model from Anthropic, built for autonomous knowledge work and coding. It supports text, image, and file inputs with text output, with reasoning support and a 1M-token context window. It is suited for long-running, complex, and asynchronous tasks that previously required frequent human check-ins.
 
@@ -3004,7 +3004,7 @@ Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art 
 - **Provider**: moonshotai
 - **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.6/1M · 出力 $3.41/1M · キャッシュ読 $0.25/1M
+- **Pricing**: 入力 $0.6/1M · 出力 $3.41/1M · キャッシュ読 $0.2/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-20
 - **HF**: `moonshotai/Kimi-K2.6`
@@ -6609,13 +6609,13 @@ GLM-5.1 delivers a major leap in coding capability, with particularly significan
 
 - **ID**: `z-ai/glm-5.2`
 - **Provider**: z-ai
-- **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 128,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.7168/1M · 出力 $2.25/1M · キャッシュ読 $0.1331/1M
-- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.7063/1M · 出力 $2.22/1M · キャッシュ読 $0.1312/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-06-16
 - **HF**: `zai-org/GLM-5.2`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice, response_format
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, frequency_penalty, stop, tool_choice, tools, response_format, structured_outputs, logprobs, top_logprobs
 
 GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering, and complex multi-step automation.
 
@@ -6673,7 +6673,7 @@ Zonos v0.1 Transformer is a text-to-speech model from Zyphra built on a pure tra
 - **Pricing**: 入力 $10.00/1M · 出力 $50.00/1M · キャッシュ読 $1.00/1M · キャッシュ書 $12.50/1M · Web検索 $0.01
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-06-09
-- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, max_tokens, max_completion_tokens, tools, tool_choice, response_format, verbosity, stop
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, stop, tool_choice, tools, response_format, verbosity, structured_outputs, max_completion_tokens
 
 This model always redirects to the latest model in the Claude Fable family.
 
