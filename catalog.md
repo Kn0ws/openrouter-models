@@ -1,13 +1,13 @@
-# OpenRouter モデルカタログ（全443モデル）
+# OpenRouter モデルカタログ（全440モデル）
 
-- 取得日時: 2026-07-26T07:10:21
-- プロバイダ数: 72 / 無料枠あり: 18
+- 取得日時: 2026-07-27T07:26:10
+- プロバイダ数: 71 / 無料枠あり: 18
 
 ## プロバイダ別サマリ
 
 | Provider | モデル数 | 最安入力($/1M) | 最高入力($/1M) | 最大Context |
 |---|--:|--:|--:|--:|
-| openai | 79 | 0.00 | 40,000.00 | 1,050,000 |
+| openai | 78 | 0.00 | 40,000.00 | 1,050,000 |
 | qwen | 52 | 0.01 | 35.00 | 1,000,000 |
 | google | 38 | 0.00 | 16,000.00 | 1,048,576 |
 | mistralai | 23 | 0.02 | 3,000.00 | 262,144 |
@@ -50,13 +50,12 @@
 | ~openai | 2 | 0.75 | 5.00 | 1,050,000 |
 | ~google | 2 | 1.50 | 2.00 | 1,048,576 |
 | zyphra | 2 | 7.00 | 7.00 | 4,096 |
-| xiaomi | 2 | 0.10 | 0.35 | 1,050,000 |
+| xiaomi | 2 | 0.11 | 0.35 | 1,050,000 |
 | arcee-ai | 2 | 0.22 | 0.75 | 262,144 |
 | rekaai | 2 | 0.10 | 0.10 | 65,536 |
 | relace | 2 | 0.85 | 1.00 | 256,000 |
 | thenlper | 2 | 0.01 | 0.01 | 512 |
 | morph | 2 | 0.80 | 0.90 | 262,144 |
-| inflection | 2 | 2.50 | 2.50 | 8,000 |
 | meituan | 1 | 0.30 | 0.30 | 1,048,756 |
 | thinkingmachines | 1 | 1.00 | 1.00 | 1,048,576 |
 | meta | 1 | 1.25 | 1.25 | 1,048,576 |
@@ -1406,12 +1405,12 @@ Gemini 3.1 Flash Image, a.k.a. "Nano Banana 2," is Google’s latest state of th
 
 - **ID**: `google/gemini-3.1-flash-image-preview`
 - **Provider**: google
-- **Context**: 131K (131,072) tok / max出力 32,768 tok
+- **Context**: 65K (65,536) tok / max出力 65,536 tok
 - **Modality**: text+image->text+image  (in: text,image → out: text,image)
 - **Pricing**: 入力 $0.5/1M · 出力 $3.00/1M · Web検索 $0.014 · Web Search $0.014/request
-- **Capabilities**: JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-02-26
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format, structured_outputs
 
 Gemini 3.1 Flash Image Preview, a.k.a. "Nano Banana 2," is Google’s latest state of the art image generation and editing model, delivering Pro-level visual quality at Flash speed. It combines advanced contextual understanding with fast, cost-efficient inference, making complex image generation and iterative edits significantly more accessible. Aspect ratios can be controlled with the [image_config API Parameter](https://openrouter.ai/docs/features/multimodal/image-generation#image-aspect-ratio-configuration)
 
@@ -1927,40 +1926,6 @@ Ring-2.6-1T is a 1T-parameter-scale thinking model with 63B active parameters, b
 With adaptive reasoning effort across high and xhigh modes, Ring-2.6-1T dynamically allocates reasoning budget based on task complexity. This enables stronger performance with lower token overhead, especially in tool-heavy and multi-turn agent workflows.
 
 Ring-2.6-1T is designed for advanced coding agents, complex reasoning pipelines, …
-
-### ▎inflection（2）
-
-#### Inflection: Inflection 3 Pi
-
-- **ID**: `inflection/inflection-3-pi`
-- **Provider**: inflection
-- **Context**: 8K (8,000) tok / max出力 1,024 tok
-- **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $2.50/1M · 出力 $10.00/1M
-- **Knowledge cutoff**: 2024-10-31T23:59:59.000Z
-- **登録日**: 2024-10-11
-- **対応パラメータ**: max_tokens, temperature, top_p, stop
-
-Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like customer support and roleplay.
-
-Pi has been trained to mirror your tone and style, if you use more emojis, so will Pi! Try experimenting with various prompts and conversation styles.
-
-#### Inflection: Inflection 3 Productivity
-
-- **ID**: `inflection/inflection-3-productivity`
-- **Provider**: inflection
-- **Context**: 8K (8,000) tok / max出力 1,024 tok
-- **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $2.50/1M · 出力 $10.00/1M
-- **Knowledge cutoff**: 2024-10-31T23:59:59.000Z
-- **登録日**: 2024-10-11
-- **対応パラメータ**: max_tokens, temperature, top_p, stop
-
-Inflection 3 Productivity is optimized for following instructions. It is better for tasks requiring JSON output or precise adherence to provided guidelines. It has access to recent news.
-
-For emotional intelligence similar to Pi, see [Inflect 3 Pi](/inflection/inflection-3-pi)
-
-See [Inflection's announcement](https://inflection.ai/blog/enterprise) for more details.
 
 ### ▎intfloat（3）
 
@@ -3407,7 +3372,7 @@ The model's reasoning capabilities can be controlled via a system prompt. If the
 
 Parakeet TDT 0.6B v3 is NVIDIA's 600M-parameter multilingual speech-to-text model built on the FastConformer-TDT architecture. Trained on the Granary dataset (670,000+ hours of audio), it supports automatic language detection across all official EU languages and achieves a 6.34% average word error rate on the HuggingFace Open ASR Leaderboard. Returns transcribed text with punctuation and segment timestamps.
 
-### ▎openai（79）
+### ▎openai（78）
 
 #### OpenAI: GPT-3.5 Turbo
 
@@ -3670,20 +3635,6 @@ GPT-4o mini achieves an 82% score on MMLU and presently ranks higher than GPT-4 
 Check out the [launch announcement](https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/) to learn more.
 
 #multimodal
-
-#### OpenAI: GPT-4o-mini Search Preview
-
-- **ID**: `openai/gpt-4o-mini-search-preview`
-- **Provider**: openai
-- **Context**: 128K (128,000) tok / max出力 16,384 tok
-- **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.15/1M · 出力 $0.6/1M · Web検索 $0.0275 · Web Search $0.0275/request
-- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Web検索
-- **Knowledge cutoff**: 2023-10-31T23:59:59.000Z
-- **登録日**: 2025-03-12
-- **対応パラメータ**: web_search_options, max_tokens, response_format, structured_outputs
-
-GPT-4o mini Search Preview is a specialized model for web search in Chat Completions. It is trained to understand and execute web search queries.
 
 #### OpenAI: GPT-4o Mini Transcribe
 
@@ -6433,11 +6384,11 @@ Grok Voice TTS 1.0 is a text-to-speech model from xAI. It converts text into spo
 - **Provider**: xiaomi
 - **Context**: 1.05M (1,050,000) tok
 - **Modality**: text+image+audio+video->text  (in: text,image,audio,video → out: text)
-- **Pricing**: 入力 $0.105/1M · 出力 $0.28/1M · キャッシュ読 $0.028/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
+- **Pricing**: 入力 $0.112/1M · 出力 $0.224/1M · キャッシュ読 $0.0024/1M
+- **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-04-22
 - **HF**: `XiaomiMiMo/MiMo-V2.5`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, tool_choice, tools, response_format, structured_outputs, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, tools, tool_choice
 
 MiMo-V2.5 is a native omnimodal model by Xiaomi. It delivers Pro-level agentic performance at roughly half the inference cost, while surpassing MiMo-V2-Omni in multimodal perception across image and video understanding tasks. Its 1M context window supports complete documents, extended conversations, and complex task contexts in a single pass, making it ideal for integration with agent frameworks where strong reasoning, rich perception, and cost efficiency all matter.
 
@@ -6609,13 +6560,13 @@ GLM-5.1 delivers a major leap in coding capability, with particularly significan
 
 - **ID**: `z-ai/glm-5.2`
 - **Provider**: z-ai
-- **Context**: 1.04858M (1,048,576) tok / max出力 128,000 tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 262,144 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.7063/1M · 出力 $2.22/1M · キャッシュ読 $0.1312/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
+- **Pricing**: 入力 $0.76/1M · 出力 $2.42/1M · キャッシュ読 $0.14/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-06-16
 - **HF**: `zai-org/GLM-5.2`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, frequency_penalty, stop, tool_choice, tools, response_format, structured_outputs, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, repetition_penalty, frequency_penalty, presence_penalty, stop, seed, response_format, tools, tool_choice, logprobs, top_logprobs, structured_outputs
 
 GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering, and complex multi-step automation.
 
