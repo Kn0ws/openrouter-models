@@ -1,6 +1,6 @@
 # OpenRouter モデルカタログ（全474モデル）
 
-- 取得日時: 2026-07-29T07:12:19
+- 取得日時: 2026-07-30T07:10:50
 - プロバイダ数: 72 / 無料枠あり: 19
 
 ## プロバイダ別サマリ
@@ -21,7 +21,7 @@
 | cohere | 8 | 0.00 | 2.50 | 256,000 |
 | meta-llama | 8 | 0.02 | 0.40 | 1,310,720 |
 | microsoft | 7 | 0.07 | 360,000.00 | 65,535 |
-| moonshotai | 7 | 0.38 | 3.00 | 1,048,576 |
+| moonshotai | 7 | 0.38 | 2.90 | 1,048,576 |
 | perplexity | 7 | 0.00 | 3.00 | 200,000 |
 | voyageai | 6 | 0.00 | 0.12 | 32,000 |
 | bytedance-seed | 5 | 0.00 | 0.25 | 262,144 |
@@ -63,7 +63,7 @@
 | ~x-ai | 1 | 2.00 | 2.00 | 500,000 |
 | sakana | 1 | 5.00 | 5.00 | 1,000,000 |
 | perceptron | 1 | 0.15 | 0.15 | 32,768 |
-| ~moonshotai | 1 | 3.00 | 3.00 | 1,048,576 |
+| ~moonshotai | 1 | 2.90 | 2.90 | 1,048,576 |
 | sesame | 1 | 7.00 | 7.00 | 4,096 |
 | canopylabs | 1 | 7.00 | 7.00 | 4,096 |
 | hexgrad | 1 | 0.62 | 0.62 | 4,096 |
@@ -1196,7 +1196,7 @@ Deepgram Nova-3 general-purpose speech-to-text model with monolingual and multil
 - **Provider**: deepseek
 - **Context**: 163K (163,840) tok / max出力 16,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.2002/1M · 出力 $0.8001/1M
+- **Pricing**: 入力 $0.2574/1M · 出力 $1.03/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode
 - **Knowledge cutoff**: 2024-07-31T23:59:59.000Z
 - **登録日**: 2024-12-26
@@ -3274,13 +3274,13 @@ MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 fa
 
 - **ID**: `moonshotai/kimi-k3`
 - **Provider**: moonshotai
-- **Context**: 1.04858M (1,048,576) tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $3.00/1M · 出力 $15.00/1M · キャッシュ読 $0.3/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
+- **Pricing**: 入力 $2.90/1M · 出力 $15.00/1M · キャッシュ読 $0.29/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-07-16
 - **HF**: `moonshotai/Kimi-K3`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, response_format, logprobs, top_logprobs, tools, tool_choice, structured_outputs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, stop, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, seed, logit_bias, response_format, structured_outputs, logprobs, top_logprobs, tools, tool_choice
 
 Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at navigating large repositories, using tools, debugging, and iterating against images, logs, tests, and runtime feedback. Its architecture uses KDA and Attention Residuals for computational efficiency.
 
@@ -5169,7 +5169,7 @@ Qwen2.5 72B is the latest series of Qwen large language models. Qwen2.5 brings t
 - **Provider**: qwen
 - **Context**: 32K (32,768) tok / max出力 32,768 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.04/1M · 出力 $0.1/1M
+- **Pricing**: 入力 $0.1/1M · 出力 $0.2/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Seed固定
 - **Knowledge cutoff**: 2024-06-30T23:59:59.000Z
 - **登録日**: 2024-10-16
@@ -5295,7 +5295,7 @@ Qwen2.5-VL is proficient in recognizing common objects such as flowers, birds, f
 - **Provider**: qwen
 - **Context**: 131K (131,072) tok / max出力 40,960 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.1/1M · 出力 $0.24/1M
+- **Pricing**: 入力 $0.1/1M · 出力 $0.22/1M
 - **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **Knowledge cutoff**: 2025-03-31T23:59:59.000Z
 - **登録日**: 2025-04-28
@@ -6632,7 +6632,7 @@ Solar Pro 3 is Upstage's powerful Mixture-of-Experts (MoE) language model. With 
 - **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
 - **登録日**: 2026-07-27
 
-Rerank 2.5 is an instruction-following text reranker from Voyage AI by MongoDB, optimized for retrieval quality. It is suited for rescoring candidates in general-purpose and domain-specific search, and accepts natural-language guidance for relevance scoring, including queries up to 8,000 tokens.
+rerank-2.5 is a cutting-edge reranker optimized for quality, delivering a 7.94% improvement in retrieval accuracy over Cohere Rerank v3.5 across 93 datasets. It also outperformed Cohere Rerank v3.5 by 12.70% on the Massive Instructed Retrieval Benchmark (MAIR). The model supports a combined context length of 32K tokens per query–document pair, including up to 8K tokens for the query, enabling more accurate retrieval over longer documents. Additionally, rerank-2.5 supports instruction following, allowing users to guide relevance scoring through natural language prompts. Learn more about rerank-2.5 here:[ …
 
 #### VoyageAI by MongoDB: rerank-2.5-lite
 
@@ -6643,7 +6643,7 @@ Rerank 2.5 is an instruction-following text reranker from Voyage AI by MongoDB, 
 - **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
 - **登録日**: 2026-07-27
 
-Rerank 2.5 Lite is an instruction-following text reranker from Voyage AI by MongoDB, balancing ranking quality with lower latency. It is suited for high-throughput retrieval pipelines and accepts natural-language guidance for relevance scoring, including queries up to 8,000 tokens.
+rerank-2.5-lite is a reranker optimized for both latency and quality, delivering a 7.16% improvement in retrieval accuracy over Cohere Rerank v3.5 across 93 datasets. It also outperformed Cohere Rerank v3.5 by 10.36% on the Massive Instructed Retrieval Benchmark (MAIR). The model supports a combined context length of 32K tokens per query–document pair, including up to 8K tokens for the query, enabling more accurate retrieval over longer documents. Additionally, rerank-2.5-lite supports instruction following, allowing users to guide relevance scoring through natural language prompts. Learn more about rerank-2.5-lite here: …
 
 #### VoyageAI by MongoDB: voyage-4
 
@@ -6654,7 +6654,7 @@ Rerank 2.5 Lite is an instruction-following text reranker from Voyage AI by Mong
 - **Pricing**: 入力 $0.06/1M · 出力 無料/1M
 - **登録日**: 2026-07-27
 
-Voyage 4 is a general-purpose multilingual embedding model from Voyage AI by MongoDB. It is suited for retrieval, semantic search, and RAG applications, with Matryoshka embeddings at 2048, 1024, 512, and 256 dimensions and multiple quantization options.
+voyage-4 is a general-purpose (including multilingual) embedding model optimized for retrieval/search and AI applications. voyage-4 supports embeddings in 2048, 1024, 512, and 256 dimensions, with multiple quantization options.  Learn more about voyage-4 here: [blog.voyageai.com/2026/01/15/voyage-4](https://blog.voyageai.com/2026/01/15/voyage-4)
 
 #### VoyageAI by MongoDB: voyage-4-large
 
@@ -6665,7 +6665,7 @@ Voyage 4 is a general-purpose multilingual embedding model from Voyage AI by Mon
 - **Pricing**: 入力 $0.12/1M · 出力 無料/1M
 - **登録日**: 2026-07-27
 
-Voyage 4 Large is a general-purpose multilingual embedding model from Voyage AI by MongoDB, optimized for retrieval quality. It supports Matryoshka embeddings at 2048, 1024, 512, and 256 dimensions, with multiple quantization options for balancing retrieval quality, storage, and serving efficiency.
+voyage-4-large is a state-of-the-art general-purpose and multilingual embedding optimized for retrieval quality. Enabled by Matryoshka learning and quantization-aware training, voyage-4-large supports embeddings in 2048, 1024, 512, and 256 dimensions, with multiple quantization options. Learn more about voyage-4-large here: [blog.voyageai.com/2026/01/15/voyage-4](https://blog.voyageai.com/2026/01/15/voyage-4)
 
 #### VoyageAI by MongoDB: voyage-4-lite
 
@@ -6676,7 +6676,7 @@ Voyage 4 Large is a general-purpose multilingual embedding model from Voyage AI 
 - **Pricing**: 入力 $0.02/1M · 出力 無料/1M
 - **登録日**: 2026-07-27
 
-Voyage 4 Lite is an efficiency-focused general-purpose embedding model from Voyage AI by MongoDB, optimized for low-latency and cost-sensitive retrieval. It supports Matryoshka embeddings at 2048, 1024, 512, and 256 dimensions, with multiple quantization options.
+voyage-4-lite is a lightweight, general-purpose embedding model optimized for low latency and cost. Enabled by Matryoshka learning and quantization-aware training, voyage-4-lite supports embeddings in 2048, 1024, 512, and 256 dimensions, with multiple quantization options.  Learn more about voyage-4-lite here: [blog.voyageai.com/2026/01/15/voyage-4](https://blog.voyageai.com/2026/01/15/voyage-4)
 
 #### VoyageAI by MongoDB: voyage-multimodal-3.5
 
@@ -6687,7 +6687,7 @@ Voyage 4 Lite is an efficiency-focused general-purpose embedding model from Voya
 - **Pricing**: 入力 $0.12/1M · 出力 無料/1M · Image Input $6e-10/B pixels
 - **登録日**: 2026-07-27
 
-Voyage Multimodal 3.5 is a multimodal embedding model from Voyage AI by MongoDB. It maps interleaved text and visual content into a shared embedding space for cross-modal retrieval over documents, screenshots, figures, tables, and other mixed-media collections, with Matryoshka embeddings at 2048, 1024, 512, and 256 dimensions.
+voyage-multimodal-3.5 is a state-of-the-art multimodal embedding model capable of vectorizing not only text, images, and video individually, but also content that interleaves all three modalities. It delivers excellent performance for mixed-modality searches involving text and visual content such as PDF screenshots, figures, tables, videos, and more. Enabled by Matryoshka learning and quantization-aware training, voyage-multimodal-3.5 supports embeddings in 2048, 1024, 512, and 256 dimensions, with multiple quantization options. Learn more about voyage-multimodal-3.5 here: [blog.voyageai.com/2026/01/15/voyage-multimodal-3-5](https://blog.voyageai.com/2026/01/15/voyage-multimodal-3-5)
 
 ### ▎writer（1）
 
@@ -7035,7 +7035,7 @@ GLM-5.1 delivers a major leap in coding capability, with particularly significan
 - **Provider**: z-ai
 - **Context**: 1.04858M (1,048,576) tok / max出力 128,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.7539/1M · 出力 $2.37/1M · キャッシュ読 $0.14/1M
+- **Pricing**: 入力 $0.6993/1M · 出力 $2.20/1M · キャッシュ読 $0.1299/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-06-16
 - **HF**: `zai-org/GLM-5.2`
@@ -7174,12 +7174,12 @@ This model always redirects to the latest model in the Google Gemini Pro family.
 
 - **ID**: `~moonshotai/kimi-latest`
 - **Provider**: ~moonshotai
-- **Context**: 1.04858M (1,048,576) tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $3.00/1M · 出力 $15.00/1M · キャッシュ読 $0.3/1M
+- **Pricing**: 入力 $2.90/1M · 出力 $15.00/1M · キャッシュ読 $0.29/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-27
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, response_format, logprobs, top_logprobs, tools, tool_choice, structured_outputs, stop, frequency_penalty, presence_penalty, top_k, min_p, repetition_penalty, seed, logit_bias
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, stop, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, seed, logit_bias, response_format, structured_outputs, logprobs, top_logprobs, tools, tool_choice
 
 This model always redirects to the latest model in the MoonshotAI Kimi family.
 
