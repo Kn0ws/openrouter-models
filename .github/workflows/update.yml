@@ -3,7 +3,13 @@ name: Update OpenRouter models
 on:
   schedule:
     - cron: "17 6 * * *"   # 毎日 06:17 UTC（=日本時間 15:17 頃）
-  workflow_dispatch: {}     # 手動実行も可
+  workflow_dispatch:
+    inputs:
+      verify_translation_key:
+        description: "翻訳キーだけを検証する（推論・公開なし、所有者限定）"
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write           # GITHUB_TOKEN でリポジトリに push する
@@ -14,7 +20,11 @@ concurrency:
 
 jobs:
   update:
+    # 所有者以外の手動実行・再実行を拒否する。再実行は元のactor権限を使うため、
+    # actor と triggering_actor の両方を検査する。
+    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
 
@@ -22,10 +32,18 @@ jobs:
         with:
           python-version: "3.x"
 
+      - name: Verify translation key (owner-only, no inference)
+        if: github.event_name == 'workflow_dispatch' && inputs.verify_translation_key
+        env:
+          OPENROUTER_TRANSLATION_API_KEY: ${{ secrets.OPENROUTER_TRANSLATION_API_KEY }}
+        run: python3 or_models.py translate --verify-key
+
       - name: Fetch latest models (差分があれば新スナップショットが残る)
+        if: github.event_name != 'workflow_dispatch' || inputs.verify_translation_key != true
         run: python3 or_models.py fetch
 
       - name: Detect change
+        if: github.event_name != 'workflow_dispatch' || inputs.verify_translation_key != true
         id: chk
         run: |
           if [ -n "$(git status --porcelain snapshots)" ]; then
@@ -35,12 +53,19 @@ jobs:
             echo "変更なし。コミットをスキップします。"
           fi
 
+      - name: Translate newly added models safely
+        if: (github.event_name != 'workflow_dispatch' || inputs.verify_translation_key != true) && steps.chk.outputs.changed == 'yes'
+        env:
+          # 翻訳ステップだけに渡す。ログ・成果物・以降のステップには渡さない。
+          OPENROUTER_TRANSLATION_API_KEY: ${{ secrets.OPENROUTER_TRANSLATION_API_KEY }}
+        run: python3 or_models.py translate
+
       - name: Export site data & commit
-        if: steps.chk.outputs.changed == 'yes'
+        if: (github.event_name != 'workflow_dispatch' || inputs.verify_translation_key != true) && steps.chk.outputs.changed == 'yes'
         run: |
           python3 or_models.py export
           python3 or_models.py prune --keep-days 30   # 古いスナップショットを間引く(30日ローリング)
-          # 未翻訳モデルを検知してジョブサマリに表示（翻訳自体は手動: LLMが必要なため）
+          # translate が成功してから export する。未訳が残れば fail-closed として公開しない。
           untr=$(python3 or_models.py untranslated) || true
           echo "$untr"
           {
@@ -48,10 +73,11 @@ jobs:
             echo '```'
             echo "$untr" | grep -E '未翻訳:|^  [~a-z]' || true
             echo '```'
-            echo "未翻訳が残る場合は、ローカルで \`untranslated.json\` を翻訳し \`translations.json\` にマージしてください。"
+            echo "新規モデルの日本語訳は、翻訳専用の小額キーで構造化出力を検証してから反映しています。"
           } >> "$GITHUB_STEP_SUMMARY"
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
+          # 許可した生成物だけをコミットする。任意ファイルや秘密情報を混入させない。
+          git add -A -- snapshots models.json catalog.md translations.json
           git commit -m "chore: update OpenRouter models ($(date -u +%Y-%m-%d))"
           git push

@@ -30,14 +30,32 @@
 
 ```bash
 python3 or_models.py fetch         # 最新取得＋前回スナップショットとの差分を表示（変更が無ければ破棄）
+python3 or_models.py translate     # 未翻訳だけを安全な構造化出力で日本語化
 python3 or_models.py export        # index.html 用に models.json / catalog.md を再生成
 python3 or_models.py untranslated  # 日本語訳が無いモデルを抽出（→ untranslated.json）
-git add -A && git commit -m "update models" && git push
+git add -A -- snapshots models.json catalog.md translations.json && git commit -m "update models" && git push
 ```
 
 `fetch` は取得のたびにスナップショットを保存し、**新規 / 削除 / 価格・コンテキスト・対応パラメータの変更** を差分検出します（毎日 GitHub Action でも自動実行）。
 
-新しく増えたモデルは英語説明のまま表示され、`untranslated` で抽出して翻訳し `translations.json` にマージすると日本語解説が付きます（差分翻訳）。
+新しく増えたモデルは、GitHub Actions の定期取得で未訳分だけを自動翻訳してから公開します。ローカルで候補だけ確認する場合は `python3 or_models.py translate --dry-run` を使えます。
+
+### 自動翻訳の安全設定
+
+自動翻訳は OpenRouter の `openai/gpt-4o-mini` を固定で使います。入力として送るのは、公開済みカタログのモデルID・名称・モダリティ・対応機能・英語説明だけです。リポジトリの設定、環境変数、利用者データは送信しません。
+
+有効化前に、次の**翻訳専用の通常APIキー**を作成し、GitHub Actions の Repository secret `OPENROUTER_TRANSLATION_API_KEY` に設定してください。
+
+- 管理キー・プロビジョニングキーは不可。推論専用キーにする。
+- `limit` は **1 USD 以下**、`limit_reset` は **monthly** にする。可能なら有効期限も設定する。
+- OpenRouter の Guardrail を使える場合は、同じキーに `openai/gpt-4o-mini` だけを許可し、データ収集を拒否する。
+- Secret は Actions Secret にだけ保存し、リポジトリ・Issue・ログ・環境変数ファイルへ書かない。
+
+ワークフローは新しいスナップショットがある時だけ実行され、1回あたり最大20モデル、1モデルあたり1リクエスト（自動再試行なし）に固定しています。モデル・送信先・スキーマ・出力長はコードで固定し、構造化出力をローカルでも検証します。キーが未設定・管理キー・上限超過・API失敗・不正な応答のいずれでも、`translations.json` を変更せず公開を停止します（fail-closed）。
+
+手動実行・再実行はリポジトリ所有者だけに制限しています。Secret 設定後は Actions の **Run workflow** で `verify_translation_key` を有効にすると、推論や公開をせずキーの種類・利用上限だけを確認できます。
+
+このワークフローの条件は、`main` を直接変更できる人がワークフロー自体を書き換えることまでは防げません。Repository settings では `main` への書き込み権限を最小化し、利用可能なら GitHub Actions の **Policies / Workflow execution protections** で所有者だけを許可してください。
 
 ## ローカルプレビュー
 
