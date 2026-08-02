@@ -1,7 +1,7 @@
-# OpenRouter モデルカタログ（全448モデル）
+# OpenRouter モデルカタログ（全449モデル）
 
-- 取得日時: 2026-08-01T07:07:08
-- プロバイダ数: 74 / 無料枠あり: 20
+- 取得日時: 2026-08-02T07:08:49
+- プロバイダ数: 75 / 無料枠あり: 20
 
 ## プロバイダ別サマリ
 
@@ -45,7 +45,7 @@
 | intfloat | 3 | 0.01 | 0.01 | 512 |
 | baai | 3 | 0.01 | 0.01 | 8,194 |
 | sao10k | 3 | 0.04 | 0.85 | 131,072 |
-| thinkingmachines | 2 | 0.50 | 1.00 | 1,048,576 |
+| thinkingmachines | 2 | 0.45 | 1.00 | 1,048,576 |
 | runway | 2 | 0.00 | 0.00 | 0 |
 | deepgram | 2 | 30.00 | 4,300.00 | 0 |
 | nex-agi | 2 | 0.02 | 0.25 | 262,144 |
@@ -60,6 +60,7 @@
 | relace | 2 | 0.85 | 1.00 | 256,000 |
 | thenlper | 2 | 0.01 | 0.01 | 512 |
 | morph | 2 | 0.80 | 0.90 | 262,144 |
+| ~deepseek | 1 | 0.09 | 0.09 | 1,048,576 |
 | meituan | 1 | 0.30 | 0.30 | 1,048,756 |
 | meta | 1 | 1.25 | 1.25 | 1,048,576 |
 | ~x-ai | 1 | 2.00 | 2.00 | 500,000 |
@@ -1219,7 +1220,7 @@ The model was trained under conditions aligned with V3.1-Terminus to enable dire
 - **Provider**: deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 384,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.0896/1M · 出力 $0.1792/1M · キャッシュ読 $0.0179/1M
+- **Pricing**: 入力 $0.0868/1M · 出力 $0.1736/1M · キャッシュ読 $0.0174/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-04-24
 - **HF**: `deepseek-ai/DeepSeek-V4-Flash`
@@ -6181,7 +6182,7 @@ Inkling is an open-weight multimodal mixture-of-experts model from Thinking Mach
 - **Provider**: thinkingmachines
 - **Context**: 524K (524,288) tok / max出力 262,144 tok
 - **Modality**: text+image+audio->text  (in: text,image,audio → out: text)
-- **Pricing**: 入力 $0.5/1M · 出力 $1.20/1M · キャッシュ読 $0.1/1M
+- **Pricing**: 入力 $0.45/1M · 出力 $1.20/1M · キャッシュ読 $0.1/1M
 - **Capabilities**: Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-07-30
 - **HF**: `thinkingmachines/Inkling-Small`
@@ -6633,13 +6634,13 @@ GLM-5.1 delivers a major leap in coding capability, with particularly significan
 
 - **ID**: `z-ai/glm-5.2`
 - **Provider**: z-ai
-- **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 128,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.72/1M · 出力 $1.80/1M · キャッシュ読 $0.12/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $0.336/1M · 出力 $1.06/1M · キャッシュ読 $0.0624/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-06-16
 - **HF**: `zai-org/GLM-5.2`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, frequency_penalty, stop, tool_choice, tools, response_format, structured_outputs, logprobs, top_logprobs
 
 GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering, and complex multi-step automation.
 
@@ -6739,6 +6740,21 @@ This model always redirects to the latest model in the Claude Opus family.
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, stop, tool_choice, tools, structured_outputs, response_format, verbosity, max_completion_tokens
 
 This model always redirects to the latest model in the Anthropic Claude Sonnet family.
+
+### ▎~deepseek（1）
+
+#### DeepSeek V4 Flash Latest
+
+- **ID**: `~deepseek/deepseek-v4-flash-latest`
+- **Provider**: ~deepseek
+- **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
+- **Modality**: text->text  (in: text → out: text)
+- **Pricing**: 入力 $0.09/1M · 出力 $0.18/1M · キャッシュ読 $0.018/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **登録日**: 2026-08-01
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, logit_bias, tools, tool_choice, structured_outputs, logprobs, top_logprobs, top_a
+
+This model always redirects to the latest model in the DeepSeek V4 Flash family.
 
 ### ▎~google（2）
 
