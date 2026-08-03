@@ -1,6 +1,6 @@
 # OpenRouter モデルカタログ（全449モデル）
 
-- 取得日時: 2026-08-02T07:08:49
+- 取得日時: 2026-08-03T07:25:17
 - プロバイダ数: 75 / 無料枠あり: 20
 
 ## プロバイダ別サマリ
@@ -45,7 +45,7 @@
 | intfloat | 3 | 0.01 | 0.01 | 512 |
 | baai | 3 | 0.01 | 0.01 | 8,194 |
 | sao10k | 3 | 0.04 | 0.85 | 131,072 |
-| thinkingmachines | 2 | 0.45 | 1.00 | 1,048,576 |
+| thinkingmachines | 2 | 0.45 | 0.95 | 1,048,576 |
 | runway | 2 | 0.00 | 0.00 | 0 |
 | deepgram | 2 | 30.00 | 4,300.00 | 0 |
 | nex-agi | 2 | 0.02 | 0.25 | 262,144 |
@@ -1218,13 +1218,13 @@ The model was trained under conditions aligned with V3.1-Terminus to enable dire
 
 - **ID**: `deepseek/deepseek-v4-flash`
 - **Provider**: deepseek
-- **Context**: 1.04858M (1,048,576) tok / max出力 384,000 tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.0868/1M · 出力 $0.1736/1M · キャッシュ読 $0.0174/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
+- **Pricing**: 入力 $0.0882/1M · 出力 $0.1764/1M · キャッシュ読 $0.0176/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-04-24
 - **HF**: `deepseek-ai/DeepSeek-V4-Flash`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, frequency_penalty, stop, response_format, tools, tool_choice, logprobs, top_logprobs, structured_outputs
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, stop, response_format, structured_outputs, tools, tool_choice
 
 DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and high-throughput workloads, while maintaining strong reasoning and coding performance.
 
@@ -6168,7 +6168,7 @@ The gte-large embedding model converts English sentences, paragraphs and moderat
 - **Provider**: thinkingmachines
 - **Context**: 1.04858M (1,048,576) tok / max出力 262,144 tok
 - **Modality**: text+image+audio->text  (in: text,image,audio → out: text)
-- **Pricing**: 入力 $1.00/1M · 出力 $4.05/1M · キャッシュ読 $0.17/1M
+- **Pricing**: 入力 $0.95/1M · 出力 $4.05/1M · キャッシュ読 $0.16/1M
 - **Capabilities**: JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-07-17
 - **HF**: `thinkingmachines/Inkling`
@@ -6634,13 +6634,13 @@ GLM-5.1 delivers a major leap in coding capability, with particularly significan
 
 - **ID**: `z-ai/glm-5.2`
 - **Provider**: z-ai
-- **Context**: 1.04858M (1,048,576) tok / max出力 128,000 tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.336/1M · 出力 $1.06/1M · キャッシュ読 $0.0624/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
+- **Pricing**: 入力 $0.72/1M · 出力 $1.80/1M · キャッシュ読 $0.12/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-06-16
 - **HF**: `zai-org/GLM-5.2`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, frequency_penalty, stop, tool_choice, tools, response_format, structured_outputs, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
 
 GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering, and complex multi-step automation.
 
