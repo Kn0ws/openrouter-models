@@ -1,6 +1,6 @@
-# OpenRouter モデルカタログ（全450モデル）
+# OpenRouter モデルカタログ（全453モデル）
 
-- 取得日時: 2026-08-04T07:10:49
+- 取得日時: 2026-08-05T07:11:04
 - プロバイダ数: 75 / 無料枠あり: 20
 
 ## プロバイダ別サマリ
@@ -8,12 +8,12 @@
 | Provider | モデル数 | 最安入力($/1M) | 最高入力($/1M) | 最大Context |
 |---|--:|--:|--:|--:|
 | openai | 72 | 0.00 | 40,000.00 | 1,050,000 |
-| qwen | 54 | 0.01 | 35.00 | 1,000,000 |
+| qwen | 56 | 0.00 | 35.00 | 1,000,000 |
 | google | 38 | 0.00 | 16,000.00 | 1,048,576 |
 | mistralai | 22 | 0.02 | 3,000.00 | 262,144 |
 | anthropic | 17 | 0.25 | 30.00 | 1,000,000 |
 | nvidia | 14 | 0.00 | 1,500.00 | 1,000,000 |
-| deepseek | 12 | 0.09 | 0.80 | 1,048,576 |
+| deepseek | 12 | 0.08 | 0.80 | 1,048,576 |
 | minimax | 12 | 0.00 | 100.00 | 1,048,576 |
 | z-ai | 12 | 0.06 | 1.20 | 1,048,576 |
 | recraft | 11 | 0.00 | 0.00 | 65,536 |
@@ -24,6 +24,7 @@
 | moonshotai | 7 | 0.38 | 2.90 | 1,048,576 |
 | perplexity | 7 | 0.00 | 3.00 | 200,000 |
 | voyageai | 6 | 0.00 | 0.12 | 32,000 |
+| black-forest-labs | 5 | 0.00 | 0.00 | 67,344 |
 | fish-audio | 5 | 0.00 | 100.00 | 0 |
 | bytedance-seed | 5 | 0.00 | 0.25 | 262,144 |
 | amazon | 5 | 0.04 | 2.50 | 1,000,000 |
@@ -35,7 +36,6 @@
 | ~anthropic | 4 | 1.00 | 10.00 | 1,000,000 |
 | sourceful | 4 | 0.00 | 0.00 | 32,768 |
 | bytedance | 4 | 0.00 | 0.10 | 128,000 |
-| black-forest-labs | 4 | 0.00 | 0.00 | 67,344 |
 | thedrummer | 4 | 0.25 | 0.55 | 1,024,000 |
 | nousresearch | 4 | 0.13 | 1.00 | 131,072 |
 | krea | 3 | 0.00 | 0.00 | 65,536 |
@@ -671,7 +671,18 @@ The bge-m3 embedding model encodes sentences, paragraphs, and long documents int
 
 ERNIE-4.5-VL-424B-A47B is a multimodal Mixture-of-Experts (MoE) model from Baidu’s ERNIE 4.5 series, featuring 424B total parameters with 47B active per token. It is trained jointly on text and image data using a heterogeneous MoE architecture and modality-isolated routing to enable high-fidelity cross-modal reasoning, image understanding, and long-context generation (up to 131k tokens). Fine-tuned with techniques like SFT, DPO, UPO, and RLVR, this model supports both “thinking” and non-thinking inference modes. Designed for vision-language tasks in English and Chinese, it is optimized for efficient scaling and can operate under 4-bit/8-bit quantization.
 
-### ▎black-forest-labs（4）
+### ▎black-forest-labs（5）
+
+#### Black Forest Labs: FLUX.3 Video
+
+- **ID**: `black-forest-labs/flux-3-video`
+- **Provider**: black-forest-labs
+- **Context**: — tok
+- **Modality**: text+image+video->video  (in: text,image,video → out: video)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Video Output $0.17〜$0.53/second
+- **登録日**: 2026-08-04
+
+FLUX.3 Video is a video generation model from Black Forest Labs. It supports text-to-video, image-guided generation with opening and closing keyframes, and video continuation workflows, making it suited for controlled creative production, scene animation, and extending existing clips. It can generate synchronized audio alongside the video.
 
 #### Black Forest Labs: FLUX.2 Flex
 
@@ -1218,13 +1229,13 @@ The model was trained under conditions aligned with V3.1-Terminus to enable dire
 
 - **ID**: `deepseek/deepseek-v4-flash`
 - **Provider**: deepseek
-- **Context**: 1.04858M (1,048,576) tok / max出力 384,000 tok
+- **Context**: 1.04858M (1,048,576) tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.0881/1M · 出力 $0.1761/1M · キャッシュ読 $0.0176/1M
+- **Pricing**: 入力 $0.084/1M · 出力 $0.168/1M · キャッシュ読 $0.0168/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-04-24
 - **HF**: `deepseek-ai/DeepSeek-V4-Flash`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, frequency_penalty, stop, response_format, tools, tool_choice, logprobs, top_logprobs, structured_outputs
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, tool_choice, tools, structured_outputs, response_format, logprobs, top_logprobs
 
 DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and high-throughput workloads, while maintaining strong reasoning and coding performance.
 
@@ -2312,14 +2323,14 @@ Supported languages: English, German, French, Italian, Portuguese, Hindi, Spanis
 
 - **ID**: `meta-llama/llama-4-maverick`
 - **Provider**: meta-llama
-- **Context**: 1.04858M (1,048,576) tok / max出力 16,384 tok
+- **Context**: 1.04858M (1,048,576) tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.2/1M · 出力 $0.8/1M
-- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Seed固定
+- **Pricing**: 入力 $0.2/1M · 出力 $0.696/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, logprobs
 - **Knowledge cutoff**: 2024-08-31T23:59:59.000Z
 - **登録日**: 2025-04-05
 - **HF**: `meta-llama/Llama-4-Maverick-17B-128E-Instruct`
-- **対応パラメータ**: structured_outputs, response_format, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, logit_bias
+- **対応パラメータ**: temperature, top_p, max_tokens, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
 
 Llama 4 Maverick 17B Instruct (128E) is a high-capacity multimodal language model from Meta, built on a mixture-of-experts (MoE) architecture with 128 experts and 17 billion active parameters per forward pass (400B total). It supports multilingual text and image input, and produces multilingual text and code output across 12 supported languages. Optimized for vision-language tasks, Maverick is instruction-tuned for assistant-like behavior, image reasoning, and general-purpose multimodal interaction.
 
@@ -3040,13 +3051,13 @@ Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art 
 
 - **ID**: `moonshotai/kimi-k2.6`
 - **Provider**: moonshotai
-- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Context**: 262K (262,144) tok / max出力 65,535 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.589/1M · 出力 $2.48/1M · キャッシュ読 $0.0992/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
+- **Pricing**: 入力 $0.58/1M · 出力 $3.40/1M · キャッシュ読 $0.058/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-04-20
 - **HF**: `moonshotai/Kimi-K2.6`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, frequency_penalty, presence_penalty, stop, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice, structured_outputs
 
 Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and can convert prompts and visual inputs into production-ready interfaces. Its agent swarm architecture scales to hundreds of parallel sub-agents for autonomous task decomposition - delivering documents, websites, and spreadsheets in a single run without human oversight.
 
@@ -3056,11 +3067,11 @@ Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-h
 - **Provider**: moonshotai
 - **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.71/1M · 出力 $3.50/1M · キャッシュ読 $0.15/1M
+- **Pricing**: 入力 $0.7/1M · 出力 $3.50/1M · キャッシュ読 $0.15/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-06-12
 - **HF**: `moonshotai/Kimi-K2.7-Code`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, repetition_penalty, frequency_penalty, presence_penalty, stop, seed, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, top_p, stop, frequency_penalty, logit_bias, parallel_tool_calls, presence_penalty, reasoning_effort, seed, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
 
 MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of-experts architecture that accepts text and image input, and it always operates in a thinking mode, preserving full reasoning content across multi-turn conversations. With a 256K-token context window, it targets long-horizon coding, agentic task decomposition, and multi-turn dialogue. The model activates 32B parameters out of roughly 1T total.
 
@@ -4701,7 +4712,7 @@ Laguna XS 2.1 is the latest coding agent model in the 33B-A3B category from [Poo
 
 Laguna XS 2.1 is designed for software engineering and agentic coding use cases, and you are responsible for confirming that it is appropriate for your intended application. Laguna XS 2.1 is subject to the [OpenMDW-1.1 License](https://openmdw.ai/license/1-1/), and should be used consistently with Poolside's …
 
-### ▎qwen（54）
+### ▎qwen（56）
 
 #### Qwen2.5 72B Instruct
 
@@ -4794,6 +4805,32 @@ Qwen-Audio-3.0-TTS Flash is Alibaba's fast, cost-efficient text-to-speech model,
 - **対応パラメータ**: max_tokens, temperature, top_p, seed, presence_penalty, response_format
 
 Qwen-Audio-3.0-TTS Plus is Alibaba's higher-quality text-to-speech model, generating spoken audio from text via the DashScope Speech Synthesizer API.
+
+#### Qwen: Qwen Image 3
+
+- **ID**: `qwen/qwen-image-3`
+- **Provider**: qwen
+- **Context**: 65K (65,536) tok
+- **Modality**: text+image->image  (in: text,image → out: image)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · 画像 $0.003/枚 · Image Output $0.03/image · Image Input $0.003/image
+- **Capabilities**: JSON mode, Seed固定
+- **登録日**: 2026-08-05
+- **対応パラメータ**: max_tokens, temperature, top_p, seed, presence_penalty, response_format
+
+Qwen Image 3 is a unified image generation and editing model from Qwen. It supports precise rendering of text and details as small as 10px, along with a richer world knowledge base than previous generations.
+
+#### Qwen: Qwen Image 3 Pro
+
+- **ID**: `qwen/qwen-image-3-pro`
+- **Provider**: qwen
+- **Context**: 65K (65,536) tok
+- **Modality**: text+image->image  (in: text,image → out: image)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · 画像 $0.003/枚 · Image Output $0.04〜$0.075/image · Image Input $0.003/image
+- **Capabilities**: JSON mode, Seed固定
+- **登録日**: 2026-08-05
+- **対応パラメータ**: max_tokens, temperature, top_p, seed, presence_penalty, response_format
+
+Qwen Image 3 Pro is an image generation and editing model from Qwen. It supports precise rendering of text and details as small as 10px, along with richer world knowledge compared to previous generations.
 
 #### Qwen: Qwen-Plus
 
@@ -5064,11 +5101,11 @@ Qwen3 Coder Flash is Alibaba's fast and cost efficient version of their propriet
 - **Provider**: qwen
 - **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.11/1M · 出力 $0.8/1M · キャッシュ読 $0.07/1M
+- **Pricing**: 入力 $0.12/1M · 出力 $0.8/1M · キャッシュ読 $0.07/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, logprobs, Seed固定
 - **登録日**: 2026-02-04
 - **HF**: `Qwen/Qwen3-Coder-Next`
-- **対応パラメータ**: max_tokens, temperature, top_p, frequency_penalty, presence_penalty, stop, seed, tools, tool_choice, response_format, structured_outputs, logprobs, top_logprobs
+- **対応パラメータ**: max_tokens, temperature, top_p, frequency_penalty, presence_penalty, repetition_penalty, seed, stop, top_k, logit_bias, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
 
 Qwen3-Coder-Next is an open-weight causal language model optimized for coding agents and local development workflows. It uses a sparse MoE design with 80B total parameters and only 3B activated per token, delivering performance comparable to models with 10 to 20x higher active compute, which makes it well suited for cost-sensitive, always-on agent deployment.
 
@@ -5335,7 +5372,7 @@ The Qwen3.5 Series 35B-A3B is a native vision-language model designed with a hyb
 - **Provider**: qwen
 - **Context**: 262K (262,144) tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.385/1M · 出力 $2.45/1M · キャッシュ読 $0.111/1M
+- **Pricing**: 入力 $0.3025/1M · 出力 $1.93/1M · キャッシュ読 $0.111/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-02-16
 - **HF**: `Qwen/Qwen3.5-397B-A17B`
@@ -5400,13 +5437,13 @@ Qwen3.5 Plus (April 2026) is a large-scale multimodal language model from Alibab
 
 - **ID**: `qwen/qwen3.6-27b`
 - **Provider**: qwen
-- **Context**: 262K (262,144) tok / max出力 32,768 tok
+- **Context**: 262K (262,144) tok / max出力 131,072 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.27/1M · 出力 $1.89/1M · キャッシュ読 $0.13/1M
-- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $0.289/1M · 出力 $2.40/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-27
 - **HF**: `Qwen/Qwen3.6-27B`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, stop, frequency_penalty, presence_penalty, seed, tools, tool_choice, response_format, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, stop, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, seed, logit_bias, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
 
 Qwen3.6 27B is a dense 27-billion-parameter language model from the Qwen Team at Alibaba, released in April 2026. It features hybrid multimodal capabilities — accepting text, image, and video inputs — and supports a 262,144-token context window.
 
@@ -6319,7 +6356,7 @@ Palmyra X5 is Writer's most advanced model, purpose-built for building and scali
 
 ### ▎x-ai（10）
 
-#### xAI: Grok 4.20
+#### SpaceXAI: Grok 4.20
 
 - **ID**: `x-ai/grok-4.20`
 - **Provider**: x-ai
@@ -6331,11 +6368,11 @@ Palmyra X5 is Writer's most advanced model, purpose-built for building and scali
 - **登録日**: 2026-03-31
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, logprobs, top_logprobs, response_format, tools, tool_choice, structured_outputs
 
-Grok 4.20 is a reasoning model from xAI with industry-leading speed and agentic tool calling capabilities. It combines the lowest hallucination rate on the market with strict prompt adherance, delivering consistently precise and truthful responses.
+Grok 4.20 is a reasoning model from SpaceXAI with industry-leading speed and agentic tool calling capabilities. It combines the lowest hallucination rate on the market with strict prompt adherance, delivering consistently precise and truthful responses.
 
 Reasoning can be enabled/disabled using the `reasoning` `enabled` parameter in the API. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#controlling-reasoning-tokens)
 
-#### xAI: Grok 4.20 Multi-Agent
+#### SpaceXAI: Grok 4.20 Multi-Agent
 
 - **ID**: `x-ai/grok-4.20-multi-agent`
 - **Provider**: x-ai
@@ -6347,13 +6384,13 @@ Reasoning can be enabled/disabled using the `reasoning` `enabled` parameter in t
 - **登録日**: 2026-03-31
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, logprobs, top_logprobs, response_format, structured_outputs
 
-Grok 4.20 Multi-Agent is a variant of xAI’s Grok 4.20 designed for collaborative, agent-based workflows. Multiple agents operate in parallel to conduct deep research, coordinate tool use, and synthesize information across complex tasks.
+Grok 4.20 Multi-Agent is a variant of SpaceXAI’s Grok 4.20 designed for collaborative, agent-based workflows. Multiple agents operate in parallel to conduct deep research, coordinate tool use, and synthesize information across complex tasks.
 
 Reasoning effort behavior:
 - low / medium: 4 agents
 - high / xhigh: 16 agents
 
-#### xAI: Grok 4.3
+#### SpaceXAI: Grok 4.3
 
 - **ID**: `x-ai/grok-4.3`
 - **Provider**: x-ai
@@ -6364,11 +6401,11 @@ Reasoning effort behavior:
 - **登録日**: 2026-04-30
 - **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, max_tokens, temperature, top_p, seed, logprobs, top_logprobs, stop, frequency_penalty, presence_penalty, tools, tool_choice
 
-Grok 4.3 is a reasoning model from xAI. It accepts text and image inputs with text output, and is suited for agentic workflows, instruction-following tasks, and applications requiring high factual accuracy. Reasoning can be configured between none/low/medium/high (default low) effort levels.
+Grok 4.3 is a reasoning model from SpaceXAI. It accepts text and image inputs with text output, and is suited for agentic workflows, instruction-following tasks, and applications requiring high factual accuracy. Reasoning can be configured between none/low/medium/high (default low) effort levels.
 
 It supports a 1 million token context window with no output token limit, making it well-suited for long-document analysis, deep research, and multi-step agentic tasks. Pricing is tiered: requests exceeding 200k total tokens are billed at a higher rate.
 
-#### xAI: Grok 4.5
+#### SpaceXAI: Grok 4.5
 
 - **ID**: `x-ai/grok-4.5`
 - **Provider**: x-ai
@@ -6381,7 +6418,7 @@ It supports a 1 million token context window with no output token limit, making 
 
 Grok 4.5 is SpaceXAI's smartest model with frontier performance on coding, knowledge work, and STEM.
 
-#### xAI: Grok Build 0.1
+#### SpaceXAI: Grok Build 0.1
 
 - **ID**: `x-ai/grok-build-0.1`
 - **Provider**: x-ai
@@ -6392,9 +6429,9 @@ Grok 4.5 is SpaceXAI's smartest model with frontier performance on coding, knowl
 - **登録日**: 2026-05-20
 - **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, max_tokens, temperature, top_p, seed, logprobs, top_logprobs, stop, frequency_penalty, presence_penalty, tools, tool_choice
 
-Grok Build 0.1 is xAI’s fast coding model trained specifically for agentic software engineering workflows. It supports text and image inputs with text output, and is optimized for interactive coding agents, tool use, and multi-step development tasks. The model powers xAI’s Grok Build CLI and features a 256K context window with no text output limit, making it well suited for long-horizon coding and automation workflows. Currently in early access.
+Grok Build 0.1 is SpaceXAI’s fast coding model trained specifically for agentic software engineering workflows. It supports text and image inputs with text output, and is optimized for interactive coding agents, tool use, and multi-step development tasks. The model powers SpaceXAI’s Grok Build CLI and features a 256K context window with no text output limit, making it well suited for long-horizon coding and automation workflows. Currently in early access.
 
-#### xAI: Grok Imagine Image Quality
+#### SpaceXAI: Grok Imagine Image Quality
 
 - **ID**: `x-ai/grok-imagine-image-quality`
 - **Provider**: x-ai
@@ -6405,11 +6442,11 @@ Grok Build 0.1 is xAI’s fast coding model trained specifically for agentic sof
 - **登録日**: 2026-05-18
 - **対応パラメータ**: max_tokens, temperature, top_p, seed, logprobs, top_logprobs, response_format, stop, frequency_penalty, presence_penalty
 
-Grok Imagine Image Quality is xAI's fast, high-fidelity image generation and editing model. It accepts text prompts and optional reference images, producing photorealistic outputs at 1K or 2K across a range of aspect ratios, including flexible adjustment of reference images.
+Grok Imagine Image Quality is SpaceXAI's fast, high-fidelity image generation and editing model. It accepts text prompts and optional reference images, producing photorealistic outputs at 1K or 2K across a range of aspect ratios, including flexible adjustment of reference images.
 
-The model emphasizes realistic detail — natural lighting and physics, accurate textures, and consistent rendering of named entities such as brands, public figures, and specific locations. It supports clean multilingual text rendering inside images, making it the top choice for posters, packaging, ads, menus, and social graphics. When given reference images, it preserves identity and structure for product placement, …
+The model emphasizes realistic detail — natural lighting and physics, accurate textures, and consistent rendering of named entities such as brands, public figures, and specific locations. It supports clean multilingual text rendering inside images, making it the top choice for posters, packaging, ads, menus, and social graphics. When given reference images, it preserves identity and structure for product …
 
-#### xAI: Grok Imagine Video
+#### SpaceXAI: Grok Imagine Video
 
 - **ID**: `x-ai/grok-imagine-video`
 - **Provider**: x-ai
@@ -6420,11 +6457,11 @@ The model emphasizes realistic detail — natural lighting and physics, accurate
 - **登録日**: 2026-05-18
 - **対応パラメータ**: max_tokens, temperature, top_p, seed, logprobs, top_logprobs, response_format, stop, frequency_penalty, presence_penalty
 
-Grok Imagine Video is xAI's fast, text-, image-, and reference-conditioned video generation model. It produces short videos (1–15 seconds, 24 fps) at 480p or 720p across seven aspect ratios - 1:1, 16:9, 9:16, 4:3, 3:4, 3:2, and 2:3.
+Grok Imagine Video is SpaceXAI's fast, text-, image-, and reference-conditioned video generation model. It produces short videos (1–15 seconds, 24 fps) at 480p or 720p across seven aspect ratios - 1:1, 16:9, 9:16, 4:3, 3:4, 3:2, and 2:3.
 
 The model supports three generation modes: text-to-video from a prompt alone, image-to-video that animates a still input, and reference-to-video that grounds the output in up to seven reference images for consistent characters, styles, or settings.
 
-#### xAI: Grok Imagine Video 1.5
+#### SpaceXAI: Grok Imagine Video 1.5
 
 - **ID**: `x-ai/grok-imagine-video-1.5`
 - **Provider**: x-ai
@@ -6435,9 +6472,9 @@ The model supports three generation modes: text-to-video from a prompt alone, im
 - **登録日**: 2026-07-20
 - **対応パラメータ**: max_tokens, temperature, top_p, seed, logprobs, top_logprobs, response_format, stop, frequency_penalty, presence_penalty
 
-Grok Imagine Video 1.5 is a video generation model from xAI. It creates videos from text prompts, with an optional starting image to guide the scene. It can direct subject and camera motion, pacing, atmosphere, and physical behavior while maintaining visual continuity, and can generate synchronized sound effects, ambience, and dialogue.
+Grok Imagine Video 1.5 is a video generation model from SpaceXAI. It creates videos from text prompts, with an optional starting image to guide the scene. It can direct subject and camera motion, pacing, atmosphere, and physical behavior while maintaining visual continuity, and can generate synchronized sound effects, ambience, and dialogue.
 
-#### xAI: Grok STT 1.0
+#### SpaceXAI: Grok STT 1.0
 
 - **ID**: `x-ai/grok-stt-1.0`
 - **Provider**: x-ai
@@ -6448,9 +6485,9 @@ Grok Imagine Video 1.5 is a video generation model from xAI. It creates videos f
 - **登録日**: 2026-07-23
 - **対応パラメータ**: max_tokens, temperature, top_p, seed, logprobs, top_logprobs, response_format, stop, frequency_penalty, presence_penalty
 
-Grok STT is xAI's speech-to-text model, available via the REST /v1/stt endpoint. It supports transcription with word-level timestamps, optional speaker diarization, and multichannel audio.
+Grok STT is SpaceXAI's speech-to-text model, available via the REST /v1/stt endpoint. It supports transcription with word-level timestamps, optional speaker diarization, and multichannel audio.
 
-#### xAI: Grok Voice TTS 1.0
+#### SpaceXAI: Grok Voice TTS 1.0
 
 - **ID**: `x-ai/grok-voice-tts-1.0`
 - **Provider**: x-ai
@@ -6461,7 +6498,7 @@ Grok STT is xAI's speech-to-text model, available via the REST /v1/stt endpoint.
 - **登録日**: 2026-05-15
 - **対応パラメータ**: max_tokens, temperature, top_p, seed, logprobs, top_logprobs, response_format, stop, frequency_penalty, presence_penalty
 
-Grok Voice TTS 1.0 is a text-to-speech model from xAI. It converts text into spoken audio across 20+ languages with automatic language detection, and offers five built-in voices (Eve, Ara, Rex, Sal, Leo) covering a range of tones. Inline speech tags allow control over pauses, emphasis, pitch, speed, and vocal style. Output is available in MP3, WAV, PCM, μ-law, and A-law formats at sample rates from 8 kHz to 48 kHz, with up to 15,000 characters per request.
+Grok Voice TTS 1.0 is a text-to-speech model from SpaceXAI. It converts text into spoken audio across 20+ languages with automatic language detection, and offers five built-in voices (Eve, Ara, Rex, Sal, Leo) covering a range of tones. Inline speech tags allow control over pauses, emphasis, pitch, speed, and vocal style. Output is available in MP3, WAV, PCM, μ-law, and A-law formats at sample rates from 8 kHz to 48 kHz, with up to 15,000 characters per request.
 
 ### ▎xiaomi（2）
 
@@ -6647,13 +6684,13 @@ GLM-5.1 delivers a major leap in coding capability, with particularly significan
 
 - **ID**: `z-ai/glm-5.2`
 - **Provider**: z-ai
-- **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.5866/1M · 出力 $1.84/1M · キャッシュ読 $0.1089/1M
-- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.6/1M · 出力 $1.50/1M · キャッシュ読 $0.1/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-06-16
 - **HF**: `zai-org/GLM-5.2`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice, response_format
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
 
 GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering, and complex multi-step automation.
 
