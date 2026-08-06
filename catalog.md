@@ -1,13 +1,13 @@
-# OpenRouter モデルカタログ（全453モデル）
+# OpenRouter モデルカタログ（全456モデル）
 
-- 取得日時: 2026-08-05T07:11:04
+- 取得日時: 2026-08-06T07:11:35
 - プロバイダ数: 75 / 無料枠あり: 20
 
 ## プロバイダ別サマリ
 
 | Provider | モデル数 | 最安入力($/1M) | 最高入力($/1M) | 最大Context |
 |---|--:|--:|--:|--:|
-| openai | 72 | 0.00 | 40,000.00 | 1,050,000 |
+| openai | 73 | 0.00 | 40,000.00 | 1,050,000 |
 | qwen | 56 | 0.00 | 35.00 | 1,000,000 |
 | google | 38 | 0.00 | 16,000.00 | 1,048,576 |
 | mistralai | 22 | 0.02 | 3,000.00 | 262,144 |
@@ -26,10 +26,10 @@
 | voyageai | 6 | 0.00 | 0.12 | 32,000 |
 | black-forest-labs | 5 | 0.00 | 0.00 | 67,344 |
 | fish-audio | 5 | 0.00 | 100.00 | 0 |
+| inclusionai | 5 | 0.00 | 0.07 | 262,144 |
 | bytedance-seed | 5 | 0.00 | 0.25 | 262,144 |
 | amazon | 5 | 0.04 | 2.50 | 1,000,000 |
 | sentence-transformers | 5 | 0.01 | 0.01 | 512 |
-| inclusionai | 4 | 0.00 | 0.07 | 262,144 |
 | poolside | 4 | 0.00 | 0.09 | 1,048,576 |
 | aion-labs | 4 | 0.70 | 3.00 | 131,072 |
 | alibaba | 4 | 0.00 | 0.00 | 0 |
@@ -45,6 +45,7 @@
 | intfloat | 3 | 0.01 | 0.01 | 512 |
 | baai | 3 | 0.01 | 0.01 | 8,194 |
 | sao10k | 3 | 0.04 | 0.85 | 131,072 |
+| meta | 2 | 1.25 | 1.25 | 1,048,576 |
 | thinkingmachines | 2 | 0.45 | 0.95 | 1,048,576 |
 | runway | 2 | 0.00 | 0.00 | 0 |
 | deepgram | 2 | 30.00 | 4,300.00 | 0 |
@@ -62,7 +63,6 @@
 | morph | 2 | 0.80 | 0.90 | 262,144 |
 | ~deepseek | 1 | 0.09 | 0.09 | 1,048,576 |
 | meituan | 1 | 0.30 | 0.30 | 1,048,756 |
-| meta | 1 | 1.25 | 1.25 | 1,048,576 |
 | ~x-ai | 1 | 2.00 | 2.00 | 500,000 |
 | sakana | 1 | 5.00 | 5.00 | 1,000,000 |
 | perceptron | 1 | 0.15 | 0.15 | 32,768 |
@@ -71,7 +71,7 @@
 | canopylabs | 1 | 7.00 | 7.00 | 4,096 |
 | hexgrad | 1 | 0.62 | 0.62 | 4,096 |
 | inception | 1 | 0.25 | 0.25 | 128,000 |
-| upstage | 1 | 0.15 | 0.15 | 128,000 |
+| upstage | 1 | 0.15 | 0.15 | 131,072 |
 | writer | 1 | 0.60 | 0.60 | 1,040,000 |
 | allenai | 1 | 0.15 | 0.15 | 65,536 |
 | deepcogito | 1 | 1.25 | 1.25 | 128,000 |
@@ -1951,7 +1951,7 @@ Mercury 2 is an extremely fast reasoning LLM, and the first reasoning diffusion 
 Instead of generating tokens sequentially, Mercury 2 produces and refines multiple tokens in parallel, achieving >1,000 tokens/sec on standard GPUs. Mercury 2 is 5x+ faster than leading speed-optimized LLMs like Claude 4.5 Haiku and GPT 5 Mini, at a fraction of the cost. 
 Mercury 2 supports tunable reasoning levels, 128K context, native tool use, and schema-aligned JSON output. Built for coding workflows where latency compounds, real-time voice/search, and agent loops. OpenAI API compatible. Read more in the [blog post](https://www.inceptionlabs.ai/blog/introducing-mercury-2).
 
-### ▎inclusionai（4）
+### ▎inclusionai（5）
 
 #### inclusionAI: Ling-2.6-1T
 
@@ -1981,6 +1981,22 @@ The model achieves state-of-the-art results on benchmarks such as AIME26 and SWE
 
 Ling-2.6-flash is an instant (instruct) model from inclusionAI with 104B total parameters and 7.4B active parameters, designed for real-world agents that require fast responses, strong execution, and high token efficiency. It delivers performance comparable to state-of-the-art models at a similar scale while significantly reducing token usage across coding, document processing, and lightweight agent workflows.
 
+#### Ling-3.0-flash
+
+- **ID**: `inclusionai/ling-3.0-flash`
+- **Provider**: inclusionai
+- **Context**: 131K (131,072) tok / max出力 16,384 tok
+- **Modality**: text->text  (in: text → out: text)
+- **Pricing**: 入力 $0.075/1M · 出力 $0.22/1M · キャッシュ読 $0.015/1M
+- **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力, Seed固定
+- **登録日**: 2026-07-23
+- **HF**: `inclusionAI/Ling-3.0-flash`
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, logit_bias, tools, tool_choice
+
+*Ling-3.0-flash* is a *124B-parameter Mixture-of-Experts (MoE) model*, with approximately *5.1B parameters activated per token*.
+
+The model is designed with *token efficiency and production-scale agentic inference* as key priorities, enabling developers to complete more useful work within constrained token, latency, and serving-cost budgets.
+
 #### Ling-3.0-flash (free)
 
 - **ID**: `inclusionai/ling-3.0-flash:free`
@@ -1990,6 +2006,7 @@ Ling-2.6-flash is an instant (instruct) model from inclusionAI with 104B total p
 - **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
 - **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-07-23
+- **HF**: `inclusionAI/Ling-3.0-flash`
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice, logprobs, top_logprobs
 
 *Ling-3.0-flash* is a *124B-parameter Mixture-of-Experts (MoE) model*, with approximately *5.1B parameters activated per token*.
@@ -2203,7 +2220,7 @@ An attempt to recreate Claude-style verbosity, but don't expect the same level o
 
 LongCat 2.0 is a sparse mixture-of-experts language model from Meituan, with 48B active parameters out of 1.6T total. It is suited for coding, repository-level changes, long-horizon problem solving, and agentic workflows.
 
-### ▎meta（1）
+### ▎meta（2）
 
 #### Meta: Muse Spark 1.1
 
@@ -2219,6 +2236,21 @@ LongCat 2.0 is a sparse mixture-of-experts language model from Meituan, with 48B
 Muse Spark 1.1 is a multimodal reasoning model from Meta, built for agentic tasks. It accepts text, images, video, audio, and PDF documents and returns text, with a 1M-token context window.
 
 The model is designed to orchestrate multi-agent workflows, acting as either a main agent that plans and delegates or as a subagent, and generalizes zero-shot to new tools, MCP servers, and custom skills. It supports structured output, parallel function calling, built-in search with citations, and configurable reasoning effort. Meta reports strong performance on real-world coding across large codebases, computer-use workflows, and visual-to-code generation.
+
+#### Meta: Muse Spark 1.2
+
+- **ID**: `meta/muse-spark-1.2`
+- **Provider**: meta
+- **Context**: 1.04858M (1,048,576) tok
+- **Modality**: text+image+file+audio+video->text  (in: text,image,file,audio,video → out: text)
+- **Pricing**: 入力 $1.25/1M · 出力 $4.25/1M · キャッシュ読 $0.15/1M · Web検索 $0.0025
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
+- **登録日**: 2026-08-05
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, repetition_penalty, top_k, temperature, top_p, tools, tool_choice, structured_outputs, response_format
+
+Muse Spark 1.2 is a reasoning model from Meta, designed for complex agentic tasks. It accepts text, images, video, audio, and PDF documents, returns text, and offers a 1M-token context window.
+
+The model is built to support multi-agent workflows, whether as either a main agent that plans and delegates or as a subagent executing in parallel. It works across multiple coding harnesses and supports structured output, parallel function calling, and configurable reasoning effort. In Meta’s testing, it performs well on multi-file refactors, extended debugging sessions, whole-repository generation, and tasks that stretch well past a single prompt.
 
 ### ▎meta-llama（8）
 
@@ -2586,7 +2618,7 @@ To avoid …
 - **Provider**: minimax
 - **Context**: 204K (204,800) tok / max出力 196,608 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.15/1M · 出力 $0.9/1M · キャッシュ読 $0.05/1M
+- **Pricing**: 入力 $0.22/1M · 出力 $0.9/1M · キャッシュ読 $0.05/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-02-12
 - **HF**: `MiniMaxAI/MiniMax-M2.5`
@@ -3068,10 +3100,10 @@ Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-h
 - **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
 - **Pricing**: 入力 $0.7/1M · 出力 $3.50/1M · キャッシュ読 $0.15/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-06-12
 - **HF**: `moonshotai/Kimi-K2.7-Code`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, top_p, stop, frequency_penalty, logit_bias, parallel_tool_calls, presence_penalty, reasoning_effort, seed, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, frequency_penalty, top_p, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
 
 MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of-experts architecture that accepts text and image input, and it always operates in a thinking mode, preserving full reasoning content across multi-turn conversations. With a 256K-token context window, it targets long-horizon coding, agentic task decomposition, and multi-turn dialogue. The model activates 32B parameters out of roughly 1T total.
 
@@ -3457,7 +3489,7 @@ The model's reasoning capabilities can be controlled via a system prompt. If the
 
 Parakeet TDT 0.6B v3 is NVIDIA's 600M-parameter multilingual speech-to-text model built on the FastConformer-TDT architecture. Trained on the Granary dataset (670,000+ hours of audio), it supports automatic language detection across all official EU languages and achieves a 6.34% average word error rate on the HuggingFace Open ASR Leaderboard. Returns transcribed text with punctuation and segment timestamps.
 
-### ▎openai（72）
+### ▎openai（73）
 
 #### OpenAI: GPT-3.5 Turbo
 
@@ -4301,6 +4333,19 @@ gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the A
 gpt-oss-safeguard-20b is a safety reasoning model from OpenAI built upon gpt-oss-20b. This open-weight, 21B-parameter Mixture-of-Experts (MoE) model offers lower latency for safety tasks like content classification, LLM filtering, and trust & safety labeling.
 
 Learn more about this model in OpenAI's gpt-oss-safeguard [user guide](https://cookbook.openai.com/articles/gpt-oss-safeguard-guide).
+
+#### OpenAI: GPT Transcribe
+
+- **ID**: `openai/gpt-transcribe`
+- **Provider**: openai
+- **Context**: — tok
+- **Modality**: audio->transcription  (in: audio → out: transcription)
+- **Pricing**: 入力 $4,500.00/1M · 出力 無料/1M · Audio Minutes $0.0045/minute
+- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, logprobs, Seed固定
+- **登録日**: 2026-08-05
+- **対応パラメータ**: seed, max_tokens, response_format, structured_outputs, temperature, top_p, stop, frequency_penalty, presence_penalty, logit_bias, logprobs, top_logprobs
+
+GPT Transcribe is a high-accuracy speech-to-text model from OpenAI. It is suited for recorded audio, streamed file transcription, and committed Realtime turns, with free-form context, keyword hints, and multiple language hints for specialized terms and multilingual speech.
 
 #### OpenAI: o1
 
@@ -6219,10 +6264,10 @@ The gte-large embedding model converts English sentences, paragraphs and moderat
 - **Context**: 1.04858M (1,048,576) tok / max出力 262,144 tok
 - **Modality**: text+image+audio->text  (in: text,image,audio → out: text)
 - **Pricing**: 入力 $0.95/1M · 出力 $4.05/1M · キャッシュ読 $0.16/1M
-- **Capabilities**: JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-07-17
 - **HF**: `thinkingmachines/Inkling`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, logit_bias
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, logit_bias, tools, tool_choice
 
 Inkling is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 41B active parameters out of 975B total. It is designed for general-purpose reasoning, coding, agentic and tool-use systems, retrieval-augmented generation, instruction following, and multilingual conversational applications. Its native image and audio understanding supports multimodal analysis alongside text.
 
@@ -6233,10 +6278,10 @@ Inkling is an open-weight multimodal mixture-of-experts model from Thinking Mach
 - **Context**: 524K (524,288) tok / max出力 262,144 tok
 - **Modality**: text+image+audio->text  (in: text,image,audio → out: text)
 - **Pricing**: 入力 $0.45/1M · 出力 $1.20/1M · キャッシュ読 $0.1/1M
-- **Capabilities**: Reasoning(思考), Reasoning出力, Seed固定
+- **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-07-30
 - **HF**: `thinkingmachines/Inkling-Small`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, logit_bias
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, logit_bias, tools, tool_choice
 
 Inkling Small is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 12B active parameters out of 276B total. It is positioned as the smaller, more efficient member of the Inkling family and is suited for reasoning, coding, agentic workflows, retrieval-augmented generation, instruction following, and multilingual conversation.
 
@@ -6263,12 +6308,12 @@ A recreation trial of the original MythoMax-L2-B13 but with updated models. #mer
 
 - **ID**: `upstage/solar-pro-3`
 - **Provider**: upstage
-- **Context**: 128K (128,000) tok
+- **Context**: 131K (131,072) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
 - **Pricing**: 入力 $0.15/1M · 出力 $0.6/1M · キャッシュ読 $0.015/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-01-27
-- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, tools, tool_choice, structured_outputs, response_format
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, tools, tool_choice, structured_outputs, response_format, top_p, frequency_penalty, presence_penalty
 
 Solar Pro 3 is Upstage's powerful Mixture-of-Experts (MoE) language model. With 102B total parameters and 12B active parameters per forward pass, it delivers exceptional performance while maintaining computational efficiency. Optimized for Korean with English and Japanese support.
 
