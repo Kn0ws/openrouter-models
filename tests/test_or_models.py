@@ -164,6 +164,64 @@ class TranslationSafetyTests(unittest.TestCase):
                 orm.BASE_DIR = original_base_dir
                 orm.SNAP_DIR = original_snap_dir
 
+    def test_translate_persists_only_the_fixed_safe_batch(self):
+        original_base_dir = orm.BASE_DIR
+        original_snap_dir = orm.SNAP_DIR
+        with tempfile.TemporaryDirectory() as temp_dir:
+            orm.BASE_DIR = temp_dir
+            orm.SNAP_DIR = os.path.join(temp_dir, "snapshots")
+            os.mkdir(orm.SNAP_DIR)
+            try:
+                with open(os.path.join(temp_dir, "translations.json"), "w", encoding="utf-8") as f:
+                    json.dump({}, f)
+                with open(os.path.join(orm.SNAP_DIR, "models-20260801-000000.json"), "w", encoding="utf-8") as f:
+                    json.dump({"data": [
+                        {"id": "new/one", "name": "One"},
+                        {"id": "new/two", "name": "Two"},
+                        {"id": "new/three", "name": "Three"},
+                    ]}, f)
+                args = types.SimpleNamespace(verify_key=False, dry_run=False)
+                translated = [
+                    {"desc_ja": "最初のモデルに対する十分な長さの説明です。", "good_at": "最初のモデルに対する十分な長さの用途です。"},
+                    {"desc_ja": "二番目のモデルに対する十分な長さの説明です。", "good_at": "二番目のモデルに対する十分な長さの用途です。"},
+                ]
+                with mock.patch.dict(os.environ, {orm.TRANSLATION_TOKEN_ENV: "test-token"}), \
+                     mock.patch.object(orm, "TRANSLATION_MAX_MODELS_PER_RUN", 2), \
+                     mock.patch.object(orm, "verify_translation_key"), \
+                     mock.patch.object(orm, "translate_model", side_effect=translated) as translate_model:
+                    orm.cmd_translate(args)
+                self.assertEqual(translate_model.call_count, 2)
+                self.assertEqual(
+                    [call.args[0]["id"] for call in translate_model.call_args_list],
+                    ["new/one", "new/two"],
+                )
+                with open(os.path.join(temp_dir, "translations.json"), encoding="utf-8") as f:
+                    saved = json.load(f)
+                self.assertEqual(set(saved), {"new/one", "new/two"})
+            finally:
+                orm.BASE_DIR = original_base_dir
+                orm.SNAP_DIR = original_snap_dir
+
+    def test_untranslated_require_complete_uses_pending_status(self):
+        original_base_dir = orm.BASE_DIR
+        original_snap_dir = orm.SNAP_DIR
+        with tempfile.TemporaryDirectory() as temp_dir:
+            orm.BASE_DIR = temp_dir
+            orm.SNAP_DIR = os.path.join(temp_dir, "snapshots")
+            os.mkdir(orm.SNAP_DIR)
+            try:
+                with open(os.path.join(temp_dir, "translations.json"), "w", encoding="utf-8") as f:
+                    json.dump({}, f)
+                with open(os.path.join(orm.SNAP_DIR, "models-20260801-000000.json"), "w", encoding="utf-8") as f:
+                    json.dump({"data": [{"id": "new/one", "name": "One"}]}, f)
+                args = types.SimpleNamespace(require_complete=True)
+                with self.assertRaises(SystemExit) as raised:
+                    orm.cmd_untranslated(args)
+                self.assertEqual(raised.exception.code, 2)
+            finally:
+                orm.BASE_DIR = original_base_dir
+                orm.SNAP_DIR = original_snap_dir
+
 
 if __name__ == "__main__":
     unittest.main()

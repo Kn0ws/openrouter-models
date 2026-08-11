@@ -42,42 +42,58 @@ jobs:
         if: github.event_name != 'workflow_dispatch' || inputs.verify_translation_key != true
         run: python3 or_models.py fetch
 
-      - name: Detect change
+      - name: Translate pending models safely
+        # 新スナップショットが無い日も、前回保存した未訳バッチの続きを処理する。
         if: github.event_name != 'workflow_dispatch' || inputs.verify_translation_key != true
-        id: chk
-        run: |
-          if [ -n "$(git status --porcelain snapshots)" ]; then
-            echo "changed=yes" >> "$GITHUB_OUTPUT"
-          else
-            echo "changed=no"  >> "$GITHUB_OUTPUT"
-            echo "変更なし。コミットをスキップします。"
-          fi
-
-      - name: Translate newly added models safely
-        if: (github.event_name != 'workflow_dispatch' || inputs.verify_translation_key != true) && steps.chk.outputs.changed == 'yes'
         env:
           # 翻訳ステップだけに渡す。ログ・成果物・以降のステップには渡さない。
           OPENROUTER_TRANSLATION_API_KEY: ${{ secrets.OPENROUTER_TRANSLATION_API_KEY }}
         run: python3 or_models.py translate
 
-      - name: Export site data & commit
-        if: (github.event_name != 'workflow_dispatch' || inputs.verify_translation_key != true) && steps.chk.outputs.changed == 'yes'
+      - name: Persist translations or publish catalog
+        if: github.event_name != 'workflow_dispatch' || inputs.verify_translation_key != true
         run: |
-          python3 or_models.py export
-          python3 or_models.py prune --keep-days 30   # 古いスナップショットを間引く(30日ローリング)
-          # translate が成功してから export する。未訳が残れば fail-closed として公開しない。
-          untr=$(python3 or_models.py untranslated) || true
-          echo "$untr"
+          # 状態コード2は「未訳が残る」だけを意味する。その他の失敗は止める。
+          set +e
+          untr=$(python3 or_models.py untranslated --require-complete)
+          untr_status=$?
+          set -e
+          untr_summary=$(printf '%s\n' "$untr" | sed -n '1p')
+          echo "$untr_summary"
+
+          case "$untr_status" in
+            0)
+              state="全件翻訳済み。公開データを更新"
+              python3 or_models.py export
+              python3 or_models.py prune --keep-days 30   # 古いスナップショットを間引く(30日ローリング)
+              git add -- snapshots models.json catalog.md translations.json
+              ;;
+            2)
+              state="未訳が残るため公開を保留し、訳文バッチだけを保存"
+              # models.json / catalog.md は触らない。全件翻訳後だけ公開する。
+              git add -- snapshots translations.json
+              ;;
+            *)
+              echo "未訳状態を確認できませんでした。公開を停止します。" >&2
+              exit "$untr_status"
+              ;;
+          esac
+
           {
             echo "### OpenRouter モデル更新 ($(date -u +%Y-%m-%d))"
             echo '```'
-            echo "$untr" | grep -E '未翻訳:|^  [~a-z]' || true
+            echo "$untr_summary"
+            echo "$state"
             echo '```'
-            echo "新規モデルの日本語訳は、翻訳専用の小額キーで構造化出力を検証してから反映しています。"
+            echo "新規モデルの日本語訳は、翻訳専用の小額キーで構造化出力を検証してから反映しています。未訳が残る間は公開データを更新しません。"
           } >> "$GITHUB_STEP_SUMMARY"
+
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # 許可した生成物だけをコミットする。任意ファイルや秘密情報を混入させない。
-          git add -A -- snapshots models.json catalog.md translations.json
+          if git diff --cached --quiet; then
+            echo "保存対象の変更なし。コミットをスキップします。"
+            exit 0
+          fi
           git commit -m "chore: update OpenRouter models ($(date -u +%Y-%m-%d))"
           git push

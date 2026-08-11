@@ -866,10 +866,14 @@ def cmd_untranslated(args):
         with open(p, "w", encoding="utf-8") as f:
             json.dump(out, f, ensure_ascii=False, indent=1)
         print(f"\n翻訳用データ: {os.path.relpath(p, BASE_DIR)}（このファイルを翻訳して translations.json にマージ）")
+    # CI では未訳を「失敗」ではなく、公開保留を示す明確な状態として扱う。
+    # 2 はシェル側で他の実行エラーと区別できる固定の状態コード。
+    if missing and getattr(args, "require_complete", False):
+        raise SystemExit(2)
 
 
 def cmd_translate(args):
-    """未翻訳だけを1件ずつ構造化出力で翻訳し、全件成功時だけtranslations.jsonへ反映する。"""
+    """未翻訳を固定上限のバッチで翻訳し、選択バッチ全件成功時だけ反映する。"""
     if args.verify_key:
         token = (os.environ.get(TRANSLATION_TOKEN_ENV) or "").strip()
         if not token:
@@ -886,14 +890,15 @@ def cmd_translate(args):
     if not missing:
         print("未翻訳: 0（自動翻訳は不要です）")
         return
-    if len(missing) > TRANSLATION_MAX_MODELS_PER_RUN:
-        raise RuntimeError(
-            f"未翻訳 {len(missing)} 件は1回の安全上限 {TRANSLATION_MAX_MODELS_PER_RUN} 件を超えています。"
-            "内容を確認してから分割してください。"
-        )
+    batch = missing[:TRANSLATION_MAX_MODELS_PER_RUN]
+    remaining = len(missing) - len(batch)
     if args.dry_run:
-        print(f"翻訳候補: {len(missing)} 件（dry-run、API呼び出し・ファイル変更なし）")
-        for model in missing:
+        print(
+            f"翻訳候補: {len(batch)} / 未翻訳 {len(missing)} 件"
+            f"（1回の安全上限 {TRANSLATION_MAX_MODELS_PER_RUN}、残り {remaining} 件、"
+            "dry-run、API呼び出し・ファイル変更なし）"
+        )
+        for model in batch:
             print(f"  {model['id']}")
         return
     token = (os.environ.get(TRANSLATION_TOKEN_ENV) or "").strip()
@@ -901,14 +906,14 @@ def cmd_translate(args):
         raise RuntimeError(f"{TRANSLATION_TOKEN_ENV} が未設定です。翻訳専用の小額キーをGitHub Secretに設定してください。")
     verify_translation_key(token)
     additions = {}
-    for index, model in enumerate(missing, start=1):
-        print(f"翻訳: {model['id']} ({index}/{len(missing)})")
+    for index, model in enumerate(batch, start=1):
+        print(f"翻訳: {model['id']} ({index}/{len(batch)})")
         # 再試行しない: 失敗時は既存訳を変更せずジョブ全体を止める。
         additions[model["id"]] = translate_model(model, token)
     merged = dict(tx)
     merged.update(additions)
     save_translations_atomically(merged)
-    print(f"自動翻訳を反映: {len(additions)} 件")
+    print(f"自動翻訳を反映: {len(additions)} 件（未訳残り: {remaining} 件）")
 
 
 def cmd_prune(args):
@@ -971,7 +976,10 @@ def main():
     sub.add_parser("report", help="全モデル詳細レポート生成").set_defaults(func=cmd_report)
     sub.add_parser("new", help="直近2スナップショットの差分").set_defaults(func=cmd_new)
     sub.add_parser("export", help="静的サイト用データ(site/)を書き出し").set_defaults(func=cmd_export)
-    sub.add_parser("untranslated", help="未翻訳モデルを抽出(差分翻訳用)").set_defaults(func=cmd_untranslated)
+    p = sub.add_parser("untranslated", help="未翻訳モデルを抽出(差分翻訳用)")
+    p.add_argument("--require-complete", action="store_true",
+                   help="未訳が残る場合は状態コード2で終了（CIの公開保留判定用）")
+    p.set_defaults(func=cmd_untranslated)
     p = sub.add_parser("translate", help="未翻訳モデルを安全な構造化出力で自動翻訳")
     translate_mode = p.add_mutually_exclusive_group()
     translate_mode.add_argument("--dry-run", action="store_true", help="翻訳候補だけを表示（API呼び出し・ファイル変更なし）")
