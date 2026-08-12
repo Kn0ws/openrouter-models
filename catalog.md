@@ -1,7 +1,7 @@
-# OpenRouter モデルカタログ（全521モデル）
+# OpenRouter モデルカタログ（全526モデル）
 
-- 取得日時: 2026-08-11T07:53:38
-- プロバイダ数: 75 / 無料枠あり: 20
+- 取得日時: 2026-08-12T06:45:23
+- プロバイダ数: 76 / 無料枠あり: 22
 
 ## プロバイダ別サマリ
 
@@ -12,23 +12,23 @@
 | google | 47 | 0.00 | 16,000.00 | 1,048,576 |
 | anthropic | 28 | 0.25 | 30.00 | 1,000,000 |
 | mistralai | 22 | 0.02 | 3,000.00 | 262,144 |
-| nvidia | 15 | 0.00 | 1,500.00 | 1,000,000 |
+| nvidia | 17 | 0.00 | 1,500.00 | 1,000,000 |
 | minimax | 13 | 0.00 | 100.00 | 1,048,576 |
 | z-ai | 13 | 0.06 | 1.20 | 1,048,576 |
 | deepseek | 12 | 0.07 | 0.80 | 1,048,576 |
+| x-ai | 11 | 0.00 | 100,000.00 | 2,000,000 |
 | recraft | 11 | 0.00 | 0.00 | 65,536 |
-| x-ai | 10 | 0.00 | 100,000.00 | 2,000,000 |
 | moonshotai | 8 | 0.38 | 2.80 | 1,048,576 |
 | cohere | 8 | 0.00 | 2.50 | 256,000 |
 | meta-llama | 8 | 0.02 | 0.40 | 1,310,720 |
 | microsoft | 7 | 0.07 | 360,000.00 | 65,535 |
 | perplexity | 7 | 0.00 | 3.00 | 200,000 |
+| bytedance-seed | 6 | 0.00 | 0.50 | 262,144 |
 | voyageai | 6 | 0.00 | 0.12 | 32,000 |
 | bytedance | 5 | 0.00 | 0.10 | 128,000 |
 | inclusionai | 5 | 0.00 | 0.07 | 262,144 |
 | black-forest-labs | 5 | 0.00 | 0.00 | 67,344 |
 | fish-audio | 5 | 0.00 | 100.00 | 0 |
-| bytedance-seed | 5 | 0.00 | 0.25 | 262,144 |
 | amazon | 5 | 0.04 | 2.50 | 1,000,000 |
 | sentence-transformers | 5 | 0.01 | 0.01 | 512 |
 | poolside | 4 | 0.00 | 0.09 | 1,048,576 |
@@ -38,7 +38,7 @@
 | sourceful | 4 | 0.00 | 0.00 | 32,768 |
 | thedrummer | 4 | 0.25 | 0.55 | 1,024,000 |
 | nousresearch | 4 | 0.13 | 1.00 | 131,072 |
-| meta | 3 | 0.35 | 1.25 | 1,048,576 |
+| meta | 3 | 0.30 | 1.25 | 1,048,576 |
 | thinkingmachines | 3 | 0.45 | 0.95 | 1,048,576 |
 | krea | 3 | 0.00 | 0.00 | 65,536 |
 | kwaipilot | 3 | 0.15 | 0.74 | 262,144 |
@@ -63,6 +63,7 @@
 | relace | 2 | 0.85 | 1.00 | 256,000 |
 | thenlper | 2 | 0.01 | 0.01 | 512 |
 | morph | 2 | 0.80 | 0.90 | 262,144 |
+| liquid | 1 | 0.00 | 0.00 | 128,000 |
 | ~deepseek | 1 | 0.08 | 0.08 | 1,048,576 |
 | meituan | 1 | 0.30 | 0.30 | 1,048,756 |
 | ~x-ai | 1 | 2.00 | 2.00 | 500,000 |
@@ -978,7 +979,7 @@ UI-TARS-1.5 is a multimodal vision-language agent optimized for GUI-based enviro
 
 This model achieves state-of-the-art results on a range of interactive and grounding benchmarks, including OSworld, WebVoyager, AndroidWorld, and ScreenSpot. It also demonstrates perfect task completion across diverse Poki games and outperforms prior models in Minecraft agent tasks. UI-TARS-1.5 supports thought decomposition during inference and shows strong …
 
-### ▎bytedance-seed（5）
+### ▎bytedance-seed（6）
 
 #### ByteDance Seed: Seed 1.6
 
@@ -1005,6 +1006,19 @@ Seed 1.6 is a general-purpose model released by the ByteDance Seed team. It inco
 - **対応パラメータ**: reasoning, include_reasoning, frequency_penalty, max_tokens, temperature, top_p, tools, tool_choice, response_format, structured_outputs, stop
 
 Seed 1.6 Flash is an ultra-fast multimodal deep thinking model by ByteDance Seed, supporting both text and visual understanding. It features a 256k context window and can generate outputs of up to 16k tokens.
+
+#### ByteDance Seed: Seed-2.0-Code
+
+- **ID**: `bytedance-seed/seed-2.0-code`
+- **Provider**: bytedance-seed
+- **Context**: 262K (262,144) tok / max出力 131,072 tok
+- **Modality**: text+image+video->text  (in: text,image,video → out: text)
+- **Pricing**: 入力 $0.5/1M · 出力 $3.00/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
+- **登録日**: 2026-07-30
+- **対応パラメータ**: reasoning, include_reasoning, frequency_penalty, max_tokens, temperature, top_p, tools, tool_choice, response_format, structured_outputs, stop
+
+Seed 2.0 Code is a model from ByteDance Seed optimized for agentic coding. It is suited for frontend development, multilingual programming tasks, and coding-agent workflows in tools such as Claude Code, Kilo, and OpenCode.
 
 #### ByteDance Seed: Seed-2.0-Lite
 
@@ -2488,6 +2502,24 @@ Kling v3.0 Standard is a video generation model from Kuaishou. It supports text-
 
 Kling Video O1 is a video generation model from Kuaishou. It supports text and image inputs with video output, enabling text-to-video and image-to-video workflows. It is suited for cinematic content production, with first-frame and last-frame control for precise scene composition. It generates 5 or 10 second clips in 16:9, 9:16, or 1:1 aspect ratios.
 
+### ▎liquid（1）
+
+#### LiquidAI: LFM2.5-2.6B (free)
+
+- **ID**: `liquid/lfm-2.5-2.6b:free`
+- **Provider**: liquid
+- **Context**: 128K (128,000) tok / max出力 32,768 tok
+- **Modality**: text->text  (in: text → out: text)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **登録日**: 2026-08-11
+- **HF**: `LiquidAI/LFM2.5-2.6B`
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, min_p, repetition_penalty, max_completion_tokens, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
+
+LFM2.5-2.6B is a compact reasoning model from Liquid AI. It is suited for agent workflows, data extraction, RAG, and long-context processing. Liquid advises against using it for agentic coding or knowledge-heavy tasks.
+
+Prompts and outputs may be retained and used to train Liquid models.
+
 ### ▎mancer（1）
 
 #### Mancer: Weaver (alpha)
@@ -2526,13 +2558,13 @@ LongCat 2.0 is a sparse mixture-of-experts language model from Meituan, with 48B
 
 - **ID**: `meta/muse-glimmer-30b`
 - **Provider**: meta
-- **Context**: 131K (131,072) tok
+- **Context**: 131K (131,072) tok / max出力 16,384 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.35/1M · 出力 $1.50/1M · キャッシュ読 $0.04/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
+- **Pricing**: 入力 $0.3/1M · 出力 $1.20/1M · キャッシュ読 $0.04/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-08-09
 - **HF**: `meta-models/Muse-Glimmer-30B`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, repetition_penalty, logit_bias, min_p, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, logit_bias, structured_outputs, tools, tool_choice
 
 Muse Glimmer 30B is a dense, open-weight multimodal model from Meta Superintelligence Labs, distilled from Muse Spark and optimized for autonomous agents on consumer hardware. It is suited for long-horizon agentic and coding workflows, with multi-step reasoning, reliable tool use, failure recovery, image understanding, and multilingual support across more than 100 languages.
 
@@ -3612,7 +3644,7 @@ Hermes 4 70B is a hybrid reasoning model from Nous Research, built on Meta-Llama
 
 This 70B variant is trained with the expanded post-training corpus (~60B tokens) emphasizing verified reasoning data, leading to improvements in mathematics, coding, STEM, logic, and structured outputs while maintaining …
 
-### ▎nvidia（15）
+### ▎nvidia（17）
 
 #### NVIDIA: Llama Nemotron Embed VL 1B V2 (free)
 
@@ -3801,6 +3833,34 @@ It is particularly strong at multi-step reasoning and planning, with high-throug
 NVIDIA Nemotron 3.5 Content Safety is a compact 4B-parameter multimodal guardrail model from NVIDIA, fine-tuned from Google Gemma-3-4B. It moderates both inputs to and responses from LLMs and VLMs, accepting text and image input and returning text output: a safe/unsafe classification for the user prompt and the response, safety category labels, and an optional reasoning trace. It covers 12 languages with a context window of up to 128K tokens.
 
 It is suited for prompt and response moderation, content classification, safety pipelines, and enterprise AI guardrails with policy enforcement, and includes a togglable reasoning mode. It is part of the NVIDIA Nemotron family of open models for …
+
+#### NVIDIA: Nemotron 3.5 Lightning
+
+- **ID**: `nvidia/nemotron-3.5-lightning`
+- **Provider**: nvidia
+- **Context**: 262K (262,144) tok / max出力 24,576 tok
+- **Modality**: text->text  (in: text → out: text)
+- **Pricing**: 入力 $0.05/1M · 出力 $0.2/1M
+- **Capabilities**: Structured outputs(JSONスキーマ), Reasoning(思考), Reasoning出力, Seed固定
+- **登録日**: 2026-08-11
+- **HF**: `nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16`
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, logit_bias, structured_outputs
+
+NVIDIA Nemotron 3.5 Lightning is an open mixture-of-experts model from NVIDIA, with 3B active parameters out of 30B total. It is suited for high-throughput agentic workloads and specialized tasks that benefit from domain-specific customization.
+
+#### NVIDIA: Nemotron 3.5 Lightning (free)
+
+- **ID**: `nvidia/nemotron-3.5-lightning:free`
+- **Provider**: nvidia
+- **Context**: 1M (1,000,000) tok / max出力 65,536 tok
+- **Modality**: text->text  (in: text → out: text)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力, Seed固定
+- **登録日**: 2026-08-11
+- **HF**: `nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16`
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, seed, top_p, tools, tool_choice
+
+NVIDIA Nemotron 3.5 Lightning is an open mixture-of-experts model from NVIDIA, with 3B active parameters out of 30B total. It is suited for high-throughput agentic workloads and specialized tasks that benefit from domain-specific customization.
 
 #### NVIDIA: Nemotron Nano 12B 2 VL (free)
 
@@ -7353,7 +7413,7 @@ voyage-multimodal-3.5 is a state-of-the-art multimodal embedding model capable o
 
 Palmyra X5 is Writer's most advanced model, purpose-built for building and scaling AI agents across the enterprise. It delivers industry-leading speed and efficiency on context windows up to 1 million tokens, powered by a novel transformer architecture and hybrid attention mechanisms. This enables faster inference and expanded memory for processing large volumes of enterprise data, critical for scaling AI agents.
 
-### ▎x-ai（10）
+### ▎x-ai（11）
 
 #### SpaceXAI: Grok 4.20
 
@@ -7429,6 +7489,19 @@ Grok 4.5 is SpaceXAI's smartest model with frontier performance on coding, knowl
 - **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, max_tokens, temperature, top_p, seed, logprobs, top_logprobs, stop, frequency_penalty, presence_penalty, tools, tool_choice
 
 Grok Build 0.1 is SpaceXAI’s fast coding model trained specifically for agentic software engineering workflows. It supports text and image inputs with text output, and is optimized for interactive coding agents, tool use, and multi-step development tasks. The model powers SpaceXAI’s Grok Build CLI and features a 256K context window with no text output limit, making it well suited for long-horizon coding and automation workflows. Currently in early access.
+
+#### xAI: Grok Imagine Image 2.0
+
+- **ID**: `x-ai/grok-imagine-image-2.0`
+- **Provider**: x-ai
+- **Context**: 65K (65,536) tok
+- **Modality**: text+image->image  (in: text,image → out: image)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · 画像 $0.01/枚 · Image Output $0.04〜$0.08/image · Image Input $0.01/image
+- **Capabilities**: JSON mode, logprobs, Seed固定
+- **登録日**: 2026-08-11
+- **対応パラメータ**: max_tokens, temperature, top_p, seed, logprobs, top_logprobs, response_format, stop, frequency_penalty, presence_penalty
+
+Grok Imagine Image 2.0 is an image generation and editing model from xAI. It is suited for creating images from text prompts and editing images from references, with low and medium quality modes.
 
 #### SpaceXAI: Grok Imagine Image Quality
 
@@ -7817,7 +7890,7 @@ This model always redirects to the latest model in the Anthropic Claude Sonnet f
 - **Pricing**: 入力 $0.08/1M · 出力 $0.252/1M · キャッシュ読 $0.0252/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-01
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, response_format, tools, tool_choice, logprobs, top_logprobs, structured_outputs, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, logit_bias, top_a
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, response_format, tools, tool_choice, logprobs, top_logprobs, structured_outputs, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, logit_bias, parallel_tool_calls, reasoning_effort, top_a
 
 This model always redirects to the latest model in the DeepSeek V4 Flash family.
 
