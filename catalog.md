@@ -1,14 +1,14 @@
-# OpenRouter モデルカタログ（全540モデル）
+# OpenRouter モデルカタログ（全542モデル）
 
-- 取得日時: 2026-08-14T06:45:46
-- プロバイダ数: 75 / 無料枠あり: 23
+- 取得日時: 2026-08-15T06:26:19
+- プロバイダ数: 76 / 無料枠あり: 24
 
 ## プロバイダ別サマリ
 
 | Provider | モデル数 | 最安入力($/1M) | 最高入力($/1M) | 最大Context |
 |---|--:|--:|--:|--:|
 | openai | 109 | 0.00 | 6,000.00 | 1,050,000 |
-| qwen | 60 | 0.00 | 35.00 | 1,010,000 |
+| qwen | 61 | 0.00 | 35.00 | 1,048,576 |
 | google | 49 | 0.00 | 16,000.00 | 1,048,576 |
 | anthropic | 28 | 0.25 | 30.00 | 1,000,000 |
 | mistralai | 24 | 0.02 | 3,000.00 | 262,144 |
@@ -43,7 +43,7 @@
 | thinkingmachines | 3 | 0.45 | 0.95 | 1,048,576 |
 | krea | 3 | 0.00 | 0.00 | 65,536 |
 | kwaipilot | 3 | 0.15 | 0.74 | 262,144 |
-| tencent | 3 | 0.06 | 0.14 | 262,144 |
+| tencent | 3 | 0.13 | 0.18 | 262,144 |
 | kwaivgi | 3 | 0.00 | 0.00 | 0 |
 | intfloat | 3 | 0.01 | 0.01 | 512 |
 | baai | 3 | 0.01 | 0.01 | 8,194 |
@@ -62,6 +62,7 @@
 | relace | 2 | 0.85 | 1.00 | 256,000 |
 | thenlper | 2 | 0.01 | 0.01 | 512 |
 | morph | 2 | 0.80 | 0.90 | 262,144 |
+| dots-studio | 1 | 0.00 | 0.00 | 512,000 |
 | liquid | 1 | 0.00 | 0.00 | 128,000 |
 | ~deepseek | 1 | 0.08 | 0.08 | 1,048,576 |
 | meituan | 1 | 0.30 | 0.30 | 1,048,756 |
@@ -363,7 +364,7 @@ It is particularly strong at end-to-end work that would otherwise take a person 
 - **Provider**: anthropic
 - **Context**: 1M (1,000,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $5.00/1M · 出力 $25.00/1M · キャッシュ読 $0.5/1M · キャッシュ書 $6.25/1M · Web検索 $0.01
+- **Pricing**: 入力 $5.00/1M · 出力 $25.00/1M · キャッシュ読 $0.5/1M · キャッシュ書 $6.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-06-09
 - **対応パラメータ**: max_tokens, stop, reasoning, include_reasoning, tool_choice, tools, structured_outputs, response_format, verbosity
@@ -393,7 +394,7 @@ It introduces extended thinking to the Haiku line; enabling controllable reasoni
 - **Provider**: anthropic
 - **Context**: 200K (200,000) tok / max出力 64,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $0.5/1M · 出力 $2.50/1M · キャッシュ読 $0.05/1M · キャッシュ書 $0.625/1M · Web検索 $0.01
+- **Pricing**: 入力 $0.5/1M · 出力 $2.50/1M · キャッシュ読 $0.05/1M · キャッシュ書 $0.625/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2025-10-15
 - **対応パラメータ**: max_tokens, top_p, temperature, stop, reasoning, include_reasoning, tools, tool_choice, top_k, structured_outputs, response_format
@@ -438,7 +439,7 @@ Claude Opus 4.1 is an updated version of Anthropic’s flagship model, offering 
 - **Provider**: anthropic
 - **Context**: 200K (200,000) tok / max出力 32,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $7.50/1M · 出力 $37.50/1M · キャッシュ読 $0.75/1M · キャッシュ書 $9.38/1M · Web検索 $0.01
+- **Pricing**: 入力 $7.50/1M · 出力 $37.50/1M · キャッシュ読 $0.75/1M · キャッシュ書 $9.38/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **Knowledge cutoff**: 2025-01-31T00:00:00.000Z
 - **登録日**: 2025-08-05
@@ -452,7 +453,7 @@ Claude Opus 4.1 is an updated version of Anthropic’s flagship model, offering 
 - **Provider**: anthropic
 - **Context**: 200K (200,000) tok / max出力 64,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $5.00/1M · 出力 $25.00/1M · キャッシュ読 $0.5/1M · キャッシュ書 $6.25/1M · Web検索 $0.01
+- **Pricing**: 入力 $5.00/1M · 出力 $25.00/1M · キャッシュ読 $0.5/1M · キャッシュ書 $6.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2025-11-24
 - **対応パラメータ**: max_tokens, temperature, stop, reasoning, include_reasoning, tool_choice, tools, structured_outputs, response_format, verbosity
@@ -467,7 +468,7 @@ Opus 4.5 supports advanced tool use, extended context management, …
 - **Provider**: anthropic
 - **Context**: 200K (200,000) tok / max出力 64,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $2.50/1M · 出力 $12.50/1M · キャッシュ読 $0.25/1M · キャッシュ書 $3.12/1M · Web検索 $0.01
+- **Pricing**: 入力 $2.50/1M · 出力 $12.50/1M · キャッシュ読 $0.25/1M · キャッシュ書 $3.12/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2025-11-24
 - **対応パラメータ**: max_tokens, temperature, stop, reasoning, include_reasoning, tool_choice, tools, structured_outputs, response_format, verbosity
@@ -497,7 +498,7 @@ Beyond coding, Opus 4.6 excels at sustained knowledge work. It produces near-pro
 - **Provider**: anthropic
 - **Context**: 1M (1,000,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $2.50/1M · 出力 $12.50/1M · キャッシュ読 $0.25/1M · キャッシュ書 $3.12/1M · Web検索 $0.01
+- **Pricing**: 入力 $2.50/1M · 出力 $12.50/1M · キャッシュ読 $0.25/1M · キャッシュ書 $3.12/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-02-04
 - **対応パラメータ**: max_tokens, top_p, temperature, stop, reasoning, include_reasoning, tool_choice, tools, structured_outputs, response_format, verbosity
@@ -527,7 +528,7 @@ Beyond coding, Opus 4.7 brings improved knowledge work capabilities - from draft
 - **Provider**: anthropic
 - **Context**: 1M (1,000,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $30.00/1M · 出力 $150.00/1M · キャッシュ読 $3.00/1M · キャッシュ書 $37.50/1M · Web検索 $0.01
+- **Pricing**: 入力 $30.00/1M · 出力 $150.00/1M · キャッシュ読 $3.00/1M · キャッシュ書 $37.50/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-05-12
 - **対応パラメータ**: max_tokens, stop, reasoning, include_reasoning, tool_choice, tools, structured_outputs, response_format, verbosity
@@ -542,7 +543,7 @@ Learn more in Anthropic's docs: https://platform.claude.com/docs/en/build-with-c
 - **Provider**: anthropic
 - **Context**: 1M (1,000,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $2.50/1M · 出力 $12.50/1M · キャッシュ読 $0.25/1M · キャッシュ書 $3.12/1M · Web検索 $0.01
+- **Pricing**: 入力 $2.50/1M · 出力 $12.50/1M · キャッシュ読 $0.25/1M · キャッシュ書 $3.12/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-04-16
 - **対応パラメータ**: max_tokens, stop, reasoning, include_reasoning, tool_choice, tools, structured_outputs, response_format, verbosity
@@ -572,7 +573,7 @@ It is particularly strong on multi-step reasoning, complex coding, and end-to-en
 - **Provider**: anthropic
 - **Context**: 1M (1,000,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $10.00/1M · 出力 $50.00/1M · キャッシュ読 $1.00/1M · キャッシュ書 $12.50/1M · Web検索 $0.01
+- **Pricing**: 入力 $10.00/1M · 出力 $50.00/1M · キャッシュ読 $1.00/1M · キャッシュ書 $12.50/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-05-27
 - **対応パラメータ**: max_tokens, stop, reasoning, include_reasoning, tool_choice, tools, structured_outputs, response_format, verbosity
@@ -587,7 +588,7 @@ Learn more in Anthropic's docs: https://platform.claude.com/docs/en/build-with-c
 - **Provider**: anthropic
 - **Context**: 1M (1,000,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $2.50/1M · 出力 $12.50/1M · キャッシュ読 $0.25/1M · キャッシュ書 $3.12/1M · Web検索 $0.01
+- **Pricing**: 入力 $2.50/1M · 出力 $12.50/1M · キャッシュ読 $0.25/1M · キャッシュ書 $3.12/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-05-27
 - **対応パラメータ**: max_tokens, stop, reasoning, include_reasoning, tool_choice, tools, structured_outputs, response_format, verbosity
@@ -617,7 +618,7 @@ The model maintains strong instruction following and tool use across extended ta
 - **Provider**: anthropic
 - **Context**: 1M (1,000,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $10.00/1M · 出力 $50.00/1M · キャッシュ読 $1.00/1M · キャッシュ書 $12.50/1M · Web検索 $0.01
+- **Pricing**: 入力 $10.00/1M · 出力 $50.00/1M · キャッシュ読 $1.00/1M · キャッシュ書 $12.50/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-07-24
 - **対応パラメータ**: max_tokens, stop, reasoning, include_reasoning, tool_choice, tools, structured_outputs, response_format, verbosity
@@ -632,7 +633,7 @@ Learn more in Anthropic's docs: https://platform.claude.com/docs/en/build-with-c
 - **Provider**: anthropic
 - **Context**: 1M (1,000,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $2.50/1M · 出力 $12.50/1M · キャッシュ読 $0.25/1M · キャッシュ書 $3.12/1M · Web検索 $0.01
+- **Pricing**: 入力 $2.50/1M · 出力 $12.50/1M · キャッシュ読 $0.25/1M · キャッシュ書 $3.12/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-07-24
 - **対応パラメータ**: max_tokens, stop, reasoning, include_reasoning, tool_choice, tools, structured_outputs, response_format, verbosity
@@ -677,7 +678,7 @@ Sonnet 4.5 also introduces stronger agentic capabilities, including improved too
 - **Provider**: anthropic
 - **Context**: 1M (1,000,000) tok / max出力 64,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $1.50/1M · 出力 $7.50/1M · キャッシュ読 $0.15/1M · キャッシュ書 $1.88/1M · Web検索 $0.01
+- **Pricing**: 入力 $1.50/1M · 出力 $7.50/1M · キャッシュ読 $0.15/1M · キャッシュ書 $1.88/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **Knowledge cutoff**: 2025-01-31T00:00:00.000Z
 - **登録日**: 2025-09-29
@@ -693,7 +694,7 @@ Sonnet 4.5 also introduces stronger agentic capabilities, including improved too
 - **Provider**: anthropic
 - **Context**: 1M (1,000,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $3.00/1M · 出力 $15.00/1M · キャッシュ読 $0.3/1M · キャッシュ書 $3.75/1M · Web検索 $0.01
+- **Pricing**: 入力 $3.00/1M · 出力 $15.00/1M · キャッシュ読 $0.3/1M · キャッシュ書 $3.75/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-02-17
 - **対応パラメータ**: max_tokens, top_p, temperature, stop, reasoning, include_reasoning, tools, tool_choice, structured_outputs, response_format, verbosity
@@ -706,7 +707,7 @@ Sonnet 4.6 is Anthropic's most capable Sonnet-class model yet, with frontier per
 - **Provider**: anthropic
 - **Context**: 1M (1,000,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $1.50/1M · 出力 $7.50/1M · キャッシュ読 $0.15/1M · キャッシュ書 $1.88/1M · Web検索 $0.01
+- **Pricing**: 入力 $1.50/1M · 出力 $7.50/1M · キャッシュ読 $0.15/1M · キャッシュ書 $1.88/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-02-17
 - **対応パラメータ**: max_tokens, top_p, temperature, stop, reasoning, include_reasoning, tools, tool_choice, structured_outputs, response_format, verbosity
@@ -719,7 +720,7 @@ Sonnet 4.6 is Anthropic's most capable Sonnet-class model yet, with frontier per
 - **Provider**: anthropic
 - **Context**: 1M (1,000,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $2.00/1M · 出力 $10.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $2.50/1M · Web検索 $0.01
+- **Pricing**: 入力 $2.00/1M · 出力 $10.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $2.50/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-06-30
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, stop, tool_choice, tools, structured_outputs, response_format, verbosity
@@ -732,7 +733,7 @@ Sonnet 5 is Anthropic's most capable Sonnet-class model, with frontier performan
 - **Provider**: anthropic
 - **Context**: 1M (1,000,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $1.00/1M · 出力 $5.00/1M · キャッシュ読 $0.1/1M · キャッシュ書 $1.25/1M · Web検索 $0.01
+- **Pricing**: 入力 $1.00/1M · 出力 $5.00/1M · キャッシュ読 $0.1/1M · キャッシュ書 $1.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-06-30
 - **対応パラメータ**: max_tokens, stop, reasoning, include_reasoning, tools, tool_choice, structured_outputs, response_format, verbosity
@@ -1491,13 +1492,13 @@ The model includes hybrid attention for efficient long-context processing. Reaso
 
 - **ID**: `deepseek/deepseek-v4-flash-0731`
 - **Provider**: deepseek
-- **Context**: 1.04858M (1,048,576) tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 384,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.08/1M · 出力 $0.252/1M · キャッシュ読 $0.0252/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
+- **Pricing**: 入力 $0.0783/1M · 出力 $0.1565/1M · キャッシュ読 $0.0157/1M
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-07-31
 - **HF**: `deepseek-ai/DeepSeek-V4-Flash-0731`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, response_format, tools, tool_choice, logprobs, top_logprobs, structured_outputs
+- **対応パラメータ**: reasoning, include_reasoning, response_format, tools, tool_choice, logprobs, top_logprobs, max_tokens, temperature, top_p, stop
 
 DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows. This is the GA release of DeepSeek V4 Flash.
 
@@ -1507,11 +1508,11 @@ DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 
 - **Provider**: deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 384,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.435/1M · 出力 $0.87/1M · キャッシュ読 $0.0036/1M
-- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, logprobs
+- **Pricing**: 入力 $0.4138/1M · 出力 $0.8275/1M · キャッシュ読 $0.0345/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-04-24
 - **HF**: `deepseek-ai/DeepSeek-V4-Pro`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, logprobs, top_logprobs, tools, tool_choice, response_format
+- **対応パラメータ**: reasoning, include_reasoning, tools, tool_choice, response_format, logprobs, top_logprobs, structured_outputs, max_tokens, temperature, top_p, stop
 
 DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding, and long-horizon agent workflows, with strong performance across knowledge, math, and software engineering benchmarks.
 
@@ -1530,6 +1531,21 @@ Built on the same architecture as DeepSeek V4 Flash, it introduces a hybrid atte
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, logprobs, top_logprobs, tools, tool_choice, response_format
 
 DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.
+
+### ▎dots-studio（1）
+
+#### Dots Studio: Dots3-Note Preview (free)
+
+- **ID**: `dots-studio/dots-3-note-preview:free`
+- **Provider**: dots-studio
+- **Context**: 512K (512,000) tok / max出力 512,000 tok
+- **Modality**: text+image->text  (in: text,image → out: text)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
+- **登録日**: 2026-08-14
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, response_format, structured_outputs, tools, tool_choice
+
+Dots3-Note Preview is an open-weight mixture-of-experts model from Dots Studio, with 16B active parameters out of 280B total. It is the lightest model in the Dots 3 family and is suited for reasoning, coding, multimodal understanding, long-context processing, and multi-step agent workflows.
 
 ### ▎fish-audio（5）
 
@@ -1739,7 +1755,7 @@ Gemini 2.5 Pro is Google’s state-of-the-art AI model designed for advanced rea
 - **Provider**: google
 - **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
 - **Modality**: text+image+file+audio+video->text  (in: text,image,file,audio,video → out: text)
-- **Pricing**: 入力 $0.5/1M · 出力 $3.00/1M · キャッシュ読 $0.05/1M · キャッシュ書 $0.0833/1M · 推論 $3.00/1M · 画像 $5e-07/枚 · 音声 $1.00/1M · Web検索 $0.014 · Web Search $0.014/request
+- **Pricing**: 入力 $0.5/1M · 出力 $3.00/1M · キャッシュ読 $0.05/1M · キャッシュ書 $0.0833/1M · 推論 $3.00/1M · 画像 $5e-07/枚 · 音声 $1.00/1M · Web検索 $0.014 · Web Search $0.014/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2025-12-17
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format, tools, tool_choice, structured_outputs
@@ -1754,7 +1770,7 @@ The model supports a 1M token context window and multimodal inputs including tex
 - **Provider**: google
 - **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
 - **Modality**: text+image+file+audio+video->text  (in: text,image,file,audio,video → out: text)
-- **Pricing**: 入力 $0.25/1M · 出力 $1.50/1M · 推論 $1.50/1M · 画像 $2.5e-07/枚 · 音声 $0.5/1M · Web検索 $0.014 · Web Search $0.014/request
+- **Pricing**: 入力 $0.25/1M · 出力 $1.50/1M · 推論 $1.50/1M · 画像 $2.5e-07/枚 · 音声 $0.5/1M · Web検索 $0.014 · Web Search $0.014/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2025-12-17
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format, tool_choice, tools, stop, structured_outputs
@@ -1769,7 +1785,7 @@ The model supports a 1M token context window and multimodal inputs including tex
 - **Provider**: google
 - **Context**: 131K (131,072) tok / max出力 32,768 tok
 - **Modality**: text+image->text+image  (in: text,image → out: text,image)
-- **Pricing**: 入力 $2.00/1M · 出力 $12.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $0.375/1M · 推論 $12.00/1M · 画像 $2e-06/枚 · 音声 $2.00/1M · Web検索 $0.014 · Web Search $0.014/request
+- **Pricing**: 入力 $2.00/1M · 出力 $12.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $0.375/1M · 推論 $12.00/1M · 画像 $2e-06/枚 · 音声 $2.00/1M · Web検索 $0.014 · Web Search $0.014/1K calls
 - **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-06-18
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format, stop, structured_outputs
@@ -1784,7 +1800,7 @@ It offers industry-leading text rendering in images (including long passages and
 - **Provider**: google
 - **Context**: 65K (65,536) tok / max出力 32,768 tok
 - **Modality**: text+image->text+image  (in: text,image → out: text,image)
-- **Pricing**: 入力 $2.00/1M · 出力 $12.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $0.375/1M · 推論 $12.00/1M · 画像 $2e-06/枚 · 音声 $2.00/1M · Web検索 $0.014 · Web Search $0.014/request
+- **Pricing**: 入力 $2.00/1M · 出力 $12.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $0.375/1M · 推論 $12.00/1M · 画像 $2e-06/枚 · 音声 $2.00/1M · Web検索 $0.014 · Web Search $0.014/1K calls
 - **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2025-11-20
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format, stop, structured_outputs
@@ -1799,7 +1815,7 @@ It offers industry-leading text rendering in images (including long passages and
 - **Provider**: google
 - **Context**: 131K (131,072) tok / max出力 32,768 tok
 - **Modality**: text+image->text+image  (in: text,image → out: text,image)
-- **Pricing**: 入力 $0.5/1M · 出力 $3.00/1M · Web検索 $0.014 · Web Search $0.014/request
+- **Pricing**: 入力 $0.5/1M · 出力 $3.00/1M · Web検索 $0.014 · Web Search $0.014/1K calls
 - **Capabilities**: JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-06-18
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format
@@ -1812,7 +1828,7 @@ Gemini 3.1 Flash Image, a.k.a. "Nano Banana 2," is Google’s latest state of th
 - **Provider**: google
 - **Context**: 65K (65,536) tok / max出力 65,536 tok
 - **Modality**: text+image->text+image  (in: text,image → out: text,image)
-- **Pricing**: 入力 $0.5/1M · 出力 $3.00/1M · Web検索 $0.014 · Web Search $0.014/request
+- **Pricing**: 入力 $0.5/1M · 出力 $3.00/1M · Web検索 $0.014 · Web Search $0.014/1K calls
 - **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-02-26
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format, structured_outputs
@@ -1825,7 +1841,7 @@ Gemini 3.1 Flash Image Preview, a.k.a. "Nano Banana 2," is Google’s latest sta
 - **Provider**: google
 - **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
 - **Modality**: text+image+file+audio+video->text  (in: text,image,file,audio,video → out: text)
-- **Pricing**: 入力 $0.25/1M · 出力 $1.50/1M · キャッシュ読 $0.025/1M · キャッシュ書 $0.0833/1M · 推論 $1.50/1M · 画像 $2.5e-07/枚 · 音声 $0.5/1M · Web検索 $0.014 · Web Search $0.014/request
+- **Pricing**: 入力 $0.25/1M · 出力 $1.50/1M · キャッシュ読 $0.025/1M · キャッシュ書 $0.0833/1M · 推論 $1.50/1M · 画像 $2.5e-07/枚 · 音声 $0.5/1M · Web検索 $0.014 · Web Search $0.014/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-05-07
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format, stop, structured_outputs, tools, tool_choice
@@ -1856,7 +1872,7 @@ A single drop-in API handles text-to-image, image editing, and multi-image compo
 - **Provider**: google
 - **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
 - **Modality**: text+image+file+audio+video->text  (in: text,image,file,audio,video → out: text)
-- **Pricing**: 入力 $0.25/1M · 出力 $1.50/1M · キャッシュ読 $0.025/1M · キャッシュ書 $0.0833/1M · 推論 $1.50/1M · 画像 $2.5e-07/枚 · 音声 $0.5/1M · Web検索 $0.014 · Web Search $0.014/request
+- **Pricing**: 入力 $0.25/1M · 出力 $1.50/1M · キャッシュ読 $0.025/1M · キャッシュ書 $0.0833/1M · 推論 $1.50/1M · 画像 $2.5e-07/枚 · 音声 $0.5/1M · Web検索 $0.014 · Web Search $0.014/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-03-03
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format, structured_outputs, tool_choice, tools
@@ -1869,7 +1885,7 @@ Gemini 3.1 Flash Lite Preview is Google's high-efficiency model optimized for hi
 - **Provider**: google
 - **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
 - **Modality**: text+image+file+audio+video->text  (in: text,image,file,audio,video → out: text)
-- **Pricing**: 入力 $0.125/1M · 出力 $0.75/1M · キャッシュ読 $0.0125/1M · 推論 $0.75/1M · 画像 $1.25e-07/枚 · 音声 $0.25/1M · Web検索 $0.014 · Web Search $0.014/request
+- **Pricing**: 入力 $0.125/1M · 出力 $0.75/1M · キャッシュ読 $0.0125/1M · 推論 $0.75/1M · 画像 $1.25e-07/枚 · 音声 $0.25/1M · Web検索 $0.014 · Web Search $0.014/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-05-07
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format, stop, structured_outputs, tools, tool_choice
@@ -1899,7 +1915,7 @@ The headline addition is a system of 200+ inline audio tags (e.g. `[whispers]`, 
 - **Provider**: google
 - **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
 - **Modality**: text+image+file+audio+video->text  (in: text,image,file,audio,video → out: text)
-- **Pricing**: 入力 $2.00/1M · 出力 $12.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $0.375/1M · 推論 $12.00/1M · 画像 $2e-06/枚 · 音声 $2.00/1M · Web検索 $0.014 · Web Search $0.014/request
+- **Pricing**: 入力 $2.00/1M · 出力 $12.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $0.375/1M · 推論 $12.00/1M · 画像 $2e-06/枚 · 音声 $2.00/1M · Web検索 $0.014 · Web Search $0.014/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-02-19
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format, tools, tool_choice, stop, structured_outputs
@@ -1927,7 +1943,7 @@ It retains the core strengths of Gemini 3.1 Pro, including multimodal reasoning 
 - **Provider**: google
 - **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
 - **Modality**: text+image+file+audio+video->text  (in: text,image,file,audio,video → out: text)
-- **Pricing**: 入力 $1.00/1M · 出力 $6.00/1M · 推論 $6.00/1M · 画像 $1e-06/枚 · 音声 $1.00/1M · Web検索 $0.014 · Web Search $0.014/request
+- **Pricing**: 入力 $1.00/1M · 出力 $6.00/1M · 推論 $6.00/1M · 画像 $1e-06/枚 · 音声 $1.00/1M · Web検索 $0.014 · Web Search $0.014/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-02-19
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format, tools, tool_choice, stop, structured_outputs
@@ -1940,7 +1956,7 @@ Gemini 3.1 Pro Preview is Google’s frontier reasoning model, delivering enhanc
 - **Provider**: google
 - **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
 - **Modality**: text+image+file+audio+video->text  (in: text,image,file,audio,video → out: text)
-- **Pricing**: 入力 $1.50/1M · 出力 $9.00/1M · キャッシュ読 $0.15/1M · キャッシュ書 $0.0833/1M · 推論 $9.00/1M · 画像 $1.5e-06/枚 · 音声 $3.00/1M · Web検索 $0.014 · Web Search $0.014/request
+- **Pricing**: 入力 $1.50/1M · 出力 $9.00/1M · キャッシュ読 $0.15/1M · キャッシュ書 $0.0833/1M · 推論 $9.00/1M · 画像 $1.5e-06/枚 · 音声 $3.00/1M · Web検索 $0.014 · Web Search $0.014/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2025-01-01T00:00:00.000Z
 - **登録日**: 2026-05-19
@@ -1956,7 +1972,7 @@ Defaults to medium thinking effort for faster and more cost-efficient responses,
 - **Provider**: google
 - **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
 - **Modality**: text+image+file+audio+video->text  (in: text,image,file,audio,video → out: text)
-- **Pricing**: 入力 $0.3/1M · 出力 $2.50/1M · キャッシュ読 $0.03/1M · キャッシュ書 $0.0833/1M · 推論 $2.50/1M · 画像 $3e-07/枚 · 音声 $0.3/1M · Web検索 $0.014 · Web Search $0.014/request
+- **Pricing**: 入力 $0.3/1M · 出力 $2.50/1M · キャッシュ読 $0.03/1M · キャッシュ書 $0.0833/1M · 推論 $2.50/1M · 画像 $3e-07/枚 · 音声 $0.3/1M · Web検索 $0.014 · Web Search $0.014/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-07-21
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format, structured_outputs, tool_choice, tools
@@ -1969,7 +1985,7 @@ Gemini 3.5 Flash Lite is a high-efficiency model from Google with upgraded agent
 - **Provider**: google
 - **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
 - **Modality**: text+image+file+audio+video->text  (in: text,image,file,audio,video → out: text)
-- **Pricing**: 入力 $0.15/1M · 出力 $1.25/1M · キャッシュ読 $0.015/1M · 推論 $1.25/1M · 画像 $1.5e-07/枚 · 音声 $0.15/1M · Web検索 $0.014 · Web Search $0.014/request
+- **Pricing**: 入力 $0.15/1M · 出力 $1.25/1M · キャッシュ読 $0.015/1M · 推論 $1.25/1M · 画像 $1.5e-07/枚 · 音声 $0.15/1M · Web検索 $0.014 · Web Search $0.014/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-07-21
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, seed, response_format, stop, structured_outputs, tools, tool_choice
@@ -1982,7 +1998,7 @@ Gemini 3.5 Flash Lite is a high-efficiency model from Google with upgraded agent
 - **Provider**: google
 - **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
 - **Modality**: text+image+file+audio+video->text  (in: text,image,file,audio,video → out: text)
-- **Pricing**: 入力 $0.75/1M · 出力 $4.50/1M · キャッシュ読 $0.075/1M · 推論 $4.50/1M · 画像 $7.5e-07/枚 · 音声 $1.50/1M · Web検索 $0.014 · Web Search $0.014/request
+- **Pricing**: 入力 $0.75/1M · 出力 $4.50/1M · キャッシュ読 $0.075/1M · 推論 $4.50/1M · 画像 $7.5e-07/枚 · 音声 $1.50/1M · Web検索 $0.014 · Web Search $0.014/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2025-01-01T00:00:00.000Z
 - **登録日**: 2026-05-19
@@ -1998,7 +2014,7 @@ Defaults to medium thinking effort for faster and more cost-efficient responses,
 - **Provider**: google
 - **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
 - **Modality**: text+image+file+audio+video->text  (in: text,image,file,audio,video → out: text)
-- **Pricing**: 入力 $0.75/1M · 出力 $3.75/1M · キャッシュ読 $0.075/1M · キャッシュ書 $0.0417/1M · 推論 $3.75/1M · 画像 $7.5e-07/枚 · 音声 $0.75/1M · Web検索 $0.014 · Web Search $0.014/request
+- **Pricing**: 入力 $0.75/1M · 出力 $3.75/1M · キャッシュ読 $0.075/1M · キャッシュ書 $0.0417/1M · 推論 $3.75/1M · 画像 $7.5e-07/枚 · 音声 $0.75/1M · Web検索 $0.014 · Web Search $0.014/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-07-21
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, seed, response_format, stop, structured_outputs, tools, tool_choice
@@ -2011,7 +2027,7 @@ Gemini 3.6 Flash is a high-efficiency model from Google for coding, agentic work
 - **Provider**: google
 - **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
 - **Modality**: text+image+file+audio+video->text  (in: text,image,file,audio,video → out: text)
-- **Pricing**: 入力 $0.375/1M · 出力 $1.88/1M · キャッシュ読 $0.0375/1M · キャッシュ書 $0.0417/1M · 推論 $1.88/1M · 画像 $3.75e-07/枚 · 音声 $0.375/1M · Web検索 $0.014 · Web Search $0.014/request
+- **Pricing**: 入力 $0.375/1M · 出力 $1.88/1M · キャッシュ読 $0.0375/1M · キャッシュ書 $0.0417/1M · 推論 $1.88/1M · 画像 $3.75e-07/枚 · 音声 $0.375/1M · Web検索 $0.014 · Web Search $0.014/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-07-21
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, seed, response_format, stop, structured_outputs, tools, tool_choice
@@ -2024,7 +2040,7 @@ Gemini 3.6 Flash is a high-efficiency model from Google for coding, agentic work
 - **Provider**: google
 - **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
 - **Modality**: text+image+file+audio+video->text  (in: text,image,file,audio,video → out: text)
-- **Pricing**: 入力 $0.375/1M · 出力 $1.88/1M · キャッシュ読 $0.0375/1M · キャッシュ書 $0.0208/1M · 推論 $1.88/1M · 画像 $3.75e-07/枚 · 音声 $0.375/1M · Web検索 $0.007 · Web Search $0.007/request
+- **Pricing**: 入力 $0.375/1M · 出力 $1.88/1M · キャッシュ読 $0.0375/1M · キャッシュ書 $0.0208/1M · 推論 $1.88/1M · 画像 $3.75e-07/枚 · 音声 $0.375/1M · Web検索 $0.014 · Web Search $0.014/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-08-13
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, seed, response_format, stop, structured_outputs, tools, tool_choice
@@ -2037,7 +2053,7 @@ Gemini 3.7 Flash is a multimodal model from Google for fast agentic workflows, c
 - **Provider**: google
 - **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
 - **Modality**: text+image+file+audio+video->text  (in: text,image,file,audio,video → out: text)
-- **Pricing**: 入力 $0.1875/1M · 出力 $0.9375/1M · キャッシュ読 $0.0187/1M · キャッシュ書 $0.0208/1M · 推論 $0.9375/1M · 画像 $1.875e-07/枚 · 音声 $0.1875/1M · Web検索 $0.007 · Web Search $0.007/request
+- **Pricing**: 入力 $0.1875/1M · 出力 $0.9375/1M · キャッシュ読 $0.0187/1M · キャッシュ書 $0.0208/1M · 推論 $0.9375/1M · 画像 $1.875e-07/枚 · 音声 $0.1875/1M · Web検索 $0.014 · Web Search $0.014/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-08-13
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, seed, response_format, stop, structured_outputs, tools, tool_choice
@@ -2199,10 +2215,10 @@ Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from G
 - **Context**: 262K (262,144) tok / max出力 8,192 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
 - **Pricing**: 入力 $0.08/1M · 出力 $0.35/1M · キャッシュ読 $0.01/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-04-02
 - **HF**: `google/gemma-4-31B-it`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, stop, seed, response_format, tools, tool_choice, structured_outputs, logprobs, top_logprobs, top_p, top_k, min_p, top_a
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, stop, seed, response_format, tools, tool_choice, structured_outputs, top_p, top_k, min_p, top_a
 
 Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function calling, and multilingual support across 140+ languages. Strong on coding, reasoning, and document understanding tasks. Apache 2.0 license.
 
@@ -2659,7 +2675,7 @@ Muse Glimmer 30B is a dense, open-weight multimodal model from Meta Superintelli
 - **Provider**: meta
 - **Context**: 1.04858M (1,048,576) tok
 - **Modality**: text+image+file+audio+video->text  (in: text,image,file,audio,video → out: text)
-- **Pricing**: 入力 $1.25/1M · 出力 $4.25/1M · キャッシュ読 $0.15/1M · Web検索 $0.0025
+- **Pricing**: 入力 $1.25/1M · 出力 $4.25/1M · キャッシュ読 $0.15/1M · Web検索 $0.0025 · Web Search $0.0025/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-07-16
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, repetition_penalty, top_k, temperature, top_p, tools, tool_choice, structured_outputs, response_format
@@ -2674,7 +2690,7 @@ The model is designed to orchestrate multi-agent workflows, acting as either a m
 - **Provider**: meta
 - **Context**: 1.04858M (1,048,576) tok
 - **Modality**: text+image+file+audio+video->text  (in: text,image,file,audio,video → out: text)
-- **Pricing**: 入力 $1.25/1M · 出力 $4.25/1M · キャッシュ読 $0.15/1M · Web検索 $0.0025
+- **Pricing**: 入力 $1.25/1M · 出力 $4.25/1M · キャッシュ読 $0.15/1M · Web検索 $0.0025 · Web Search $0.0025/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-08-05
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, repetition_penalty, top_k, temperature, top_p, tools, tool_choice, structured_outputs, response_format
@@ -3558,13 +3574,13 @@ Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art 
 
 - **ID**: `moonshotai/kimi-k2.6`
 - **Provider**: moonshotai
-- **Context**: 262K (262,144) tok / max出力 65,535 tok
+- **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.58/1M · 出力 $3.40/1M · キャッシュ読 $0.058/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.5415/1M · 出力 $2.28/1M · キャッシュ読 $0.0912/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-04-20
 - **HF**: `moonshotai/Kimi-K2.6`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice, structured_outputs
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, frequency_penalty, presence_penalty, stop, response_format, structured_outputs, tools, tool_choice
 
 Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and can convert prompts and visual inputs into production-ready interfaces. Its agent swarm architecture scales to hundreds of parallel sub-agents for autonomous task decomposition - delivering documents, websites, and spreadsheets in a single run without human oversight.
 
@@ -4196,7 +4212,7 @@ GPT-4.1 is a flagship large language model optimized for advanced instruction fo
 - **Provider**: openai
 - **Context**: 1.04758M (1,047,576) tok / max出力 32,768 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $0.4/1M · 出力 $1.60/1M · キャッシュ読 $0.1/1M · Web検索 $0.01
+- **Pricing**: 入力 $0.4/1M · 出力 $1.60/1M · キャッシュ読 $0.1/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Seed固定
 - **Knowledge cutoff**: 2024-06-30T23:59:59.000Z
 - **登録日**: 2025-04-14
@@ -4210,7 +4226,7 @@ GPT-4.1 Mini is a mid-sized model delivering performance competitive with GPT-4o
 - **Provider**: openai
 - **Context**: 1.04758M (1,047,576) tok / max出力 32,768 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $0.2/1M · 出力 $0.8/1M · キャッシュ読 $0.05/1M · Web検索 $0.01
+- **Pricing**: 入力 $0.2/1M · 出力 $0.8/1M · キャッシュ読 $0.05/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Seed固定
 - **Knowledge cutoff**: 2024-06-30T23:59:59.000Z
 - **登録日**: 2025-04-14
@@ -4224,7 +4240,7 @@ GPT-4.1 Mini is a mid-sized model delivering performance competitive with GPT-4o
 - **Provider**: openai
 - **Context**: 1.04758M (1,047,576) tok / max出力 32,768 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $0.1/1M · 出力 $0.4/1M · キャッシュ読 $0.025/1M · Web検索 $0.01
+- **Pricing**: 入力 $0.1/1M · 出力 $0.4/1M · キャッシュ読 $0.025/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Seed固定
 - **Knowledge cutoff**: 2024-06-30T23:59:59.000Z
 - **登録日**: 2025-04-14
@@ -4238,7 +4254,7 @@ For tasks that demand low latency, GPT‑4.1 nano is the fastest and cheapest mo
 - **Provider**: openai
 - **Context**: 1.04758M (1,047,576) tok / max出力 32,768 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $0.05/1M · 出力 $0.2/1M · キャッシュ読 $0.0125/1M · Web検索 $0.01
+- **Pricing**: 入力 $0.05/1M · 出力 $0.2/1M · キャッシュ読 $0.0125/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Seed固定
 - **Knowledge cutoff**: 2024-06-30T23:59:59.000Z
 - **登録日**: 2025-04-14
@@ -4252,7 +4268,7 @@ For tasks that demand low latency, GPT‑4.1 nano is the fastest and cheapest mo
 - **Provider**: openai
 - **Context**: 1.04758M (1,047,576) tok / max出力 32,768 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $1.00/1M · 出力 $4.00/1M · キャッシュ読 $0.25/1M · Web検索 $0.01
+- **Pricing**: 入力 $1.00/1M · 出力 $4.00/1M · キャッシュ読 $0.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Seed固定
 - **Knowledge cutoff**: 2024-06-30T23:59:59.000Z
 - **登録日**: 2025-04-14
@@ -4476,7 +4492,7 @@ Codex integrates into developer …
 - **Provider**: openai
 - **Context**: 400K (400,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text+image  (in: text,image,file → out: text,image)
-- **Pricing**: 入力 $10.00/1M · 出力 $10.00/1M · キャッシュ読 $1.25/1M · Web検索 $0.01
+- **Pricing**: 入力 $10.00/1M · 出力 $10.00/1M · キャッシュ読 $1.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2025-10-14
 - **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, seed, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, logit_bias, logprobs, top_logprobs
@@ -4489,7 +4505,7 @@ Codex integrates into developer …
 - **Provider**: openai
 - **Context**: 400K (400,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text+image  (in: text,image,file → out: text,image)
-- **Pricing**: 入力 $2.50/1M · 出力 $2.00/1M · キャッシュ読 $0.25/1M · Web検索 $0.01
+- **Pricing**: 入力 $2.50/1M · 出力 $2.00/1M · キャッシュ読 $0.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2025-10-16
 - **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, seed, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, logit_bias, logprobs, top_logprobs
@@ -4502,7 +4518,7 @@ GPT-5 Image Mini combines OpenAI's advanced language capabilities, powered by [G
 - **Provider**: openai
 - **Context**: 400K (400,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $0.25/1M · 出力 $2.00/1M · キャッシュ読 $0.025/1M · Web検索 $0.01
+- **Pricing**: 入力 $0.25/1M · 出力 $2.00/1M · キャッシュ読 $0.025/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2024-05-31T23:59:59.000Z
 - **登録日**: 2025-08-07
@@ -4516,7 +4532,7 @@ GPT-5 Mini is a compact version of GPT-5, designed to handle lighter-weight reas
 - **Provider**: openai
 - **Context**: 400K (400,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $0.125/1M · 出力 $1.00/1M · キャッシュ読 $0.0125/1M · Web検索 $0.01
+- **Pricing**: 入力 $0.125/1M · 出力 $1.00/1M · キャッシュ読 $0.0125/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2024-05-31T23:59:59.000Z
 - **登録日**: 2025-08-07
@@ -4530,7 +4546,7 @@ GPT-5 Mini is a compact version of GPT-5, designed to handle lighter-weight reas
 - **Provider**: openai
 - **Context**: 400K (400,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $0.05/1M · 出力 $0.4/1M · キャッシュ読 $0.005/1M · Web検索 $0.01
+- **Pricing**: 入力 $0.05/1M · 出力 $0.4/1M · キャッシュ読 $0.005/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2024-05-31T23:59:59.000Z
 - **登録日**: 2025-08-07
@@ -4544,7 +4560,7 @@ GPT-5-Nano is the smallest and fastest variant in the GPT-5 system, optimized fo
 - **Provider**: openai
 - **Context**: 400K (400,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $0.025/1M · 出力 $0.2/1M · キャッシュ読 $0.0025/1M · Web検索 $0.01
+- **Pricing**: 入力 $0.025/1M · 出力 $0.2/1M · キャッシュ読 $0.0025/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2024-05-31T23:59:59.000Z
 - **登録日**: 2025-08-07
@@ -4558,7 +4574,7 @@ GPT-5-Nano is the smallest and fastest variant in the GPT-5 system, optimized fo
 - **Provider**: openai
 - **Context**: 400K (400,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $15.00/1M · 出力 $120.00/1M · Web検索 $0.01
+- **Pricing**: 入力 $15.00/1M · 出力 $120.00/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2024-09-30T23:59:59.000Z
 - **登録日**: 2025-10-06
@@ -4572,7 +4588,7 @@ GPT-5 Pro is OpenAI’s most advanced model, offering major improvements in reas
 - **Provider**: openai
 - **Context**: 400K (400,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $7.50/1M · 出力 $60.00/1M · Web検索 $0.01
+- **Pricing**: 入力 $7.50/1M · 出力 $60.00/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2024-09-30T23:59:59.000Z
 - **登録日**: 2025-10-06
@@ -4586,7 +4602,7 @@ GPT-5 Pro is OpenAI’s most advanced model, offering major improvements in reas
 - **Provider**: openai
 - **Context**: 400K (400,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $1.25/1M · 出力 $10.00/1M · キャッシュ読 $0.125/1M · Web検索 $0.01
+- **Pricing**: 入力 $1.25/1M · 出力 $10.00/1M · キャッシュ読 $0.125/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2025-11-13
 - **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, seed, max_tokens, tools, tool_choice
@@ -4643,7 +4659,7 @@ GPT-5.1-Codex-Mini is a smaller and faster version of GPT-5.1-Codex
 - **Provider**: openai
 - **Context**: 400K (400,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $0.625/1M · 出力 $5.00/1M · キャッシュ読 $0.0625/1M · Web検索 $0.01
+- **Pricing**: 入力 $0.625/1M · 出力 $5.00/1M · キャッシュ読 $0.0625/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2025-11-13
 - **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, seed, max_tokens, tools, tool_choice
@@ -4658,7 +4674,7 @@ Built for broad task coverage, GPT-5.1 delivers consistent gains across math, co
 - **Provider**: openai
 - **Context**: 400K (400,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $1.75/1M · 出力 $14.00/1M · キャッシュ読 $0.175/1M · Web検索 $0.01
+- **Pricing**: 入力 $1.75/1M · 出力 $14.00/1M · キャッシュ読 $0.175/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2025-12-10
 - **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
@@ -4701,7 +4717,7 @@ Codex integrates into …
 - **Provider**: openai
 - **Context**: 400K (400,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $21.00/1M · 出力 $168.00/1M · Web検索 $0.01
+- **Pricing**: 入力 $21.00/1M · 出力 $168.00/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2025-12-10
 - **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
@@ -4714,7 +4730,7 @@ GPT-5.2 Pro is OpenAI’s most advanced model, offering major improvements in ag
 - **Provider**: openai
 - **Context**: 400K (400,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $10.50/1M · 出力 $84.00/1M · Web検索 $0.01
+- **Pricing**: 入力 $10.50/1M · 出力 $84.00/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2025-12-10
 - **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
@@ -4727,7 +4743,7 @@ GPT-5.2 Pro is OpenAI’s most advanced model, offering major improvements in ag
 - **Provider**: openai
 - **Context**: 400K (400,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $0.875/1M · 出力 $7.00/1M · キャッシュ読 $0.0875/1M · Web検索 $0.01
+- **Pricing**: 入力 $0.875/1M · 出力 $7.00/1M · キャッシュ読 $0.0875/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2025-12-10
 - **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
@@ -4742,7 +4758,7 @@ Built for broad task coverage, GPT-5.2 delivers consistent gains across math, co
 - **Provider**: openai
 - **Context**: 400K (400,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $1.75/1M · 出力 $14.00/1M · キャッシュ読 $0.175/1M · Web検索 $0.01
+- **Pricing**: 入力 $1.75/1M · 出力 $14.00/1M · キャッシュ読 $0.175/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-02-24
 - **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
@@ -4757,7 +4773,7 @@ Beyond coding, GPT-5.3-Codex performs strongly …
 - **Provider**: openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $2.50/1M · 出力 $15.00/1M · キャッシュ読 $0.25/1M · Web検索 $0.01
+- **Pricing**: 入力 $2.50/1M · 出力 $15.00/1M · キャッシュ読 $0.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-03-05
 - **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
@@ -4772,7 +4788,7 @@ The model delivers improved performance in coding, document understanding, tool 
 - **Provider**: openai
 - **Context**: 272K (272,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text+image  (in: text,image,file → out: text,image)
-- **Pricing**: 入力 $8.00/1M · 出力 $15.00/1M · キャッシュ読 $2.00/1M · Web検索 $0.01
+- **Pricing**: 入力 $8.00/1M · 出力 $15.00/1M · キャッシュ読 $2.00/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-21
 - **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, stop, frequency_penalty, presence_penalty, logit_bias, logprobs, top_logprobs
@@ -4785,7 +4801,7 @@ The model delivers improved performance in coding, document understanding, tool 
 - **Provider**: openai
 - **Context**: 400K (400,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $0.75/1M · 出力 $4.50/1M · キャッシュ読 $0.075/1M · Web検索 $0.01
+- **Pricing**: 入力 $0.75/1M · 出力 $4.50/1M · キャッシュ読 $0.075/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2025-08-31T00:00:00.000Z
 - **登録日**: 2026-03-17
@@ -4801,7 +4817,7 @@ The model is designed for production environments that require a balance of capa
 - **Provider**: openai
 - **Context**: 400K (400,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $0.375/1M · 出力 $2.25/1M · キャッシュ読 $0.0375/1M · Web検索 $0.01
+- **Pricing**: 入力 $0.375/1M · 出力 $2.25/1M · キャッシュ読 $0.0375/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2025-08-31T00:00:00.000Z
 - **登録日**: 2026-03-17
@@ -4833,7 +4849,7 @@ The model prioritizes responsiveness and efficiency over deep reasoning, making 
 - **Provider**: openai
 - **Context**: 400K (400,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $0.1/1M · 出力 $0.625/1M · キャッシュ読 $0.01/1M · Web検索 $0.01
+- **Pricing**: 入力 $0.1/1M · 出力 $0.625/1M · キャッシュ読 $0.01/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2025-08-31T00:00:00.000Z
 - **登録日**: 2026-03-17
@@ -4849,7 +4865,7 @@ The model prioritizes responsiveness and efficiency over deep reasoning, making 
 - **Provider**: openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $30.00/1M · 出力 $180.00/1M · Web検索 $0.01
+- **Pricing**: 入力 $30.00/1M · 出力 $180.00/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-03-05
 - **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
@@ -4862,7 +4878,7 @@ GPT-5.4 Pro is OpenAI's most advanced model, building on GPT-5.4's unified archi
 - **Provider**: openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $15.00/1M · 出力 $90.00/1M · Web検索 $0.01
+- **Pricing**: 入力 $15.00/1M · 出力 $90.00/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-03-05
 - **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
@@ -4875,7 +4891,7 @@ GPT-5.4 Pro is OpenAI's most advanced model, building on GPT-5.4's unified archi
 - **Provider**: openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $1.25/1M · 出力 $7.50/1M · キャッシュ読 $0.125/1M · Web検索 $0.01
+- **Pricing**: 入力 $1.25/1M · 出力 $7.50/1M · キャッシュ読 $0.125/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-03-05
 - **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
@@ -4890,7 +4906,7 @@ The model delivers improved performance in coding, document understanding, tool 
 - **Provider**: openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $5.00/1M · 出力 $30.00/1M · キャッシュ読 $0.5/1M · Web検索 $0.01
+- **Pricing**: 入力 $5.00/1M · 出力 $30.00/1M · キャッシュ読 $0.5/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2025-12-01T00:00:00.000Z
 - **登録日**: 2026-04-24
@@ -4904,7 +4920,7 @@ GPT-5.5 is OpenAI’s frontier model designed for complex professional workloads
 - **Provider**: openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $30.00/1M · 出力 $180.00/1M · Web検索 $0.01
+- **Pricing**: 入力 $30.00/1M · 出力 $180.00/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2025-12-01T00:00:00.000Z
 - **登録日**: 2026-04-24
@@ -4918,7 +4934,7 @@ GPT-5.5 Pro is OpenAI’s high-capability model optimized for deep reasoning and
 - **Provider**: openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $15.00/1M · 出力 $90.00/1M · Web検索 $0.01
+- **Pricing**: 入力 $15.00/1M · 出力 $90.00/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2025-12-01T00:00:00.000Z
 - **登録日**: 2026-04-24
@@ -4932,7 +4948,7 @@ GPT-5.5 Pro is OpenAI’s high-capability model optimized for deep reasoning and
 - **Provider**: openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $2.50/1M · 出力 $15.00/1M · キャッシュ読 $0.25/1M · Web検索 $0.01
+- **Pricing**: 入力 $2.50/1M · 出力 $15.00/1M · キャッシュ読 $0.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2025-12-01T00:00:00.000Z
 - **登録日**: 2026-04-24
@@ -4946,7 +4962,7 @@ GPT-5.5 is OpenAI’s frontier model designed for complex professional workloads
 - **Provider**: openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $0.1/1M · 出力 $0.6/1M · キャッシュ読 $0.01/1M · キャッシュ書 $0.125/1M · Web検索 $0.005
+- **Pricing**: 入力 $0.1/1M · 出力 $0.6/1M · キャッシュ読 $0.01/1M · キャッシュ書 $0.125/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
@@ -4960,7 +4976,7 @@ GPT-5.6 Luna is a fast, cost-efficient model in OpenAI's GPT-5.6 series. It is s
 - **Provider**: openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $0.1/1M · 出力 $0.6/1M · キャッシュ読 $0.01/1M · キャッシュ書 $0.125/1M · Web検索 $0.005
+- **Pricing**: 入力 $0.1/1M · 出力 $0.6/1M · キャッシュ読 $0.01/1M · キャッシュ書 $0.125/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
@@ -4976,7 +4992,7 @@ Learn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reaso
 - **Provider**: openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $0.1/1M · 出力 $0.6/1M · キャッシュ読 $0.01/1M · Web検索 $0.01
+- **Pricing**: 入力 $0.1/1M · 出力 $0.6/1M · キャッシュ読 $0.01/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
@@ -4992,7 +5008,7 @@ Learn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reaso
 - **Provider**: openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $0.1/1M · 出力 $0.6/1M · キャッシュ読 $0.01/1M · Web検索 $0.01
+- **Pricing**: 入力 $0.1/1M · 出力 $0.6/1M · キャッシュ読 $0.01/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
@@ -5006,7 +5022,7 @@ GPT-5.6 Luna is a fast, cost-efficient model in OpenAI's GPT-5.6 series. It is s
 - **Provider**: openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $5.00/1M · 出力 $30.00/1M · キャッシュ読 $0.5/1M · キャッシュ書 $6.25/1M · Web検索 $0.01
+- **Pricing**: 入力 $5.00/1M · 出力 $30.00/1M · キャッシュ読 $0.5/1M · キャッシュ書 $6.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
@@ -5020,7 +5036,7 @@ GPT-5.6 Sol is the flagship model in OpenAI's GPT-5.6 series. It is suited for c
 - **Provider**: openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $5.00/1M · 出力 $30.00/1M · キャッシュ読 $0.5/1M · キャッシュ書 $6.25/1M · Web検索 $0.01
+- **Pricing**: 入力 $5.00/1M · 出力 $30.00/1M · キャッシュ読 $0.5/1M · キャッシュ書 $6.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
@@ -5036,7 +5052,7 @@ Learn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reaso
 - **Provider**: openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $2.50/1M · 出力 $15.00/1M · キャッシュ読 $0.25/1M · Web検索 $0.01
+- **Pricing**: 入力 $2.50/1M · 出力 $15.00/1M · キャッシュ読 $0.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
@@ -5052,7 +5068,7 @@ Learn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reaso
 - **Provider**: openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $2.50/1M · 出力 $15.00/1M · キャッシュ読 $0.25/1M · Web検索 $0.01
+- **Pricing**: 入力 $2.50/1M · 出力 $15.00/1M · キャッシュ読 $0.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
@@ -5066,7 +5082,7 @@ GPT-5.6 Sol is the flagship model in OpenAI's GPT-5.6 series. It is suited for c
 - **Provider**: openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $1.00/1M · 出力 $6.00/1M · キャッシュ読 $0.1/1M · キャッシュ書 $1.25/1M · Web検索 $0.005
+- **Pricing**: 入力 $1.00/1M · 出力 $6.00/1M · キャッシュ読 $0.1/1M · キャッシュ書 $1.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
@@ -5080,7 +5096,7 @@ GPT-5.6 Terra is a balanced model in OpenAI's GPT-5.6 series, positioned between
 - **Provider**: openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $1.00/1M · 出力 $6.00/1M · キャッシュ読 $0.1/1M · キャッシュ書 $1.25/1M · Web検索 $0.005
+- **Pricing**: 入力 $1.00/1M · 出力 $6.00/1M · キャッシュ読 $0.1/1M · キャッシュ書 $1.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
@@ -5096,7 +5112,7 @@ Learn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reaso
 - **Provider**: openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $1.00/1M · 出力 $6.00/1M · キャッシュ読 $0.1/1M · Web検索 $0.01
+- **Pricing**: 入力 $1.00/1M · 出力 $6.00/1M · キャッシュ読 $0.1/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
@@ -5112,7 +5128,7 @@ Learn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reaso
 - **Provider**: openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $1.00/1M · 出力 $6.00/1M · キャッシュ読 $0.1/1M · Web検索 $0.01
+- **Pricing**: 入力 $1.00/1M · 出力 $6.00/1M · キャッシュ読 $0.1/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
@@ -5126,7 +5142,7 @@ GPT-5.6 Terra is a balanced model in OpenAI's GPT-5.6 series, positioned between
 - **Provider**: openai
 - **Context**: 400K (400,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $0.625/1M · 出力 $5.00/1M · キャッシュ読 $0.0625/1M · Web検索 $0.01
+- **Pricing**: 入力 $0.625/1M · 出力 $5.00/1M · キャッシュ読 $0.0625/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2024-09-30T00:00:00.000Z
 - **登録日**: 2025-08-07
@@ -5166,7 +5182,7 @@ A cost-efficient version of GPT Audio. The new snapshot features an upgraded dec
 - **Provider**: openai
 - **Context**: 400K (400,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $5.00/1M · 出力 $30.00/1M · キャッシュ読 $0.5/1M · Web検索 $0.01
+- **Pricing**: 入力 $5.00/1M · 出力 $30.00/1M · キャッシュ読 $0.5/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Seed固定
 - **登録日**: 2026-05-05
 - **対応パラメータ**: seed, max_tokens, response_format, structured_outputs, tools, tool_choice
@@ -5354,7 +5370,7 @@ The o1 models are optimized for math, science, programming, and other STEM-relat
 - **Provider**: openai
 - **Context**: 200K (200,000) tok / max出力 100,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $2.00/1M · 出力 $8.00/1M · キャッシュ読 $0.5/1M · Web検索 $0.01
+- **Pricing**: 入力 $2.00/1M · 出力 $8.00/1M · キャッシュ読 $0.5/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2024-06-30T23:59:59.000Z
 - **登録日**: 2025-04-16
@@ -5444,7 +5460,7 @@ The model demonstrates significant improvements over its …
 - **Provider**: openai
 - **Context**: 200K (200,000) tok / max出力 100,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $20.00/1M · 出力 $80.00/1M · Web検索 $0.01
+- **Pricing**: 入力 $20.00/1M · 出力 $80.00/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2024-06-30T23:59:59.000Z
 - **登録日**: 2025-06-10
@@ -5460,7 +5476,7 @@ Note that BYOK is required for this model. Set up here: https://openrouter.ai/se
 - **Provider**: openai
 - **Context**: 200K (200,000) tok / max出力 100,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $10.00/1M · 出力 $40.00/1M · Web検索 $0.01
+- **Pricing**: 入力 $10.00/1M · 出力 $40.00/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2024-06-30T23:59:59.000Z
 - **登録日**: 2025-06-10
@@ -5476,7 +5492,7 @@ Note that BYOK is required for this model. Set up here: https://openrouter.ai/se
 - **Provider**: openai
 - **Context**: 200K (200,000) tok / max出力 100,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $1.00/1M · 出力 $4.00/1M · キャッシュ読 $0.25/1M · Web検索 $0.01
+- **Pricing**: 入力 $1.00/1M · 出力 $4.00/1M · キャッシュ読 $0.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2024-06-30T23:59:59.000Z
 - **登録日**: 2025-04-16
@@ -5490,7 +5506,7 @@ o3 is a well-rounded and powerful model across domains. It sets a new standard f
 - **Provider**: openai
 - **Context**: 200K (200,000) tok / max出力 100,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $1.10/1M · 出力 $4.40/1M · キャッシュ読 $0.275/1M · Web検索 $0.01
+- **Pricing**: 入力 $1.10/1M · 出力 $4.40/1M · キャッシュ読 $0.275/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2024-06-30T23:59:59.000Z
 - **登録日**: 2025-04-16
@@ -5506,7 +5522,7 @@ Despite its smaller size, o4-mini exhibits high accuracy in STEM tasks, visual p
 - **Provider**: openai
 - **Context**: 200K (200,000) tok / max出力 100,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $1.10/1M · 出力 $4.40/1M · キャッシュ読 $0.275/1M · Web検索 $0.01
+- **Pricing**: 入力 $1.10/1M · 出力 $4.40/1M · キャッシュ読 $0.275/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2024-06-30T23:59:59.000Z
 - **登録日**: 2025-04-16
@@ -5524,7 +5540,7 @@ Despite its smaller size, o4-mini exhibits high accuracy in STEM tasks, visual p
 - **Provider**: openai
 - **Context**: 200K (200,000) tok / max出力 100,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $0.55/1M · 出力 $2.20/1M · キャッシュ読 $0.1375/1M · Web検索 $0.01
+- **Pricing**: 入力 $0.55/1M · 出力 $2.20/1M · キャッシュ読 $0.1375/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2024-06-30T23:59:59.000Z
 - **登録日**: 2025-04-16
@@ -5542,7 +5558,7 @@ Despite its smaller size, o4-mini exhibits high accuracy in STEM tasks, visual p
 - **Provider**: openai
 - **Context**: 200K (200,000) tok / max出力 100,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $0.55/1M · 出力 $2.20/1M · キャッシュ読 $0.1375/1M · Web検索 $0.01
+- **Pricing**: 入力 $0.55/1M · 出力 $2.20/1M · キャッシュ読 $0.1375/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2024-06-30T23:59:59.000Z
 - **登録日**: 2025-04-16
@@ -5722,7 +5738,7 @@ pplx-embed-v1 -4B is one of Perplexity's state-of-the-art text embedding models 
 - **Provider**: perplexity
 - **Context**: 127K (127,072) tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $1.00/1M · 出力 $1.00/1M · Web検索 $0.005 · Web Search $0.005/request
+- **Pricing**: 入力 $1.00/1M · 出力 $1.00/1M · Web検索 $0.005 · Web Search $0.005/1K calls
 - **Capabilities**: Web検索
 - **登録日**: 2025-01-27
 - **対応パラメータ**: max_tokens, temperature, top_p, top_k, frequency_penalty, presence_penalty, web_search_options
@@ -5735,7 +5751,7 @@ Sonar is lightweight, affordable, fast, and simple to use — now featuring cita
 - **Provider**: perplexity
 - **Context**: 128K (128,000) tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $2.00/1M · 出力 $8.00/1M · 推論 $3.00/1M · Web検索 $0.005 · Web Search $0.005/request
+- **Pricing**: 入力 $2.00/1M · 出力 $8.00/1M · 推論 $3.00/1M · Web検索 $0.005 · Web Search $0.005/1K calls
 - **Capabilities**: Reasoning(思考), Reasoning出力, Web検索
 - **登録日**: 2025-03-07
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, frequency_penalty, presence_penalty, web_search_options
@@ -5752,7 +5768,7 @@ Notes on Pricing ([Source](https://docs.perplexity.ai/guides/pricing#detailed-pr
 - **Provider**: perplexity
 - **Context**: 200K (200,000) tok / max出力 8,000 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $3.00/1M · 出力 $15.00/1M · Web検索 $0.005 · Web Search $0.005/request
+- **Pricing**: 入力 $3.00/1M · 出力 $15.00/1M · Web検索 $0.005 · Web Search $0.005/1K calls
 - **Capabilities**: Web検索
 - **登録日**: 2025-03-07
 - **対応パラメータ**: max_tokens, temperature, top_p, top_k, frequency_penalty, presence_penalty, web_search_options
@@ -5767,7 +5783,7 @@ For enterprises seeking more advanced capabilities, the Sonar Pro API can handle
 - **Provider**: perplexity
 - **Context**: 200K (200,000) tok / max出力 8,000 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $3.00/1M · 出力 $15.00/1M · Web検索 $0.018 · Web Search $0.018/request
+- **Pricing**: 入力 $3.00/1M · 出力 $15.00/1M · Web検索 $0.018 · Web Search $0.018/1K calls
 - **Capabilities**: Structured outputs(JSONスキーマ), Reasoning(思考), Reasoning出力, Web検索
 - **登録日**: 2025-10-30
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, frequency_penalty, presence_penalty, web_search_options, structured_outputs
@@ -5782,7 +5798,7 @@ Sonar Pro Search adds autonomous, multi-step reasoning to Sonar Pro. So, instead
 - **Provider**: perplexity
 - **Context**: 128K (128,000) tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $2.00/1M · 出力 $8.00/1M · Web検索 $0.005 · Web Search $0.005/request
+- **Pricing**: 入力 $2.00/1M · 出力 $8.00/1M · Web検索 $0.005 · Web Search $0.005/1K calls
 - **Capabilities**: Reasoning(思考), Reasoning出力, Web検索
 - **登録日**: 2025-03-07
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, frequency_penalty, presence_penalty, web_search_options
@@ -5857,7 +5873,7 @@ Laguna XS 2.1 is the latest coding agent model in the 33B-A3B category from [Poo
 
 Laguna XS 2.1 is designed for software engineering and agentic coding use cases, and you are responsible for confirming that it is appropriate for your intended application. Laguna XS 2.1 is subject to the [OpenMDW-1.1 License](https://openmdw.ai/license/1-1/), and should be used consistently with Poolside's …
 
-### ▎qwen（60）
+### ▎qwen（61）
 
 #### Qwen2.5 72B Instruct
 
@@ -6639,13 +6655,13 @@ The model is designed for agentic coding and reasoning tasks, with particular st
 
 - **ID**: `qwen/qwen3.6-35b-a3b`
 - **Provider**: qwen
-- **Context**: 262K (262,144) tok / max出力 65,536 tok
+- **Context**: 262K (262,144) tok / max出力 8,192 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.098/1M · 出力 $0.95/1M
-- **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力
+- **Pricing**: 入力 $0.08/1M · 出力 $0.75/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-27
 - **HF**: `Qwen/Qwen3.6-35B-A3B`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, response_format, structured_outputs, logprobs, top_logprobs, tools, tool_choice
 
 Qwen3.6-35B-A3B is an open-weight multimodal model from Alibaba Cloud with 35 billion total parameters and 3 billion active parameters per token. It uses a hybrid sparse mixture-of-experts architecture combining Gated DeltaNet linear attention with standard gated attention layers, enabling efficient inference at a fraction of the compute cost. The model supports a 262K token native context window (extensible to 1M via YaRN) and accepts text, image, and video inputs. It includes integrated thinking mode with reasoning traces preserved across multi-turn conversations, function calling, and structured output. Released under the Apache 2.0 license.
 
@@ -6731,7 +6747,7 @@ Qwen3.7-Plus is a cost-effective model in Alibaba's Qwen3.7 series. It supports 
 
 - **ID**: `qwen/qwen3.8-2.4t-a95b`
 - **Provider**: qwen
-- **Context**: 1.01M (1,010,000) tok / max出力 52,429 tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 52,429 tok
 - **Modality**: text->text  (in: text → out: text)
 - **Pricing**: 入力 $2.00/1M · 出力 $6.00/1M · キャッシュ読 $0.2/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
@@ -6740,6 +6756,20 @@ Qwen3.7-Plus is a cost-effective model in Alibaba's Qwen3.7 series. It supports 
 - **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, tools, tool_choice, structured_outputs, response_format, logprobs, top_logprobs
 
 Qwen3.8 2.4T A95B is an open-weight sparse mixture-of-experts model from Qwen and the open-weight variant of [Qwen3.8 Max](/qwen/qwen3.8-max), with 95 billion active parameters out of 2.4 trillion total. It is suited for coding, research, complex reasoning, and agentic workflows.
+
+#### Qwen: Qwen3.8 27B
+
+- **ID**: `qwen/qwen3.8-27b`
+- **Provider**: qwen
+- **Context**: 262K (262,144) tok / max出力 131,072 tok
+- **Modality**: text+image+video->text  (in: text,image,video → out: text)
+- **Pricing**: 入力 $0.45/1M · 出力 $3.20/1M
+- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **登録日**: 2026-08-14
+- **HF**: `Qwen/Qwen3.8-27B`
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, stop, frequency_penalty, presence_penalty, repetition_penalty, seed, max_tokens, response_format, structured_outputs, logprobs, top_logprobs
+
+Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be enabled or disabled.
 
 #### Qwen: Qwen3.8 Max
 
@@ -7009,7 +7039,7 @@ Runway Gen-4.5 is a video generation model from Runway for text-to-video and ima
 - **Provider**: sakana
 - **Context**: 1M (1,000,000) tok / max出力 128,000 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $5.00/1M · 出力 $30.00/1M · キャッシュ読 $0.5/1M · Web検索 $0.01
+- **Pricing**: 入力 $5.00/1M · 出力 $30.00/1M · キャッシュ読 $0.5/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), Reasoning(思考), Reasoning出力, Web検索
 - **登録日**: 2026-06-24
 - **対応パラメータ**: reasoning, include_reasoning, tools, tool_choice, structured_outputs, web_search_options
@@ -7024,7 +7054,7 @@ Fugu Ultra prioritizes answer quality on complex, multi-step reasoning, coding, 
 - **Provider**: sakana
 - **Context**: 262K (262,144) tok / max出力 65,536 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $0.95/1M · 出力 $4.00/1M · キャッシュ読 $0.15/1M · Web検索 $0.007 · Code Execution $0.12/hour
+- **Pricing**: 入力 $0.95/1M · 出力 $4.00/1M · キャッシュ読 $0.15/1M · Web検索 $0.007 · Web Search $0.007/1K calls · Code Execution $0.12/hour
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), Reasoning(思考), Reasoning出力, Web検索
 - **登録日**: 2026-08-11
 - **対応パラメータ**: reasoning, include_reasoning, tools, tool_choice, structured_outputs, web_search_options
@@ -7304,7 +7334,7 @@ Hunyuan-A13B is a 13B active parameter Mixture-of-Experts (MoE) language model d
 - **Provider**: tencent
 - **Context**: 262K (262,144) tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.1288/1M · 出力 $0.5336/1M · キャッシュ読 $0.0322/1M
+- **Pricing**: 入力 $0.126/1M · 出力 $0.522/1M · キャッシュ読 $0.0315/1M
 - **Capabilities**: JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-07-06
 - **HF**: `tencent/Hy3`
@@ -7320,7 +7350,7 @@ Tencent positions it as a reliable, cost-effective option across coding, documen
 - **Provider**: tencent
 - **Context**: 262K (262,144) tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.063/1M · 出力 $0.21/1M · キャッシュ読 $0.021/1M
+- **Pricing**: 入力 $0.18/1M · 出力 $0.6/1M · キャッシュ読 $0.06/1M
 - **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-04-22
 - **HF**: `tencent/Hy3-preview`
@@ -7615,7 +7645,7 @@ Palmyra X5 is Writer's most advanced model, purpose-built for building and scali
 - **Provider**: x-ai
 - **Context**: 2M (2,000,000) tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $1.25/1M · 出力 $2.50/1M · キャッシュ読 $0.2/1M · Web検索 $0.005
+- **Pricing**: 入力 $1.25/1M · 出力 $2.50/1M · キャッシュ読 $0.2/1M · Web検索 $0.005 · Web Search $0.005/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **Knowledge cutoff**: 2025-09-01T00:00:00.000Z
 - **登録日**: 2026-03-31
@@ -7631,7 +7661,7 @@ Reasoning can be enabled/disabled using the `reasoning` `enabled` parameter in t
 - **Provider**: x-ai
 - **Context**: 2M (2,000,000) tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $1.25/1M · 出力 $2.50/1M · キャッシュ読 $0.2/1M · Web検索 $0.005
+- **Pricing**: 入力 $1.25/1M · 出力 $2.50/1M · キャッシュ読 $0.2/1M · Web検索 $0.005 · Web Search $0.005/1K calls
 - **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **Knowledge cutoff**: 2025-09-01T00:00:00.000Z
 - **登録日**: 2026-03-31
@@ -7649,7 +7679,7 @@ Reasoning effort behavior:
 - **Provider**: x-ai
 - **Context**: 1M (1,000,000) tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $1.25/1M · 出力 $2.50/1M · キャッシュ読 $0.2/1M · Web検索 $0.005
+- **Pricing**: 入力 $1.25/1M · 出力 $2.50/1M · キャッシュ読 $0.2/1M · Web検索 $0.005 · Web Search $0.005/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-30
 - **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, max_tokens, temperature, top_p, seed, logprobs, top_logprobs, stop, frequency_penalty, presence_penalty, tools, tool_choice
@@ -7664,7 +7694,7 @@ It supports a 1 million token context window with no output token limit, making 
 - **Provider**: x-ai
 - **Context**: 500K (500,000) tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $2.00/1M · 出力 $6.00/1M · キャッシュ読 $0.3/1M · Web検索 $0.005
+- **Pricing**: 入力 $2.00/1M · 出力 $6.00/1M · キャッシュ読 $0.3/1M · Web検索 $0.005 · Web Search $0.005/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-07-08
 - **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, max_tokens, temperature, top_p, seed, logprobs, top_logprobs, stop, frequency_penalty, presence_penalty, tools, tool_choice
@@ -7677,7 +7707,7 @@ Grok 4.5 is a model from SpaceXAI with frontier performance on coding, knowledge
 - **Provider**: x-ai
 - **Context**: 500K (500,000) tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $2.00/1M · 出力 $6.00/1M · キャッシュ読 $0.5/1M · Web検索 $0.005
+- **Pricing**: 入力 $2.00/1M · 出力 $6.00/1M · キャッシュ読 $0.5/1M · Web検索 $0.005 · Web Search $0.005/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-12
 - **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, max_tokens, temperature, top_p, seed, logprobs, top_logprobs, stop, frequency_penalty, presence_penalty, tools, tool_choice
@@ -7690,7 +7720,7 @@ Grok 4.6 is SpaceXAI's smartest model with frontier performance on coding, knowl
 - **Provider**: x-ai
 - **Context**: 256K (256,000) tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $1.00/1M · 出力 $2.00/1M · キャッシュ読 $0.2/1M · Web検索 $0.005
+- **Pricing**: 入力 $1.00/1M · 出力 $2.00/1M · キャッシュ読 $0.2/1M · Web検索 $0.005 · Web Search $0.005/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-05-20
 - **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, max_tokens, temperature, top_p, seed, logprobs, top_logprobs, stop, frequency_penalty, presence_penalty, tools, tool_choice
@@ -7949,13 +7979,13 @@ GLM-5 Turbo is a new model from Z.ai designed for fast inference and strong perf
 
 - **ID**: `z-ai/glm-5.1`
 - **Provider**: z-ai
-- **Context**: 204K (204,800) tok / max出力 128,000 tok
+- **Context**: 204K (204,800) tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.966/1M · 出力 $3.04/1M · キャッシュ読 $0.1794/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
+- **Pricing**: 入力 $0.91/1M · 出力 $2.86/1M · キャッシュ読 $0.169/1M
+- **Capabilities**: Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-07
 - **HF**: `zai-org/GLM-5.1`
-- **対応パラメータ**: reasoning, include_reasoning, tools, tool_choice, response_format, structured_outputs, logprobs, top_logprobs, max_tokens, temperature, top_p, stop
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, logprobs, top_logprobs
 
 GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on a single task for more than 8 hours, autonomously planning, executing, and improving itself throughout the process, ultimately delivering complete, engineering-grade results.
 
@@ -7965,11 +7995,11 @@ GLM-5.1 delivers a major leap in coding capability, with particularly significan
 - **Provider**: z-ai
 - **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.5/1M · 出力 $3.15/1M · キャッシュ読 $0.115/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $0.49/1M · 出力 $1.54/1M · キャッシュ読 $0.091/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-06-16
 - **HF**: `zai-org/GLM-5.2`
-- **対応パラメータ**: reasoning, include_reasoning, response_format, tools, temperature, top_p, top_k, frequency_penalty, presence_penalty, stop, seed, max_tokens, logprobs, top_logprobs, tool_choice, structured_outputs
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, frequency_penalty, presence_penalty, repetition_penalty, stop, response_format, structured_outputs, tools, tool_choice
 
 GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering, and complex multi-step automation.
 
@@ -8051,7 +8081,7 @@ This model always redirects to the latest model in the Claude Opus family.
 - **Provider**: ~anthropic
 - **Context**: 1M (1,000,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $2.00/1M · 出力 $10.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $2.50/1M · Web検索 $0.01
+- **Pricing**: 入力 $2.00/1M · 出力 $10.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $2.50/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-04-27
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, stop, tool_choice, tools, structured_outputs, response_format, verbosity, max_completion_tokens
@@ -8064,12 +8094,12 @@ This model always redirects to the latest model in the Anthropic Claude Sonnet f
 
 - **ID**: `~deepseek/deepseek-v4-flash-latest`
 - **Provider**: ~deepseek
-- **Context**: 1.04858M (1,048,576) tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 384,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.08/1M · 出力 $0.252/1M · キャッシュ読 $0.0252/1M
+- **Pricing**: 入力 $0.0783/1M · 出力 $0.1565/1M · キャッシュ読 $0.0157/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-01
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, response_format, tools, tool_choice, logprobs, top_logprobs, structured_outputs, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, logit_bias, parallel_tool_calls, reasoning_effort, top_a
+- **対応パラメータ**: reasoning, include_reasoning, response_format, tools, tool_choice, logprobs, top_logprobs, max_tokens, temperature, top_p, stop, structured_outputs, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, logit_bias, parallel_tool_calls, reasoning_effort, top_a
 
 This model always redirects to the latest model in the DeepSeek V4 Flash family.
 
@@ -8081,7 +8111,7 @@ This model always redirects to the latest model in the DeepSeek V4 Flash family.
 - **Provider**: ~google
 - **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
 - **Modality**: text+image+file+audio+video->text  (in: text,image,file,audio,video → out: text)
-- **Pricing**: 入力 $0.375/1M · 出力 $1.88/1M · キャッシュ読 $0.0375/1M · キャッシュ書 $0.0208/1M · 推論 $1.88/1M · 画像 $3.75e-07/枚 · 音声 $0.375/1M · Web検索 $0.007 · Web Search $0.007/request
+- **Pricing**: 入力 $0.375/1M · 出力 $1.88/1M · キャッシュ読 $0.0375/1M · キャッシュ書 $0.0208/1M · 推論 $1.88/1M · 画像 $3.75e-07/枚 · 音声 $0.375/1M · Web検索 $0.014 · Web Search $0.014/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-04-27
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, seed, response_format, stop, structured_outputs, tools, tool_choice, temperature, top_p
@@ -8094,7 +8124,7 @@ This model always redirects to the latest model in the Google Gemini Flash famil
 - **Provider**: ~google
 - **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
 - **Modality**: text+image+file+audio+video->text  (in: text,image,file,audio,video → out: text)
-- **Pricing**: 入力 $2.00/1M · 出力 $12.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $0.375/1M · 推論 $12.00/1M · 画像 $2e-06/枚 · 音声 $2.00/1M · Web検索 $0.014 · Web Search $0.014/request
+- **Pricing**: 入力 $2.00/1M · 出力 $12.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $0.375/1M · 推論 $12.00/1M · 画像 $2e-06/枚 · 音声 $2.00/1M · Web検索 $0.014 · Web Search $0.014/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-04-27
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format, tools, tool_choice, stop, structured_outputs
@@ -8124,7 +8154,7 @@ This model always redirects to the latest model in the MoonshotAI Kimi family.
 - **Provider**: ~openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $5.00/1M · 出力 $30.00/1M · キャッシュ読 $0.5/1M · キャッシュ書 $6.25/1M · Web検索 $0.01
+- **Pricing**: 入力 $5.00/1M · 出力 $30.00/1M · キャッシュ読 $0.5/1M · キャッシュ書 $6.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-04-27
@@ -8138,7 +8168,7 @@ This model always redirects to the latest model in the OpenAI GPT family.
 - **Provider**: ~openai
 - **Context**: 400K (400,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $0.75/1M · 出力 $4.50/1M · キャッシュ読 $0.075/1M · Web検索 $0.01
+- **Pricing**: 入力 $0.75/1M · 出力 $4.50/1M · キャッシュ読 $0.075/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2025-08-31T00:00:00.000Z
 - **登録日**: 2026-04-27
@@ -8154,7 +8184,7 @@ This model always redirects to the latest model in the OpenAI GPT Mini family.
 - **Provider**: ~x-ai
 - **Context**: 500K (500,000) tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $2.00/1M · 出力 $6.00/1M · キャッシュ読 $0.5/1M · Web検索 $0.005
+- **Pricing**: 入力 $2.00/1M · 出力 $6.00/1M · キャッシュ読 $0.5/1M · Web検索 $0.005 · Web Search $0.005/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-07-08
 - **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, max_tokens, temperature, top_p, seed, logprobs, top_logprobs, stop, frequency_penalty, presence_penalty, tools, tool_choice
