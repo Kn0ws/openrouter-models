@@ -1,7 +1,7 @@
-# OpenRouter モデルカタログ（全543モデル）
+# OpenRouter モデルカタログ（全542モデル）
 
-- 取得日時: 2026-08-17T06:27:37
-- プロバイダ数: 76 / 無料枠あり: 25
+- 取得日時: 2026-08-18T06:27:01
+- プロバイダ数: 75 / 無料枠あり: 24
 
 ## プロバイダ別サマリ
 
@@ -14,7 +14,7 @@
 | mistralai | 24 | 0.02 | 3,000.00 | 262,144 |
 | nvidia | 18 | 0.00 | 1,500.00 | 1,000,000 |
 | z-ai | 14 | 0.00 | 1.20 | 1,048,576 |
-| deepseek | 13 | 0.06 | 1.06 | 1,310,720 |
+| deepseek | 13 | 0.07 | 1.22 | 1,310,720 |
 | minimax | 13 | 0.00 | 100.00 | 1,048,576 |
 | x-ai | 12 | 0.00 | 100,000.00 | 2,000,000 |
 | recraft | 11 | 0.00 | 0.00 | 65,536 |
@@ -54,7 +54,7 @@
 | nex-agi | 2 | 0.02 | 0.25 | 262,144 |
 | stepfun | 2 | 0.10 | 0.20 | 262,144 |
 | ibm-granite | 2 | 0.02 | 0.05 | 131,072 |
-| ~openai | 2 | 0.75 | 5.00 | 1,050,000 |
+| ~openai | 2 | 0.75 | 2.50 | 1,050,000 |
 | ~google | 2 | 0.38 | 2.00 | 1,048,576 |
 | xiaomi | 2 | 0.12 | 0.30 | 1,050,000 |
 | arcee-ai | 2 | 0.22 | 0.75 | 262,144 |
@@ -63,8 +63,7 @@
 | thenlper | 2 | 0.01 | 0.01 | 512 |
 | morph | 2 | 0.80 | 0.90 | 262,144 |
 | dots-studio | 1 | 0.00 | 0.00 | 512,000 |
-| liquid | 1 | 0.00 | 0.00 | 128,000 |
-| ~deepseek | 1 | 0.06 | 0.06 | 1,310,720 |
+| ~deepseek | 1 | 0.08 | 0.08 | 1,310,720 |
 | meituan | 1 | 0.30 | 0.30 | 1,048,756 |
 | ~x-ai | 1 | 2.00 | 2.00 | 500,000 |
 | perceptron | 1 | 0.15 | 0.15 | 32,768 |
@@ -349,10 +348,10 @@ See the launch announcement and benchmark results [here](https://www.anthropic.c
 - **Provider**: anthropic
 - **Context**: 1M (1,000,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $10.00/1M · 出力 $50.00/1M · キャッシュ読 $1.00/1M · キャッシュ書 $12.50/1M · Web検索 $0.01
+- **Pricing**: 入力 $10.00/1M · 出力 $50.00/1M · キャッシュ読 $1.00/1M · キャッシュ書 $12.50/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-06-09
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, stop, tool_choice, tools, response_format, verbosity, structured_outputs
+- **対応パラメータ**: max_tokens, stop, reasoning, include_reasoning, tool_choice, tools, structured_outputs, response_format, verbosity
 
 Claude Fable 5 is a Mythos-class model from Anthropic, built for autonomous knowledge work and coding. It supports text, image, and file inputs with text output, with reasoning support and a 1M-token context window. It is suited for long-running, complex, and asynchronous tasks that previously required frequent human check-ins.
 
@@ -694,10 +693,10 @@ Sonnet 4.5 also introduces stronger agentic capabilities, including improved too
 - **Provider**: anthropic
 - **Context**: 1M (1,000,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $3.00/1M · 出力 $15.00/1M · キャッシュ読 $0.3/1M · キャッシュ書 $3.75/1M · Web検索 $0.01 · Web Search $0.01/1K calls
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
+- **Pricing**: 入力 $3.00/1M · 出力 $15.00/1M · キャッシュ読 $0.3/1M · キャッシュ書 $3.75/1M · Web検索 $0.01
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-02-17
-- **対応パラメータ**: max_tokens, top_p, temperature, stop, reasoning, include_reasoning, tools, tool_choice, structured_outputs, response_format, verbosity
+- **対応パラメータ**: max_tokens, top_p, temperature, stop, reasoning, include_reasoning, tools, tool_choice, response_format, verbosity
 
 Sonnet 4.6 is Anthropic's most capable Sonnet-class model yet, with frontier performance across coding, agents, and professional work. It excels at iterative development, complex codebase navigation, end-to-end project management with memory, polished document creation, and confident computer use for web QA and workflow automation.
 
@@ -723,7 +722,7 @@ Sonnet 4.6 is Anthropic's most capable Sonnet-class model yet, with frontier per
 - **Pricing**: 入力 $2.00/1M · 出力 $10.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $2.50/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-06-30
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, stop, tool_choice, tools, structured_outputs, response_format, verbosity
+- **対応パラメータ**: max_tokens, stop, reasoning, include_reasoning, tool_choice, tools, structured_outputs, response_format, verbosity
 
 Sonnet 5 is Anthropic's most capable Sonnet-class model, with frontier performance across coding, agents, and professional work. It supports adaptive thinking with selectable reasoning effort levels (low, medium, high, max, and x-high), a 1M-token context window, and text, image, and file inputs. Sonnet 5 uses an updated tokenizer and includes real-time cyber safeguards that block certain high-risk dual-use activities.
 
@@ -1430,14 +1429,14 @@ The model leverages fine-tuning from DeepSeek R1's outputs, enabling competitive
 
 - **ID**: `deepseek/deepseek-v3.1-terminus`
 - **Provider**: deepseek
-- **Context**: 163K (163,840) tok / max出力 32,768 tok
+- **Context**: 163K (163,840) tok / max出力 163,840 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.27/1M · 出力 $0.95/1M · キャッシュ読 $0.13/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.27/1M · 出力 $1.00/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **Knowledge cutoff**: 2025-03-31T23:59:59.000Z
 - **登録日**: 2025-09-22
 - **HF**: `deepseek-ai/DeepSeek-V3.1-Terminus`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, tools, tool_choice, logit_bias, structured_outputs
+- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, temperature, top_p, top_k, frequency_penalty, tools, tool_choice, max_tokens
 
 DeepSeek-V3.1 Terminus is an update to [DeepSeek V3.1](/deepseek/deepseek-chat-v3.1) that maintains the model's original capabilities while addressing issues reported by users, including language consistency and agent capabilities, further optimizing the model's performance in coding and search agents. It is a large hybrid reasoning model (671B parameters, 37B active) that supports both thinking and non-thinking modes. It extends the DeepSeek-V3 base with a two-phase long-context training process, reaching up to 128K tokens, and uses FP8 microscaling for efficient inference. Users can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our …
 
@@ -1492,13 +1491,13 @@ The model includes hybrid attention for efficient long-context processing. Reaso
 
 - **ID**: `deepseek/deepseek-v4-flash-0731`
 - **Provider**: deepseek
-- **Context**: 1.31072M (1,310,720) tok / max出力 262,144 tok
+- **Context**: 1.31072M (1,310,720) tok / max出力 384,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.0603/1M · 出力 $0.1206/1M · キャッシュ読 $0.0121/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.0786/1M · 出力 $0.1572/1M · キャッシュ読 $0.0157/1M
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-07-31
 - **HF**: `deepseek-ai/DeepSeek-V4-Flash-0731`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, response_format, tools, tool_choice, logprobs, top_logprobs, max_tokens, temperature, top_p, stop
 
 DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows. This is the GA release of DeepSeek V4 Flash.
 
@@ -1522,13 +1521,13 @@ Built on the same architecture as DeepSeek V4 Flash, it introduces a hybrid atte
 
 - **ID**: `deepseek/deepseek-v4-pro-0813`
 - **Provider**: deepseek
-- **Context**: 1.04858M (1,048,576) tok / max出力 393,216 tok
+- **Context**: 1.04858M (1,048,576) tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $1.06/1M · 出力 $3.17/1M · キャッシュ読 $0.28/1M
-- **Capabilities**: JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $1.22/1M · 出力 $2.44/1M · キャッシュ読 $0.1015/1M
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-12
 - **HF**: `deepseek-ai/DeepSeek-V4-Pro-0813`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, response_format
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format, tools, tool_choice, logprobs, top_logprobs
 
 DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.
 
@@ -2603,24 +2602,6 @@ Kling v3.0 Standard is a video generation model from Kuaishou. It supports text-
 
 Kling Video O1 is a video generation model from Kuaishou. It supports text and image inputs with video output, enabling text-to-video and image-to-video workflows. It is suited for cinematic content production, with first-frame and last-frame control for precise scene composition. It generates 5 or 10 second clips in 16:9, 9:16, or 1:1 aspect ratios.
 
-### ▎liquid（1）
-
-#### LiquidAI: LFM2.5-2.6B (free)
-
-- **ID**: `liquid/lfm-2.5-2.6b:free`
-- **Provider**: liquid
-- **Context**: 128K (128,000) tok / max出力 8,192 tok
-- **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
-- **登録日**: 2026-08-11
-- **HF**: `LiquidAI/LFM2.5-2.6B`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, min_p, repetition_penalty, max_completion_tokens, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
-
-LFM2.5-2.6B is a compact reasoning model from Liquid AI. It is suited for agent workflows, data extraction, RAG, and long-context processing. Liquid advises against using it for agentic coding or knowledge-heavy tasks.
-
-Prompts and outputs may be retained and used to train Liquid models.
-
 ### ▎mancer（1）
 
 #### Mancer: Weaver (alpha)
@@ -3576,7 +3557,7 @@ Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art 
 - **Provider**: moonshotai
 - **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.5493/1M · 出力 $2.31/1M · キャッシュ読 $0.0925/1M
+- **Pricing**: 入力 $0.5684/1M · 出力 $3.33/1M · キャッシュ読 $0.0925/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-04-20
 - **HF**: `moonshotai/Kimi-K2.6`
@@ -3590,7 +3571,7 @@ Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-h
 - **Provider**: moonshotai
 - **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.67/1M · 出力 $3.40/1M · キャッシュ読 $0.15/1M
+- **Pricing**: 入力 $0.67/1M · 出力 $3.40/1M · キャッシュ読 $0.17/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-06-12
 - **HF**: `moonshotai/Kimi-K2.7-Code`
@@ -4962,7 +4943,7 @@ GPT-5.5 is OpenAI’s frontier model designed for complex professional workloads
 - **Provider**: openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $0.1/1M · 出力 $0.6/1M · キャッシュ読 $0.01/1M · キャッシュ書 $0.125/1M · Web検索 $0.01 · Web Search $0.01/1K calls
+- **Pricing**: 入力 $0.2/1M · 出力 $1.20/1M · キャッシュ読 $0.02/1M · キャッシュ書 $0.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
@@ -4976,7 +4957,7 @@ GPT-5.6 Luna is a fast, cost-efficient model in OpenAI's GPT-5.6 series. It is s
 - **Provider**: openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $0.1/1M · 出力 $0.6/1M · キャッシュ読 $0.01/1M · キャッシュ書 $0.125/1M · Web検索 $0.01 · Web Search $0.01/1K calls
+- **Pricing**: 入力 $0.2/1M · 出力 $1.20/1M · キャッシュ読 $0.02/1M · キャッシュ書 $0.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
@@ -5022,7 +5003,7 @@ GPT-5.6 Luna is a fast, cost-efficient model in OpenAI's GPT-5.6 series. It is s
 - **Provider**: openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $5.00/1M · 出力 $30.00/1M · キャッシュ読 $0.5/1M · キャッシュ書 $6.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
+- **Pricing**: 入力 $2.50/1M · 出力 $15.00/1M · キャッシュ読 $0.25/1M · キャッシュ書 $3.12/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
@@ -5036,11 +5017,11 @@ GPT-5.6 Sol is the flagship model in OpenAI's GPT-5.6 series. It is suited for c
 - **Provider**: openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $5.00/1M · 出力 $30.00/1M · キャッシュ読 $0.5/1M · キャッシュ書 $6.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
+- **Pricing**: 入力 $2.50/1M · 出力 $15.00/1M · キャッシュ読 $0.25/1M · キャッシュ書 $3.12/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
-- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
 
 GPT-5.6 Sol Pro is the same underlying model as [GPT-5.6 Sol](https://openrouter.ai/openai/gpt-5.6-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.
 
@@ -5052,7 +5033,7 @@ Learn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reaso
 - **Provider**: openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $2.50/1M · 出力 $15.00/1M · キャッシュ読 $0.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
+- **Pricing**: 入力 $1.25/1M · 出力 $7.50/1M · キャッシュ読 $0.125/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
@@ -5068,7 +5049,7 @@ Learn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reaso
 - **Provider**: openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $2.50/1M · 出力 $15.00/1M · キャッシュ読 $0.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
+- **Pricing**: 入力 $1.25/1M · 出力 $7.50/1M · キャッシュ読 $0.125/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
@@ -5082,11 +5063,11 @@ GPT-5.6 Sol is the flagship model in OpenAI's GPT-5.6 series. It is suited for c
 - **Provider**: openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $1.00/1M · 出力 $6.00/1M · キャッシュ読 $0.1/1M · キャッシュ書 $1.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
+- **Pricing**: 入力 $2.00/1M · 出力 $12.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $2.50/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice
 
 GPT-5.6 Terra is a balanced model in OpenAI's GPT-5.6 series, positioned between the flagship Sol tier and the cost-efficient Luna tier. It is suited for everyday coding, reasoning, and agentic tasks where capability and cost need to be balanced, offering strong performance at roughly half the cost of Sol.
 
@@ -5096,7 +5077,7 @@ GPT-5.6 Terra is a balanced model in OpenAI's GPT-5.6 series, positioned between
 - **Provider**: openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $1.00/1M · 出力 $6.00/1M · キャッシュ読 $0.1/1M · キャッシュ書 $1.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
+- **Pricing**: 入力 $2.00/1M · 出力 $12.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $2.50/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
@@ -7682,7 +7663,7 @@ Reasoning effort behavior:
 - **Pricing**: 入力 $1.25/1M · 出力 $2.50/1M · キャッシュ読 $0.2/1M · Web検索 $0.005 · Web Search $0.005/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-30
-- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, max_tokens, temperature, top_p, seed, logprobs, top_logprobs, stop, frequency_penalty, presence_penalty, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, max_tokens, temperature, top_p, seed, logprobs, top_logprobs, tools, tool_choice
 
 Grok 4.3 is a reasoning model from SpaceXAI. It accepts text and image inputs with text output, and is suited for agentic workflows, instruction-following tasks, and applications requiring high factual accuracy. Reasoning can be configured between none/low/medium/high (default low) effort levels.
 
@@ -7697,7 +7678,7 @@ It supports a 1 million token context window with no output token limit, making 
 - **Pricing**: 入力 $2.00/1M · 出力 $6.00/1M · キャッシュ読 $0.3/1M · Web検索 $0.005 · Web Search $0.005/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-07-08
-- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, max_tokens, temperature, top_p, seed, logprobs, top_logprobs, stop, frequency_penalty, presence_penalty, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, max_tokens, temperature, top_p, seed, logprobs, top_logprobs, tools, tool_choice
 
 Grok 4.5 is a model from SpaceXAI with frontier performance on coding, knowledge work, and STEM.
 
@@ -7710,7 +7691,7 @@ Grok 4.5 is a model from SpaceXAI with frontier performance on coding, knowledge
 - **Pricing**: 入力 $2.00/1M · 出力 $6.00/1M · キャッシュ読 $0.5/1M · Web検索 $0.005 · Web Search $0.005/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-12
-- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, max_tokens, temperature, top_p, seed, logprobs, top_logprobs, stop, frequency_penalty, presence_penalty, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, max_tokens, temperature, top_p, seed, logprobs, top_logprobs, tools, tool_choice
 
 Grok 4.6 is SpaceXAI's smartest model with frontier performance on coding, knowledge work, and STEM.
 
@@ -7723,7 +7704,7 @@ Grok 4.6 is SpaceXAI's smartest model with frontier performance on coding, knowl
 - **Pricing**: 入力 $1.00/1M · 出力 $2.00/1M · キャッシュ読 $0.2/1M · Web検索 $0.005 · Web Search $0.005/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-05-20
-- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, max_tokens, temperature, top_p, seed, logprobs, top_logprobs, stop, frequency_penalty, presence_penalty, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, max_tokens, temperature, top_p, seed, logprobs, top_logprobs, tools, tool_choice
 
 Grok Build 0.1 is SpaceXAI’s fast coding model trained specifically for agentic software engineering workflows. It supports text and image inputs with text output, and is optimized for interactive coding agents, tool use, and multi-step development tasks. The model powers SpaceXAI’s Grok Build CLI and features a 256K context window with no text output limit, making it well suited for long-horizon coding and automation workflows. Currently in early access.
 
@@ -7736,7 +7717,7 @@ Grok Build 0.1 is SpaceXAI’s fast coding model trained specifically for agenti
 - **Pricing**: 入力 無料/1M · 出力 無料/1M · 画像 $0.01/枚 · Image Output $0.04〜$0.08/image · Image Input $0.01/image
 - **Capabilities**: JSON mode, logprobs, Seed固定
 - **登録日**: 2026-08-11
-- **対応パラメータ**: max_tokens, temperature, top_p, seed, logprobs, top_logprobs, response_format, stop, frequency_penalty, presence_penalty
+- **対応パラメータ**: max_tokens, temperature, top_p, seed, logprobs, top_logprobs, response_format
 
 Grok Imagine Image 2.0 is an image generation and editing model from xAI. It is suited for creating images from text prompts and editing images from references, with low and medium quality modes.
 
@@ -7749,7 +7730,7 @@ Grok Imagine Image 2.0 is an image generation and editing model from xAI. It is 
 - **Pricing**: 入力 無料/1M · 出力 無料/1M · 画像 $0.01/枚 · Image Output $0.05〜$0.07/image · Image Input $0.01/image
 - **Capabilities**: JSON mode, logprobs, Seed固定
 - **登録日**: 2026-05-18
-- **対応パラメータ**: max_tokens, temperature, top_p, seed, logprobs, top_logprobs, response_format, stop, frequency_penalty, presence_penalty
+- **対応パラメータ**: max_tokens, temperature, top_p, seed, logprobs, top_logprobs, response_format
 
 Grok Imagine Image Quality is SpaceXAI's fast, high-fidelity image generation and editing model. It accepts text prompts and optional reference images, producing photorealistic outputs at 1K or 2K across a range of aspect ratios, including flexible adjustment of reference images.
 
@@ -7764,7 +7745,7 @@ The model emphasizes realistic detail — natural lighting and physics, accurate
 - **Pricing**: 入力 無料/1M · 出力 無料/1M · Video Output $0.05〜$0.07/second · Image Input $0.002/image
 - **Capabilities**: JSON mode, logprobs, Seed固定
 - **登録日**: 2026-05-18
-- **対応パラメータ**: max_tokens, temperature, top_p, seed, logprobs, top_logprobs, response_format, stop, frequency_penalty, presence_penalty
+- **対応パラメータ**: max_tokens, temperature, top_p, seed, logprobs, top_logprobs, response_format
 
 Grok Imagine Video is SpaceXAI's fast, text-, image-, and reference-conditioned video generation model. It produces short videos (1–15 seconds, 24 fps) at 480p or 720p across seven aspect ratios - 1:1, 16:9, 9:16, 4:3, 3:4, 3:2, and 2:3.
 
@@ -7779,7 +7760,7 @@ The model supports three generation modes: text-to-video from a prompt alone, im
 - **Pricing**: 入力 無料/1M · 出力 無料/1M · Video Output $0.08〜$0.25/second · Image Input $0.01/image
 - **Capabilities**: JSON mode, logprobs, Seed固定
 - **登録日**: 2026-07-20
-- **対応パラメータ**: max_tokens, temperature, top_p, seed, logprobs, top_logprobs, response_format, stop, frequency_penalty, presence_penalty
+- **対応パラメータ**: max_tokens, temperature, top_p, seed, logprobs, top_logprobs, response_format
 
 Grok Imagine Video 1.5 is a video generation model from SpaceXAI. It creates videos from text prompts, with an optional starting image to guide the scene. It can direct subject and camera motion, pacing, atmosphere, and physical behavior while maintaining visual continuity, and can generate synchronized sound effects, ambience, and dialogue.
 
@@ -7792,7 +7773,7 @@ Grok Imagine Video 1.5 is a video generation model from SpaceXAI. It creates vid
 - **Pricing**: 入力 $100,000.00/1M · 出力 無料/1M · Audio Hours $0.1/hour
 - **Capabilities**: JSON mode, logprobs, Seed固定
 - **登録日**: 2026-07-23
-- **対応パラメータ**: max_tokens, temperature, top_p, seed, logprobs, top_logprobs, response_format, stop, frequency_penalty, presence_penalty
+- **対応パラメータ**: max_tokens, temperature, top_p, seed, logprobs, top_logprobs, response_format
 
 Grok STT is SpaceXAI's speech-to-text model, available via the REST /v1/stt endpoint. It supports transcription with word-level timestamps, optional speaker diarization, and multichannel audio.
 
@@ -7805,7 +7786,7 @@ Grok STT is SpaceXAI's speech-to-text model, available via the REST /v1/stt endp
 - **Pricing**: 入力 $15.00/1M · 出力 無料/1M · Characters $1.5e-05/M characters
 - **Capabilities**: JSON mode, logprobs, Seed固定
 - **登録日**: 2026-05-15
-- **対応パラメータ**: max_tokens, temperature, top_p, seed, logprobs, top_logprobs, response_format, stop, frequency_penalty, presence_penalty
+- **対応パラメータ**: max_tokens, temperature, top_p, seed, logprobs, top_logprobs, response_format
 
 Grok Voice TTS 1.0 is a text-to-speech model from SpaceXAI. It converts text into spoken audio across 20+ languages with automatic language detection, and offers five built-in voices (Eve, Ara, Rex, Sal, Leo) covering a range of tones. Inline speech tags allow control over pauses, emphasis, pitch, speed, and vocal style. Output is available in MP3, WAV, PCM, μ-law, and A-law formats at sample rates from 8 kHz to 48 kHz, with up to 15,000 characters per request.
 
@@ -8058,10 +8039,10 @@ GLM-5V-Turbo is Z.ai’s first native multimodal agent foundation model, built f
 - **Provider**: ~anthropic
 - **Context**: 1M (1,000,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $10.00/1M · 出力 $50.00/1M · キャッシュ読 $1.00/1M · キャッシュ書 $12.50/1M · Web検索 $0.01
+- **Pricing**: 入力 $10.00/1M · 出力 $50.00/1M · キャッシュ読 $1.00/1M · キャッシュ書 $12.50/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-06-09
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, stop, tool_choice, tools, response_format, verbosity, structured_outputs, max_completion_tokens
+- **対応パラメータ**: max_tokens, stop, reasoning, include_reasoning, tool_choice, tools, structured_outputs, response_format, verbosity, max_completion_tokens
 
 This model always redirects to the latest model in the Claude Fable family.
 
@@ -8100,7 +8081,7 @@ This model always redirects to the latest model in the Claude Opus family.
 - **Pricing**: 入力 $2.00/1M · 出力 $10.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $2.50/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-04-27
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, stop, tool_choice, tools, structured_outputs, response_format, verbosity, max_completion_tokens
+- **対応パラメータ**: max_tokens, stop, reasoning, include_reasoning, tool_choice, tools, structured_outputs, response_format, verbosity, max_completion_tokens
 
 This model always redirects to the latest model in the Anthropic Claude Sonnet family.
 
@@ -8110,12 +8091,12 @@ This model always redirects to the latest model in the Anthropic Claude Sonnet f
 
 - **ID**: `~deepseek/deepseek-v4-flash-latest`
 - **Provider**: ~deepseek
-- **Context**: 1.31072M (1,310,720) tok / max出力 262,144 tok
+- **Context**: 1.31072M (1,310,720) tok / max出力 384,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.0603/1M · 出力 $0.1206/1M · キャッシュ読 $0.0121/1M
+- **Pricing**: 入力 $0.0786/1M · 出力 $0.1572/1M · キャッシュ読 $0.0157/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-01
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, logit_bias, parallel_tool_calls, reasoning_effort, top_a
+- **対応パラメータ**: reasoning, include_reasoning, response_format, tools, tool_choice, logprobs, top_logprobs, max_tokens, temperature, top_p, stop, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, seed, structured_outputs, logit_bias, parallel_tool_calls, reasoning_effort, top_a
 
 This model always redirects to the latest model in the DeepSeek V4 Flash family.
 
@@ -8170,7 +8151,7 @@ This model always redirects to the latest model in the MoonshotAI Kimi family.
 - **Provider**: ~openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $5.00/1M · 出力 $30.00/1M · キャッシュ読 $0.5/1M · キャッシュ書 $6.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
+- **Pricing**: 入力 $2.50/1M · 出力 $15.00/1M · キャッシュ読 $0.25/1M · キャッシュ書 $3.12/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-04-27
@@ -8203,6 +8184,6 @@ This model always redirects to the latest model in the OpenAI GPT Mini family.
 - **Pricing**: 入力 $2.00/1M · 出力 $6.00/1M · キャッシュ読 $0.5/1M · Web検索 $0.005 · Web Search $0.005/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-07-08
-- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, max_tokens, temperature, top_p, seed, logprobs, top_logprobs, stop, frequency_penalty, presence_penalty, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, max_tokens, temperature, top_p, seed, logprobs, top_logprobs, tools, tool_choice
 
 This model always redirects to the latest Grok model from xAI.
