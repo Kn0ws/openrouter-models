@@ -1,7 +1,7 @@
-# OpenRouter モデルカタログ（全545モデル）
+# OpenRouter モデルカタログ（全544モデル）
 
-- 取得日時: 2026-08-19T06:26:44
-- プロバイダ数: 76 / 無料枠あり: 26
+- 取得日時: 2026-08-20T06:26:59
+- プロバイダ数: 75 / 無料枠あり: 26
 
 ## プロバイダ別サマリ
 
@@ -63,8 +63,9 @@
 | relace | 2 | 0.85 | 1.00 | 256,000 |
 | thenlper | 2 | 0.01 | 0.01 | 512 |
 | morph | 2 | 0.80 | 0.90 | 262,144 |
+| ~z-ai | 1 | 1.40 | 1.40 | 1,048,576 |
 | dots-studio | 1 | 0.00 | 0.00 | 512,000 |
-| ~deepseek | 1 | 0.08 | 0.08 | 1,310,720 |
+| ~deepseek | 1 | 0.07 | 0.07 | 1,310,720 |
 | meituan | 1 | 0.30 | 0.30 | 1,048,756 |
 | ~x-ai | 1 | 2.00 | 2.00 | 500,000 |
 | perceptron | 1 | 0.15 | 0.15 | 32,768 |
@@ -76,32 +77,13 @@
 | writer | 1 | 0.60 | 0.60 | 1,040,000 |
 | allenai | 1 | 0.15 | 0.15 | 65,536 |
 | deepcogito | 1 | 1.25 | 1.25 | 128,000 |
-| ai21 | 1 | 2.00 | 2.00 | 256,000 |
 | cognitivecomputations | 1 | 0.20 | 0.20 | 128,000 |
 | baidu | 1 | 0.42 | 0.42 | 123,000 |
 | anthracite-org | 1 | 3.00 | 3.00 | 32,768 |
-| mancer | 1 | 0.50 | 0.50 | 8,000 |
 | undi95 | 1 | 0.45 | 0.45 | 6,144 |
 | gryphe | 1 | 0.06 | 0.06 | 8,192 |
 
 ## モデル詳細
-
-### ▎ai21（1）
-
-#### AI21: Jamba Large 1.7
-
-- **ID**: `ai21/jamba-large-1.7`
-- **Provider**: ai21
-- **Context**: 256K (256,000) tok / max出力 4,096 tok
-- **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $2.00/1M · 出力 $8.00/1M
-- **Capabilities**: Function calling, Tool choice, JSON mode
-- **Knowledge cutoff**: 2024-08-31T23:59:59.000Z
-- **登録日**: 2025-08-08
-- **HF**: `ai21labs/AI21-Jamba-Large-1.7`
-- **対応パラメータ**: response_format, max_tokens, temperature, top_p, stop, tools, tool_choice
-
-Jamba Large 1.7 is the latest model in the Jamba open family, offering improvements in grounding, instruction-following, and overall efficiency. Built on a hybrid SSM-Transformer architecture with a 256K context window, it delivers more accurate, contextually grounded responses and better steerability than previous versions.
 
 ### ▎aion-labs（4）
 
@@ -1494,11 +1476,11 @@ The model includes hybrid attention for efficient long-context processing. Reaso
 - **Provider**: deepseek
 - **Context**: 1.31072M (1,310,720) tok / max出力 262,144 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.0765/1M · 出力 $0.153/1M · キャッシュ読 $0.0153/1M
+- **Pricing**: 入力 $0.065/1M · 出力 $0.14/1M · キャッシュ読 $0.014/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-07-31
 - **HF**: `deepseek-ai/DeepSeek-V4-Flash-0731`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, stop, seed, top_p, frequency_penalty, presence_penalty, structured_outputs, response_format, tools, tool_choice
 
 DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows. This is the GA release of DeepSeek V4 Flash.
 
@@ -1506,13 +1488,13 @@ DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 
 
 - **ID**: `deepseek/deepseek-v4-pro`
 - **Provider**: deepseek
-- **Context**: 1.04858M (1,048,576) tok / max出力 384,000 tok
+- **Context**: 1.04858M (1,048,576) tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.6943/1M · 出力 $1.39/1M · キャッシュ読 $0.0579/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
+- **Pricing**: 入力 $0.87/1M · 出力 $1.74/1M · キャッシュ読 $0.174/1M
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-04-24
 - **HF**: `deepseek-ai/DeepSeek-V4-Pro`
-- **対応パラメータ**: reasoning, include_reasoning, tools, tool_choice, response_format, logprobs, top_logprobs, structured_outputs, max_tokens, temperature, top_p, stop
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, response_format, tool_choice, tools, logprobs, top_logprobs
 
 DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding, and long-horizon agent workflows, with strong performance across knowledge, math, and software engineering benchmarks.
 
@@ -2637,22 +2619,6 @@ LFM2.5-Embedding-350M is a text embedding model from Liquid AI. It produces 1,02
 
 Successful OpenRouter requests and embeddings may be retained and used to train Liquid models.
 
-### ▎mancer（1）
-
-#### Mancer: Weaver (alpha)
-
-- **ID**: `mancer/weaver`
-- **Provider**: mancer
-- **Context**: 8K (8,000) tok / max出力 6,000 tok
-- **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.5/1M · 出力 $0.75/1M
-- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, logprobs, Seed固定
-- **Knowledge cutoff**: 2023-06-30T23:59:59.000Z
-- **登録日**: 2023-08-02
-- **対応パラメータ**: response_format, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, logit_bias, top_k, min_p, seed, top_a, logprobs, top_logprobs, structured_outputs
-
-An attempt to recreate Claude-style verbosity, but don't expect the same level of coherence or memory. Meant for use in roleplay/narrative situations.
-
 ### ▎meituan（1）
 
 #### Meituan: LongCat 2.0
@@ -3079,13 +3045,13 @@ To avoid …
 
 - **ID**: `minimax/minimax-m2.5`
 - **Provider**: minimax
-- **Context**: 204K (204,800) tok / max出力 196,608 tok
+- **Context**: 204K (204,800) tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.22/1M · 出力 $0.9/1M · キャッシュ読 $0.05/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $0.225/1M · 出力 $0.9/1M · キャッシュ読 $0.06/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-02-12
 - **HF**: `MiniMaxAI/MiniMax-M2.5`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, top_p, stop, frequency_penalty, logit_bias, parallel_tool_calls, presence_penalty, reasoning_effort, seed, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, structured_outputs, response_format, tool_choice, tools, logprobs, top_logprobs
 
 MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning.
 
@@ -3590,13 +3556,13 @@ Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art 
 
 - **ID**: `moonshotai/kimi-k2.6`
 - **Provider**: moonshotai
-- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Context**: 262K (262,144) tok / max出力 65,535 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.5684/1M · 出力 $3.33/1M · キャッシュ読 $0.0925/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.58/1M · 出力 $3.40/1M · キャッシュ読 $0.058/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-04-20
 - **HF**: `moonshotai/Kimi-K2.6`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice, structured_outputs
 
 Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and can convert prompts and visual inputs into production-ready interfaces. Its agent swarm architecture scales to hundreds of parallel sub-agents for autonomous task decomposition - delivering documents, websites, and spreadsheets in a single run without human oversight.
 
@@ -6406,14 +6372,14 @@ The model employs scaling-efficient training and decoding to improve parameter e
 
 - **ID**: `qwen/qwen3-next-80b-a3b-thinking`
 - **Provider**: qwen
-- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Context**: 262K (262,144) tok
 - **Modality**: text->text  (in: text → out: text)
 - **Pricing**: 入力 $0.15/1M · 出力 $1.20/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2025-09-30T23:59:59.000Z
 - **登録日**: 2025-09-11
 - **HF**: `Qwen/Qwen3-Next-80B-A3B-Thinking`
-- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, max_tokens, temperature, top_p, seed, top_k, repetition_penalty, frequency_penalty, presence_penalty, stop, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, logit_bias, repetition_penalty, response_format, tools, tool_choice, structured_outputs
 
 Qwen3-Next-80B-A3B-Thinking is a reasoning-first chat model in the Qwen3-Next line that outputs structured “thinking” traces by default. It’s designed for hard multi-step problems; math proofs, code synthesis/debugging, logic, and agentic planning, and reports strong results across knowledge, reasoning, coding, alignment, and multilingual evaluations. Compared with prior Qwen3 variants, it emphasizes stability under long chains of thought and efficient scaling during inference, and it is tuned to follow complex instructions while reducing repetitive or off-task behavior.
 
@@ -6777,13 +6743,13 @@ Qwen3.8 2.4T A95B is an open-weight sparse mixture-of-experts model from Qwen an
 
 - **ID**: `qwen/qwen3.8-27b`
 - **Provider**: qwen
-- **Context**: 262K (262,144) tok / max出力 131,072 tok
+- **Context**: 1M (1,000,000) tok / max出力 65,536 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.45/1M · 出力 $3.20/1M · キャッシュ読 $0.05/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $0.4/1M · 出力 $3.00/1M · キャッシュ読 $0.04/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-08-14
 - **HF**: `Qwen/Qwen3.8-27B`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, stop, frequency_penalty, presence_penalty, repetition_penalty, seed, max_tokens, response_format, structured_outputs, logprobs, top_logprobs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, response_format, structured_outputs, tools, tool_choice
 
 Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be enabled or disabled.
 
@@ -8143,10 +8109,10 @@ This model always redirects to the latest model in the Anthropic Claude Sonnet f
 - **Provider**: ~deepseek
 - **Context**: 1.31072M (1,310,720) tok / max出力 262,144 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.0765/1M · 出力 $0.153/1M · キャッシュ読 $0.0153/1M
+- **Pricing**: 入力 $0.065/1M · 出力 $0.14/1M · キャッシュ読 $0.014/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-01
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, logit_bias, parallel_tool_calls, reasoning_effort, top_a
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, stop, seed, top_p, frequency_penalty, presence_penalty, structured_outputs, response_format, tools, tool_choice, top_k, logprobs, top_logprobs, min_p, logit_bias, repetition_penalty, parallel_tool_calls, reasoning_effort, top_a
 
 This model always redirects to the latest model in the DeepSeek V4 Flash family.
 
@@ -8237,3 +8203,18 @@ This model always redirects to the latest model in the OpenAI GPT Mini family.
 - **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, max_tokens, temperature, top_p, seed, logprobs, top_logprobs, tools, tool_choice
 
 This model always redirects to the latest Grok model from xAI.
+
+### ▎~z-ai（1）
+
+#### Z.ai: GLM Latest
+
+- **ID**: `~z-ai/glm-latest`
+- **Provider**: ~z-ai
+- **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
+- **Modality**: text->text  (in: text → out: text)
+- **Pricing**: 入力 $1.40/1M · 出力 $4.40/1M · キャッシュ読 $0.26/1M
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力
+- **登録日**: 2026-08-19
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, tools, tool_choice, top_k, response_format
+
+This model always redirects to the latest GLM model from Z.ai.
