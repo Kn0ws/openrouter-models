@@ -1,6 +1,6 @@
-# OpenRouter モデルカタログ（全552モデル）
+# OpenRouter モデルカタログ（全553モデル）
 
-- 取得日時: 2026-08-22T06:26:38
+- 取得日時: 2026-08-23T06:26:32
 - プロバイダ数: 76 / 無料枠あり: 28
 
 ## プロバイダ別サマリ
@@ -14,7 +14,7 @@
 | mistralai | 25 | 0.02 | 3,000.00 | 262,144 |
 | nvidia | 18 | 0.00 | 1,500.00 | 1,000,000 |
 | z-ai | 15 | 0.00 | 1.40 | 1,048,576 |
-| deepseek | 14 | 0.07 | 1.16 | 1,310,720 |
+| deepseek | 14 | 0.05 | 0.80 | 1,310,720 |
 | minimax | 13 | 0.00 | 100.00 | 1,048,576 |
 | x-ai | 12 | 0.00 | 100,000.00 | 2,000,000 |
 | recraft | 11 | 0.00 | 0.00 | 65,536 |
@@ -25,9 +25,9 @@
 | voyageai | 7 | 0.00 | 0.12 | 32,000 |
 | microsoft | 7 | 0.07 | 360,000.00 | 65,535 |
 | perplexity | 7 | 0.00 | 3.00 | 200,000 |
+| tencent | 6 | 0.04 | 0.18 | 262,144 |
 | black-forest-labs | 6 | 0.00 | 0.00 | 67,344 |
 | bytedance | 6 | 0.00 | 0.10 | 128,000 |
-| tencent | 5 | 0.04 | 0.18 | 262,144 |
 | thinkingmachines | 5 | 0.00 | 1.00 | 1,048,576 |
 | fish-audio | 5 | 0.00 | 100.00 | 0 |
 | amazon | 5 | 0.04 | 2.50 | 1,000,000 |
@@ -66,7 +66,7 @@
 | stealth | 1 | 0.00 | 0.00 | 1,048,576 |
 | ~z-ai | 1 | 1.40 | 1.40 | 1,048,576 |
 | dots-studio | 1 | 0.00 | 0.00 | 512,000 |
-| ~deepseek | 1 | 0.07 | 0.07 | 1,310,720 |
+| ~deepseek | 1 | 0.05 | 0.05 | 1,310,720 |
 | meituan | 1 | 0.30 | 0.30 | 1,048,756 |
 | ~x-ai | 1 | 2.00 | 2.00 | 500,000 |
 | perceptron | 1 | 0.15 | 0.15 | 32,768 |
@@ -1455,13 +1455,13 @@ The model was trained under conditions aligned with V3.1-Terminus to enable dire
 
 - **ID**: `deepseek/deepseek-v4-flash`
 - **Provider**: deepseek
-- **Context**: 1.04858M (1,048,576) tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 384,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.0679/1M · 出力 $0.168/1M · キャッシュ読 $0.0168/1M
+- **Pricing**: 入力 $0.0517/1M · 出力 $0.1033/1M · キャッシュ読 $0.0103/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-04-24
 - **HF**: `deepseek-ai/DeepSeek-V4-Flash`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, tool_choice, tools, structured_outputs, response_format, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, response_format, tools, tool_choice, logprobs, top_logprobs, structured_outputs, max_tokens, temperature, top_p, stop
 
 DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and high-throughput workloads, while maintaining strong reasoning and coding performance.
 
@@ -1473,11 +1473,11 @@ The model includes hybrid attention for efficient long-context processing. Reaso
 - **Provider**: deepseek
 - **Context**: 1.31072M (1,310,720) tok / max出力 1,048,576 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.065/1M · 出力 $0.18/1M · キャッシュ読 $0.02/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $0.05/1M · 出力 $0.1/1M · キャッシュ読 $0.01/1M
+- **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-07-31
 - **HF**: `deepseek-ai/DeepSeek-V4-Flash-0731`
-- **対応パラメータ**: reasoning, include_reasoning, response_format, tools, tool_choice, structured_outputs, logprobs, top_logprobs, temperature, top_p, top_k, frequency_penalty, presence_penalty, stop, seed, max_tokens
+- **対応パラメータ**: reasoning, include_reasoning, tools, tool_choice, temperature, top_p, top_k, min_p, stop, max_tokens, logit_bias, frequency_penalty, presence_penalty, repetition_penalty
 
 DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows. This is the GA release of DeepSeek V4 Flash.
 
@@ -1487,7 +1487,7 @@ DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 
 - **Provider**: deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 384,000 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.44/1M · 出力 $1.32/1M · キャッシュ読 $0.014/1M
+- **Pricing**: 入力 $0.22/1M · 出力 $0.66/1M · キャッシュ読 $0.007/1M
 - **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-08-21
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, logprobs, top_logprobs, tools, tool_choice, response_format
@@ -1502,7 +1502,7 @@ It is suited for document and chart understanding, visual question answering, an
 - **Provider**: deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 384,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.4646/1M · 出力 $0.9292/1M · キャッシュ読 $0.0387/1M
+- **Pricing**: 入力 $0.3969/1M · 出力 $0.7938/1M · キャッシュ読 $0.0331/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-04-24
 - **HF**: `deepseek-ai/DeepSeek-V4-Pro`
@@ -1516,13 +1516,13 @@ Built on the same architecture as DeepSeek V4 Flash, it introduces a hybrid atte
 
 - **ID**: `deepseek/deepseek-v4-pro-0813`
 - **Provider**: deepseek
-- **Context**: 1.04858M (1,048,576) tok / max出力 393,216 tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 384,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $1.16/1M · 出力 $3.48/1M · キャッシュ読 $0.1162/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.66/1M · 出力 $1.98/1M · キャッシュ読 $0.022/1M
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-08-12
 - **HF**: `deepseek-ai/DeepSeek-V4-Pro-0813`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, presence_penalty, response_format, top_k, frequency_penalty, stop, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, logprobs, top_logprobs, tools, tool_choice, response_format
 
 DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.
 
@@ -2180,7 +2180,7 @@ This model supports a wide linguistic range (trained in over 140 languages) and 
 - **Provider**: google
 - **Context**: 262K (262,144) tok / max出力 32,768 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.05/1M · 出力 $0.25/1M
+- **Pricing**: 入力 $0.042/1M · 出力 $0.22/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-03
 - **HF**: `google/gemma-4-26B-A4B-it`
@@ -6107,14 +6107,14 @@ Qwen3-235B-A22B is a 235B parameter mixture-of-experts (MoE) model developed by 
 
 - **ID**: `qwen/qwen3-235b-a22b-2507`
 - **Provider**: qwen
-- **Context**: 262K (262,144) tok / max出力 16,384 tok
+- **Context**: 262K (262,144) tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.09/1M · 出力 $0.55/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Seed固定
+- **Pricing**: 入力 $0.0875/1M · 出力 $0.35/1M · キャッシュ読 $0.0175/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, logprobs, Seed固定
 - **Knowledge cutoff**: 2025-06-30T23:59:59.000Z
 - **登録日**: 2025-07-21
 - **HF**: `Qwen/Qwen3-235B-A22B-Instruct-2507`
-- **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, tools, tool_choice, logit_bias, structured_outputs
+- **対応パラメータ**: max_tokens, temperature, top_p, seed, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
 
 Qwen3-235B-A22B-Instruct-2507 is a multilingual, instruction-tuned mixture-of-experts language model based on the Qwen3-235B architecture, with 22B active parameters per forward pass. It is optimized for general-purpose text generation, including instruction following, logical reasoning, math, code, and tool usage. The model supports a native 262K context length and does not implement "thinking mode" (<think> blocks).
 
@@ -6678,9 +6678,9 @@ The model is designed for agentic coding and reasoning tasks, with particular st
 
 - **ID**: `qwen/qwen3.6-35b-a3b`
 - **Provider**: qwen
-- **Context**: 262K (262,144) tok / max出力 8,192 tok
+- **Context**: 262K (262,144) tok / max出力 16,384 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.08/1M · 出力 $0.75/1M
+- **Pricing**: 入力 $0.07/1M · 出力 $0.7/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-27
 - **HF**: `Qwen/Qwen3.6-35B-A3B`
@@ -7351,7 +7351,7 @@ Step 3.7 Flash is StepFun's latest high-efficiency multimodal Mixture-of-Experts
 
 Designed for coding, agentic workflows, structured outputs, and long-context productivity tasks.
 
-### ▎tencent（5）
+### ▎tencent（6）
 
 #### Tencent: Hunyuan A13B Instruct
 
@@ -7394,6 +7394,20 @@ Hy-MT2-1.8B is a compact 1.8B-parameter translation model from Tencent. It suppo
 - **対応パラメータ**: temperature, stop, max_completion_tokens, max_tokens, response_format, structured_outputs
 
 Hy-MT2-30B-A3B is Tencent's flagship translation model in the Hy-MT2 family. It supports 33 language pairs and five Chinese dialect and minority-language pairs, with workflows for structured, delimiter-based, contextual, glossary-based, and style-guided translation. It uses 3B active parameters out of 30B total.
+
+#### Tencent: Hy-MT2-7B
+
+- **ID**: `tencent/hy-mt2-7b`
+- **Provider**: tencent
+- **Context**: 8K (8,192) tok / max出力 4,096 tok
+- **Modality**: text->text  (in: text → out: text)
+- **Pricing**: 入力 $0.074/1M · 出力 $0.295/1M
+- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode
+- **登録日**: 2026-08-19
+- **HF**: `tencent/Hy-MT2-7B`
+- **対応パラメータ**: temperature, stop, max_completion_tokens, max_tokens, response_format, structured_outputs
+
+Hy-MT2-7B is a 7B-parameter translation model from Tencent. It supports 33 language pairs and five Chinese dialect and minority-language pairs, with workflows for structured, delimiter-based, contextual, glossary-based, and style-guided translation.
 
 #### Tencent: Hy3
 
@@ -8222,10 +8236,10 @@ This model always redirects to the latest model in the Anthropic Claude Sonnet f
 - **Provider**: ~deepseek
 - **Context**: 1.31072M (1,310,720) tok / max出力 1,048,576 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.065/1M · 出力 $0.18/1M · キャッシュ読 $0.02/1M
+- **Pricing**: 入力 $0.05/1M · 出力 $0.1/1M · キャッシュ読 $0.01/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-01
-- **対応パラメータ**: reasoning, include_reasoning, response_format, tools, tool_choice, structured_outputs, logprobs, top_logprobs, temperature, top_p, top_k, frequency_penalty, presence_penalty, stop, seed, max_tokens, min_p, repetition_penalty, logit_bias, parallel_tool_calls, reasoning_effort, top_a
+- **対応パラメータ**: reasoning, include_reasoning, tools, tool_choice, temperature, top_p, top_k, min_p, stop, max_tokens, logit_bias, frequency_penalty, presence_penalty, repetition_penalty, seed, structured_outputs, response_format, logprobs, top_logprobs, parallel_tool_calls, reasoning_effort, top_a
 
 This model always redirects to the latest model in the DeepSeek V4 Flash family.
 
