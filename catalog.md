@@ -1,23 +1,23 @@
-# OpenRouter モデルカタログ（全551モデル）
+# OpenRouter モデルカタログ（全556モデル）
 
-- 取得日時: 2026-08-26T06:27:16
-- プロバイダ数: 77 / 無料枠あり: 27
+- 取得日時: 2026-08-27T09:23:09
+- プロバイダ数: 76 / 無料枠あり: 26
 
 ## プロバイダ別サマリ
 
 | Provider | モデル数 | 最安入力($/1M) | 最高入力($/1M) | 最大Context |
 |---|--:|--:|--:|--:|
 | openai | 108 | 0.00 | 6,000.00 | 1,050,000 |
-| qwen | 60 | 0.00 | 35.00 | 1,048,576 |
+| qwen | 61 | 0.00 | 35.00 | 1,048,576 |
 | google | 49 | 0.00 | 16,000.00 | 1,048,576 |
 | anthropic | 28 | 0.25 | 30.00 | 1,000,000 |
 | mistralai | 26 | 0.02 | 3,000.00 | 262,144 |
-| z-ai | 15 | 0.00 | 1.40 | 1,048,576 |
+| z-ai | 15 | 0.00 | 1.40 | 1,310,720 |
+| recraft | 15 | 0.00 | 0.00 | 65,536 |
 | nvidia | 15 | 0.00 | 1,500.00 | 1,000,000 |
 | minimax | 15 | 0.00 | 100.00 | 1,048,576 |
 | deepseek | 14 | 0.03 | 1.12 | 1,310,720 |
 | x-ai | 12 | 0.00 | 100,000.00 | 2,000,000 |
-| recraft | 11 | 0.00 | 0.00 | 65,536 |
 | bytedance-seed | 9 | 0.00 | 0.50 | 262,144 |
 | moonshotai | 8 | 0.45 | 2.55 | 1,048,576 |
 | cohere | 8 | 0.00 | 2.50 | 256,000 |
@@ -28,12 +28,12 @@
 | tencent | 6 | 0.04 | 0.18 | 262,144 |
 | black-forest-labs | 6 | 0.00 | 0.00 | 67,344 |
 | bytedance | 6 | 0.00 | 0.10 | 128,000 |
+| meta | 5 | 0.00 | 1.25 | 1,048,576 |
 | alibaba | 5 | 0.00 | 0.00 | 0 |
 | thinkingmachines | 5 | 0.00 | 1.00 | 1,048,576 |
 | fish-audio | 5 | 0.00 | 100.00 | 0 |
 | amazon | 5 | 0.04 | 2.50 | 1,000,000 |
 | sentence-transformers | 5 | 0.01 | 0.01 | 512 |
-| meta | 4 | 0.10 | 1.25 | 1,048,576 |
 | poolside | 4 | 0.00 | 0.09 | 1,048,576 |
 | aion-labs | 4 | 0.70 | 3.00 | 131,072 |
 | ~anthropic | 4 | 1.00 | 10.00 | 1,000,000 |
@@ -63,7 +63,6 @@
 | thenlper | 2 | 0.01 | 0.01 | 512 |
 | morph | 2 | 0.80 | 0.90 | 262,144 |
 | heygen | 1 | 0.00 | 0.00 | 0 |
-| stealth | 1 | 0.00 | 0.00 | 1,048,576 |
 | ~z-ai | 1 | 1.40 | 1.40 | 1,048,576 |
 | dots-studio | 1 | 0.00 | 0.00 | 512,000 |
 | ~deepseek | 1 | 0.03 | 0.03 | 1,310,720 |
@@ -1487,7 +1486,7 @@ The model includes hybrid attention for efficient long-context processing. Reaso
 - **Provider**: deepseek
 - **Context**: 1.31072M (1,310,720) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.03/1M · 出力 $0.075/1M · キャッシュ読 $0.007/1M
+- **Pricing**: 入力 $0.03/1M · 出力 $0.1/1M · キャッシュ読 $0.007/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-07-31
 - **HF**: `deepseek-ai/DeepSeek-V4-Flash-0731`
@@ -1530,13 +1529,13 @@ Built on the same architecture as DeepSeek V4 Flash, it introduces a hybrid atte
 
 - **ID**: `deepseek/deepseek-v4-pro-0813`
 - **Provider**: deepseek
-- **Context**: 1.04858M (1,048,576) tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 384,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $1.12/1M · 出力 $3.37/1M · キャッシュ読 $0.0374/1M
-- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $1.12/1M · 出力 $3.35/1M · キャッシュ読 $0.0372/1M
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-08-12
 - **HF**: `deepseek-ai/DeepSeek-V4-Pro-0813`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, response_format, tools, tool_choice, logprobs, top_logprobs
 
 DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.
 
@@ -2643,7 +2642,7 @@ An attempt to recreate Claude-style verbosity, but don't expect the same level o
 
 LongCat 2.0 is a sparse mixture-of-experts language model from Meituan, with 48B active parameters out of 1.6T total. It is suited for coding, repository-level changes, long-horizon problem solving, and agentic workflows.
 
-### ▎meta（4）
+### ▎meta（5）
 
 #### Meta: Muse Glimmer 30B
 
@@ -2658,6 +2657,20 @@ LongCat 2.0 is a sparse mixture-of-experts language model from Meituan, with 48B
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, min_p, repetition_penalty, structured_outputs, tools, tool_choice, response_format
 
 Muse Glimmer 30B is a dense, open-weight multimodal model from Meta Superintelligence Labs, distilled from Muse Spark and optimized for autonomous agents on consumer hardware. It is suited for long-horizon agentic and coding workflows, with multi-step reasoning, reliable tool use, failure recovery, image understanding, and multilingual support across more than 100 languages.
+
+#### Meta: Muse Image
+
+- **ID**: `meta/muse-image`
+- **Provider**: meta
+- **Context**: 65K (65,536) tok
+- **Modality**: text+image->image  (in: text,image → out: image)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.01/image
+- **登録日**: 2026-08-26
+- **対応パラメータ**: max_tokens, repetition_penalty, top_k, temperature, top_p
+
+Muse Image is an agentic image generation model from Meta that generates and edits images from text and reference images. Unlike single-pass image models, it reasons before it renders, breaking down multi-part prompts and refining its output within the chain of thought, and invokes web search for factual accuracy on knowledge-intensive prompts.
+
+The model supports text-to-image generation, targeted image editing, multi-image composition, reference-image conditioning for style and subject consistency across a series, and precise text rendering within generated images. Iterative editing works by passing the previous output image back with a new instruction.
 
 #### Meta: Muse Spark 1.1
 
@@ -3233,7 +3246,7 @@ Devstral 2 supports exploring codebases and orchestrating changes across multipl
 
 - **ID**: `mistralai/ministral-14b-2512`
 - **Provider**: mistralai
-- **Context**: 262K (262,144) tok
+- **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
 - **Pricing**: 入力 $0.2/1M · 出力 $0.2/1M · キャッシュ読 $0.02/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Seed固定
@@ -3247,7 +3260,7 @@ The largest model in the Ministral 3 family, Ministral 3 14B offers frontier cap
 
 - **ID**: `mistralai/ministral-3b-2512`
 - **Provider**: mistralai
-- **Context**: 131K (131,072) tok
+- **Context**: 131K (131,072) tok / max出力 131,072 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
 - **Pricing**: 入力 $0.1/1M · 出力 $0.1/1M · キャッシュ読 $0.01/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Seed固定
@@ -3275,7 +3288,7 @@ Ministral 8B is an 8B parameter model featuring a unique interleaved sliding-win
 
 - **ID**: `mistralai/ministral-8b-2512`
 - **Provider**: mistralai
-- **Context**: 262K (262,144) tok
+- **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
 - **Pricing**: 入力 $0.15/1M · 出力 $0.15/1M · キャッシュ読 $0.015/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Seed固定
@@ -3334,7 +3347,7 @@ It supports dozens of languages including French, German, Spanish, Italian, Port
 
 - **ID**: `mistralai/mistral-large-2512`
 - **Provider**: mistralai
-- **Context**: 262K (262,144) tok
+- **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
 - **Pricing**: 入力 $0.5/1M · 出力 $1.50/1M · キャッシュ読 $0.05/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Seed固定
@@ -3347,7 +3360,7 @@ Mistral Large 3 2512 is Mistral’s most capable model to date, featuring a spar
 
 - **ID**: `mistralai/mistral-medium-3`
 - **Provider**: mistralai
-- **Context**: 131K (131,072) tok
+- **Context**: 131K (131,072) tok / max出力 131,072 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
 - **Pricing**: 入力 $0.4/1M · 出力 $2.00/1M · キャッシュ読 $0.04/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Seed固定
@@ -3376,7 +3389,7 @@ Mistral Medium 3.5 is a dense 128B instruction-following model from Mistral AI. 
 
 - **ID**: `mistralai/mistral-medium-3.1`
 - **Provider**: mistralai
-- **Context**: 131K (131,072) tok
+- **Context**: 131K (131,072) tok / max出力 131,072 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
 - **Pricing**: 入力 $0.4/1M · 出力 $2.00/1M · キャッシュ読 $0.04/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Seed固定
@@ -3442,7 +3455,7 @@ The model achieves 81% accuracy on the MMLU benchmark and performs competitively
 
 - **ID**: `mistralai/mistral-small-2603`
 - **Provider**: mistralai
-- **Context**: 262K (262,144) tok
+- **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
 - **Pricing**: 入力 $0.15/1M · 出力 $0.6/1M · キャッシュ読 $0.015/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
@@ -3643,11 +3656,11 @@ Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art 
 - **Provider**: moonshotai
 - **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.5684/1M · 出力 $3.33/1M · キャッシュ読 $0.0925/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.56/1M · 出力 $3.39/1M · キャッシュ読 $0.17/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-20
 - **HF**: `moonshotai/Kimi-K2.6`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, top_p, stop, frequency_penalty, logit_bias, parallel_tool_calls, presence_penalty, seed, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
 
 Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and can convert prompts and visual inputs into production-ready interfaces. Its agent swarm architecture scales to hundreds of parallel sub-agents for autonomous task decomposition - delivering documents, websites, and spreadsheets in a single run without human oversight.
 
@@ -5871,7 +5884,7 @@ Laguna XS 2.1 is the latest coding agent model in the 33B-A3B category from [Poo
 
 Laguna XS 2.1 is designed for software engineering and agentic coding use cases, and you are responsible for confirming that it is appropriate for your intended application. Laguna XS 2.1 is subject to the [OpenMDW-1.1 License](https://openmdw.ai/license/1-1/), and should be used consistently with Poolside's …
 
-### ▎qwen（60）
+### ▎qwen（61）
 
 #### Qwen2.5 72B Instruct
 
@@ -6543,13 +6556,13 @@ The Qwen3.5 27B native vision-language Dense model incorporates a linear attenti
 
 - **ID**: `qwen/qwen3.5-35b-a3b`
 - **Provider**: qwen
-- **Context**: 262K (262,144) tok / max出力 81,920 tok
+- **Context**: 262K (262,144) tok / max出力 16,384 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.14/1M · 出力 $1.00/1M · キャッシュ読 $0.05/1M
-- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.08/1M · 出力 $0.75/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-02-25
 - **HF**: `Qwen/Qwen3.5-35B-A3B`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, structured_outputs, logit_bias
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, structured_outputs, logprobs, top_logprobs, tools, response_format, tool_choice
 
 The Qwen3.5 Series 35B-A3B is a native vision-language model designed with a hybrid architecture that integrates linear attention mechanisms and a sparse mixture-of-experts model, achieving higher inference efficiency. Its overall performance is comparable to that of the Qwen3.5-27B.
 
@@ -6756,6 +6769,19 @@ Qwen3.8 2.4T A95B is an open-weight sparse mixture-of-experts model from Qwen an
 
 Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be enabled or disabled.
 
+#### Qwen: Qwen3.8 Flash
+
+- **ID**: `qwen/qwen3.8-flash`
+- **Provider**: qwen
+- **Context**: 1M (1,000,000) tok / max出力 131,072 tok
+- **Modality**: text+image+video->text  (in: text,image,video → out: text)
+- **Pricing**: 入力 $0.15/1M · 出力 $0.47/1M · キャッシュ読 $0.016/1M · キャッシュ書 $0.2/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **登録日**: 2026-08-26
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, presence_penalty, response_format, tools, structured_outputs, top_k, frequency_penalty, stop, logprobs, top_logprobs, tool_choice
+
+Qwen3.8 Flash is a multimodal reasoning model from Alibaba. It is suited for coding assistance, agentic workflows, visual understanding, document and codebase analysis, desktop interaction, chart analysis, and long-video analysis.
+
 #### Qwen: Qwen3.8 Max
 
 - **ID**: `qwen/qwen3.8-max`
@@ -6769,7 +6795,7 @@ Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suite
 
 Qwen3.8 Max is the flagship model in Alibaba's Qwen3.8 series, the general-availability successor to the Qwen3.8 Max Preview. It is a multimodal reasoning model intended for complex reasoning, visual understanding, coding, and agentic workflows.
 
-### ▎recraft（11）
+### ▎recraft（15）
 
 #### Recraft: Recraft V3
 
@@ -6828,6 +6854,66 @@ Note: only one input image is supported.
 Recraft V4 Pro Vector is the vector (SVG) variant of Recraft V4 Pro. It supports text and image inputs and produces vector image output across multiple aspect ratios at the higher fidelity Pro tier. Output is delivered as SVG, suitable for icons, logos, and other graphics that need to scale cleanly. V4 Pro offers higher fidelity and detail density than V4, with stronger compositional judgment, color coherence, and legible embedded text compared to V3.
 
 Supports the following `image_config` parameters: `strength` (controls how much the output deviates from the source image), `rgb_colors` (sets a color palette), and `background_rgb_color` (sets the background color). See the image generation …
+
+#### Recraft: Recraft V4 Styles
+
+- **ID**: `recraft/recraft-v4-styles`
+- **Provider**: recraft
+- **Context**: 65K (65,536) tok
+- **Modality**: text+image->image  (in: text,image → out: image)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.035/image · Style Creation $0.005/request
+- **登録日**: 2026-08-26
+
+Recraft V4 Styles is a style-consistent image generation model from Recraft. Every request requires at least one style reference image and generates a new image that reproduces the reference's rendering technique, colour, texture, and composition rather than editing it. It produces raster images at approximately 1K resolution.
+
+Note: 1 to 10 reference images in PNG, JPG or WEBP, each at least 256 px on its shortest edge.
+
+Pricing has two parts: $0.035 per image plus a one-time $0.005 style-creation charge per request, regardless of how many images that request returns. A single-image request costs $0.040, and a six-image request costs $0.215.
+
+#### Recraft: Recraft V4 Styles Pro
+
+- **ID**: `recraft/recraft-v4-styles-pro`
+- **Provider**: recraft
+- **Context**: 65K (65,536) tok
+- **Modality**: text+image->image  (in: text,image → out: image)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.1/image · Style Creation $0.005/request
+- **登録日**: 2026-08-26
+
+Recraft V4 Styles Pro is a style-consistent image generation model from Recraft. Every request requires at least one style reference image and generates a new image that reproduces the reference's rendering technique, colour, texture, and composition rather than editing it. It produces raster images at approximately 2K resolution.
+
+Note: 1 to 10 reference images in PNG, JPG or WEBP, each at least 256 px on its shortest edge.
+
+Pricing has two parts: $0.10 per image plus a one-time $0.005 style-creation charge per request, regardless of how many images that request returns. A single-image request costs $0.105, and a six-image request costs $0.605.
+
+#### Recraft: Recraft V4 Styles Pro Vector
+
+- **ID**: `recraft/recraft-v4-styles-pro-vector`
+- **Provider**: recraft
+- **Context**: 65K (65,536) tok
+- **Modality**: text+image->image  (in: text,image → out: image)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.12/image · Style Creation $0.005/request
+- **登録日**: 2026-08-26
+
+Recraft V4 Styles Pro Vector is a style-consistent image generation model from Recraft. Every request requires at least one style reference image and generates a new image that reproduces the reference's rendering technique, colour, texture, and composition rather than editing it. It produces SVG output for graphics that need to scale cleanly.
+
+Note: 1 to 10 reference images in PNG, JPG or WEBP, each at least 256 px on its shortest edge.
+
+Pricing has two parts: $0.12 per image plus a one-time $0.005 style-creation charge per request, regardless of how many images that request returns. A single-image request costs $0.125, and a six-image request costs $0.725.
+
+#### Recraft: Recraft V4 Styles Vector
+
+- **ID**: `recraft/recraft-v4-styles-vector`
+- **Provider**: recraft
+- **Context**: 65K (65,536) tok
+- **Modality**: text+image->image  (in: text,image → out: image)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.05/image · Style Creation $0.005/request
+- **登録日**: 2026-08-26
+
+Recraft V4 Styles Vector is a style-consistent image generation model from Recraft. Every request requires at least one style reference image and generates a new image that reproduces the reference's rendering technique, colour, texture, and composition rather than editing it. It produces SVG output for graphics that need to scale cleanly.
+
+Note: 1 to 10 reference images in PNG, JPG or WEBP, each at least 256 px on its shortest edge.
+
+Pricing has two parts: $0.05 per image plus a one-time $0.005 style-creation charge per request, regardless of how many images that request returns. A single-image request costs $0.055, and a six-image request costs $0.305.
 
 #### Recraft: Recraft V4 Vector
 
@@ -7263,23 +7349,6 @@ The Riverflow 2.5 series is a unified text-to-image and image-to-image family th
 Riverflow V2.5 Pro is the most powerful variant of Sourceful's Riverflow 2.5 lineup, best for top-tier control and quality-sensitive outputs.
 
 The Riverflow 2.5 series is a unified text-to-image and image-to-image family that treats generation as a production workflow, using an integrated reasoning model to plan multi-step edits and judge candidates before accepting a result. Riverflow 2.5 combines their reasoning with a mix of closed and open image diffusion models to provide greater accuracy and steerability.Reasoning effort is controllable via the reasoning parameter (low/medium/high/xhigh) - higher levels do more editing passes and apply a stricter internal judge, with xhigh suited to …
-
-### ▎stealth（1）
-
-#### Ox Alpha
-
-- **ID**: `stealth/ox-alpha`
-- **Provider**: stealth
-- **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
-- **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
-- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力
-- **登録日**: 2026-08-20
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, tools, tool_choice, top_k, response_format
-
-Ox Alpha is a reasoning model designed for coding, sustained agentic work, and production workloads. It is suited for long-horizon software engineering, complex reasoning, and workflows that combine text with visual context.
-
-Ox Alpha is a stealth model. It is developed and operated by a third-party provider who has chosen to remain anonymous during this preview. OpenRouter routes requests to it and is not its developer, owner, or provider. Prompts and completions are retained by the provider and are not used for training; all other use is governed by the [Stealth Model Terms](https://openrouter.ai/terms/stealth).
 
 ### ▎stepfun（2）
 
@@ -8076,22 +8145,6 @@ GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and o
 
 Reasoning efforts `high` and `xhigh` are supported; `xhigh` maps to max reasoning. It is particularly strong at coding and tool use across long-running tasks, able to maintain engineering context and follow standards consistently through a full development workflow, from requirements to multi-platform deployment, in a single task.
 
-#### Z.ai: GLM 5.2 (batch)
-
-- **ID**: `z-ai/glm-5.2:batch`
-- **Provider**: z-ai
-- **Context**: 1.04858M (1,048,575) tok
-- **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $1.40/1M · 出力 $4.40/1M · キャッシュ読 $0.26/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
-- **登録日**: 2026-06-16
-- **HF**: `zai-org/GLM-5.2`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, repetition_penalty, logit_bias, min_p, response_format, structured_outputs, tools, tool_choice
-
-GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering, and complex multi-step automation.
-
-Reasoning efforts `high` and `xhigh` are supported; `xhigh` maps to max reasoning. It is particularly strong at coding and tool use across long-running tasks, able to maintain engineering context and follow standards consistently through a full development workflow, from requirements to multi-platform deployment, in a single task.
-
 #### Z.ai: GLM 5.2 (free)
 
 - **ID**: `z-ai/glm-5.2:free`
@@ -8122,6 +8175,20 @@ Reasoning efforts `high` and `xhigh` are supported; `xhigh` maps to max reasonin
 GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves on GLM-5.2 in coding and in the balance between performance and token efficiency.
 
 Reasoning is always on and cannot be disabled. Reasoning efforts `low`, `high`, and `max` are supported; `max` is the default.
+
+#### Z.ai: GLM 5.3 Flash
+
+- **ID**: `z-ai/glm-5.3-flash`
+- **Provider**: z-ai
+- **Context**: 1.31072M (1,310,720) tok / max出力 131,072 tok
+- **Modality**: text+image+video->text  (in: text,image,video → out: text)
+- **Pricing**: 入力 $0.075/1M · 出力 $0.25/1M · キャッシュ読 $0.015/1M
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力
+- **登録日**: 2026-08-26
+- **HF**: `zai-org/GLM-5.3-Flash`
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, tools, tool_choice, top_k, response_format
+
+GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while reducing compute overhead.
 
 #### Z.ai: GLM 5V Turbo
 
@@ -8198,7 +8265,7 @@ This model always redirects to the latest model in the Anthropic Claude Sonnet f
 - **Provider**: ~deepseek
 - **Context**: 1.31072M (1,310,720) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.03/1M · 出力 $0.075/1M · キャッシュ読 $0.007/1M
+- **Pricing**: 入力 $0.03/1M · 出力 $0.1/1M · キャッシュ読 $0.007/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-01
 - **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, stop, seed, top_p, frequency_penalty, presence_penalty, structured_outputs, response_format, tools, tool_choice, top_k, min_p, logit_bias, repetition_penalty, logprobs, top_logprobs, parallel_tool_calls, reasoning_effort, top_a
