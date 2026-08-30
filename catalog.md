@@ -1,6 +1,6 @@
-# OpenRouter モデルカタログ（全533モデル）
+# OpenRouter モデルカタログ（全534モデル）
 
-- 取得日時: 2026-08-29T06:34:16
+- 取得日時: 2026-08-30T06:35:43
 - プロバイダ数: 75 / 無料枠あり: 27
 
 ## プロバイダ別サマリ
@@ -12,8 +12,8 @@
 | google | 50 | 0.00 | 16,000.00 | 1,048,576 |
 | mistralai | 31 | 0.02 | 3,000.00 | 262,144 |
 | anthropic | 28 | 0.25 | 30.00 | 1,000,000 |
+| z-ai | 16 | 0.00 | 1.20 | 1,310,720 |
 | deepseek | 16 | 0.03 | 1.32 | 1,310,720 |
-| z-ai | 15 | 0.00 | 1.20 | 1,310,720 |
 | recraft | 15 | 0.00 | 0.00 | 65,536 |
 | nvidia | 15 | 0.00 | 1,500.00 | 1,000,000 |
 | minimax | 15 | 0.00 | 100.00 | 1,048,576 |
@@ -63,7 +63,7 @@
 | thenlper | 2 | 0.01 | 0.01 | 512 |
 | morph | 2 | 0.80 | 0.90 | 262,144 |
 | heygen | 1 | 0.00 | 0.00 | 0 |
-| ~z-ai | 1 | 1.20 | 1.20 | 1,310,720 |
+| ~z-ai | 1 | 1.19 | 1.19 | 1,310,720 |
 | dots-studio | 1 | 0.00 | 0.00 | 512,000 |
 | ~deepseek | 1 | 0.03 | 0.03 | 1,310,720 |
 | meituan | 1 | 0.30 | 0.30 | 1,048,756 |
@@ -1466,9 +1466,9 @@ The model includes hybrid attention for efficient long-context processing. Reaso
 
 - **ID**: `deepseek/deepseek-v4-flash-0731`
 - **Provider**: deepseek
-- **Context**: 1.31072M (1,310,720) tok / max出力 131,072 tok
+- **Context**: 1.31072M (1,310,720) tok / max出力 393,216 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.03/1M · 出力 $0.1/1M · キャッシュ読 $0.007/1M
+- **Pricing**: 入力 $0.03/1M · 出力 $0.16/1M · キャッシュ読 $0.01/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-07-31
 - **HF**: `deepseek-ai/DeepSeek-V4-Flash-0731`
@@ -1511,7 +1511,7 @@ It is suited for document and chart understanding, visual question answering, an
 - **Provider**: deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 384,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.6809/1M · 出力 $1.36/1M · キャッシュ読 $0.0567/1M
+- **Pricing**: 入力 $0.478/1M · 出力 $0.956/1M · キャッシュ読 $0.0398/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-04-24
 - **HF**: `deepseek-ai/DeepSeek-V4-Pro`
@@ -2225,13 +2225,13 @@ Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from G
 
 - **ID**: `google/gemma-4-31b-it`
 - **Provider**: google
-- **Context**: 262K (262,144) tok / max出力 8,192 tok
+- **Context**: 262K (262,144) tok / max出力 16,384 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.07/1M · 出力 $0.35/1M · キャッシュ読 $0.1/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.09/1M · 出力 $0.34/1M · キャッシュ読 $0.05/1M
+- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-04-02
 - **HF**: `google/gemma-4-31B-it`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, stop, seed, response_format, tools, tool_choice, structured_outputs, top_p, frequency_penalty, presence_penalty
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, structured_outputs, logit_bias
 
 Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function calling, and multilingual support across 140+ languages. Strong on coding, reasoning, and document understanding tasks. Apache 2.0 license.
 
@@ -6042,12 +6042,12 @@ Beyond analysis, Qwen3-VL supports agentic interaction and tool use: it can foll
 - **Provider**: qwen
 - **Context**: 262K (262,144) tok / max出力 32,768 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.13/1M · 出力 $0.52/1M
+- **Pricing**: 入力 $0.09/1M · 出力 $0.4/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, logprobs, Seed固定
 - **Knowledge cutoff**: 2025-03-31T23:59:59.000Z
 - **登録日**: 2025-10-06
 - **HF**: `Qwen/Qwen3-VL-30B-A3B-Instruct`
-- **対応パラメータ**: max_tokens, temperature, top_p, seed, presence_penalty, response_format, tools, tool_choice, structured_outputs, logprobs, top_logprobs, top_k, frequency_penalty, stop
+- **対応パラメータ**: temperature, top_p, top_k, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
 
 Qwen3-VL-30B-A3B-Instruct is a multimodal model that unifies strong text generation with visual understanding for images and videos. Its Instruct variant optimizes instruction-following for general multimodal tasks. It excels in perception of real-world/synthetic categories, 2D/3D spatial grounding, and long-form visual comprehension, achieving competitive multimodal benchmark results. For agentic use, it handles multi-image multi-turn instructions, video timeline alignments, GUI automation, and visual coding from sketches to debugged UI. Text performance matches flagship Qwen3 models, suiting document AI, OCR, UI assistance, spatial tasks, and agent research.
 
@@ -6375,13 +6375,13 @@ Qwen3.8 2.4T A95B is an open-weight sparse mixture-of-experts model from Qwen an
 
 - **ID**: `qwen/qwen3.8-27b`
 - **Provider**: qwen
-- **Context**: 1M (1,000,000) tok / max出力 65,536 tok
+- **Context**: 1M (1,000,000) tok / max出力 131,072 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.35/1M · 出力 $2.75/1M · キャッシュ読 $0.035/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.25/1M · 出力 $3.00/1M · キャッシュ読 $0.025/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-14
 - **HF**: `Qwen/Qwen3.8-27B`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, max_tokens, stop, seed, frequency_penalty, presence_penalty, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
 
 Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be enabled or disabled.
 
@@ -7602,7 +7602,7 @@ MiMo-V2.5 is a native omnimodal model by Xiaomi. It delivers Pro-level agentic p
 
 MiMo-V2.5-Pro is Xiaomi’s flagship model, delivering strong performance in general agentic capabilities, complex software engineering, and long-horizon tasks, with top rankings on benchmarks such as ClawEval, GDPVal, and SWE-bench Pro. It can independently and autonomously complete professional tasks that would take human experts days or weeks, involving more than a thousand tool calls. Its context length of up to 1M makes it well suited for integration with a wide range of agent frameworks.
 
-### ▎z-ai（15）
+### ▎z-ai（16）
 
 #### Z.ai: GLM 4.5
 
@@ -7788,17 +7788,31 @@ Reasoning efforts `high` and `xhigh` are supported; `xhigh` maps to max reasonin
 
 - **ID**: `z-ai/glm-5.3`
 - **Provider**: z-ai
-- **Context**: 1.31072M (1,310,720) tok
+- **Context**: 1.31072M (1,310,720) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $1.20/1M · 出力 $4.00/1M · キャッシュ読 $0.24/1M
-- **Capabilities**: Function calling, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $1.19/1M · 出力 $4.18/1M · キャッシュ読 $0.247/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-18
 - **HF**: `zai-org/GLM-5.3`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, logit_bias, structured_outputs, tools
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, stop, frequency_penalty, presence_penalty, seed, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
 
 GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves on GLM-5.2 in coding and in the balance between performance and token efficiency.
 
 Reasoning is always on and cannot be disabled. Reasoning efforts `low`, `high`, and `max` are supported; `max` is the default.
+
+#### Z.ai: GLM 5.3 Flash
+
+- **ID**: `z-ai/glm-5.3-flash`
+- **Provider**: z-ai
+- **Context**: 1.31072M (1,310,720) tok / max出力 131,072 tok
+- **Modality**: text+image+video->text  (in: text,image,video → out: text)
+- **Pricing**: 入力 $0.075/1M · 出力 $0.25/1M · キャッシュ読 $0.015/1M
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **登録日**: 2026-08-26
+- **HF**: `zai-org/GLM-5.3-Flash`
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice, response_format
+
+GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while reducing compute overhead.
 
 #### Z.ai: GLM 5.3 Flash (batch)
 
@@ -7887,12 +7901,12 @@ This model always redirects to the latest model in the Anthropic Claude Sonnet f
 
 - **ID**: `~deepseek/deepseek-v4-flash-latest`
 - **Provider**: ~deepseek
-- **Context**: 1.31072M (1,310,720) tok / max出力 131,072 tok
+- **Context**: 1.31072M (1,310,720) tok / max出力 393,216 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.03/1M · 出力 $0.1/1M · キャッシュ読 $0.007/1M
+- **Pricing**: 入力 $0.03/1M · 出力 $0.16/1M · キャッシュ読 $0.01/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-01
-- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, stop, seed, top_p, frequency_penalty, presence_penalty, structured_outputs, response_format, tools, tool_choice, top_k, min_p, logit_bias, repetition_penalty, logprobs, top_logprobs, parallel_tool_calls, reasoning_effort, top_a
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, stop, seed, top_p, frequency_penalty, presence_penalty, structured_outputs, response_format, tools, tool_choice, logprobs, top_logprobs, top_k, min_p, logit_bias, repetition_penalty, parallel_tool_calls, reasoning_effort, top_a
 
 This model always redirects to the latest model in the DeepSeek V4 Flash family.
 
@@ -7990,11 +8004,11 @@ This model always redirects to the latest Grok model from xAI.
 
 - **ID**: `~z-ai/glm-latest`
 - **Provider**: ~z-ai
-- **Context**: 1.31072M (1,310,720) tok
+- **Context**: 1.31072M (1,310,720) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $1.20/1M · 出力 $4.00/1M · キャッシュ読 $0.24/1M
+- **Pricing**: 入力 $1.19/1M · 出力 $4.18/1M · キャッシュ読 $0.247/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-19
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, logit_bias, structured_outputs, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, stop, frequency_penalty, presence_penalty, seed, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, repetition_penalty, min_p, logit_bias
 
 This model always redirects to the latest GLM model from Z.ai.
