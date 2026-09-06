@@ -1,6 +1,6 @@
 # OpenRouter モデルカタログ（全576モデル）
 
-- 取得日時: 2026-09-05T06:35:05
+- 取得日時: 2026-09-06T06:35:46
 - プロバイダ数: 75 / 無料枠あり: 28
 
 ## プロバイダ別サマリ
@@ -49,7 +49,7 @@
 | sao10k | 3 | 0.04 | 0.85 | 131,072 |
 | inception | 2 | 0.04 | 0.25 | 260,000 |
 | ibm-granite | 2 | 0.02 | 0.06 | 131,072 |
-| ~z-ai | 2 | 0.07 | 1.15 | 1,310,720 |
+| ~z-ai | 2 | 0.07 | 1.17 | 1,310,720 |
 | liquid | 2 | 0.00 | 0.00 | 65,536 |
 | sakana | 2 | 0.95 | 5.00 | 1,000,000 |
 | upstage | 2 | 0.03 | 0.15 | 524,288 |
@@ -70,7 +70,7 @@
 | meituan | 1 | 0.30 | 0.30 | 1,048,756 |
 | ~x-ai | 1 | 2.00 | 2.00 | 500,000 |
 | perceptron | 1 | 0.15 | 0.15 | 32,768 |
-| ~moonshotai | 1 | 2.50 | 2.50 | 1,048,576 |
+| ~moonshotai | 1 | 2.55 | 2.55 | 1,048,576 |
 | sesame | 1 | 7.00 | 7.00 | 4,096 |
 | canopylabs | 1 | 7.00 | 7.00 | 4,096 |
 | hexgrad | 1 | 0.62 | 0.62 | 4,096 |
@@ -1475,7 +1475,7 @@ DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 
 
 - **ID**: `deepseek/deepseek-v4-flash-vision-exp`
 - **Provider**: deepseek
-- **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 262,144 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
 - **Pricing**: 入力 $0.2156/1M · 出力 $0.6468/1M · キャッシュ読 $0.0686/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
@@ -1491,13 +1491,13 @@ It is suited for document and chart understanding, visual question answering, an
 
 - **ID**: `deepseek/deepseek-v4-pro`
 - **Provider**: deepseek
-- **Context**: 1.04858M (1,048,576) tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 384,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.87/1M · 出力 $1.74/1M · キャッシュ読 $0.174/1M
-- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, logprobs
+- **Pricing**: 入力 $0.7383/1M · 出力 $1.48/1M · キャッシュ読 $0.0615/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-04-24
 - **HF**: `deepseek-ai/DeepSeek-V4-Pro`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, response_format, tool_choice, tools, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, tools, tool_choice, response_format, logprobs, top_logprobs, structured_outputs, max_tokens, temperature, top_p, stop
 
 DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding, and long-horizon agent workflows, with strong performance across knowledge, math, and software engineering benchmarks.
 
@@ -3818,11 +3818,11 @@ Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art 
 - **Provider**: moonshotai
 - **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.5484/1M · 出力 $2.31/1M · キャッシュ読 $0.0924/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.5367/1M · 出力 $2.26/1M · キャッシュ読 $0.0904/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-04-20
 - **HF**: `moonshotai/Kimi-K2.6`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, frequency_penalty, presence_penalty, stop, response_format, structured_outputs, tools, tool_choice
 
 Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and can convert prompts and visual inputs into production-ready interfaces. Its agent swarm architecture scales to hundreds of parallel sub-agents for autonomous task decomposition - delivering documents, websites, and spreadsheets in a single run without human oversight.
 
@@ -3846,11 +3846,11 @@ MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 fa
 - **Provider**: moonshotai
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $2.50/1M · 出力 $14.00/1M · キャッシュ読 $0.29/1M
+- **Pricing**: 入力 $2.55/1M · 出力 $12.75/1M · キャッシュ読 $0.256/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-07-16
 - **HF**: `moonshotai/Kimi-K3`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, stop, response_format, structured_outputs, logprobs, top_logprobs, tools, tool_choice, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, seed, logit_bias
+- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, temperature, top_p, top_k, frequency_penalty, presence_penalty, repetition_penalty, stop, max_tokens, seed, tools, logprobs, top_logprobs, tool_choice
 
 Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at navigating large repositories, using tools, debugging, and iterating against images, logs, tests, and runtime feedback. Its architecture uses KDA and Attention Residuals for computational efficiency.
 
@@ -6718,7 +6718,7 @@ The Qwen3.5 27B native vision-language Dense model incorporates a linear attenti
 
 - **ID**: `qwen/qwen3.5-35b-a3b`
 - **Provider**: qwen
-- **Context**: 262K (262,144) tok / max出力 16,384 tok
+- **Context**: 262K (262,144) tok / max出力 32,768 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
 - **Pricing**: 入力 $0.08/1M · 出力 $0.75/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
@@ -6829,7 +6829,7 @@ The model is designed for agentic coding and reasoning tasks, with particular st
 
 - **ID**: `qwen/qwen3.6-35b-a3b`
 - **Provider**: qwen
-- **Context**: 262K (262,144) tok / max出力 16,384 tok
+- **Context**: 262K (262,144) tok / max出力 32,768 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
 - **Pricing**: 入力 $0.05/1M · 出力 $0.7/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
@@ -6951,7 +6951,7 @@ Qwen3.8 2.4T A95B is an open-weight sparse mixture-of-experts model from Qwen an
 - **Provider**: qwen
 - **Context**: 1M (1,000,000) tok / max出力 32,768 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.22/1M · 出力 $2.42/1M
+- **Pricing**: 入力 $0.15/1M · 出力 $0.2/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-14
 - **HF**: `Qwen/Qwen3.8-27B`
@@ -8382,7 +8382,7 @@ Reasoning efforts `high` and `xhigh` are supported; `xhigh` maps to max reasonin
 - **Provider**: z-ai
 - **Context**: 1.31072M (1,310,720) tok / max出力 262,144 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $1.15/1M · 出力 $3.50/1M · キャッシュ読 $0.1/1M
+- **Pricing**: 入力 $1.17/1M · 出力 $3.96/1M · キャッシュ読 $0.234/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-18
 - **HF**: `zai-org/GLM-5.3`
@@ -8538,10 +8538,10 @@ This model always redirects to the latest model in the Google Gemini Pro family.
 - **Provider**: ~moonshotai
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $2.50/1M · 出力 $14.00/1M · キャッシュ読 $0.29/1M
+- **Pricing**: 入力 $2.55/1M · 出力 $12.75/1M · キャッシュ読 $0.256/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-27
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, stop, response_format, structured_outputs, logprobs, top_logprobs, tools, tool_choice, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, seed, logit_bias
+- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, temperature, top_p, top_k, frequency_penalty, presence_penalty, repetition_penalty, stop, max_tokens, seed, tools, logprobs, top_logprobs, tool_choice, min_p, logit_bias
 
 This model always redirects to the latest model in the MoonshotAI Kimi family.
 
@@ -8611,7 +8611,7 @@ This model always redirects to the latest model in the GLM Flash family.
 - **Provider**: ~z-ai
 - **Context**: 1.31072M (1,310,720) tok / max出力 262,144 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $1.15/1M · 出力 $3.50/1M · キャッシュ読 $0.1/1M
+- **Pricing**: 入力 $1.17/1M · 出力 $3.96/1M · キャッシュ読 $0.234/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-19
 - **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, max_tokens, stop, seed, frequency_penalty, presence_penalty, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, repetition_penalty, min_p, logit_bias, parallel_tool_calls, reasoning_effort
