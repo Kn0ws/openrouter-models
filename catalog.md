@@ -1,19 +1,19 @@
-# OpenRouter モデルカタログ（全573モデル）
+# OpenRouter モデルカタログ（全578モデル）
 
-- 取得日時: 2026-09-08T06:39:31
-- プロバイダ数: 75 / 無料枠あり: 25
+- 取得日時: 2026-09-09T06:40:10
+- プロバイダ数: 75 / 無料枠あり: 27
 
 ## プロバイダ別サマリ
 
 | Provider | モデル数 | 最安入力($/1M) | 最高入力($/1M) | 最大Context |
 |---|--:|--:|--:|--:|
-| openai | 109 | 0.00 | 6,000.00 | 1,050,000 |
+| openai | 111 | 0.00 | 6,000.00 | 1,050,000 |
 | qwen | 63 | 0.00 | 35.00 | 1,048,576 |
 | google | 52 | 0.00 | 16,000.00 | 1,048,576 |
 | anthropic | 27 | 0.25 | 15.00 | 1,000,000 |
 | mistralai | 26 | 0.02 | 3,000.00 | 262,144 |
-| deepseek | 16 | 0.05 | 1.32 | 1,310,720 |
-| z-ai | 15 | 0.06 | 1.20 | 1,310,720 |
+| z-ai | 17 | 0.06 | 1.20 | 1,310,720 |
+| deepseek | 17 | 0.05 | 0.87 | 1,310,720 |
 | recraft | 15 | 0.00 | 0.00 | 65,536 |
 | nvidia | 15 | 0.00 | 1,500.00 | 1,000,000 |
 | minimax | 14 | 0.00 | 100.00 | 1,048,576 |
@@ -48,14 +48,14 @@
 | thedrummer | 3 | 0.30 | 0.55 | 1,024,000 |
 | sao10k | 3 | 0.04 | 0.85 | 131,072 |
 | inception | 2 | 0.04 | 0.25 | 260,000 |
+| nex-agi | 2 | 0.00 | 0.00 | 262,144 |
 | ibm-granite | 2 | 0.02 | 0.06 | 131,072 |
-| ~z-ai | 2 | 0.07 | 1.12 | 1,310,720 |
+| ~z-ai | 2 | 0.07 | 1.11 | 1,310,720 |
 | liquid | 2 | 0.00 | 0.00 | 65,536 |
 | sakana | 2 | 0.95 | 5.00 | 1,000,000 |
 | upstage | 2 | 0.03 | 0.15 | 524,288 |
 | runway | 2 | 0.00 | 0.00 | 0 |
 | kwaipilot | 2 | 0.30 | 0.74 | 262,144 |
-| nex-agi | 2 | 0.02 | 0.25 | 262,144 |
 | stepfun | 2 | 0.10 | 0.16 | 262,144 |
 | ~openai | 2 | 0.75 | 2.00 | 1,050,000 |
 | ~google | 2 | 0.75 | 2.00 | 1,048,576 |
@@ -70,7 +70,7 @@
 | meituan | 1 | 0.30 | 0.30 | 1,048,756 |
 | ~x-ai | 1 | 2.00 | 2.00 | 500,000 |
 | perceptron | 1 | 0.15 | 0.15 | 32,768 |
-| ~moonshotai | 1 | 2.50 | 2.50 | 1,048,576 |
+| ~moonshotai | 1 | 2.40 | 2.40 | 1,048,576 |
 | sesame | 1 | 7.00 | 7.00 | 4,096 |
 | canopylabs | 1 | 7.00 | 7.00 | 4,096 |
 | hexgrad | 1 | 0.62 | 0.62 | 4,096 |
@@ -1271,7 +1271,7 @@ Flux TTS is a text-to-speech model from Deepgram. It is suited for natural, expr
 
 Deepgram Nova-3 general-purpose speech-to-text model with monolingual and multilingual transcription support.
 
-### ▎deepseek（16）
+### ▎deepseek（17）
 
 #### DeepSeek: DeepSeek V3
 
@@ -1463,11 +1463,11 @@ DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 
 - **Provider**: deepseek
 - **Context**: 1.04858M (1,048,576) tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.14/1M · 出力 $0.28/1M · キャッシュ読 $0.03/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
+- **Pricing**: 入力 $0.11/1M · 出力 $0.33/1M · キャッシュ読 $0.0035/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-07-31
 - **HF**: `deepseek-ai/DeepSeek-V4-Flash-0731`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, repetition_penalty, logit_bias, min_p, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, repetition_penalty, logit_bias, logprobs, top_logprobs, response_format, structured_outputs, tools, tool_choice
 
 DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows. This is the GA release of DeepSeek V4 Flash.
 
@@ -1482,6 +1482,22 @@ DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 
 - **登録日**: 2026-08-21
 - **HF**: `deepseek-ai/DeepSeek-V4-Flash-Vision-Exp`
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, logit_bias, structured_outputs, tools, tool_choice
+
+DeepSeek V4 Flash Vision Exp is an experimental vision-enabled version of [DeepSeek V4 Flash 0731](https://openrouter.ai/deepseek/deepseek-v4-flash-0731) from DeepSeek, adding image understanding while matching the base model on text capabilities including agents, reasoning, and world knowledge. It is a sparse mixture-of-experts model with 13B active parameters out of 284B total.
+
+It is suited for document and chart understanding, visual question answering, and multimodal agent workflows that interleave text and images.
+
+#### DeepSeek: DeepSeek V4 Flash Vision Exp (batch)
+
+- **ID**: `deepseek/deepseek-v4-flash-vision-exp:batch`
+- **Provider**: deepseek
+- **Context**: 1.04858M (1,048,576) tok
+- **Modality**: text+image->text  (in: text,image → out: text)
+- **Pricing**: 入力 $0.11/1M · 出力 $0.33/1M · キャッシュ読 $0.0035/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
+- **登録日**: 2026-08-21
+- **HF**: `deepseek-ai/DeepSeek-V4-Flash-Vision-Exp`
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, repetition_penalty, logit_bias, logprobs, top_logprobs, response_format, structured_outputs, tools, tool_choice
 
 DeepSeek V4 Flash Vision Exp is an experimental vision-enabled version of [DeepSeek V4 Flash 0731](https://openrouter.ai/deepseek/deepseek-v4-flash-0731) from DeepSeek, adding image understanding while matching the base model on text capabilities including agents, reasoning, and world knowledge. It is a sparse mixture-of-experts model with 13B active parameters out of 284B total.
 
@@ -1509,11 +1525,11 @@ Built on the same architecture as DeepSeek V4 Flash, it introduces a hybrid atte
 - **Provider**: deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 393,216 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.99/1M · 出力 $2.97/1M · キャッシュ読 $0.033/1M
-- **Capabilities**: JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.5795/1M · 出力 $1.74/1M · キャッシュ読 $0.0184/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-08-12
 - **HF**: `deepseek-ai/DeepSeek-V4-Pro-0813`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, response_format
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, stop, response_format, structured_outputs, tools, tool_choice
 
 DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.
 
@@ -1523,11 +1539,11 @@ DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. Th
 - **Provider**: deepseek
 - **Context**: 1.04858M (1,048,576) tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $1.32/1M · 出力 $3.96/1M · キャッシュ読 $0.13/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
+- **Pricing**: 入力 $0.66/1M · 出力 $1.98/1M · キャッシュ読 $0.022/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-08-12
 - **HF**: `deepseek-ai/DeepSeek-V4-Pro-0813`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, repetition_penalty, logit_bias, min_p, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, repetition_penalty, logit_bias, logprobs, top_logprobs, response_format, structured_outputs, tools, tool_choice
 
 DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.
 
@@ -2432,20 +2448,20 @@ Mercury 2 is an extremely fast reasoning LLM, and the first reasoning diffusion 
 Instead of generating tokens sequentially, Mercury 2 produces and refines multiple tokens in parallel, achieving >1,000 tokens/sec on standard GPUs. Mercury 2 is 5x+ faster than leading speed-optimized LLMs like Claude 4.5 Haiku and GPT 5 Mini, at a fraction of the cost. 
 Mercury 2 supports tunable reasoning levels, 128K context, native tool use, and schema-aligned JSON output. Built for coding workflows where latency compounds, real-time voice/search, and agent loops. OpenAI API compatible. Read more in the [blog post](https://www.inceptionlabs.ai/blog/introducing-mercury-2).
 
-#### Inception: Mercury 2.5 Preview
+#### Inception: Mercury 2.5
 
-- **ID**: `inception/mercury-2.5-preview`
+- **ID**: `inception/mercury-2.5`
 - **Provider**: inception
 - **Context**: 260K (260,000) tok / max出力 65,536 tok
 - **Modality**: text->text  (in: text → out: text)
 - **Pricing**: 入力 $0.04/1M · 出力 $0.15/1M · キャッシュ読 $0.004/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
-- **登録日**: 2026-08-31
+- **登録日**: 2026-09-08
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, stop, temperature, tools, tool_choice, response_format, structured_outputs
 
 Mercury 2.5 is the fastest reasoning LLM, and the latest diffusion LLM (dLLM) from Inception.
 Instead of generating tokens sequentially, Mercury 2.5 produces and refines multiple tokens in parallel, achieving 1,107 tokens/sec on standard GPUs. It delivers a 10+ point jump in intelligence over Mercury 2, comparable quality to cost-optimized frontier models like GPT-5.6 Luna (Low), Gemini 3.5 Flash-Lite, and Claude Haiku 4.5.
-Mercury 2.5 supports tunable reasoning levels, parallel tool calls, and schema-aligned JSON output. It's built for production workloads where latency compounds: search agents, voice pipelines, and coding subagents.
+Mercury 2.5 supports tunable reasoning levels, parallel tool calls, and schema-aligned JSON output. It's built for production workloads where latency compounds: search agents, voice pipelines, and coding subagents. Read more in the [blog …
 
 ### ▎inclusionai（4）
 
@@ -2737,11 +2753,11 @@ Muse Glimmer 30B is a dense, open-weight multimodal model from Meta Superintelli
 - **Provider**: meta
 - **Context**: 131K (131,072) tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.35/1M · 出力 $1.50/1M · キャッシュ読 $0.04/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
+- **Pricing**: 入力 $0.175/1M · 出力 $0.75/1M · キャッシュ読 $0.02/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-08-09
 - **HF**: `meta-models/Muse-Glimmer-30B`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, repetition_penalty, logit_bias, min_p, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, repetition_penalty, logit_bias, logprobs, top_logprobs, response_format, structured_outputs, tools, tool_choice
 
 Muse Glimmer 30B is a dense, open-weight multimodal model from Meta Superintelligence Labs, distilled from Muse Spark and optimized for autonomous agents on consumer hardware. It is suited for long-horizon agentic and coding workflows, with multi-step reasoning, reliable tool use, failure recovery, image understanding, and multilingual support across more than 100 languages.
 
@@ -3784,13 +3800,13 @@ Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art 
 
 - **ID**: `moonshotai/kimi-k2.6`
 - **Provider**: moonshotai
-- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Context**: 262K (262,144) tok / max出力 65,535 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.56/1M · 出力 $3.39/1M · キャッシュ読 $0.17/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $0.58/1M · 出力 $3.40/1M · キャッシュ読 $0.058/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-04-20
 - **HF**: `moonshotai/Kimi-K2.6`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, top_p, stop, frequency_penalty, logit_bias, parallel_tool_calls, presence_penalty, seed, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice, structured_outputs
 
 Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and can convert prompts and visual inputs into production-ready interfaces. Its agent swarm architecture scales to hundreds of parallel sub-agents for autonomous task decomposition - delivering documents, websites, and spreadsheets in a single run without human oversight.
 
@@ -3798,13 +3814,13 @@ Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-h
 
 - **ID**: `moonshotai/kimi-k2.7-code`
 - **Provider**: moonshotai
-- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Context**: 262K (262,144) tok / max出力 16,384 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.66/1M · 出力 $3.40/1M · キャッシュ読 $0.18/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $0.68/1M · 出力 $3.40/1M · キャッシュ読 $0.136/1M
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-06-12
 - **HF**: `moonshotai/Kimi-K2.7-Code`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, top_p, stop, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, frequency_penalty, logit_bias, parallel_tool_calls, presence_penalty, seed
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, response_format, tools, tool_choice, logit_bias
 
 MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of-experts architecture that accepts text and image input, and it always operates in a thinking mode, preserving full reasoning content across multi-turn conversations. With a 256K-token context window, it targets long-horizon coding, agentic task decomposition, and multi-turn dialogue. The model activates 32B parameters out of roughly 1T total.
 
@@ -3814,11 +3830,11 @@ MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 fa
 - **Provider**: moonshotai
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $2.50/1M · 出力 $14.00/1M · キャッシュ読 $0.29/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $2.40/1M · 出力 $12.00/1M · キャッシュ読 $0.24/1M
+- **Capabilities**: JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-07-16
 - **HF**: `moonshotai/Kimi-K3`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, stop, response_format, structured_outputs, logprobs, top_logprobs, tools, tool_choice, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, seed, logit_bias
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, stop, frequency_penalty, presence_penalty, repetition_penalty, max_tokens, response_format
 
 Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at navigating large repositories, using tools, debugging, and iterating against images, logs, tests, and runtime feedback. Its architecture uses KDA and Attention Residuals for computational efficiency.
 
@@ -3879,33 +3895,33 @@ Zero Data Retention is enabled for Morph. Learn more about this model in their [
 
 ### ▎nex-agi（2）
 
-#### Nex AGI: Nex-N2-Mini
+#### Nex AGI: Nex-N2.5-Mini (free)
 
-- **ID**: `nex-agi/nex-n2-mini`
+- **ID**: `nex-agi/nex-n2.5-mini:free`
 - **Provider**: nex-agi
 - **Context**: 262K (262,144) tok / max出力 262,144 tok
-- **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.025/1M · 出力 $0.1/1M · キャッシュ読 $0.0025/1M
+- **Modality**: text->text  (in: text → out: text)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
-- **登録日**: 2026-06-24
-- **HF**: `nex-agi/Nex-N2-Mini`
-- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, top_p, top_k, temperature, max_tokens, logprobs, top_logprobs, tools, tool_choice
+- **登録日**: 2026-09-08
+- **HF**: `nex-agi/Nex-N2.5-mini`
+- **対応パラメータ**: reasoning, include_reasoning, top_p, top_k, temperature, max_tokens, logprobs, top_logprobs, tools, tool_choice, response_format, structured_outputs
 
-Nex-N2-Mini is an open-source agentic mixture-of-experts model from Nex AGI, the smaller sibling in the Nex-N2 series. It accepts text and image input and is built for coding, tool use, deep research, and long-horizon agentic workflows, with a 262K-token context window and native reasoning support.
+Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes. Its core strength is agentic coding within a visual feedback loop: it can explore codebases, implement multi-file changes, run commands, launch applications, interact with browser and desktop interfaces, and test software from the user's perspective. When observed behavior does not match the intended result, Nex-N2.5 can diagnose the issue, revise its implementation, and test again. This makes it especially effective for autonomous software engineering, GUI-based QA, computer-use automation, deep research, and scientific workflows where success must be demonstrated in the environment—not merely inferred from …
 
-#### Nex AGI: Nex-N2-Pro
+#### Nex AGI: Nex-N2.5-Pro (free)
 
-- **ID**: `nex-agi/nex-n2-pro`
+- **ID**: `nex-agi/nex-n2.5-pro:free`
 - **Provider**: nex-agi
 - **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.25/1M · 出力 $1.00/1M · キャッシュ読 $0.025/1M
-- **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力, logprobs
-- **登録日**: 2026-06-08
-- **HF**: `nex-agi/Nex-N2-Pro`
-- **対応パラメータ**: reasoning, include_reasoning, top_p, top_k, temperature, max_tokens, logprobs, top_logprobs, tools, tool_choice
+- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
+- **登録日**: 2026-09-08
+- **HF**: `nex-agi/Nex-N2.5-Pro`
+- **対応パラメータ**: reasoning, include_reasoning, top_p, top_k, temperature, max_tokens, logprobs, top_logprobs, tools, tool_choice, response_format, structured_outputs
 
-Nex-N2-Pro is an agentic mixture-of-experts model from Nex AGI, with 17B active parameters out of 397B total. Built on the Qwen3.5 architecture, it accepts text and image input and produces text output, and supports reasoning, function calling, and structured outputs. It is designed for coding, tool use, deep research, and long-horizon agentic workflows, unifying planning, code implementation, debugging, and iteration into a single execution loop.
+Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes. Its core strength is agentic coding within a visual feedback loop: it can explore codebases, implement multi-file changes, run commands, launch applications, interact with browser and desktop interfaces, and test software from the user's perspective. When observed behavior does not match the intended result, Nex-N2.5 can diagnose the issue, revise its implementation, and test again. This makes it especially effective for autonomous software engineering, GUI-based QA, computer-use automation, deep research, and scientific workflows where success must be demonstrated in the environment—not merely inferred from …
 
 ### ▎nousresearch（4）
 
@@ -4063,7 +4079,7 @@ Built on a hybrid MoE Transformer-Mamba architecture with Conv3D video layers an
 
 - **ID**: `nvidia/nemotron-3-super-120b-a12b`
 - **Provider**: nvidia
-- **Context**: 1M (1,000,000) tok / max出力 16,384 tok
+- **Context**: 262K (262,144) tok / max出力 16,384 tok
 - **Modality**: text->text  (in: text → out: text)
 - **Pricing**: 入力 $0.085/1M · 出力 $0.4/1M
 - **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
@@ -4209,7 +4225,7 @@ NVIDIA Nemotron 3.5 Lightning is an open mixture-of-experts model from NVIDIA, w
 
 Parakeet TDT 0.6B v3 is NVIDIA's 600M-parameter multilingual speech-to-text model built on the FastConformer-TDT architecture. Trained on the Granary dataset (670,000+ hours of audio), it supports automatic language detection across all official EU languages and achieves a 6.34% average word error rate on the HuggingFace Open ASR Leaderboard. Returns transcribed text with punctuation and segment timestamps.
 
-### ▎openai（109）
+### ▎openai（111）
 
 #### OpenAI: GPT-3.5 Turbo
 
@@ -5426,6 +5442,32 @@ A cost-efficient variant of GPT Image 1 for high-quality image generation at red
 - **対応パラメータ**: seed, max_tokens, response_format, structured_outputs, temperature, top_p, stop, frequency_penalty, presence_penalty, logit_bias, logprobs, top_logprobs
 
 OpenAI's latest image generation model. Supports high-fidelity image generation and editing via the dedicated Images API.
+
+#### OpenAI: GPT Image 2.5 Flare
+
+- **ID**: `openai/gpt-image-2.5-flare`
+- **Provider**: openai
+- **Context**: 400K (400,000) tok
+- **Modality**: text+image->image  (in: text,image → out: image)
+- **Pricing**: 入力 $8.00/1M · 出力 $8.00/1M · キャッシュ読 $2.00/1M · Web検索 $0.01
+- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, logprobs, Seed固定
+- **登録日**: 2026-09-09
+- **対応パラメータ**: seed, max_tokens, response_format, structured_outputs, temperature, top_p, stop, frequency_penalty, presence_penalty, logit_bias, logprobs, top_logprobs
+
+GPT Image 2.5 Flare is an image generation and editing model from OpenAI, positioned as the speed-oriented tier of the GPT Image 2.5 series. It is suited to high-volume everyday generation, creator content, and rapid prototyping via the dedicated Images API.
+
+#### OpenAI: GPT Image 2.5 Sunburst
+
+- **ID**: `openai/gpt-image-2.5-sunburst`
+- **Provider**: openai
+- **Context**: 400K (400,000) tok
+- **Modality**: text+image->image  (in: text,image → out: image)
+- **Pricing**: 入力 $8.00/1M · 出力 $8.00/1M · キャッシュ読 $2.00/1M · Web検索 $0.01
+- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, logprobs, Seed固定
+- **登録日**: 2026-09-09
+- **対応パラメータ**: seed, max_tokens, response_format, structured_outputs, temperature, top_p, stop, frequency_penalty, presence_penalty, logit_bias, logprobs, top_logprobs
+
+GPT Image 2.5 Sunburst is an image generation and editing model from OpenAI, positioned as the precision-oriented tier of the GPT Image 2.5 series. It is suited to detailed creative work where editing accuracy matters more than generation speed, via the dedicated Images API.
 
 #### OpenAI: gpt-oss-120b
 
@@ -7773,10 +7815,10 @@ Inkling Small is an open-weight multimodal mixture-of-experts model from Thinkin
 - **Context**: 1.04858M (1,048,576) tok / max出力 262,144 tok
 - **Modality**: text+image+audio->text  (in: text,image,audio → out: text)
 - **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
-- **Capabilities**: Function calling, Reasoning(思考), Reasoning出力, Seed固定
+- **Capabilities**: Function calling, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-07-30
 - **HF**: `thinkingmachines/Inkling-Small`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, stop, frequency_penalty, presence_penalty, seed, tools
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, stop, frequency_penalty, presence_penalty, seed, tools, logprobs, top_logprobs
 
 Inkling Small is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 12B active parameters out of 276B total. It is positioned as the smaller, more efficient member of the Inkling family and is suited for reasoning, coding, agentic workflows, retrieval-augmented generation, instruction following, and multilingual conversation.
 
@@ -8163,7 +8205,7 @@ MiMo-V2.5 is a native omnimodal model by Xiaomi. It delivers Pro-level agentic p
 
 MiMo-V2.5-Pro is Xiaomi’s flagship model, delivering strong performance in general agentic capabilities, complex software engineering, and long-horizon tasks, with top rankings on benchmarks such as ClawEval, GDPVal, and SWE-bench Pro. It can independently and autonomously complete professional tasks that would take human experts days or weeks, involving more than a thousand tool calls. Its context length of up to 1M makes it well suited for integration with a wide range of agent frameworks.
 
-### ▎z-ai（15）
+### ▎z-ai（17）
 
 #### Z.ai: GLM 4.5
 
@@ -8329,17 +8371,33 @@ GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and o
 
 Reasoning efforts `high` and `xhigh` are supported; `xhigh` maps to max reasoning. It is particularly strong at coding and tool use across long-running tasks, able to maintain engineering context and follow standards consistently through a full development workflow, from requirements to multi-platform deployment, in a single task.
 
+#### Z.ai: GLM 5.2 (batch)
+
+- **ID**: `z-ai/glm-5.2:batch`
+- **Provider**: z-ai
+- **Context**: 1.04858M (1,048,576) tok
+- **Modality**: text->text  (in: text → out: text)
+- **Pricing**: 入力 $0.7/1M · 出力 $2.20/1M · キャッシュ読 $0.07/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
+- **登録日**: 2026-06-16
+- **HF**: `zai-org/GLM-5.2`
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, repetition_penalty, logit_bias, logprobs, top_logprobs, response_format, structured_outputs, tool_choice, tools
+
+GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering, and complex multi-step automation.
+
+Reasoning efforts `high` and `xhigh` are supported; `xhigh` maps to max reasoning. It is particularly strong at coding and tool use across long-running tasks, able to maintain engineering context and follow standards consistently through a full development workflow, from requirements to multi-platform deployment, in a single task.
+
 #### Z.ai: GLM 5.3
 
 - **ID**: `z-ai/glm-5.3`
 - **Provider**: z-ai
-- **Context**: 1.31072M (1,310,720) tok
+- **Context**: 1.31072M (1,310,720) tok / max出力 128,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $1.12/1M · 出力 $3.52/1M · キャッシュ読 $0.208/1M
-- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $1.11/1M · 出力 $3.50/1M · キャッシュ読 $0.2067/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-08-18
 - **HF**: `zai-org/GLM-5.3`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
 
 GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves on GLM-5.2 in coding and in the balance between performance and token efficiency.
 
@@ -8349,13 +8407,13 @@ Reasoning is always on and cannot be disabled. Reasoning efforts `low`, `high`, 
 
 - **ID**: `z-ai/glm-5.3-flash`
 - **Provider**: z-ai
-- **Context**: 1.31072M (1,310,720) tok / max出力 131,072 tok
+- **Context**: 1.31072M (1,310,720) tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.0713/1M · 出力 $0.2375/1M · キャッシュ読 $0.0143/1M
+- **Pricing**: 入力 $0.075/1M · 出力 $0.25/1M · キャッシュ読 $0.015/1M
 - **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-08-26
 - **HF**: `zai-org/GLM-5.3-Flash`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice, response_format
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format, tools, tool_choice
 
 GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while reducing compute overhead.
 
@@ -8363,15 +8421,31 @@ GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient
 
 - **ID**: `z-ai/glm-5.3-flash:batch`
 - **Provider**: z-ai
-- **Context**: 1.04858M (1,048,575) tok
+- **Context**: 1.04858M (1,048,576) tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.15/1M · 出力 $0.5/1M · キャッシュ読 $0.03/1M
+- **Pricing**: 入力 $0.075/1M · 出力 $0.25/1M · キャッシュ読 $0.015/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-08-26
 - **HF**: `zai-org/GLM-5.3-Flash`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, repetition_penalty, logit_bias, min_p, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, repetition_penalty, logit_bias, logprobs, top_logprobs, response_format, structured_outputs, tools, tool_choice
 
 GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while reducing compute overhead.
+
+#### Z.ai: GLM 5.3 (batch)
+
+- **ID**: `z-ai/glm-5.3:batch`
+- **Provider**: z-ai
+- **Context**: 1.04858M (1,048,576) tok
+- **Modality**: text->text  (in: text → out: text)
+- **Pricing**: 入力 $0.7/1M · 出力 $2.20/1M · キャッシュ読 $0.13/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
+- **登録日**: 2026-08-18
+- **HF**: `zai-org/GLM-5.3`
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, repetition_penalty, logit_bias, logprobs, top_logprobs, response_format, structured_outputs, tools, tool_choice
+
+GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves on GLM-5.2 in coding and in the balance between performance and token efficiency.
+
+Reasoning is always on and cannot be disabled. Reasoning efforts `low`, `high`, and `max` are supported; `max` is the default.
 
 #### Z.ai: GLM 5V Turbo
 
@@ -8491,10 +8565,10 @@ This model always redirects to the latest model in the Google Gemini Pro family.
 - **Provider**: ~moonshotai
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $2.50/1M · 出力 $14.00/1M · キャッシュ読 $0.29/1M
+- **Pricing**: 入力 $2.40/1M · 出力 $12.00/1M · キャッシュ読 $0.24/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-27
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, stop, response_format, structured_outputs, logprobs, top_logprobs, tools, tool_choice, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, seed, logit_bias
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, stop, frequency_penalty, presence_penalty, repetition_penalty, max_tokens, response_format, structured_outputs, seed, tools, logprobs, top_logprobs, tool_choice, min_p, logit_bias
 
 This model always redirects to the latest model in the MoonshotAI Kimi family.
 
@@ -8549,12 +8623,12 @@ This model always redirects to the latest Grok model from xAI.
 
 - **ID**: `~z-ai/glm-flash-latest`
 - **Provider**: ~z-ai
-- **Context**: 1.31072M (1,310,720) tok / max出力 131,072 tok
+- **Context**: 1.31072M (1,310,720) tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.0713/1M · 出力 $0.2375/1M · キャッシュ読 $0.0143/1M
+- **Pricing**: 入力 $0.075/1M · 出力 $0.25/1M · キャッシュ読 $0.015/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-27
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice, response_format, min_p, logit_bias, structured_outputs, logprobs, top_logprobs, reasoning_effort
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format, tools, tool_choice, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, min_p, logit_bias, structured_outputs, logprobs, top_logprobs, reasoning_effort
 
 This model always redirects to the latest model in the GLM Flash family.
 
@@ -8562,11 +8636,11 @@ This model always redirects to the latest model in the GLM Flash family.
 
 - **ID**: `~z-ai/glm-latest`
 - **Provider**: ~z-ai
-- **Context**: 1.31072M (1,310,720) tok
+- **Context**: 1.31072M (1,310,720) tok / max出力 128,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $1.12/1M · 出力 $3.52/1M · キャッシュ読 $0.208/1M
+- **Pricing**: 入力 $1.11/1M · 出力 $3.50/1M · キャッシュ読 $0.2067/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-19
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format, tools, tool_choice, top_k, stop, frequency_penalty, presence_penalty, structured_outputs, logprobs, top_logprobs, repetition_penalty, min_p, reasoning_effort, logit_bias, parallel_tool_calls
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, seed, min_p, top_k, presence_penalty, reasoning_effort, frequency_penalty, repetition_penalty, logit_bias, parallel_tool_calls
 
 This model always redirects to the latest GLM model from Z.ai.
