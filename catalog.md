@@ -1,6 +1,6 @@
 # OpenRouter モデルカタログ（全594モデル）
 
-- 取得日時: 2026-09-12T06:35:46
+- 取得日時: 2026-09-13T06:40:30
 - プロバイダ数: 76 / 無料枠あり: 28
 
 ## プロバイダ別サマリ
@@ -12,7 +12,7 @@
 | google | 52 | 0.00 | 16,000.00 | 1,048,576 |
 | mistralai | 31 | 0.02 | 3,000.00 | 262,144 |
 | anthropic | 27 | 0.25 | 15.00 | 1,000,000 |
-| deepseek | 18 | 0.05 | 0.83 | 1,310,720 |
+| deepseek | 18 | 0.04 | 0.80 | 1,310,720 |
 | z-ai | 17 | 0.06 | 1.20 | 1,310,720 |
 | recraft | 15 | 0.00 | 0.00 | 65,536 |
 | nvidia | 15 | 0.00 | 1,500.00 | 1,000,000 |
@@ -53,7 +53,7 @@
 | inception | 2 | 0.04 | 0.25 | 260,000 |
 | nex-agi | 2 | 0.00 | 0.00 | 262,144 |
 | ibm-granite | 2 | 0.02 | 0.06 | 131,072 |
-| ~z-ai | 2 | 0.07 | 0.85 | 1,310,720 |
+| ~z-ai | 2 | 0.07 | 0.94 | 1,310,720 |
 | liquid | 2 | 0.00 | 0.00 | 65,536 |
 | upstage | 2 | 0.09 | 0.15 | 524,288 |
 | runway | 2 | 0.00 | 0.00 | 0 |
@@ -67,11 +67,11 @@
 | morph | 2 | 0.80 | 0.90 | 262,144 |
 | heygen | 1 | 0.00 | 0.00 | 0 |
 | dots-studio | 1 | 0.00 | 0.00 | 512,000 |
-| ~deepseek | 1 | 0.05 | 0.05 | 1,310,720 |
+| ~deepseek | 1 | 0.04 | 0.04 | 1,310,720 |
 | meituan | 1 | 0.30 | 0.30 | 1,048,756 |
 | ~x-ai | 1 | 2.00 | 2.00 | 500,000 |
 | perceptron | 1 | 0.15 | 0.15 | 32,768 |
-| ~moonshotai | 1 | 2.30 | 2.30 | 1,048,576 |
+| ~moonshotai | 1 | 2.10 | 2.10 | 1,048,576 |
 | sesame | 1 | 7.00 | 7.00 | 4,096 |
 | canopylabs | 1 | 7.00 | 7.00 | 4,096 |
 | hexgrad | 1 | 0.62 | 0.62 | 4,096 |
@@ -1343,11 +1343,11 @@ The model improves tool use, code generation, and reasoning efficiency, achievin
 - **Context**: 64K (64,000) tok / max出力 16,000 tok
 - **Modality**: text->text  (in: text → out: text)
 - **Pricing**: 入力 $0.7/1M · 出力 $2.50/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2024-07-31T23:59:59.000Z
 - **登録日**: 2025-01-20
 - **HF**: `deepseek-ai/DeepSeek-R1`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice, response_format, structured_outputs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice, response_format
 
 DeepSeek R1 is here: Performance on par with [OpenAI o1](/openai/o1), but open-sourced and with fully open reasoning tokens. It's 671B parameters in size, with 37B active in an inference pass.
 
@@ -1445,7 +1445,7 @@ The model was trained under conditions aligned with V3.1-Terminus to enable dire
 - **Provider**: deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 384,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.0671/1M · 出力 $0.1341/1M · キャッシュ読 $0.0134/1M
+- **Pricing**: 入力 $0.0498/1M · 出力 $0.0997/1M · キャッシュ読 $0.01/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-04-24
 - **HF**: `deepseek-ai/DeepSeek-V4-Flash`
@@ -1459,13 +1459,13 @@ The model includes hybrid attention for efficient long-context processing. Reaso
 
 - **ID**: `deepseek/deepseek-v4-flash-0731`
 - **Provider**: deepseek
-- **Context**: 1.31072M (1,310,720) tok / max出力 393,216 tok
+- **Context**: 1.31072M (1,310,720) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.05/1M · 出力 $0.16/1M · キャッシュ読 $0.013/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.0352/1M · 出力 $0.1056/1M · キャッシュ読 $0.0011/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-07-31
 - **HF**: `deepseek-ai/DeepSeek-V4-Flash-0731`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, stop, seed, top_p, frequency_penalty, presence_penalty, structured_outputs, response_format, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, stop, response_format, structured_outputs, tools, tool_choice
 
 DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows. This is the GA release of DeepSeek V4 Flash.
 
@@ -1521,7 +1521,7 @@ It is suited for document and chart understanding, visual question answering, an
 - **Provider**: deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 384,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.8295/1M · 出力 $1.66/1M · キャッシュ読 $0.0691/1M
+- **Pricing**: 入力 $0.6267/1M · 出力 $1.25/1M · キャッシュ読 $0.0522/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-04-24
 - **HF**: `deepseek-ai/DeepSeek-V4-Pro`
@@ -2763,7 +2763,7 @@ Kling Video O1 is a video generation model from Kuaishou. It supports text and i
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-11
 - **HF**: `LiquidAI/LFM2.5-2.6B`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, min_p, repetition_penalty, max_completion_tokens, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, stop, frequency_penalty, presence_penalty, seed, top_k, min_p, repetition_penalty, max_completion_tokens, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
 
 LFM2.5-2.6B is a compact reasoning model from Liquid AI. It is suited for agent workflows, data extraction, RAG, and long-context processing. Liquid advises against using it for agentic coding or knowledge-heavy tasks.
 
@@ -4001,11 +4001,11 @@ MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 fa
 - **Provider**: moonshotai
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $2.30/1M · 出力 $11.55/1M · キャッシュ読 $0.2632/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $2.10/1M · 出力 $10.95/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-07-16
 - **HF**: `moonshotai/Kimi-K3`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, frequency_penalty, presence_penalty, stop, seed, max_tokens, tools, tool_choice, response_format, structured_outputs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, min_p, logit_bias, top_logprobs, response_format, structured_outputs, logprobs, tools, tool_choice
 
 Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at navigating large repositories, using tools, debugging, and iterating against images, logs, tests, and runtime feedback. Its architecture uses KDA and Attention Residuals for computational efficiency.
 
@@ -6630,10 +6630,10 @@ The model is trained with a strong agentic focus and performs reliably on long-h
 - **Context**: 1M (1,000,000) tok / max出力 65,536 tok
 - **Modality**: text->text  (in: text → out: text)
 - **Pricing**: 入力 $0.65/1M · 出力 $3.25/1M · キャッシュ読 $0.13/1M · キャッシュ書 $0.8125/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), logprobs, Seed固定
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, logprobs, Seed固定
 - **Knowledge cutoff**: 2025-06-30T23:59:59.000Z
 - **登録日**: 2025-09-23
-- **対応パラメータ**: structured_outputs, response_format, max_tokens, temperature, top_p, seed, presence_penalty, tools, tool_choice, logprobs, top_logprobs, top_k, frequency_penalty, stop, reasoning
+- **対応パラメータ**: structured_outputs, response_format, max_tokens, temperature, top_p, seed, presence_penalty, tools, tool_choice, logprobs, top_logprobs, top_k, frequency_penalty, stop
 
 Qwen3 Coder Plus is Alibaba's proprietary version of the Open Source Qwen3 Coder 480B A35B. It is a powerful coding agent model specializing in autonomous programming via tool calling and environment interaction, combining coding proficiency with versatile general-purpose abilities.
 
@@ -8576,13 +8576,13 @@ Reasoning efforts `high` and `xhigh` are supported; `xhigh` maps to max reasonin
 
 - **ID**: `z-ai/glm-5.3`
 - **Provider**: z-ai
-- **Context**: 1.31072M (1,310,720) tok / max出力 1,048,576 tok
+- **Context**: 1.31072M (1,310,720) tok / max出力 262,144 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.85/1M · 出力 $2.90/1M · キャッシュ読 $0.17/1M
+- **Pricing**: 入力 $0.936/1M · 出力 $3.17/1M · キャッシュ読 $0.1872/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-18
 - **HF**: `zai-org/GLM-5.3`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, stop, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, seed, logit_bias, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, max_tokens, stop, seed, frequency_penalty, presence_penalty, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
 
 GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves on GLM-5.2 in coding and in the balance between performance and token efficiency.
 
@@ -8660,7 +8660,7 @@ GLM-5V-Turbo is Z.ai’s first native multimodal agent foundation model, built f
 
 This model always redirects to the latest model in the Claude Fable family.
 
-#### Anthropic Claude Haiku Latest
+#### Anthropic: Claude Haiku Latest
 
 - **ID**: `~anthropic/claude-haiku-latest`
 - **Provider**: ~anthropic
@@ -8671,7 +8671,7 @@ This model always redirects to the latest model in the Claude Fable family.
 - **登録日**: 2026-04-27
 - **対応パラメータ**: reasoning, include_reasoning, structured_outputs, max_tokens, temperature, top_p, max_completion_tokens, tools, tool_choice, top_k, response_format, stop
 
-This model always redirects to the latest model in the Anthropic Claude Haiku family.
+This model always redirects to the latest model in the Claude Haiku family.
 
 #### Anthropic: Claude Opus Latest
 
@@ -8686,7 +8686,7 @@ This model always redirects to the latest model in the Anthropic Claude Haiku fa
 
 This model always redirects to the latest model in the Claude Opus family.
 
-#### Anthropic Claude Sonnet Latest
+#### Anthropic: Claude Sonnet Latest
 
 - **ID**: `~anthropic/claude-sonnet-latest`
 - **Provider**: ~anthropic
@@ -8697,26 +8697,26 @@ This model always redirects to the latest model in the Claude Opus family.
 - **登録日**: 2026-04-27
 - **対応パラメータ**: max_tokens, stop, reasoning, include_reasoning, tool_choice, tools, structured_outputs, response_format, verbosity, max_completion_tokens
 
-This model always redirects to the latest model in the Anthropic Claude Sonnet family.
+This model always redirects to the latest model in the Claude Sonnet family.
 
 ### ▎~deepseek（1）
 
-#### DeepSeek V4 Flash Latest
+#### DeepSeek: DeepSeek V4 Flash Latest
 
 - **ID**: `~deepseek/deepseek-v4-flash-latest`
 - **Provider**: ~deepseek
-- **Context**: 1.31072M (1,310,720) tok / max出力 393,216 tok
+- **Context**: 1.31072M (1,310,720) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.05/1M · 出力 $0.16/1M · キャッシュ読 $0.013/1M
+- **Pricing**: 入力 $0.0352/1M · 出力 $0.1056/1M · キャッシュ読 $0.0011/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-01
-- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, stop, seed, top_p, frequency_penalty, presence_penalty, structured_outputs, response_format, tools, tool_choice, repetition_penalty, top_k, min_p, logit_bias, logprobs, top_logprobs, parallel_tool_calls, reasoning_effort, top_a
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, stop, response_format, structured_outputs, tools, tool_choice, seed, frequency_penalty, presence_penalty, top_k, min_p, logit_bias, repetition_penalty, logprobs, top_logprobs, parallel_tool_calls, reasoning_effort, top_a
 
 This model always redirects to the latest model in the DeepSeek V4 Flash family.
 
 ### ▎~google（2）
 
-#### Google Gemini Flash Latest
+#### Google: Gemini Flash Latest
 
 - **ID**: `~google/gemini-flash-latest`
 - **Provider**: ~google
@@ -8727,9 +8727,9 @@ This model always redirects to the latest model in the DeepSeek V4 Flash family.
 - **登録日**: 2026-04-27
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format, structured_outputs, tool_choice, tools, stop
 
-This model always redirects to the latest model in the Google Gemini Flash family.
+This model always redirects to the latest model in the Gemini Flash family.
 
-#### Google Gemini Pro Latest
+#### Google: Gemini Pro Latest
 
 - **ID**: `~google/gemini-pro-latest`
 - **Provider**: ~google
@@ -8740,26 +8740,26 @@ This model always redirects to the latest model in the Google Gemini Flash famil
 - **登録日**: 2026-04-27
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, response_format, tools, tool_choice, stop, structured_outputs
 
-This model always redirects to the latest model in the Google Gemini Pro family.
+This model always redirects to the latest model in the Gemini Pro family.
 
 ### ▎~moonshotai（1）
 
-#### MoonshotAI Kimi Latest
+#### MoonshotAI: Kimi Latest
 
 - **ID**: `~moonshotai/kimi-latest`
 - **Provider**: ~moonshotai
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $2.30/1M · 出力 $11.55/1M · キャッシュ読 $0.2632/1M
+- **Pricing**: 入力 $2.10/1M · 出力 $10.95/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-27
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, frequency_penalty, presence_penalty, stop, seed, max_tokens, tools, tool_choice, response_format, structured_outputs, repetition_penalty, logprobs, top_logprobs, min_p, logit_bias
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, min_p, logit_bias, top_logprobs, response_format, structured_outputs, logprobs, tools, tool_choice, repetition_penalty
 
-This model always redirects to the latest model in the MoonshotAI Kimi family.
+This model always redirects to the latest model in the Kimi family.
 
 ### ▎~openai（5）
 
-#### OpenAI GPT Astra Latest
+#### OpenAI: GPT Astra Latest
 
 - **ID**: `~openai/gpt-astra-latest`
 - **Provider**: ~openai
@@ -8770,9 +8770,9 @@ This model always redirects to the latest model in the MoonshotAI Kimi family.
 - **登録日**: 2026-09-11
 - **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, max_completion_tokens
 
-This model always redirects to the latest model in the OpenAI GPT Astra family.
+This model always redirects to the latest model in the GPT Astra family.
 
-#### OpenAI GPT Luna Latest
+#### OpenAI: GPT Luna Latest
 
 - **ID**: `~openai/gpt-luna-latest`
 - **Provider**: ~openai
@@ -8784,9 +8784,9 @@ This model always redirects to the latest model in the OpenAI GPT Astra family.
 - **登録日**: 2026-09-11
 - **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, max_completion_tokens
 
-This model always redirects to the latest model in the OpenAI GPT Luna family.
+This model always redirects to the latest model in the GPT Luna family.
 
-#### OpenAI GPT Mini Latest
+#### OpenAI: GPT Mini Latest
 
 - **ID**: `~openai/gpt-mini-latest`
 - **Provider**: ~openai
@@ -8798,9 +8798,9 @@ This model always redirects to the latest model in the OpenAI GPT Luna family.
 - **登録日**: 2026-04-27
 - **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, max_completion_tokens
 
-This model always redirects to the latest model in the OpenAI GPT Mini family.
+This model always redirects to the latest model in the GPT Mini family.
 
-#### OpenAI GPT Sol Latest
+#### OpenAI: GPT Sol Latest
 
 - **ID**: `~openai/gpt-sol-latest`
 - **Provider**: ~openai
@@ -8812,9 +8812,9 @@ This model always redirects to the latest model in the OpenAI GPT Mini family.
 - **登録日**: 2026-09-11
 - **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, max_completion_tokens
 
-This model always redirects to the latest model in the OpenAI GPT Sol family.
+This model always redirects to the latest model in the GPT Sol family.
 
-#### OpenAI GPT Terra Latest
+#### OpenAI: GPT Terra Latest
 
 - **ID**: `~openai/gpt-terra-latest`
 - **Provider**: ~openai
@@ -8826,7 +8826,7 @@ This model always redirects to the latest model in the OpenAI GPT Sol family.
 - **登録日**: 2026-09-11
 - **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, max_completion_tokens
 
-This model always redirects to the latest model in the OpenAI GPT Terra family.
+This model always redirects to the latest model in the GPT Terra family.
 
 ### ▎~x-ai（1）
 
@@ -8862,11 +8862,11 @@ This model always redirects to the latest model in the GLM Flash family.
 
 - **ID**: `~z-ai/glm-latest`
 - **Provider**: ~z-ai
-- **Context**: 1.31072M (1,310,720) tok / max出力 1,048,576 tok
+- **Context**: 1.31072M (1,310,720) tok / max出力 262,144 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.85/1M · 出力 $2.90/1M · キャッシュ読 $0.17/1M
+- **Pricing**: 入力 $0.936/1M · 出力 $3.17/1M · キャッシュ読 $0.1872/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-19
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, stop, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, seed, logit_bias, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, parallel_tool_calls, reasoning_effort
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, max_tokens, stop, seed, frequency_penalty, presence_penalty, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, min_p, repetition_penalty, logit_bias, parallel_tool_calls, reasoning_effort
 
 This model always redirects to the latest GLM model from Z.ai.
