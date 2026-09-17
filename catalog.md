@@ -1,7 +1,7 @@
-# OpenRouter モデルカタログ（全592モデル）
+# OpenRouter モデルカタログ（全593モデル）
 
-- 取得日時: 2026-09-16T06:41:06
-- プロバイダ数: 76 / 無料枠あり: 29
+- 取得日時: 2026-09-17T06:41:40
+- プロバイダ数: 77 / 無料枠あり: 30
 
 ## プロバイダ別サマリ
 
@@ -12,7 +12,7 @@
 | google | 50 | 0.00 | 16,000.00 | 1,048,576 |
 | mistralai | 31 | 0.02 | 3,000.00 | 262,144 |
 | anthropic | 27 | 0.25 | 15.00 | 1,000,000 |
-| deepseek | 18 | 0.04 | 0.96 | 1,310,720 |
+| deepseek | 18 | 0.03 | 0.96 | 1,310,720 |
 | z-ai | 18 | 0.00 | 1.20 | 1,310,720 |
 | recraft | 15 | 0.00 | 0.00 | 65,536 |
 | nvidia | 15 | 0.00 | 1,500.00 | 1,000,000 |
@@ -41,7 +41,7 @@
 | aion-labs | 4 | 0.70 | 3.00 | 131,072 |
 | ~anthropic | 4 | 1.00 | 10.00 | 1,000,000 |
 | sourceful | 4 | 0.00 | 0.00 | 32,768 |
-| ~deepseek | 3 | 0.04 | 0.96 | 1,310,720 |
+| ~deepseek | 3 | 0.03 | 0.70 | 1,310,720 |
 | deepgram | 3 | 0.00 | 4,300.00 | 0 |
 | krea | 3 | 0.00 | 0.00 | 65,536 |
 | kwaivgi | 3 | 0.00 | 0.00 | 0 |
@@ -66,6 +66,7 @@
 | relace | 2 | 0.85 | 1.00 | 256,000 |
 | thenlper | 2 | 0.01 | 0.01 | 512 |
 | morph | 2 | 0.80 | 0.90 | 262,144 |
+| stealth | 1 | 0.00 | 0.00 | 262,144 |
 | heygen | 1 | 0.00 | 0.00 | 0 |
 | dots-studio | 1 | 0.00 | 0.00 | 512,000 |
 | meituan | 1 | 0.30 | 0.30 | 1,048,756 |
@@ -82,7 +83,7 @@
 | anthracite-org | 1 | 2.50 | 2.50 | 32,768 |
 | mancer | 1 | 0.40 | 0.40 | 8,000 |
 | undi95 | 1 | 0.35 | 0.35 | 6,144 |
-| gryphe | 1 | 0.06 | 0.06 | 8,192 |
+| gryphe | 1 | 0.08 | 0.08 | 8,192 |
 
 ## モデル詳細
 
@@ -1447,7 +1448,7 @@ The model includes hybrid attention for efficient long-context processing. Reaso
 - **Provider**: deepseek
 - **Context**: 1.31072M (1,310,720) tok / max出力 393,216 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.04/1M · 出力 $0.1/1M · キャッシュ読 $0.01/1M
+- **Pricing**: 入力 $0.03/1M · 出力 $0.13/1M · キャッシュ読 $0.01/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-07-31
 - **HF**: `deepseek-ai/DeepSeek-V4-Flash-0731`
@@ -1521,13 +1522,13 @@ Built on the same architecture as DeepSeek V4 Flash, it introduces a hybrid atte
 
 - **ID**: `deepseek/deepseek-v4-pro-0813`
 - **Provider**: deepseek
-- **Context**: 1.04858M (1,048,576) tok / max出力 943,718 tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 384,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.96/1M · 出力 $2.88/1M · キャッシュ読 $0.088/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.7/1M · 出力 $2.96/1M · キャッシュ読 $0.033/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-12
 - **HF**: `deepseek-ai/DeepSeek-V4-Pro-0813`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, frequency_penalty, presence_penalty, stop, seed, response_format, tools, tool_choice, structured_outputs
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, frequency_penalty, presence_penalty, stop, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
 
 DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.
 
@@ -2334,12 +2335,12 @@ Google's most cost-effective video generation model, designed for high-volume ap
 - **Provider**: gryphe
 - **Context**: 8K (8,192) tok / max出力 4,096 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.06/1M · 出力 $0.06/1M
-- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, logprobs, Seed固定
+- **Pricing**: 入力 $0.08/1M · 出力 $0.11/1M
+- **Capabilities**: Structured outputs(JSONスキーマ), logprobs, Seed固定
 - **Knowledge cutoff**: 2023-06-30T23:59:59.000Z
 - **登録日**: 2023-07-02
 - **HF**: `Gryphe/MythoMax-L2-13b`
-- **対応パラメータ**: structured_outputs, response_format, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, logprobs, top_logprobs, repetition_penalty, seed
+- **対応パラメータ**: max_tokens, temperature, top_p, frequency_penalty, presence_penalty, repetition_penalty, seed, stop, top_k, logit_bias, logprobs, top_logprobs, structured_outputs
 
 One of the highest performing and most popular fine-tunes of Llama 2 13B, with rich descriptions and roleplay. #merge
 
@@ -3322,10 +3323,10 @@ Trained for production-grade performance, M2.7 handles workflows such as live de
 - **Context**: 1.04858M (1,048,576) tok / max出力 262,144 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
 - **Pricing**: 入力 $0.23/1M · 出力 $0.96/1M · キャッシュ読 $0.05/1M
-- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-05-31
 - **HF**: `MiniMaxAI/Minimax-M3`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, repetition_penalty, frequency_penalty, presence_penalty, stop, seed, response_format, structured_outputs, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, repetition_penalty, frequency_penalty, presence_penalty, stop, seed, response_format, structured_outputs, logprobs, top_logprobs, tools, tool_choice
 
 MiniMax-M3 is a multimodal foundation model from MiniMax. It supports text, image, and video inputs with text output, a 1M-token context window, and is suited for long-horizon agentic work, coding, and tool use. It is built on MiniMax Sparse Attention (MSA), which replaces full attention with KV-block selection to cut per-token compute at long context — roughly 1/20 the cost of the previous generation at 1M tokens, with substantially faster prefill and decode while retaining quality across most tasks.
 
@@ -3588,7 +3589,7 @@ Mistral Medium 3.5 is a dense 128B instruction-following model from Mistral AI. 
 
 - **ID**: `mistralai/mistral-medium-3-5:batch`
 - **Provider**: mistralai
-- **Context**: 262K (262,144) tok
+- **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
 - **Pricing**: 入力 $0.75/1M · 出力 $3.75/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
@@ -3890,7 +3891,7 @@ Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art 
 - **Provider**: moonshotai
 - **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.516/1M · 出力 $2.87/1M · キャッシュ読 $0.1144/1M
+- **Pricing**: 入力 $0.471/1M · 出力 $2.83/1M · キャッシュ読 $0.0856/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-20
 - **HF**: `moonshotai/Kimi-K2.6`
@@ -7561,6 +7562,23 @@ Riverflow V2.5 Pro is the most powerful variant of Sourceful's Riverflow 2.5 lin
 
 The Riverflow 2.5 series is a unified text-to-image and image-to-image family that treats generation as a production workflow, using an integrated reasoning model to plan multi-step edits and judge candidates before accepting a result. Riverflow 2.5 combines their reasoning with a mix of closed and open image diffusion models to provide greater accuracy and steerability.Reasoning effort is controllable via the reasoning parameter (low/medium/high/xhigh) - higher levels do more editing passes and apply a stricter internal judge, with xhigh suited to …
 
+### ▎stealth（1）
+
+#### Union Alpha
+
+- **ID**: `stealth/union-alpha`
+- **Provider**: stealth
+- **Context**: 262K (262,144) tok / max出力 131,072 tok
+- **Modality**: text+image->text  (in: text,image → out: text)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Capabilities**: Function calling, Tool choice, JSON mode
+- **登録日**: 2026-09-16
+- **対応パラメータ**: max_tokens, temperature, top_p, tools, tool_choice, response_format
+
+Union Alpha is a multimodal model built for research, coding, and agentic workflows, while delivering frontier-level performance across a broad range of general-purpose tasks.
+
+Union Alpha  is a stealth model. It is developed and operated by a third-party provider who has chosen to remain anonymous during this preview. OpenRouter routes requests to it and is not its developer, owner, or provider. Prompts and completions may be retained by the provider but are not used for training; all other use is governed by the [Stealth Model Terms](https://openrouter.ai/terms/stealth)
+
 ### ▎stepfun（2）
 
 #### StepFun: Step 3.5 Flash
@@ -8537,12 +8555,12 @@ This model always redirects to the latest model in the DeepSeek Flash family.
 
 - **ID**: `~deepseek/deepseek-pro-latest`
 - **Provider**: ~deepseek
-- **Context**: 1.04858M (1,048,576) tok / max出力 943,718 tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 384,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.96/1M · 出力 $2.88/1M · キャッシュ読 $0.088/1M
+- **Pricing**: 入力 $0.7/1M · 出力 $2.96/1M · キャッシュ読 $0.033/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-09-14
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, frequency_penalty, presence_penalty, stop, seed, response_format, tools, tool_choice, structured_outputs, logprobs, top_logprobs, top_k, repetition_penalty, min_p, logit_bias
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, frequency_penalty, presence_penalty, stop, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, repetition_penalty, min_p, logit_bias
 
 This model always redirects to the latest model in the DeepSeek Pro family.
 
@@ -8552,7 +8570,7 @@ This model always redirects to the latest model in the DeepSeek Pro family.
 - **Provider**: ~deepseek
 - **Context**: 1.31072M (1,310,720) tok / max出力 393,216 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.04/1M · 出力 $0.1/1M · キャッシュ読 $0.01/1M
+- **Pricing**: 入力 $0.03/1M · 出力 $0.13/1M · キャッシュ読 $0.01/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-01
 - **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, stop, seed, response_format, tools, tool_choice, top_p, frequency_penalty, presence_penalty, top_k, min_p, logit_bias, repetition_penalty, structured_outputs, parallel_tool_calls, reasoning_effort, logprobs, top_logprobs, top_a
@@ -8699,7 +8717,7 @@ This model always redirects to the latest Grok model from xAI.
 - **Pricing**: 入力 $0.075/1M · 出力 $0.25/1M · キャッシュ読 $0.015/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-27
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, logit_bias, structured_outputs, tools, tool_choice, response_format, logprobs, top_logprobs, reasoning_effort
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, logit_bias, structured_outputs, tools, tool_choice, response_format, logprobs, top_logprobs, parallel_tool_calls, reasoning_effort
 
 This model always redirects to the latest model in the GLM Flash family.
 
@@ -8712,6 +8730,6 @@ This model always redirects to the latest model in the GLM Flash family.
 - **Pricing**: 入力 $0.8775/1M · 出力 $2.97/1M · キャッシュ読 $0.1755/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-19
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, max_tokens, stop, seed, frequency_penalty, presence_penalty, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, repetition_penalty, min_p, logit_bias, parallel_tool_calls, reasoning_effort
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, max_tokens, stop, seed, frequency_penalty, presence_penalty, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, min_p, repetition_penalty, logit_bias, reasoning_effort, parallel_tool_calls
 
 This model always redirects to the latest GLM model from Z.ai.
