@@ -1,7 +1,7 @@
-# OpenRouter モデルカタログ（全631モデル）
+# OpenRouter モデルカタログ（全638モデル）
 
-- 取得日時: 2026-10-01T06:45:10
-- プロバイダ数: 86 / 無料枠あり: 33
+- 取得日時: 2026-10-02T06:43:49
+- プロバイダ数: 87 / 無料枠あり: 34
 
 ## プロバイダ別サマリ
 
@@ -12,20 +12,20 @@
 | google | 53 | 0.00 | 266.67 | 1,048,576 |
 | mistralai | 31 | 0.02 | 50.00 | 262,144 |
 | anthropic | 29 | 0.50 | 15.00 | 1,000,000 |
-| z-ai | 18 | 0.02 | 2.80 | 1,048,576 |
+| z-ai | 18 | 0.03 | 2.80 | 1,048,576 |
 | recraft | 16 | 0.00 | 0.00 | 65,536 |
-| deepseek | 15 | 0.00 | 0.70 | 1,048,576 |
+| deepseek | 15 | 0.01 | 0.70 | 1,048,576 |
 | nvidia | 15 | 0.00 | 25.00 | 1,000,000 |
 | x-ai | 14 | 0.00 | 27.78 | 2,000,000 |
 | minimax | 13 | 0.00 | 100.00 | 1,048,576 |
-| bytedance-seed | 10 | 0.00 | 0.50 | 262,144 |
-| microsoft | 10 | 0.07 | 360,000.00 | 65,535 |
+| microsoft | 12 | 0.07 | 360,000.00 | 65,535 |
+| bytedance-seed | 11 | 0.00 | 0.50 | 262,144 |
 | voyageai | 9 | 0.00 | 0.12 | 32,000 |
 | cohere | 9 | 0.00 | 2.50 | 256,000 |
+| black-forest-labs | 8 | 0.00 | 0.00 | 67,344 |
 | meta | 8 | 0.00 | 50.00 | 1,048,576 |
 | moonshotai | 8 | 0.43 | 2.28 | 1,048,576 |
 | meta-llama | 8 | 0.02 | 0.40 | 1,310,720 |
-| black-forest-labs | 7 | 0.00 | 0.00 | 67,344 |
 | tencent | 7 | 0.04 | 0.83 | 1,048,576 |
 | perplexity | 7 | 0.00 | 3.00 | 200,000 |
 | fish-audio | 6 | 0.00 | 100.00 | 0 |
@@ -43,9 +43,10 @@
 | poolside | 4 | 0.00 | 0.09 | 1,048,576 |
 | ~anthropic | 4 | 1.00 | 10.00 | 1,000,000 |
 | sourceful | 4 | 0.00 | 0.00 | 32,768 |
+| liquid | 3 | 0.00 | 0.04 | 65,536 |
 | inception | 3 | 0.00 | 0.25 | 260,000 |
 | respan | 3 | 0.00 | 0.02 | 0 |
-| ~deepseek | 3 | 0.01 | 0.24 | 1,048,576 |
+| ~deepseek | 3 | 0.01 | 0.13 | 1,048,576 |
 | deepgram | 3 | 0.00 | 71.67 | 0 |
 | krea | 3 | 0.00 | 0.00 | 65,536 |
 | kwaivgi | 3 | 0.00 | 0.00 | 0 |
@@ -54,20 +55,21 @@
 | thedrummer | 3 | 0.30 | 0.55 | 1,024,000 |
 | nousresearch | 3 | 0.70 | 1.00 | 131,072 |
 | sao10k | 3 | 0.04 | 0.85 | 131,072 |
+| unbiased | 2 | 0.80 | 2.50 | 1,048,576 |
 | heygen | 2 | 0.00 | 0.00 | 0 |
 | perceptron | 2 | 0.15 | 0.15 | 36,864 |
 | inference-net | 2 | 0.03 | 0.05 | 128,000 |
 | nex-agi | 2 | 0.02 | 0.07 | 262,144 |
 | ibm-granite | 2 | 0.02 | 0.06 | 131,072 |
-| ~z-ai | 2 | 0.02 | 0.18 | 1,048,576 |
-| liquid | 2 | 0.00 | 0.00 | 65,536 |
+| ~z-ai | 2 | 0.03 | 0.12 | 1,048,576 |
 | runway | 2 | 0.00 | 0.00 | 0 |
-| stepfun | 2 | 0.10 | 0.16 | 262,144 |
+| stepfun | 2 | 0.10 | 0.20 | 262,144 |
 | ~google | 2 | 0.75 | 2.00 | 1,048,576 |
 | rekaai | 2 | 0.10 | 0.10 | 65,536 |
 | relace | 2 | 0.85 | 1.00 | 256,000 |
 | thenlper | 2 | 0.01 | 0.01 | 512 |
 | morph | 2 | 0.80 | 0.90 | 262,144 |
+| apodex | 1 | 0.00 | 0.00 | 262,144 |
 | togethercomputer | 1 | 0.04 | 0.04 | 32,768 |
 | jaredpalmer | 1 | 0.04 | 0.04 | 8,192 |
 | fireworks | 1 | 3.00 | 3.00 | 1,048,576 |
@@ -76,12 +78,11 @@
 | prism-ml | 1 | 0.07 | 0.07 | 262,144 |
 | ~typesafe | 1 | 0.04 | 0.04 | 32,000 |
 | typesafe | 1 | 0.04 | 0.04 | 32,000 |
-| unbiased | 1 | 2.50 | 2.50 | 262,144 |
 | dots-studio | 1 | 0.00 | 0.00 | 512,000 |
 | meituan | 1 | 0.30 | 0.30 | 1,048,756 |
 | kwaipilot | 1 | 0.74 | 0.74 | 262,144 |
 | ~x-ai | 1 | 2.00 | 2.00 | 500,000 |
-| ~moonshotai | 1 | 0.70 | 0.70 | 1,048,576 |
+| ~moonshotai | 1 | 1.20 | 1.20 | 1,048,576 |
 | sesame | 1 | 7.00 | 7.00 | 4,096 |
 | canopylabs | 1 | 7.00 | 7.00 | 4,096 |
 | hexgrad | 1 | 0.62 | 0.62 | 4,096 |
@@ -775,6 +776,21 @@ Thinking is always on, so effort is the main lever for trading off depth, latenc
 
 Sonnet 5 is Anthropic's most capable Sonnet-class model, with frontier performance across coding, agents, and professional work. It supports adaptive thinking with selectable reasoning effort levels (low, medium, high, max, and x-high), a 1M-token context window, and text, image, and file inputs. Sonnet 5 uses an updated tokenizer and includes real-time cyber safeguards that block certain high-risk dual-use activities.
 
+### ▎apodex（1）
+
+#### Apodex: Apodex 1.1 Mini (free)
+
+- **ID**: `apodex/apodex-1.1-mini:free`
+- **Provider**: apodex
+- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Modality**: text->text  (in: text → out: text)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **登録日**: 2026-10-01
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, response_format, structured_outputs, tools, tool_choice
+
+Apodex 1.1 Mini is a reasoning-first model from Apodex, built for complex, long-horizon research and forecasting tasks. It works directly with files, data, code, and tools to produce verifiable results, and is designed for agentic research workflows where answers need to be grounded in evidence.
+
 ### ▎arcee-ai（1）
 
 #### Arcee AI: Trinity Large Thinking
@@ -861,7 +877,20 @@ The bge-m3 embedding model encodes sentences, paragraphs, and long documents int
 
 ERNIE-4.5-VL-424B-A47B is a multimodal Mixture-of-Experts (MoE) model from Baidu’s ERNIE 4.5 series, featuring 424B total parameters with 47B active per token. It is trained jointly on text and image data using a heterogeneous MoE architecture and modality-isolated routing to enable high-fidelity cross-modal reasoning, image understanding, and long-context generation (up to 131k tokens). Fine-tuned with techniques like SFT, DPO, UPO, and RLVR, this model supports both “thinking” and non-thinking inference modes. Designed for vision-language tasks in English and Chinese, it is optimized for efficient scaling and can operate under 4-bit/8-bit quantization.
 
-### ▎black-forest-labs（7）
+### ▎black-forest-labs（8）
+
+#### Black Forest Labs: FLUX.3 Image
+
+- **ID**: `black-forest-labs/flux-3-image`
+- **Provider**: black-forest-labs
+- **Context**: 46K (46,864) tok
+- **Modality**: text+image->image  (in: text,image → out: image)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.0205〜$0.3035/image
+- **Capabilities**: Seed固定
+- **登録日**: 2026-10-01
+- **対応パラメータ**: seed
+
+FLUX.3 Image is Black Forest Labs' flagship image generation and editing model. It handles text-to-image and multi-reference editing with up to 10 input images, and renders at fixed resolution tiers from 768 up to 4K with a selectable aspect ratio. Pricing is a flat per-image rate that scales with the chosen resolution tier.
 
 #### Black Forest Labs: FLUX.3 Video
 
@@ -1041,7 +1070,7 @@ UI-TARS-1.5 is a multimodal vision-language agent optimized for GUI-based enviro
 
 This model achieves state-of-the-art results on a range of interactive and grounding benchmarks, including OSworld, WebVoyager, AndroidWorld, and ScreenSpot. It also demonstrates perfect task completion across diverse Poki games and outperforms prior models in Minecraft agent tasks. UI-TARS-1.5 supports thought decomposition during inference and shows strong …
 
-### ▎bytedance-seed（10）
+### ▎bytedance-seed（11）
 
 #### ByteDance Seed: Seed 1.6
 
@@ -1145,6 +1174,18 @@ Seed Audio 1.0 is ByteDance Seed's non-streaming audio generation model. It prod
 Seedream 4.5 is the latest in-house image generation model developed by ByteDance. Compared with Seedream 4.0, it delivers comprehensive improvements, especially in editing consistency, including better preservation of subject details, lighting, and color tone. It also enhances portrait refinement and small-text rendering. The model’s multi-image composition capabilities have been significantly strengthened, and both reasoning performance and visual aesthetics continue to advance, enabling more accurate and artistically expressive image generation.
 
 Pricing is $0.04 per output image, regardless of size.
+
+#### ByteDance Seed: Seedream 5.0 Flash
+
+- **ID**: `bytedance-seed/seedream-5-0-flash`
+- **Provider**: bytedance-seed
+- **Context**: — tok
+- **Modality**: text+image->image  (in: text,image → out: image)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.018/image
+- **登録日**: 2026-10-01
+- **対応パラメータ**: frequency_penalty, max_tokens, temperature, top_p
+
+Seedream 5.0 Flash is an image generation and editing model from ByteDance Seed. It is the fast, cost-efficient tier of the Seedream 5.0 family, suited for high-volume production and interactive editing workflows that need precise edits at low latency.
 
 #### ByteDance Seed: Seedream 5.0 Lite
 
@@ -1508,11 +1549,11 @@ The model was trained under conditions aligned with V3.1-Terminus to enable dire
 - **Provider**: deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.0045/1M · 出力 $1.28/1M · キャッシュ読 $0.0045/1M
-- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力
+- **Pricing**: 入力 $0.019/1M · 出力 $1.60/1M · キャッシュ読 $0.019/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-04-24
 - **HF**: `deepseek-ai/DeepSeek-V4-Flash`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, stop, max_tokens, logit_bias, frequency_penalty, presence_penalty, repetition_penalty, response_format, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, stop, seed, response_format, top_p, frequency_penalty, presence_penalty, top_k, min_p, logit_bias, repetition_penalty, structured_outputs, tools, tool_choice
 
 DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and high-throughput workloads, while maintaining strong reasoning and coding performance.
 
@@ -1524,11 +1565,11 @@ The model includes hybrid attention for efficient long-context processing. Reaso
 - **Provider**: deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.0108/1M · 出力 $1.28/1M · キャッシュ読 $0.0108/1M
-- **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力
+- **Pricing**: 入力 $0.0058/1M · 出力 $1.60/1M · キャッシュ読 $0.0058/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-07-31
 - **HF**: `deepseek-ai/DeepSeek-V4-Flash-0731`
-- **対応パラメータ**: reasoning, include_reasoning, tools, tool_choice, temperature, top_p, top_k, min_p, stop, max_tokens, logit_bias, frequency_penalty, presence_penalty, repetition_penalty
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, stop, seed, response_format, top_p, frequency_penalty, presence_penalty, top_k, min_p, logit_bias, repetition_penalty, structured_outputs, tools, tool_choice
 
 DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows. This is the GA release of DeepSeek V4 Flash.
 
@@ -1552,13 +1593,13 @@ It is suited for document and chart understanding, visual question answering, an
 
 - **ID**: `deepseek/deepseek-v4-pro`
 - **Provider**: deepseek
-- **Context**: 1.04858M (1,048,576) tok / max出力 384,000 tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 393,216 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.2314/1M · 出力 $0.4628/1M · キャッシュ読 $0.0193/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
+- **Pricing**: 入力 $0.1774/1M · 出力 $0.3549/1M · キャッシュ読 $0.0147/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-04-24
 - **HF**: `deepseek-ai/DeepSeek-V4-Pro`
-- **対応パラメータ**: reasoning, include_reasoning, tools, tool_choice, response_format, logprobs, top_logprobs, structured_outputs, max_tokens, temperature, top_p, stop
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, stop, response_format, structured_outputs, tools, tool_choice
 
 DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding, and long-horizon agent workflows, with strong performance across knowledge, math, and software engineering benchmarks.
 
@@ -1570,7 +1611,7 @@ Built on the same architecture as DeepSeek V4 Flash, it introduces a hybrid atte
 - **Provider**: deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 393,216 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.2402/1M · 出力 $0.7207/1M · キャッシュ読 $0.0076/1M
+- **Pricing**: 入力 $0.132/1M · 出力 $0.396/1M · キャッシュ読 $0.0042/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-08-12
 - **HF**: `deepseek-ai/DeepSeek-V4-Pro-0813`
@@ -1584,11 +1625,11 @@ DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. Th
 - **Provider**: deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.027/1M · 出力 $0.6/1M · キャッシュ読 $0.027/1M
-- **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力
+- **Pricing**: 入力 $0.015/1M · 出力 $0.75/1M · キャッシュ読 $0.015/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-09-10
 - **HF**: `deepseek-ai/DeepSeek-V4.1-Flash`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, stop, max_tokens, logit_bias, frequency_penalty, presence_penalty, repetition_penalty, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, stop, seed, top_p, frequency_penalty, presence_penalty, top_k, min_p, logit_bias, repetition_penalty, response_format, structured_outputs, tools, tool_choice
 
 DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on output from a 552B-parameter backbone, an asymmetric split that keeps per-token compute low relative to the model's total size. Image understanding is native to the architecture, with visual and text embeddings trained jointly from the start of pre-training rather than added afterward as in the earlier experimental [V4 Flash Vision Exp](https://openrouter.ai/deepseek/deepseek-v4-flash-vision-exp).
 
@@ -2829,7 +2870,18 @@ Kling v3.0 Standard is a video generation model from Kuaishou. It supports text-
 
 Kling Video O1 is a video generation model from Kuaishou. It supports text and image inputs with video output, enabling text-to-video and image-to-video workflows. It is suited for cinematic content production, with first-frame and last-frame control for precise scene composition. It generates 5 or 10 second clips in 16:9, 9:16, or 1:1 aspect ratios.
 
-### ▎liquid（2）
+### ▎liquid（3）
+
+#### LiquidAI: D1
+
+- **ID**: `liquid/d1`
+- **Provider**: liquid
+- **Context**: 65K (65,536) tok
+- **Modality**: text->decisions  (in: text → out: decisions)
+- **Pricing**: 入力 $0.04/1M · 出力 無料/1M · キャッシュ読 $0.04/1M
+- **登録日**: 2026-10-01
+
+D1 is Liquid AI's structured decision model, served as a System One endpoint. Send a state along with typed questions, and it returns a choice, a score, or a yes/no answer, each with a probability taken directly from the model rather than written out as text. It uses the same /v1/systemone schema as other OpenRouter Decisions models, so it suits routing, classification, and policy checks that need a fast, scored answer instead of prose.
 
 #### LiquidAI: LFM2.5-2.6B (free)
 
@@ -3155,7 +3207,7 @@ Llama Guard 4 is a Llama 4 Scout-derived multimodal pretrained model, fine-tuned
 
 Llama Guard 4 was aligned to safeguard against the standardized MLCommons hazards taxonomy and designed to support multimodal Llama 4 capabilities. Specifically, it combines features from previous Llama Guard models, providing content moderation …
 
-### ▎microsoft（10）
+### ▎microsoft（12）
 
 #### Microsoft AI: MAI-Image-2.5
 
@@ -3250,6 +3302,32 @@ MAI-Voice-2 is an expressive text-to-speech model from Microsoft AI. It is suite
 - **登録日**: 2026-07-23
 
 MAI-Voice-2-Flash is a low-latency text-to-speech model from Microsoft AI for voice agents, assistants, call centers, accessibility, narration, and other interactive applications. It generates expressive 24 kHz mono speech across 15 languages and 18 locales, with fine-grained control over tone and delivery. Voice prompting and cloning require Microsoft AI-approved access and appropriate speaker consent.
+
+#### Microsoft AI: MAI-Voice-2.1
+
+- **ID**: `microsoft/mai-voice-2.1`
+- **Provider**: microsoft
+- **Context**: — tok
+- **Modality**: text->speech  (in: text → out: speech)
+- **Pricing**: 入力 $22.00/1M · 出力 無料/1M · Characters $2.2e-05/M characters
+- **登録日**: 2026-10-01
+
+MAI-Voice-2.1 is Microsoft AI's highest-fidelity, most expressive text-to-speech model. It produces natural, studio-grade speech across 23 languages, with detailed prosody, nuanced expressiveness, and speaker consistency over long-form content. It is suited for audiobooks, podcasts, lectures, narration, and brand audio where maximum voice quality matters. The model prioritizes naturalness and expressivity over latency-critical generation.
+
+On OpenRouter, set `voice` to a full voice ID with the model suffix, such as `"en-US-Harper:MAI-Voice-2.1"`. A voice's locale sets the synthesis language. Set `response_format` to `"mp3"` or `"pcm"` (24 kHz mono). Harper and Grant support the `agent`, …
+
+#### Microsoft AI: MAI-Voice-2.1-Flash
+
+- **ID**: `microsoft/mai-voice-2.1-flash`
+- **Provider**: microsoft
+- **Context**: — tok
+- **Modality**: text->speech  (in: text → out: speech)
+- **Pricing**: 入力 $15.00/1M · 出力 無料/1M · Characters $1.5e-05/M characters
+- **登録日**: 2026-10-01
+
+MAI-Voice-2.1-Flash is a low-latency text-to-speech model from Microsoft AI, optimized for real-time responsiveness. It produces natural, expressive speech across 23 languages, with human-like intonation, rhythm, and emotional nuance. It is suited for voice agents, assistants, call centers, and other interactive applications where latency and cost matter most.
+
+On OpenRouter, set `voice` to a full voice ID with the model suffix, such as `"en-US-Harper:MAI-Voice-2.1-Flash"`. A voice's locale sets the synthesis language. Set `response_format` to `"mp3"` or `"pcm"` (24 kHz mono). Harper and Grant support the `agent`, `customer-call-center`, `educational`, and `narrator` speaking styles, and …
 
 #### Microsoft: Phi 4
 
@@ -4028,7 +4106,7 @@ MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 fa
 - **Provider**: moonshotai
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.7034/1M · 出力 $10.00/1M · キャッシュ読 $0.7034/1M
+- **Pricing**: 入力 $1.20/1M · 出力 $11.20/1M · キャッシュ読 $0.29/1M
 - **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-07-16
 - **HF**: `moonshotai/Kimi-K3`
@@ -4791,7 +4869,7 @@ For benchmarking against other models, it was briefly called ["im-also-a-good-gp
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2024-09-30T00:00:00.000Z
 - **登録日**: 2025-08-07
-- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, structured_outputs, response_format, seed, tools, tool_choice
+- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, structured_outputs, response_format, seed, tools, tool_choice, verbosity
 
 GPT-5 is OpenAI’s most advanced model, offering major improvements in reasoning, code quality, and user experience. It is optimized for complex tasks that require step-by-step reasoning, instruction following, and accuracy in high-stakes use cases. It supports test-time routing features and advanced prompt understanding, including user-specified intent like "think hard about this." Improvements include reductions in hallucination, sycophancy, and better performance in coding, writing, and health-related tasks.
 
@@ -4804,7 +4882,7 @@ GPT-5 is OpenAI’s most advanced model, offering major improvements in reasonin
 - **Pricing**: 入力 $10.00/1M · 出力 $10.00/1M · キャッシュ読 $1.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2025-10-14
-- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, seed, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, logit_bias, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, seed, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, logit_bias, logprobs, top_logprobs, verbosity
 
 [GPT-5](https://openrouter.ai/openai/gpt-5) Image combines OpenAI's GPT-5 model with state-of-the-art image generation capabilities. It offers major improvements in reasoning, code quality, and user experience while incorporating GPT Image 1's superior instruction following, text rendering, and detailed image editing.
 
@@ -4817,7 +4895,7 @@ GPT-5 is OpenAI’s most advanced model, offering major improvements in reasonin
 - **Pricing**: 入力 $2.50/1M · 出力 $2.00/1M · キャッシュ読 $0.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2025-10-16
-- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, seed, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, logit_bias, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, seed, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, logit_bias, logprobs, top_logprobs, verbosity
 
 GPT-5 Image Mini combines OpenAI's advanced language capabilities, powered by [GPT-5 Mini](https://openrouter.ai/openai/gpt-5-mini), with GPT Image 1 Mini for efficient image generation. This natively multimodal model features superior instruction following, text rendering, and detailed image editing with reduced latency and cost. It excels at high-quality visual creation while maintaining strong text understanding, making it ideal for applications that require both efficient image generation and text processing at scale.
 
@@ -4831,7 +4909,7 @@ GPT-5 Image Mini combines OpenAI's advanced language capabilities, powered by [G
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2024-05-31T23:59:59.000Z
 - **登録日**: 2025-08-07
-- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5 Mini is a compact version of GPT-5, designed to handle lighter-weight reasoning tasks. It provides the same instruction-following and safety-tuning benefits as GPT-5, but with reduced latency and cost. GPT-5 Mini is the successor to OpenAI's o4-mini model.
 
@@ -4845,7 +4923,7 @@ GPT-5 Mini is a compact version of GPT-5, designed to handle lighter-weight reas
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2024-05-31T23:59:59.000Z
 - **登録日**: 2025-08-07
-- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, seed, max_tokens, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, seed, max_tokens, tools, tool_choice, verbosity
 
 GPT-5 Mini is a compact version of GPT-5, designed to handle lighter-weight reasoning tasks. It provides the same instruction-following and safety-tuning benefits as GPT-5, but with reduced latency and cost. GPT-5 Mini is the successor to OpenAI's o4-mini model.
 
@@ -4859,7 +4937,7 @@ GPT-5 Mini is a compact version of GPT-5, designed to handle lighter-weight reas
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2024-05-31T23:59:59.000Z
 - **登録日**: 2025-08-07
-- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5-Nano is the smallest and fastest variant in the GPT-5 system, optimized for developer tools, rapid interactions, and ultra-low latency environments. While limited in reasoning depth compared to its larger counterparts, it retains key instruction-following and safety features. It is the successor to GPT-4.1-nano and offers a lightweight option for cost-sensitive or real-time applications.
 
@@ -4873,7 +4951,7 @@ GPT-5-Nano is the smallest and fastest variant in the GPT-5 system, optimized fo
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2024-05-31T23:59:59.000Z
 - **登録日**: 2025-08-07
-- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, seed, max_tokens, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, seed, max_tokens, tools, tool_choice, verbosity
 
 GPT-5-Nano is the smallest and fastest variant in the GPT-5 system, optimized for developer tools, rapid interactions, and ultra-low latency environments. While limited in reasoning depth compared to its larger counterparts, it retains key instruction-following and safety features. It is the successor to GPT-4.1-nano and offers a lightweight option for cost-sensitive or real-time applications.
 
@@ -4887,7 +4965,7 @@ GPT-5-Nano is the smallest and fastest variant in the GPT-5 system, optimized fo
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2024-09-30T23:59:59.000Z
 - **登録日**: 2025-10-06
-- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, seed, max_tokens, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, seed, max_tokens, tools, tool_choice, verbosity
 
 GPT-5 Pro is OpenAI’s most advanced model, offering major improvements in reasoning, code quality, and user experience. It is optimized for complex tasks that require step-by-step reasoning, instruction following, and accuracy in high-stakes use cases. It supports test-time routing features and advanced prompt understanding, including user-specified intent like "think hard about this." Improvements include reductions in hallucination, sycophancy, and better performance in coding, writing, and health-related tasks.
 
@@ -4901,7 +4979,7 @@ GPT-5 Pro is OpenAI’s most advanced model, offering major improvements in reas
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2024-09-30T23:59:59.000Z
 - **登録日**: 2025-10-06
-- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, seed, max_tokens, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, seed, max_tokens, tools, tool_choice, verbosity
 
 GPT-5 Pro is OpenAI’s most advanced model, offering major improvements in reasoning, code quality, and user experience. It is optimized for complex tasks that require step-by-step reasoning, instruction following, and accuracy in high-stakes use cases. It supports test-time routing features and advanced prompt understanding, including user-specified intent like "think hard about this." Improvements include reductions in hallucination, sycophancy, and better performance in coding, writing, and health-related tasks.
 
@@ -4914,7 +4992,7 @@ GPT-5 Pro is OpenAI’s most advanced model, offering major improvements in reas
 - **Pricing**: 入力 $1.25/1M · 出力 $10.00/1M · キャッシュ読 $0.13/1M · Web検索 $0.01
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2025-11-13
-- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, structured_outputs, response_format, seed, tools, tool_choice
+- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, structured_outputs, response_format, seed, tools, tool_choice, verbosity
 
 GPT-5.1 is the latest frontier-grade model in the GPT-5 series, offering stronger general-purpose reasoning, improved instruction adherence, and a more natural conversational style compared to GPT-5. It uses adaptive reasoning to allocate computation dynamically, responding quickly to simple queries while spending more depth on complex tasks. The model produces clearer, more grounded explanations with reduced jargon, making it easier to follow even on technical or multi-step problems.
 
@@ -4929,7 +5007,7 @@ Built for broad task coverage, GPT-5.1 delivers consistent gains across math, co
 - **Pricing**: 入力 $1.25/1M · 出力 $10.00/1M · キャッシュ読 $0.13/1M · Web検索 $0.01
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2025-11-13
-- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, structured_outputs, response_format, seed, tools, tool_choice
+- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, structured_outputs, response_format, seed, tools, tool_choice, verbosity
 
 GPT-5.1-Codex is a specialized version of GPT-5.1 optimized for software engineering and coding workflows. It is designed for both interactive development sessions and long, independent execution of complex engineering tasks. The model supports building projects from scratch, feature development, debugging, large-scale refactoring, and code review. Compared to GPT-5.1, Codex is more steerable, adheres closely to developer instructions, and produces cleaner, higher-quality code outputs. Reasoning effort can be adjusted with the `reasoning.effort` parameter. Read the [docs here](https://openrouter.ai/docs/use-cases/reasoning-tokens#reasoning-effort-level)
 
@@ -4944,7 +5022,7 @@ Codex integrates into developer …
 - **Pricing**: 入力 $1.25/1M · 出力 $10.00/1M · キャッシュ読 $0.125/1M · Web検索 $0.01
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2025-12-04
-- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, structured_outputs, response_format, seed, tools, tool_choice
+- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, structured_outputs, response_format, seed, tools, tool_choice, verbosity
 
 GPT-5.1-Codex-Max is OpenAI’s latest agentic coding model, designed for long-running, high-context software development tasks. It is based on an updated version of the 5.1 reasoning stack and trained on agentic workflows spanning software engineering, mathematics, and research. 
 GPT-5.1-Codex-Max delivers faster performance, improved reasoning, and higher token efficiency across the development lifecycle.
@@ -4958,7 +5036,7 @@ GPT-5.1-Codex-Max delivers faster performance, improved reasoning, and higher to
 - **Pricing**: 入力 $0.25/1M · 出力 $2.00/1M · キャッシュ読 $0.03/1M · Web検索 $0.01
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2025-11-13
-- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, structured_outputs, response_format, seed, tools, tool_choice
+- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, structured_outputs, response_format, seed, tools, tool_choice, verbosity
 
 GPT-5.1-Codex-Mini is a smaller and faster version of GPT-5.1-Codex
 
@@ -4971,7 +5049,7 @@ GPT-5.1-Codex-Mini is a smaller and faster version of GPT-5.1-Codex
 - **Pricing**: 入力 $0.625/1M · 出力 $5.00/1M · キャッシュ読 $0.0625/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2025-11-13
-- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, seed, max_tokens, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, seed, max_tokens, tools, tool_choice, verbosity
 
 GPT-5.1 is the latest frontier-grade model in the GPT-5 series, offering stronger general-purpose reasoning, improved instruction adherence, and a more natural conversational style compared to GPT-5. It uses adaptive reasoning to allocate computation dynamically, responding quickly to simple queries while spending more depth on complex tasks. The model produces clearer, more grounded explanations with reduced jargon, making it easier to follow even on technical or multi-step problems.
 
@@ -4986,7 +5064,7 @@ Built for broad task coverage, GPT-5.1 delivers consistent gains across math, co
 - **Pricing**: 入力 $1.75/1M · 出力 $14.00/1M · キャッシュ読 $0.175/1M · Web検索 $0.01
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2025-12-10
-- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, structured_outputs, response_format, seed, tools, tool_choice
+- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, structured_outputs, response_format, seed, tools, tool_choice, verbosity
 
 GPT-5.2 is the latest frontier-grade model in the GPT-5 series, offering stronger agentic and long context perfomance compared to GPT-5.1. It uses adaptive reasoning to allocate computation dynamically, responding quickly to simple queries while spending more depth on complex tasks.
 
@@ -5001,7 +5079,7 @@ Built for broad task coverage, GPT-5.2 delivers consistent gains across math, co
 - **Pricing**: 入力 $1.75/1M · 出力 $14.00/1M · キャッシュ読 $0.175/1M · Web検索 $0.01
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Seed固定
 - **登録日**: 2025-12-10
-- **対応パラメータ**: max_completion_tokens, structured_outputs, response_format, seed, tools, tool_choice
+- **対応パラメータ**: max_completion_tokens, structured_outputs, response_format, seed, tools, tool_choice, verbosity
 
 GPT-5.2 Chat (AKA Instant) is the fast, lightweight member of the 5.2 family, optimized for low-latency chat while retaining strong general intelligence. It uses adaptive reasoning to selectively “think” on harder queries, improving accuracy on math, coding, and multi-step tasks without slowing down typical conversations. The model is warmer and more conversational by default, with better instruction following and more stable short-form reasoning. GPT-5.2 Chat is designed for high-throughput, interactive workloads where responsiveness and consistency matter more than deep deliberation.
 
@@ -5014,7 +5092,7 @@ GPT-5.2 Chat (AKA Instant) is the fast, lightweight member of the 5.2 family, op
 - **Pricing**: 入力 $1.75/1M · 出力 $14.00/1M · キャッシュ読 $0.175/1M · Web検索 $0.01
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-01-14
-- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5.2-Codex is an upgraded version of GPT-5.1-Codex optimized for software engineering and coding workflows. It is designed for both interactive development sessions and long, independent execution of complex engineering tasks. The model supports building projects from scratch, feature development, debugging, large-scale refactoring, and code review. Compared to GPT-5.1-Codex, 5.2-Codex is more steerable, adheres closely to developer instructions, and produces cleaner, higher-quality code outputs. Reasoning effort can be adjusted with the `reasoning.effort` parameter. Read the [docs here](https://openrouter.ai/docs/use-cases/reasoning-tokens#reasoning-effort-level)
 
@@ -5029,7 +5107,7 @@ Codex integrates into …
 - **Pricing**: 入力 $21.00/1M · 出力 $168.00/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2025-12-10
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5.2 Pro is OpenAI’s most advanced model, offering major improvements in agentic coding and long context performance over GPT-5 Pro. It is optimized for complex tasks that require step-by-step reasoning, instruction following, and accuracy in high-stakes use cases. It supports test-time routing features and advanced prompt understanding, including user-specified intent like "think hard about this." Improvements include reductions in hallucination, sycophancy, and better performance in coding, writing, and health-related tasks.
 
@@ -5042,7 +5120,7 @@ GPT-5.2 Pro is OpenAI’s most advanced model, offering major improvements in ag
 - **Pricing**: 入力 $10.50/1M · 出力 $84.00/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2025-12-10
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5.2 Pro is OpenAI’s most advanced model, offering major improvements in agentic coding and long context performance over GPT-5 Pro. It is optimized for complex tasks that require step-by-step reasoning, instruction following, and accuracy in high-stakes use cases. It supports test-time routing features and advanced prompt understanding, including user-specified intent like "think hard about this." Improvements include reductions in hallucination, sycophancy, and better performance in coding, writing, and health-related tasks.
 
@@ -5055,7 +5133,7 @@ GPT-5.2 Pro is OpenAI’s most advanced model, offering major improvements in ag
 - **Pricing**: 入力 $0.875/1M · 出力 $7.00/1M · キャッシュ読 $0.0875/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2025-12-10
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5.2 is the latest frontier-grade model in the GPT-5 series, offering stronger agentic and long context perfomance compared to GPT-5.1. It uses adaptive reasoning to allocate computation dynamically, responding quickly to simple queries while spending more depth on complex tasks.
 
@@ -5070,7 +5148,7 @@ Built for broad task coverage, GPT-5.2 delivers consistent gains across math, co
 - **Pricing**: 入力 $1.75/1M · 出力 $14.00/1M · キャッシュ読 $0.175/1M · Web検索 $0.01
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-02-24
-- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5.3-Codex is OpenAI’s most advanced agentic coding model, combining the frontier software engineering performance of GPT-5.2-Codex with the broader reasoning and professional knowledge capabilities of GPT-5.2. It achieves state-of-the-art results on SWE-Bench Pro and strong performance on Terminal-Bench 2.0 and OSWorld-Verified, reflecting improved multi-language coding, terminal proficiency, and real-world computer-use skills. The model is optimized for long-running, tool-using workflows and supports interactive steering during execution, making it suitable for complex development tasks, debugging, deployment, and iterative product work.
 
@@ -5085,7 +5163,7 @@ Beyond coding, GPT-5.3-Codex performs strongly …
 - **Pricing**: 入力 $2.50/1M · 出力 $15.00/1M · キャッシュ読 $0.25/1M · Web検索 $0.01
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-03-05
-- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5.4 is OpenAI’s latest frontier model, unifying the Codex and GPT lines into a single system. It features a 1M+ token context window (922K input, 128K output) with support for text and image inputs, enabling high-context reasoning, coding, and multimodal analysis within the same workflow.
 
@@ -5100,7 +5178,7 @@ The model delivers improved performance in coding, document understanding, tool 
 - **Pricing**: 入力 $8.00/1M · 出力 $15.00/1M · キャッシュ読 $2.00/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-21
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, stop, frequency_penalty, presence_penalty, logit_bias, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, stop, frequency_penalty, presence_penalty, logit_bias, logprobs, top_logprobs, verbosity
 
 [GPT-5.4](https://openrouter.ai/openai/gpt-5.4) Image 2 combines OpenAI's GPT-5.4 model with state-of-the-art image generation capabilities from GPT Image 2. It enables rich multimodal workflows, allowing users to seamlessly move between reasoning, coding, and visual generation within the same interaction.
 
@@ -5114,7 +5192,7 @@ The model delivers improved performance in coding, document understanding, tool 
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2025-08-31T00:00:00.000Z
 - **登録日**: 2026-03-17
-- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5.4 mini brings the core capabilities of GPT-5.4 to a faster, more efficient model optimized for high-throughput workloads. It supports text and image inputs with strong performance across reasoning, coding, and tool use, while reducing latency and cost for large-scale deployments.
 
@@ -5130,7 +5208,7 @@ The model is designed for production environments that require a balance of capa
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2025-08-31T00:00:00.000Z
 - **登録日**: 2026-03-17
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5.4 mini brings the core capabilities of GPT-5.4 to a faster, more efficient model optimized for high-throughput workloads. It supports text and image inputs with strong performance across reasoning, coding, and tool use, while reducing latency and cost for large-scale deployments.
 
@@ -5146,7 +5224,7 @@ The model is designed for production environments that require a balance of capa
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2025-08-31T00:00:00.000Z
 - **登録日**: 2026-03-17
-- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5.4 nano is the most lightweight and cost-efficient variant of the GPT-5.4 family, optimized for speed-critical and high-volume tasks. It supports text and image inputs and is designed for low-latency use cases such as classification, data extraction, ranking, and sub-agent execution.
 
@@ -5162,7 +5240,7 @@ The model prioritizes responsiveness and efficiency over deep reasoning, making 
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2025-08-31T00:00:00.000Z
 - **登録日**: 2026-03-17
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5.4 nano is the most lightweight and cost-efficient variant of the GPT-5.4 family, optimized for speed-critical and high-volume tasks. It supports text and image inputs and is designed for low-latency use cases such as classification, data extraction, ranking, and sub-agent execution.
 
@@ -5177,7 +5255,7 @@ The model prioritizes responsiveness and efficiency over deep reasoning, making 
 - **Pricing**: 入力 $30.00/1M · 出力 $180.00/1M · Web検索 $0.01
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-03-05
-- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5.4 Pro is OpenAI's most advanced model, building on GPT-5.4's unified architecture with enhanced reasoning capabilities for complex, high-stakes tasks. It features a 1M+ token context window (922K input, 128K output) with support for text and image inputs. Optimized for step-by-step reasoning, instruction following, and accuracy, GPT-5.4 Pro excels at agentic coding, long-context workflows, and multi-step problem solving.
 
@@ -5190,7 +5268,7 @@ GPT-5.4 Pro is OpenAI's most advanced model, building on GPT-5.4's unified archi
 - **Pricing**: 入力 $15.00/1M · 出力 $90.00/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-03-05
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5.4 Pro is OpenAI's most advanced model, building on GPT-5.4's unified architecture with enhanced reasoning capabilities for complex, high-stakes tasks. It features a 1M+ token context window (922K input, 128K output) with support for text and image inputs. Optimized for step-by-step reasoning, instruction following, and accuracy, GPT-5.4 Pro excels at agentic coding, long-context workflows, and multi-step problem solving.
 
@@ -5203,7 +5281,7 @@ GPT-5.4 Pro is OpenAI's most advanced model, building on GPT-5.4's unified archi
 - **Pricing**: 入力 $1.25/1M · 出力 $7.50/1M · キャッシュ読 $0.125/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-03-05
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5.4 is OpenAI’s latest frontier model, unifying the Codex and GPT lines into a single system. It features a 1M+ token context window (922K input, 128K output) with support for text and image inputs, enabling high-context reasoning, coding, and multimodal analysis within the same workflow.
 
@@ -5219,7 +5297,7 @@ The model delivers improved performance in coding, document understanding, tool 
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2025-12-01T00:00:00.000Z
 - **登録日**: 2026-04-24
-- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5.5 is OpenAI’s frontier model designed for complex professional workloads, building on GPT-5.4 with stronger reasoning, higher reliability, and improved token efficiency on hard tasks. It features a 1M+ token context window (922K input, 128K output) with support for text and image inputs, enabling large-scale reasoning, coding, and multimodal workflows within a single system.
 
@@ -5233,7 +5311,7 @@ GPT-5.5 is OpenAI’s frontier model designed for complex professional workloads
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2025-12-01T00:00:00.000Z
 - **登録日**: 2026-04-24
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5.5 Pro is OpenAI’s high-capability model optimized for deep reasoning and accuracy on complex, high-stakes workloads. It features a 1M+ token context window (922K input, 128K output) with support for text and image inputs, and is designed for long-horizon problem solving, agentic coding, and precise execution across multi-step workflows.
 
@@ -5247,7 +5325,7 @@ GPT-5.5 Pro is OpenAI’s high-capability model optimized for deep reasoning and
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2025-12-01T00:00:00.000Z
 - **登録日**: 2026-04-24
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5.5 Pro is OpenAI’s high-capability model optimized for deep reasoning and accuracy on complex, high-stakes workloads. It features a 1M+ token context window (922K input, 128K output) with support for text and image inputs, and is designed for long-horizon problem solving, agentic coding, and precise execution across multi-step workflows.
 
@@ -5261,7 +5339,7 @@ GPT-5.5 Pro is OpenAI’s high-capability model optimized for deep reasoning and
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2025-12-01T00:00:00.000Z
 - **登録日**: 2026-04-24
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5.5 is OpenAI’s frontier model designed for complex professional workloads, building on GPT-5.4 with stronger reasoning, higher reliability, and improved token efficiency on hard tasks. It features a 1M+ token context window (922K input, 128K output) with support for text and image inputs, enabling large-scale reasoning, coding, and multimodal workflows within a single system.
 
@@ -5275,7 +5353,7 @@ GPT-5.5 is OpenAI’s frontier model designed for complex professional workloads
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
-- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5.6 Luna is a fast, cost-efficient model in OpenAI's GPT-5.6 series. It is suited for high-volume, latency-sensitive tasks such as chat, classification, and lightweight agentic workflows, providing capable reasoning for its price tier.
 
@@ -5289,7 +5367,7 @@ GPT-5.6 Luna is a fast, cost-efficient model in OpenAI's GPT-5.6 series. It is s
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
-- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5.6 Luna Pro is the same underlying model as [GPT-5.6 Luna](https://openrouter.ai/openai/gpt-5.6-luna), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.
 
@@ -5307,7 +5385,7 @@ Learn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reaso
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5.6 Luna Pro is the same underlying model as [GPT-5.6 Luna](https://openrouter.ai/openai/gpt-5.6-luna), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.
 
@@ -5325,7 +5403,7 @@ Learn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reaso
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5.6 Luna is a fast, cost-efficient model in OpenAI's GPT-5.6 series. It is suited for high-volume, latency-sensitive tasks such as chat, classification, and lightweight agentic workflows, providing capable reasoning for its price tier.
 
@@ -5339,7 +5417,7 @@ GPT-5.6 Luna is a fast, cost-efficient model in OpenAI's GPT-5.6 series. It is s
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5.6 Sol is the flagship model in OpenAI's GPT-5.6 series. It is suited for complex reasoning, coding, and agentic workflows, and is particularly strong at command-line and multi-step coding tasks and long-horizon problem solving.
 
@@ -5353,7 +5431,7 @@ GPT-5.6 Sol is the flagship model in OpenAI's GPT-5.6 series. It is suited for c
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5.6 Sol Pro is the same underlying model as [GPT-5.6 Sol](https://openrouter.ai/openai/gpt-5.6-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.
 
@@ -5371,7 +5449,7 @@ Learn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reaso
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5.6 Sol Pro is the same underlying model as [GPT-5.6 Sol](https://openrouter.ai/openai/gpt-5.6-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.
 
@@ -5389,7 +5467,7 @@ Learn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reaso
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5.6 Sol is the flagship model in OpenAI's GPT-5.6 series. It is suited for complex reasoning, coding, and agentic workflows, and is particularly strong at command-line and multi-step coding tasks and long-horizon problem solving.
 
@@ -5403,7 +5481,7 @@ GPT-5.6 Sol is the flagship model in OpenAI's GPT-5.6 series. It is suited for c
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
-- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5.6 Terra is a balanced model in OpenAI's GPT-5.6 series, positioned between the flagship Sol tier and the cost-efficient Luna tier. It is suited for everyday coding, reasoning, and agentic tasks where capability and cost need to be balanced, offering strong performance at roughly half the cost of Sol.
 
@@ -5417,7 +5495,7 @@ GPT-5.6 Terra is a balanced model in OpenAI's GPT-5.6 series, positioned between
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
-- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5.6 Terra Pro is the same underlying model as [GPT-5.6 Terra](https://openrouter.ai/openai/gpt-5.6-terra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.
 
@@ -5435,7 +5513,7 @@ Learn more in OpenAI's docs: …
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5.6 Terra Pro is the same underlying model as [GPT-5.6 Terra](https://openrouter.ai/openai/gpt-5.6-terra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.
 
@@ -5453,7 +5531,7 @@ Learn more in OpenAI's docs: …
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-07-09
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-5.6 Terra is a balanced model in OpenAI's GPT-5.6 series, positioned between the flagship Sol tier and the cost-efficient Luna tier. It is suited for everyday coding, reasoning, and agentic tasks where capability and cost need to be balanced, offering strong performance at roughly half the cost of Sol.
 
@@ -5467,7 +5545,7 @@ GPT-5.6 Terra is a balanced model in OpenAI's GPT-5.6 series, positioned between
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2024-09-30T00:00:00.000Z
 - **登録日**: 2025-08-07
-- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, seed, max_tokens, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, seed, max_tokens, tools, tool_choice, verbosity
 
 GPT-5 is OpenAI’s most advanced model, offering major improvements in reasoning, code quality, and user experience. It is optimized for complex tasks that require step-by-step reasoning, instruction following, and accuracy in high-stakes use cases. It supports test-time routing features and advanced prompt understanding, including user-specified intent like "think hard about this." Improvements include reductions in hallucination, sycophancy, and better performance in coding, writing, and health-related tasks.
 
@@ -5480,7 +5558,7 @@ GPT-5 is OpenAI’s most advanced model, offering major improvements in reasonin
 - **Pricing**: 入力 $10.00/1M · 出力 $50.00/1M · キャッシュ読 $1.00/1M · キャッシュ書 $12.50/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-09-04
-- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-6 Astra is OpenAI's flagship model for demanding end-to-end work. It is suited for advanced analysis, software engineering, deep research, scientific work, and document creation, with particular strengths in long-horizon agentic tasks that involve computer and browser use.
 
@@ -5493,7 +5571,7 @@ GPT-6 Astra is OpenAI's flagship model for demanding end-to-end work. It is suit
 - **Pricing**: 入力 $10.00/1M · 出力 $50.00/1M · キャッシュ読 $1.00/1M · キャッシュ書 $12.50/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-09-04
-- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-6 Astra Pro is the same underlying model as [GPT-6 Astra](https://openrouter.ai/openai/gpt-6-astra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.
 
@@ -5510,7 +5588,7 @@ Learn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reaso
 - **Pricing**: 入力 $5.00/1M · 出力 $25.00/1M · キャッシュ読 $0.5/1M · キャッシュ書 $6.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-09-04
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-6 Astra Pro is the same underlying model as [GPT-6 Astra](https://openrouter.ai/openai/gpt-6-astra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.
 
@@ -5527,7 +5605,7 @@ Learn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reaso
 - **Pricing**: 入力 $5.00/1M · 出力 $25.00/1M · キャッシュ読 $0.5/1M · キャッシュ書 $6.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-09-04
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-6 Astra is OpenAI's flagship model for demanding end-to-end work. It is suited for advanced analysis, software engineering, deep research, scientific work, and document creation, with particular strengths in long-horizon agentic tasks that involve computer and browser use.
 
@@ -5540,7 +5618,7 @@ GPT-6 Astra is OpenAI's flagship model for demanding end-to-end work. It is suit
 - **Pricing**: 入力 $0.1/1M · 出力 $0.5/1M · キャッシュ読 $0.01/1M · キャッシュ書 $0.125/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-09-22
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-6 Luna is the fast, cost-efficient model in OpenAI's GPT-6 series, positioned below GPT-6 Sol. It is suited for high-volume and latency-sensitive workloads such as chat, classification, and lightweight agentic tasks, and at higher reasoning effort it can take on complex software engineering and computer-use tasks that previously called for a Sol-tier model. It shares the GPT-6 family's gains in factual reliability and its clearer, more concise communication style.
 
@@ -5553,7 +5631,7 @@ GPT-6 Luna is the fast, cost-efficient model in OpenAI's GPT-6 series, positione
 - **Pricing**: 入力 $0.1/1M · 出力 $0.5/1M · キャッシュ読 $0.01/1M · キャッシュ書 $0.125/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-09-22
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-6 Luna Pro is the same underlying model as [GPT-6 Luna](https://openrouter.ai/openai/gpt-6-luna), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.
 
@@ -5570,7 +5648,7 @@ Learn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reaso
 - **Pricing**: 入力 $0.05/1M · 出力 $0.25/1M · キャッシュ読 $0.005/1M · キャッシュ書 $0.0625/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-09-22
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-6 Luna Pro is the same underlying model as [GPT-6 Luna](https://openrouter.ai/openai/gpt-6-luna), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.
 
@@ -5587,7 +5665,7 @@ Learn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reaso
 - **Pricing**: 入力 $0.05/1M · 出力 $0.25/1M · キャッシュ読 $0.005/1M · キャッシュ書 $0.0625/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-09-22
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-6 Luna is the fast, cost-efficient model in OpenAI's GPT-6 series, positioned below GPT-6 Sol. It is suited for high-volume and latency-sensitive workloads such as chat, classification, and lightweight agentic tasks, and at higher reasoning effort it can take on complex software engineering and computer-use tasks that previously called for a Sol-tier model. It shares the GPT-6 family's gains in factual reliability and its clearer, more concise communication style.
 
@@ -5600,7 +5678,7 @@ GPT-6 Luna is the fast, cost-efficient model in OpenAI's GPT-6 series, positione
 - **Pricing**: 入力 $2.00/1M · 出力 $10.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $2.50/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-09-22
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-6 Sol is the cost-efficient high-end model in OpenAI's GPT-6 series, positioned below the flagship GPT-6 Astra and above the fast GPT-6 Luna tier. It is suited for demanding professional work, agentic coding, business workflow automation, and computer use, and is particularly strong at long-horizon software engineering tasks in real codebases. It approaches Astra-level factual reliability at a much lower cost and shares Astra's clearer, more concise communication style in technical and coding conversations.
 
@@ -5613,7 +5691,7 @@ GPT-6 Sol is the cost-efficient high-end model in OpenAI's GPT-6 series, positio
 - **Pricing**: 入力 $2.00/1M · 出力 $10.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $2.50/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-09-22
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-6 Sol Pro is the same underlying model as [GPT-6 Sol](https://openrouter.ai/openai/gpt-6-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.
 
@@ -5630,7 +5708,7 @@ Learn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reaso
 - **Pricing**: 入力 $1.00/1M · 出力 $5.00/1M · キャッシュ読 $0.1/1M · キャッシュ書 $1.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-09-22
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-6 Sol Pro is the same underlying model as [GPT-6 Sol](https://openrouter.ai/openai/gpt-6-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.
 
@@ -5647,7 +5725,7 @@ Learn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reaso
 - **Pricing**: 入力 $1.00/1M · 出力 $5.00/1M · キャッシュ読 $0.1/1M · キャッシュ書 $1.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-09-22
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-6 Sol is the cost-efficient high-end model in OpenAI's GPT-6 series, positioned below the flagship GPT-6 Astra and above the fast GPT-6 Luna tier. It is suited for demanding professional work, agentic coding, business workflow automation, and computer use, and is particularly strong at long-horizon software engineering tasks in real codebases. It approaches Astra-level factual reliability at a much lower cost and shares Astra's clearer, more concise communication style in technical and coding conversations.
 
@@ -5660,7 +5738,7 @@ GPT-6 Sol is the cost-efficient high-end model in OpenAI's GPT-6 series, positio
 - **Pricing**: 入力 $2.00/1M · 出力 $10.00/1M · キャッシュ読 $0.1/1M · キャッシュ書 $2.50/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-09-29
-- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-6.1 Sol is an upgrade to GPT-6 Sol from OpenAI, positioned below the flagship GPT-6 Astra in the GPT-6 series. It is suited for agentic coding, computer use, document-heavy professional work, and multi-step business workflow automation, and approaches Astra-level results on these tasks at a much lower cost. Compared with GPT-6 Sol, it makes fewer factual errors and is more reliable at respecting explicit restrictions and user intent during agentic tasks.
 
@@ -5673,7 +5751,7 @@ GPT-6.1 Sol is an upgrade to GPT-6 Sol from OpenAI, positioned below the flagshi
 - **Pricing**: 入力 $2.00/1M · 出力 $10.00/1M · キャッシュ読 $0.1/1M · キャッシュ書 $2.50/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-09-29
-- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: max_completion_tokens, reasoning, include_reasoning, seed, response_format, structured_outputs, tools, tool_choice, verbosity
 
 GPT-6.1 Sol Pro is the same underlying model as [GPT-6.1 Sol](https://openrouter.ai/openai/gpt-6.1-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.
 
@@ -7982,13 +8060,13 @@ Step 3.5 Flash is StepFun's most capable open-source foundation model. Built on 
 
 - **ID**: `stepfun/step-3.7-flash`
 - **Provider**: stepfun
-- **Context**: 262K (262,144) tok / max出力 32,768 tok
+- **Context**: 262K (262,144) tok / max出力 256,000 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.16/1M · 出力 $0.92/1M · キャッシュ読 $0.032/1M
-- **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.2/1M · 出力 $1.15/1M · キャッシュ読 $0.04/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-05-28
 - **HF**: `stepfun-ai/Step-3.7-Flash`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, logit_bias, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice, structured_outputs, logprobs, top_logprobs
 
 Step 3.7 Flash is StepFun's latest high-efficiency multimodal Mixture-of-Experts model. It pairs a 196B-parameter language backbone with a vision encoder for native image and video understanding, activating roughly 11B parameters per token. The model supports a 256K context window and exposes selectable reasoning levels (high/medium/low), letting callers trade off speed, cost, and depth of reasoning.
 
@@ -8088,11 +8166,11 @@ Hy3 preview is a high-efficiency Mixture-of-Experts model from Tencent designed 
 - **Provider**: tencent
 - **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.834/1M · 出力 $2.50/1M · キャッシュ読 $0.042/1M
+- **Pricing**: 入力 $0.83/1M · 出力 $2.50/1M · キャッシュ読 $0.04/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-08-28
 - **HF**: `tencent/Hy4-preview`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, logit_bias, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, min_p, logit_bias, response_format, structured_outputs, repetition_penalty, tools, tool_choice
 
 Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that require planning, context continuity, and sustained multi-step execution.
 
@@ -8258,7 +8336,7 @@ Jev is a structured decision model from TypeSafe, and the first of its System On
 
 Learn more in TypeSafe's docs: https://docs.typesafe.ai/concepts/system-one
 
-### ▎unbiased（1）
+### ▎unbiased（2）
 
 #### Pareto
 
@@ -8272,6 +8350,19 @@ Learn more in TypeSafe's docs: https://docs.typesafe.ai/concepts/system-one
 - **対応パラメータ**: max_tokens, temperature, top_p, tools, tool_choice, response_format
 
 Pareto is a multimodal composite model built for research, coding, and agentic workflows, while delivering frontier-level performance across a broad range of general-purpose tasks.
+
+#### Pareto 26.10 Preview
+
+- **ID**: `unbiased/pareto-26.10-preview`
+- **Provider**: unbiased
+- **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
+- **Modality**: text+image->text  (in: text,image → out: text)
+- **Pricing**: 入力 $0.8/1M · 出力 $3.20/1M · キャッシュ読 $0.03/1M
+- **Capabilities**: Function calling, Tool choice
+- **登録日**: 2026-10-01
+- **対応パラメータ**: max_tokens, temperature, top_p, tools, tool_choice
+
+Pareto is a multimodal composite model built for research, coding, and agentic workflows, while delivering frontier-level performance across a broad range of general-purpose tasks. This is a preview of the next Pareto version and may change without notice; use pareto-26.9 for stable behaviour.
 
 ### ▎undi95（1）
 
@@ -8886,7 +8977,7 @@ GLM-5.1 delivers a major leap in coding capability, with particularly significan
 - **Provider**: z-ai
 - **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.2658/1M · 出力 $4.00/1M · キャッシュ読 $0.2658/1M
+- **Pricing**: 入力 $0.1314/1M · 出力 $4.00/1M · キャッシュ読 $0.1314/1M
 - **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-06-16
 - **HF**: `zai-org/GLM-5.2`
@@ -8902,7 +8993,7 @@ Reasoning efforts `high` and `xhigh` are supported; `xhigh` maps to max reasonin
 - **Provider**: z-ai
 - **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.179/1M · 出力 $4.00/1M · キャッシュ読 $0.179/1M
+- **Pricing**: 入力 $0.12/1M · 出力 $4.00/1M · キャッシュ読 $0.06/1M
 - **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-08-18
 - **HF**: `zai-org/GLM-5.3`
@@ -8918,7 +9009,7 @@ Reasoning is always on and cannot be disabled. Reasoning efforts `low`, `high`, 
 - **Provider**: z-ai
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.02/1M · 出力 $0.3/1M · キャッシュ読 $0.01/1M
+- **Pricing**: 入力 $0.0262/1M · 出力 $0.9/1M · キャッシュ読 $0.0131/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-08-26
 - **HF**: `zai-org/GLM-5.3-Flash`
@@ -9059,10 +9150,10 @@ This model always redirects to the latest model in the Claude Sonnet family.
 - **Provider**: ~deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.027/1M · 出力 $0.6/1M · キャッシュ読 $0.027/1M
+- **Pricing**: 入力 $0.015/1M · 出力 $0.75/1M · キャッシュ読 $0.015/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-09-14
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, stop, max_tokens, logit_bias, frequency_penalty, presence_penalty, repetition_penalty, tools, tool_choice, seed, response_format, structured_outputs, logprobs, top_logprobs, reasoning_effort
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, stop, seed, top_p, frequency_penalty, presence_penalty, top_k, min_p, logit_bias, repetition_penalty, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, reasoning_effort
 
 This model always redirects to the latest model in the DeepSeek Flash family.
 
@@ -9072,10 +9163,10 @@ This model always redirects to the latest model in the DeepSeek Flash family.
 - **Provider**: ~deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 393,216 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.2402/1M · 出力 $0.7207/1M · キャッシュ読 $0.0076/1M
+- **Pricing**: 入力 $0.132/1M · 出力 $0.396/1M · キャッシュ読 $0.0042/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-09-14
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, stop, response_format, structured_outputs, tools, tool_choice, top_k, min_p, logit_bias, frequency_penalty, presence_penalty, repetition_penalty, seed, logprobs, top_logprobs, reasoning_effort
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, stop, response_format, structured_outputs, tools, tool_choice, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, seed, logit_bias, logprobs, top_logprobs, reasoning_effort
 
 This model always redirects to the latest model in the DeepSeek Pro family.
 
@@ -9085,10 +9176,10 @@ This model always redirects to the latest model in the DeepSeek Pro family.
 - **Provider**: ~deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.0108/1M · 出力 $1.28/1M · キャッシュ読 $0.0108/1M
+- **Pricing**: 入力 $0.0058/1M · 出力 $1.60/1M · キャッシュ読 $0.0058/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-01
-- **対応パラメータ**: reasoning, include_reasoning, tools, tool_choice, temperature, top_p, top_k, min_p, stop, max_tokens, logit_bias, frequency_penalty, presence_penalty, repetition_penalty, seed, response_format, structured_outputs, logprobs, top_logprobs, reasoning_effort, parallel_tool_calls, top_a
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, stop, seed, response_format, top_p, frequency_penalty, presence_penalty, top_k, min_p, logit_bias, repetition_penalty, structured_outputs, tools, tool_choice, logprobs, top_logprobs, reasoning_effort, parallel_tool_calls, top_a
 
 This model always redirects to the latest model in the DeepSeek V4 Flash family.
 
@@ -9128,7 +9219,7 @@ This model always redirects to the latest model in the Gemini Pro family.
 - **Provider**: ~moonshotai
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.7034/1M · 出力 $10.00/1M · キャッシュ読 $0.7034/1M
+- **Pricing**: 入力 $1.20/1M · 出力 $11.20/1M · キャッシュ読 $0.29/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-27
 - **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, stop, frequency_penalty, presence_penalty, repetition_penalty, max_tokens, tools, tool_choice, seed, min_p, logit_bias, response_format, structured_outputs, logprobs, top_logprobs
@@ -9146,7 +9237,7 @@ This model always redirects to the latest model in the Kimi family.
 - **Pricing**: 入力 $10.00/1M · 出力 $50.00/1M · キャッシュ読 $1.00/1M · キャッシュ書 $12.50/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-09-11
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, max_completion_tokens
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity, max_completion_tokens
 
 This model always redirects to the latest model in the GPT Astra family.
 
@@ -9159,7 +9250,7 @@ This model always redirects to the latest model in the GPT Astra family.
 - **Pricing**: 入力 $0.1/1M · 出力 $0.5/1M · キャッシュ読 $0.01/1M · キャッシュ書 $0.125/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-09-11
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, max_completion_tokens
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity, max_completion_tokens
 
 This model always redirects to the latest model in the GPT Luna family.
 
@@ -9173,7 +9264,7 @@ This model always redirects to the latest model in the GPT Luna family.
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2025-08-31T00:00:00.000Z
 - **登録日**: 2026-04-27
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, max_completion_tokens
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity, max_completion_tokens
 
 This model always redirects to the latest model in the GPT Mini family.
 
@@ -9186,7 +9277,7 @@ This model always redirects to the latest model in the GPT Mini family.
 - **Pricing**: 入力 $2.00/1M · 出力 $10.00/1M · キャッシュ読 $0.1/1M · キャッシュ書 $2.50/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-09-11
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, max_completion_tokens
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity, max_completion_tokens
 
 This model always redirects to the latest model in the GPT Sol family.
 
@@ -9200,7 +9291,7 @@ This model always redirects to the latest model in the GPT Sol family.
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2026-02-16T00:00:00.000Z
 - **登録日**: 2026-09-11
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, max_completion_tokens
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity, max_completion_tokens
 
 This model always redirects to the latest model in the GPT Terra family.
 
@@ -9240,7 +9331,7 @@ This model always redirects to the latest Grok model from xAI.
 - **Provider**: ~z-ai
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.02/1M · 出力 $0.3/1M · キャッシュ読 $0.01/1M
+- **Pricing**: 入力 $0.0262/1M · 出力 $0.9/1M · キャッシュ読 $0.0131/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-27
 - **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, stop, seed, response_format, structured_outputs, tools, tool_choice, top_p, frequency_penalty, presence_penalty, top_k, min_p, logit_bias, repetition_penalty, logprobs, top_logprobs, reasoning_effort, parallel_tool_calls
@@ -9253,9 +9344,9 @@ This model always redirects to the latest model in the GLM Flash family.
 - **Provider**: ~z-ai
 - **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.179/1M · 出力 $4.00/1M · キャッシュ読 $0.179/1M
+- **Pricing**: 入力 $0.12/1M · 出力 $4.00/1M · キャッシュ読 $0.06/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-19
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice, response_format, structured_outputs, logprobs, top_logprobs, min_p, logit_bias, reasoning_effort, parallel_tool_calls
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice, response_format, structured_outputs, logprobs, top_logprobs, min_p, logit_bias, parallel_tool_calls, reasoning_effort
 
 This model always redirects to the latest GLM model from Z.ai.
