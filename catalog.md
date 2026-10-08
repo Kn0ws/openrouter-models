@@ -1,7 +1,7 @@
-# OpenRouter モデルカタログ（全643モデル）
+# OpenRouter モデルカタログ（全657モデル）
 
-- 取得日時: 2026-10-07T06:43:40
-- プロバイダ数: 86 / 無料枠あり: 33
+- 取得日時: 2026-10-08T06:45:47
+- プロバイダ数: 87 / 無料枠あり: 33
 
 ## プロバイダ別サマリ
 
@@ -11,19 +11,20 @@
 | qwen | 63 | 0.00 | 35.00 | 1,048,576 |
 | google | 54 | 0.00 | 266.67 | 1,048,576 |
 | mistralai | 32 | 0.02 | 50.00 | 524,288 |
-| anthropic | 29 | 0.50 | 15.00 | 1,000,000 |
-| z-ai | 18 | 0.02 | 2.80 | 1,048,576 |
+| anthropic | 31 | 0.05 | 15.00 | 1,000,000 |
+| z-ai | 18 | 0.03 | 2.80 | 1,048,576 |
 | recraft | 16 | 0.00 | 0.00 | 65,536 |
 | x-ai | 15 | 0.00 | 27.78 | 2,000,000 |
-| deepseek | 15 | 0.02 | 0.70 | 1,048,576 |
+| deepseek | 15 | 0.00 | 0.70 | 1,048,576 |
 | nvidia | 15 | 0.00 | 25.00 | 1,000,000 |
 | minimax | 13 | 0.00 | 100.00 | 1,048,576 |
 | microsoft | 12 | 0.07 | 360,000.00 | 65,535 |
+| elevenlabs | 11 | 20.00 | 40.00 | 0 |
 | bytedance-seed | 11 | 0.00 | 0.50 | 262,144 |
 | voyageai | 9 | 0.00 | 0.12 | 32,000 |
 | cohere | 9 | 0.00 | 2.50 | 256,000 |
-| tencent | 8 | 0.00 | 0.83 | 1,048,576 |
 | perplexity | 8 | 0.00 | 3.00 | 262,144 |
+| tencent | 8 | 0.00 | 0.83 | 1,048,576 |
 | black-forest-labs | 8 | 0.00 | 0.00 | 67,344 |
 | meta | 8 | 0.00 | 50.00 | 1,048,576 |
 | moonshotai | 8 | 0.45 | 2.28 | 1,048,576 |
@@ -33,20 +34,20 @@
 | aion-labs | 6 | 0.70 | 3.00 | 262,144 |
 | alibaba | 6 | 0.00 | 0.00 | 0 |
 | bytedance | 6 | 0.00 | 0.10 | 128,000 |
+| upstage | 5 | 0.05 | 0.15 | 524,288 |
 | xiaomi | 5 | 0.10 | 4.35 | 1,050,000 |
 | ~openai | 5 | 0.10 | 10.00 | 1,050,000 |
 | amazon | 5 | 0.04 | 2.50 | 1,000,000 |
 | sentence-transformers | 5 | 0.01 | 0.01 | 512 |
-| upstage | 4 | 0.05 | 0.15 | 524,288 |
 | sakana | 4 | 0.95 | 5.00 | 1,000,000 |
 | thinkingmachines | 4 | 0.00 | 0.95 | 1,048,576 |
 | poolside | 4 | 0.00 | 0.09 | 1,048,576 |
-| ~anthropic | 4 | 1.00 | 10.00 | 1,000,000 |
+| ~anthropic | 4 | 0.10 | 10.00 | 1,000,000 |
 | sourceful | 4 | 0.00 | 0.00 | 32,768 |
 | liquid | 3 | 0.00 | 0.04 | 65,536 |
 | inception | 3 | 0.00 | 0.25 | 260,000 |
 | respan | 3 | 0.00 | 0.02 | 0 |
-| ~deepseek | 3 | 0.02 | 0.30 | 1,048,576 |
+| ~deepseek | 3 | 0.00 | 0.16 | 1,048,576 |
 | deepgram | 3 | 30.00 | 71.67 | 0 |
 | krea | 3 | 0.00 | 0.00 | 65,536 |
 | kwaivgi | 3 | 0.00 | 0.00 | 0 |
@@ -55,14 +56,14 @@
 | thedrummer | 3 | 0.30 | 0.55 | 1,024,000 |
 | nousresearch | 3 | 0.70 | 1.00 | 131,072 |
 | sao10k | 3 | 0.04 | 0.85 | 131,072 |
-| cloudflare | 2 | 0.09 | 0.24 | 65,536 |
+| cloudflare | 2 | 0.02 | 0.04 | 65,536 |
 | unbiased | 2 | 0.80 | 2.50 | 1,048,576 |
 | heygen | 2 | 0.00 | 0.00 | 0 |
 | perceptron | 2 | 0.15 | 0.15 | 36,864 |
 | inference-net | 2 | 0.03 | 0.05 | 128,000 |
 | nex-agi | 2 | 0.02 | 0.07 | 262,144 |
 | ibm-granite | 2 | 0.02 | 0.06 | 131,072 |
-| ~z-ai | 2 | 0.02 | 0.03 | 1,048,576 |
+| ~z-ai | 2 | 0.03 | 0.04 | 1,048,576 |
 | runway | 2 | 0.00 | 0.00 | 0 |
 | stepfun | 2 | 0.10 | 0.20 | 262,144 |
 | ~google | 2 | 0.75 | 2.00 | 1,048,576 |
@@ -81,7 +82,7 @@
 | dots-studio | 1 | 0.00 | 0.00 | 512,000 |
 | meituan | 1 | 0.30 | 0.30 | 1,048,756 |
 | ~x-ai | 1 | 2.00 | 2.00 | 500,000 |
-| ~moonshotai | 1 | 0.61 | 0.61 | 1,048,576 |
+| ~moonshotai | 1 | 0.60 | 0.60 | 1,048,576 |
 | sesame | 1 | 7.00 | 7.00 | 4,096 |
 | canopylabs | 1 | 7.00 | 7.00 | 4,096 |
 | hexgrad | 1 | 0.62 | 0.62 | 4,096 |
@@ -351,7 +352,7 @@ This is a series of models designed to replicate the prose quality of the Claude
 
 The model is fine-tuned on top of [Qwen2.5 72B](https://openrouter.ai/qwen/qwen-2.5-72b-instruct).
 
-### ▎anthropic（29）
+### ▎anthropic（31）
 
 #### Anthropic: Claude Fable 5
 
@@ -438,6 +439,36 @@ It introduces extended thinking to the Haiku line; enabling controllable reasoni
 Claude Haiku 4.5 is Anthropic’s fastest and most efficient model, delivering near-frontier intelligence at a fraction of the cost and latency of larger Claude models. Matching Claude Sonnet 4’s performance across reasoning, coding, and computer-use tasks, Haiku 4.5 brings frontier-level capability to real-time and high-volume applications.
 
 It introduces extended thinking to the Haiku line; enabling controllable reasoning depth, summarized or interleaved thought output, and tool-assisted workflows with full support for coding, bash, web search, and computer-use tools. Scoring >73% on SWE-bench Verified, Haiku 4.5 ranks among the world’s best coding models while maintaining exceptional …
+
+#### Anthropic: Claude Haiku 5.5
+
+- **ID**: `anthropic/claude-haiku-5.5`
+- **Provider**: anthropic
+- **Context**: 1M (1,000,000) tok / max出力 128,000 tok
+- **Modality**: text+image+file->text  (in: text,image,file → out: text)
+- **Pricing**: 入力 $0.1/1M · 出力 $0.5/1M · キャッシュ読 $0.01/1M · キャッシュ書 $0.125/1M · Web検索 $0.01
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
+- **登録日**: 2026-10-07
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, response_format, tool_choice, tools, verbosity, structured_outputs, stop
+
+Claude Haiku 5.5 is Anthropic's small, fast model for high-volume, cost-sensitive work such as summarization, subagents, and browser use. It succeeds Claude Haiku 4.5 with stronger coding, computer use, and knowledge work, and accepts text and image input with a 1M-token context window.
+
+It is the first Haiku model with adjustable effort. Thinking is adaptive and on by default, with effort as the main lever for trading off depth, latency, and cost; it can be turned off at low, medium, and high effort.
+
+#### Anthropic: Claude Haiku 5.5 (batch)
+
+- **ID**: `anthropic/claude-haiku-5.5:batch`
+- **Provider**: anthropic
+- **Context**: 1M (1,000,000) tok / max出力 128,000 tok
+- **Modality**: text+image+file->text  (in: text,image,file → out: text)
+- **Pricing**: 入力 $0.05/1M · 出力 $0.25/1M · キャッシュ読 $0.005/1M · キャッシュ書 $0.0625/1M · Web検索 $0.01 · Web Search $0.01/1K calls
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
+- **登録日**: 2026-10-07
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, stop, tool_choice, tools, structured_outputs, response_format, verbosity
+
+Claude Haiku 5.5 is Anthropic's small, fast model for high-volume, cost-sensitive work such as summarization, subagents, and browser use. It succeeds Claude Haiku 4.5 with stronger coding, computer use, and knowledge work, and accepts text and image input with a 1M-token context window.
+
+It is the first Haiku model with adjustable effort. Thinking is adaptive and on by default, with effort as the main lever for trading off depth, latency, and cost; it can be turned off at low, medium, and high effort.
 
 #### Anthropic: Claude Opus 4.1
 
@@ -738,7 +769,7 @@ Sonnet 5 is Anthropic's most capable Sonnet-class model, with frontier performan
 - **Provider**: anthropic
 - **Context**: 1M (1,000,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $2.00/1M · 出力 $10.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $2.50/1M · Web検索 $0.01
+- **Pricing**: 入力 $2.00/1M · 出力 $10.00/1M · キャッシュ読 $0.1/1M · キャッシュ書 $2.50/1M · Web検索 $0.01
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-09-28
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, response_format, tool_choice, tools, verbosity, structured_outputs, stop
@@ -753,7 +784,7 @@ Thinking is always on, so effort is the main lever for trading off depth, latenc
 - **Provider**: anthropic
 - **Context**: 1M (1,000,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $1.00/1M · 出力 $5.00/1M · キャッシュ読 $0.1/1M · キャッシュ書 $1.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
+- **Pricing**: 入力 $1.00/1M · 出力 $5.00/1M · キャッシュ読 $0.05/1M · キャッシュ書 $1.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-09-28
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, stop, tool_choice, tools, structured_outputs, response_format, verbosity
@@ -1229,9 +1260,9 @@ Orpheus 3B is an English text-to-speech model from Canopy Labs, fine-tuned for n
 
 - **ID**: `cloudflare/clef`
 - **Provider**: cloudflare
-- **Context**: 65K (65,536) tok / max出力 65,536 tok
+- **Context**: 65K (65,536) tok
 - **Modality**: text+image->decisions  (in: text,image → out: decisions)
-- **Pricing**: 入力 $0.24/1M · 出力 無料/1M
+- **Pricing**: 入力 $0.042/1M · 出力 無料/1M
 - **登録日**: 2026-10-01
 - **HF**: `Cloudflare/clef`
 
@@ -1241,9 +1272,9 @@ Clef is Cloudflare's open-source 27B multimodal decision model, a fine-tune of Q
 
 - **ID**: `cloudflare/clef-flash`
 - **Provider**: cloudflare
-- **Context**: 65K (65,536) tok / max出力 65,536 tok
+- **Context**: 65K (65,536) tok
 - **Modality**: text+image->decisions  (in: text,image → out: decisions)
-- **Pricing**: 入力 $0.09/1M · 出力 無料/1M
+- **Pricing**: 入力 $0.021/1M · 出力 無料/1M
 - **登録日**: 2026-10-01
 - **HF**: `Cloudflare/clef-flash`
 
@@ -1574,7 +1605,7 @@ The model was trained under conditions aligned with V3.1-Terminus to enable dire
 - **Provider**: deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.03/1M · 出力 $1.28/1M · キャッシュ読 $0.03/1M
+- **Pricing**: 入力 $0.0054/1M · 出力 $1.28/1M · キャッシュ読 $0.0054/1M
 - **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-04-24
 - **HF**: `deepseek-ai/DeepSeek-V4-Flash`
@@ -1590,11 +1621,11 @@ The model includes hybrid attention for efficient long-context processing. Reaso
 - **Provider**: deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.018/1M · 出力 $1.28/1M · キャッシュ読 $0.018/1M
-- **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力
+- **Pricing**: 入力 $0.0037/1M · 出力 $0.8163/1M · キャッシュ読 $0.0037/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-07-31
 - **HF**: `deepseek-ai/DeepSeek-V4-Flash-0731`
-- **対応パラメータ**: reasoning, include_reasoning, tools, tool_choice, temperature, top_p, top_k, min_p, stop, max_tokens, logit_bias, frequency_penalty, presence_penalty, repetition_penalty
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, stop, seed, response_format, top_p, frequency_penalty, presence_penalty, top_k, min_p, logit_bias, repetition_penalty, structured_outputs, tools, tool_choice
 
 DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows. This is the GA release of DeepSeek V4 Flash.
 
@@ -1620,7 +1651,7 @@ It is suited for document and chart understanding, visual question answering, an
 - **Provider**: deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 393,216 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.2067/1M · 出力 $4.20/1M · キャッシュ読 $0.16/1M
+- **Pricing**: 入力 $0.3/1M · 出力 $4.20/1M · キャッシュ読 $0.23/1M
 - **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-04-24
 - **HF**: `deepseek-ai/DeepSeek-V4-Pro`
@@ -1636,7 +1667,7 @@ Built on the same architecture as DeepSeek V4 Flash, it introduces a hybrid atte
 - **Provider**: deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 393,216 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.2999/1M · 出力 $4.20/1M · キャッシュ読 $0.3/1M
+- **Pricing**: 入力 $0.1575/1M · 出力 $8.00/1M · キャッシュ読 $0.12/1M
 - **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-08-12
 - **HF**: `deepseek-ai/DeepSeek-V4-Pro-0813`
@@ -1650,7 +1681,7 @@ DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. Th
 - **Provider**: deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.05/1M · 出力 $1.20/1M · キャッシュ読 $0.02/1M
+- **Pricing**: 入力 $0.003/1M · 出力 $2.40/1M · キャッシュ読 $0.003/1M
 - **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-09-10
 - **HF**: `deepseek-ai/DeepSeek-V4.1-Flash`
@@ -1690,6 +1721,129 @@ It is suited for coding, terminal, and computer-use agents, along with long-hori
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, response_format, structured_outputs, tools, tool_choice
 
 Dots3-Note Preview is an open-weight mixture-of-experts model from Dots Studio, with 16B active parameters out of 280B total. It is the lightest model in the Dots 3 family and is suited for reasoning, coding, multimodal understanding, long-context processing, and multi-step agent workflows.
+
+### ▎elevenlabs（11）
+
+#### ElevenLabs: Eleven Flash v2
+
+- **ID**: `elevenlabs/eleven-flash-v2`
+- **Provider**: elevenlabs
+- **Context**: — tok
+- **Modality**: text->speech  (in: text → out: speech)
+- **Pricing**: 入力 $20.00/1M · 出力 無料/1M · Characters $2e-05/M characters
+- **登録日**: 2026-10-07
+
+Eleven Flash v2 is an English-only, ultra-low-latency text-to-speech model from ElevenLabs. It is suited for conversational and real-time English use cases, and has a 30,000-character request limit.
+
+#### ElevenLabs: Eleven Flash v2.5
+
+- **ID**: `elevenlabs/eleven-flash-v2.5`
+- **Provider**: elevenlabs
+- **Context**: — tok
+- **Modality**: text->speech  (in: text → out: speech)
+- **Pricing**: 入力 $20.00/1M · 出力 無料/1M · Characters $2e-05/M characters
+- **登録日**: 2026-10-07
+
+Eleven Flash v2.5 is an ultra-low-latency text-to-speech model from ElevenLabs. It is suited for conversational and real-time use cases, supports 32 languages, and has a 40,000-character request limit.
+
+#### ElevenLabs: Eleven Multilingual v2
+
+- **ID**: `elevenlabs/eleven-multilingual-v2`
+- **Provider**: elevenlabs
+- **Context**: — tok
+- **Modality**: text->speech  (in: text → out: speech)
+- **Pricing**: 入力 $40.00/1M · 出力 無料/1M · Characters $4e-05/M characters
+- **登録日**: 2026-10-07
+
+Eleven Multilingual v2 is a text-to-speech model from ElevenLabs. It is suited for lifelike, consistent long-form narration such as voice-overs and audiobooks, supports 29 languages, and has a 10,000-character request limit.
+
+#### ElevenLabs: Eleven Turbo v2
+
+- **ID**: `elevenlabs/eleven-turbo-v2`
+- **Provider**: elevenlabs
+- **Context**: — tok
+- **Modality**: text->speech  (in: text → out: speech)
+- **Pricing**: 入力 $20.00/1M · 出力 無料/1M · Characters $2e-05/M characters
+- **登録日**: 2026-10-07
+
+Eleven Turbo v2 is an English-only, low-latency text-to-speech model from ElevenLabs. It is suited for developer use cases where speed matters and only English is needed, and has a 30,000-character request limit.
+
+#### ElevenLabs: Eleven Turbo v2.5
+
+- **ID**: `elevenlabs/eleven-turbo-v2.5`
+- **Provider**: elevenlabs
+- **Context**: — tok
+- **Modality**: text->speech  (in: text → out: speech)
+- **Pricing**: 入力 $20.00/1M · 出力 無料/1M · Characters $2e-05/M characters
+- **登録日**: 2026-10-07
+
+Eleven Turbo v2.5 is a low-latency text-to-speech model from ElevenLabs. It balances quality and speed for developer use cases that need non-English languages, supports 32 languages, and has a 40,000-character request limit.
+
+#### ElevenLabs: Eleven v3
+
+- **ID**: `elevenlabs/eleven-v3`
+- **Provider**: elevenlabs
+- **Context**: — tok
+- **Modality**: text->speech  (in: text → out: speech)
+- **Pricing**: 入力 $40.00/1M · 出力 無料/1M · Characters $4e-05/M characters
+- **登録日**: 2026-10-07
+
+Eleven v3 is a text-to-speech model from ElevenLabs. It produces emotionally rich, highly expressive speech with inline audio tags, supports 70+ languages, and has a 5,000-character request limit.
+
+#### ElevenLabs: Eleven v3 Conversational
+
+- **ID**: `elevenlabs/eleven-v3-conversational`
+- **Provider**: elevenlabs
+- **Context**: — tok
+- **Modality**: text->speech  (in: text → out: speech)
+- **Pricing**: 入力 $20.00/1M · 出力 無料/1M · Characters $2e-05/M characters
+- **登録日**: 2026-10-07
+
+Eleven v3 Conversational is a text-to-speech model from ElevenLabs, a variant of Eleven v3 optimized for natural dialogue in conversational agents. It supports 70+ languages and has a 5,000-character request limit.
+
+#### ElevenLabs: Eleven v4
+
+- **ID**: `elevenlabs/eleven-v4`
+- **Provider**: elevenlabs
+- **Context**: — tok
+- **Modality**: text->speech  (in: text → out: speech)
+- **Pricing**: 入力 $40.00/1M · 出力 無料/1M · Characters $4e-05/M characters
+- **登録日**: 2026-10-07
+
+Eleven v4 is a text-to-speech model from ElevenLabs. It is ElevenLabs' most expressive model, with inline audio tags for emotional and delivery control, support for 90+ languages, and a 10,000-character request limit.
+
+#### ElevenLabs: Eleven v4 Turbo
+
+- **ID**: `elevenlabs/eleven-v4-turbo`
+- **Provider**: elevenlabs
+- **Context**: — tok
+- **Modality**: text->speech  (in: text → out: speech)
+- **Pricing**: 入力 $20.00/1M · 出力 無料/1M · Characters $2e-05/M characters
+- **登録日**: 2026-10-07
+
+Eleven v4 Turbo is a low-latency text-to-speech model from ElevenLabs. It keeps Eleven v4's expressive delivery and audio tags while being tuned for faster generation, with support for 90+ languages and a 10,000-character request limit.
+
+#### ElevenLabs: Scribe v2
+
+- **ID**: `elevenlabs/scribe-v2`
+- **Provider**: elevenlabs
+- **Context**: — tok
+- **Modality**: audio->transcription  (in: audio → out: transcription)
+- **Pricing**: 入力 $30.56/1M · 出力 無料/1M · Audio Seconds $3.05556e-05/second
+- **登録日**: 2026-10-07
+
+ElevenLabs Scribe v2 is a speech-to-text model that transcribes audio in 90+ languages with word-level timestamps, optional speaker diarization, and audio-event tagging.
+
+#### ElevenLabs: Scribe v2 Medical
+
+- **ID**: `elevenlabs/scribe-v2-medical`
+- **Provider**: elevenlabs
+- **Context**: — tok
+- **Modality**: audio->transcription  (in: audio → out: transcription)
+- **Pricing**: 入力 $30.56/1M · 出力 無料/1M · Audio Seconds $3.05556e-05/second
+- **登録日**: 2026-10-07
+
+ElevenLabs Scribe v2 Medical is a speech-to-text model tuned for clinical and medical terminology, with word-level timestamps, optional speaker diarization, and audio-event tagging.
 
 ### ▎fireworks（1）
 
@@ -2355,14 +2509,14 @@ See the [launch announcement](https://blog.google/technology/developers/google-g
 
 - **ID**: `google/gemma-3-12b-it`
 - **Provider**: google
-- **Context**: 131K (131,072) tok / max出力 16,384 tok
+- **Context**: 131K (131,072) tok
 - **Modality**: text+image->text  (in: text,image → out: text)
 - **Pricing**: 入力 $0.05/1M · 出力 $0.15/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Seed固定
+- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Seed固定
 - **Knowledge cutoff**: 2024-08-31T23:59:59.000Z
 - **登録日**: 2025-03-13
 - **HF**: `google/gemma-3-12b-it`
-- **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, logit_bias, structured_outputs, tools, tool_choice, response_format
+- **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, response_format, structured_outputs, repetition_penalty, seed
 
 Gemma 3 introduces multimodality, supporting vision-language input and text outputs. It handles context windows up to 128k tokens, understands over 140 languages, and offers improved math, reasoning, and chat capabilities, including structured outputs and function calling. Gemma 3 12B is the second largest in the family of Gemma 3 models after [Gemma 3 27B](google/gemma-3-27b-it)
 
@@ -2431,10 +2585,10 @@ Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from G
 - **Context**: 262K (262,144) tok / max出力 16,384 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
 - **Pricing**: 入力 $0.09/1M · 出力 $0.34/1M · キャッシュ読 $0.05/1M
-- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-04-02
 - **HF**: `google/gemma-4-31B-it`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, structured_outputs, logit_bias, response_format
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, structured_outputs, logit_bias, response_format, tools, tool_choice
 
 Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function calling, and multilingual support across 140+ languages. Strong on coding, reasoning, and document understanding tasks. Apache 2.0 license.
 
@@ -4155,11 +4309,11 @@ MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 fa
 - **Provider**: moonshotai
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.61/1M · 出力 $13.00/1M · キャッシュ読 $0.45/1M
-- **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力
+- **Pricing**: 入力 $0.6/1M · 出力 $12.30/1M · キャッシュ読 $0.4/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-07-16
 - **HF**: `moonshotai/Kimi-K3`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, stop, frequency_penalty, presence_penalty, repetition_penalty, max_tokens, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, min_p, logit_bias, response_format, structured_outputs, tools, tool_choice, repetition_penalty
 
 Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at navigating large repositories, using tools, debugging, and iterating against images, logs, tests, and runtime feedback. Its architecture uses KDA and Attention Residuals for computational efficiency.
 
@@ -4347,13 +4501,13 @@ NVIDIA Nemotron 3 Embed 1B is an open text embedding model from NVIDIA, optimize
 
 - **ID**: `nvidia/nemotron-3-nano-30b-a3b`
 - **Provider**: nvidia
-- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Context**: 262K (262,144) tok / max出力 32,768 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.05/1M · 出力 $0.2/1M · キャッシュ読 $0.03/1M
-- **Capabilities**: Function calling, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.05/1M · 出力 $0.2/1M
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2025-12-14
 - **HF**: `nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, min_p, repetition_penalty, top_k, logit_bias, structured_outputs, tools, response_format
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, response_format, tools, tool_choice, logprobs, top_logprobs
 
 NVIDIA Nemotron 3 Nano 30B A3B is a small language MoE model with highest compute efficiency and accuracy for developers to build specialized agentic AI systems.
 
@@ -6331,18 +6485,18 @@ It supports graded reasoning through the standard reasoning controls, function t
 
 ### ▎perplexity（8）
 
-#### Perplexity: Decider V1 27B
+#### Perplexity: Decider V1.1 27B
 
-- **ID**: `perplexity/pplx-decider-v1-27b`
+- **ID**: `perplexity/pplx-decider-v1.1-27b`
 - **Provider**: perplexity
 - **Context**: 262K (262,144) tok
 - **Modality**: text+image->decisions  (in: text,image → out: decisions)
-- **Pricing**: 入力 $0.04/1M · 出力 無料/1M
-- **登録日**: 2026-10-01
+- **Pricing**: 入力 $0.02/1M · 出力 無料/1M
+- **登録日**: 2026-10-07
 
-Decider V1 27B is a decision model from Perplexity. Instead of generating text, it reads content passed as `state` and returns typed, probabilistic answers to one or more named questions in a single request: the probability of yes for a yes/no question (`noul`), a probability for every option plus the most likely one (`choice`), or a probability for every level of an ordered rubric plus the expected score (`score`).
+Decider V1.1 27B is a new checkpoint of Perplexity's decision model, succeeding [Decider V1 27B](/perplexity/pplx-decider-v1-27b) with the same API contract. Instead of generating text, it reads content passed as `state` (text, JSON, or images) and returns typed, probabilistic answers to one or more named questions in a single request: the probability of yes for a yes/no question (`noul`), a probability for every option plus the most likely one (`choice`), or a probability for every level of an ordered rubric plus the expected score (`score`).
 
-It is built for classification, routing, moderation, and rubric grading where application code thresholds the returned numbers rather than parsing a chat reply. A request can carry up to 128 questions about the same content. On OpenRouter it currently accepts text and JSON …
+It is built for classification, routing, moderation, and rubric grading where application code thresholds the returned numbers rather than parsing a …
 
 #### Perplexity: Embed V1 0.6B
 
@@ -7384,11 +7538,11 @@ Qwen3.8 2.4T A95B is an open-weight sparse mixture-of-experts model from Qwen an
 - **Provider**: qwen
 - **Context**: 1M (1,000,000) tok / max出力 262,144 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.0239/1M · 出力 $4.35/1M · キャッシュ読 $0.02/1M
+- **Pricing**: 入力 $0.0238/1M · 出力 $4.35/1M · キャッシュ読 $0.0198/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-14
 - **HF**: `Qwen/Qwen3.8-27B`
-- **対応パラメータ**: reasoning, include_reasoning, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, temperature, top_p, top_k, max_tokens, stop, seed, frequency_penalty, presence_penalty, reasoning_effort
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, logit_bias, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
 
 Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be enabled or disabled.
 
@@ -8423,7 +8577,7 @@ Pareto is a multimodal composite model built for research, coding, and agentic w
 
 A recreation trial of the original MythoMax-L2-B13 but with updated models. #merge
 
-### ▎upstage（4）
+### ▎upstage（5）
 
 #### Upstage: Solar Decide
 
@@ -8435,6 +8589,19 @@ A recreation trial of the original MythoMax-L2-B13 but with updated models. #mer
 - **登録日**: 2026-09-28
 
 Solar Decide is Upstage's structured decision model, served as a System One endpoint on Solar Mini 4. Send a state along with typed questions, and it returns a choice, a score, or a yes/no answer, each with a calibrated probability taken directly from the model rather than written out as text. Because it generates no prose, each decision takes a single forward pass and output tokens are free. With a 512K context window, an entire document can serve as the state. Solar Decide uses the same /v1/systemone schema as Jev, bringing Solar Mini 4's strong Korean understanding to routing, classification, and policy checks.
+
+#### Upstage: Solar Decide Flash
+
+- **ID**: `upstage/solar-decide-flash`
+- **Provider**: upstage
+- **Context**: 524K (524,288) tok
+- **Modality**: text->decisions  (in: text → out: decisions)
+- **Pricing**: 入力 $0.05/1M · 出力 無料/1M · キャッシュ読 $0.05/1M
+- **登録日**: 2026-10-08
+
+Solar Decide Flash is Upstage's low-latency structured decision model, a faster variant of [Solar Decide](/upstage/solar-decide) built on Solar Mini 4 and served through the System One (`/v1/systemone`) API. Instead of generating text, it reads a `state` and answers typed questions, returning a choice, a score, or a yes/no answer, each with a probability taken directly from the model. Each decision is a single forward pass, and output tokens are free.
+
+It is tuned for consistently fast response times in routing, classification, and policy checks. It keeps the 512K context window, so a full document can serve as the state, and carries Solar Mini 4's Korean-language strength.
 
 #### Upstage: Solar Mini 4
 
@@ -9032,7 +9199,7 @@ GLM-5.1 delivers a major leap in coding capability, with particularly significan
 - **Provider**: z-ai
 - **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.03/1M · 出力 $12.00/1M · キャッシュ読 $0.03/1M
+- **Pricing**: 入力 $0.03/1M · 出力 $10.00/1M · キャッシュ読 $0.03/1M
 - **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-06-16
 - **HF**: `zai-org/GLM-5.2`
@@ -9048,7 +9215,7 @@ Reasoning efforts `high` and `xhigh` are supported; `xhigh` maps to max reasonin
 - **Provider**: z-ai
 - **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.03/1M · 出力 $12.00/1M · キャッシュ読 $0.03/1M
+- **Pricing**: 入力 $0.0392/1M · 出力 $12.00/1M · キャッシュ読 $0.0365/1M
 - **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-08-18
 - **HF**: `zai-org/GLM-5.3`
@@ -9064,7 +9231,7 @@ Reasoning is always on and cannot be disabled. Reasoning efforts `low`, `high`, 
 - **Provider**: z-ai
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.0235/1M · 出力 $0.6875/1M · キャッシュ読 $0.0235/1M
+- **Pricing**: 入力 $0.032/1M · 出力 $1.17/1M · キャッシュ読 $0.02/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-08-26
 - **HF**: `zai-org/GLM-5.3-Flash`
@@ -9162,12 +9329,12 @@ This model always redirects to the latest model in the Claude Fable family.
 
 - **ID**: `~anthropic/claude-haiku-latest`
 - **Provider**: ~anthropic
-- **Context**: 200K (200,000) tok / max出力 64,000 tok
+- **Context**: 1M (1,000,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $1.00/1M · 出力 $5.00/1M · キャッシュ読 $0.1/1M · キャッシュ書 $1.25/1M · Web検索 $0.01
+- **Pricing**: 入力 $0.1/1M · 出力 $0.5/1M · キャッシュ読 $0.01/1M · キャッシュ書 $0.125/1M · Web検索 $0.01
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-04-27
-- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, max_tokens, temperature, top_p, max_completion_tokens, tools, tool_choice, top_k, response_format, stop
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, response_format, tool_choice, tools, verbosity, structured_outputs, stop, max_completion_tokens
 
 This model always redirects to the latest model in the Claude Haiku family.
 
@@ -9180,7 +9347,7 @@ This model always redirects to the latest model in the Claude Haiku family.
 - **Pricing**: 入力 $4.00/1M · 出力 $20.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $5.00/1M · Web検索 $0.01
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-04-21
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, stop, tool_choice, tools, response_format, verbosity, structured_outputs, temperature, max_completion_tokens
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, stop, tool_choice, tools, response_format, verbosity, structured_outputs, max_completion_tokens
 
 This model always redirects to the latest model in the Claude Opus family.
 
@@ -9190,10 +9357,10 @@ This model always redirects to the latest model in the Claude Opus family.
 - **Provider**: ~anthropic
 - **Context**: 1M (1,000,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $2.00/1M · 出力 $10.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $2.50/1M · Web検索 $0.01
+- **Pricing**: 入力 $2.00/1M · 出力 $10.00/1M · キャッシュ読 $0.1/1M · キャッシュ書 $2.50/1M · Web検索 $0.01
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-04-27
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, response_format, tool_choice, tools, verbosity, structured_outputs, stop, temperature, max_completion_tokens
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, response_format, tool_choice, tools, verbosity, structured_outputs, stop, max_completion_tokens
 
 This model always redirects to the latest model in the Claude Sonnet family.
 
@@ -9205,7 +9372,7 @@ This model always redirects to the latest model in the Claude Sonnet family.
 - **Provider**: ~deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.05/1M · 出力 $1.20/1M · キャッシュ読 $0.02/1M
+- **Pricing**: 入力 $0.003/1M · 出力 $2.40/1M · キャッシュ読 $0.003/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-09-14
 - **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, stop, max_tokens, logit_bias, frequency_penalty, presence_penalty, repetition_penalty, tools, tool_choice, seed, response_format, structured_outputs, logprobs, top_logprobs
@@ -9218,7 +9385,7 @@ This model always redirects to the latest model in the DeepSeek Flash family.
 - **Provider**: ~deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 393,216 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.2999/1M · 出力 $4.20/1M · キャッシュ読 $0.3/1M
+- **Pricing**: 入力 $0.1575/1M · 出力 $8.00/1M · キャッシュ読 $0.12/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-09-14
 - **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, stop, max_tokens, logit_bias, frequency_penalty, presence_penalty, repetition_penalty, tools, tool_choice, response_format, seed, structured_outputs, logprobs, top_logprobs
@@ -9231,10 +9398,10 @@ This model always redirects to the latest model in the DeepSeek Pro family.
 - **Provider**: ~deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.018/1M · 出力 $1.28/1M · キャッシュ読 $0.018/1M
+- **Pricing**: 入力 $0.0037/1M · 出力 $0.8163/1M · キャッシュ読 $0.0037/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-01
-- **対応パラメータ**: reasoning, include_reasoning, tools, tool_choice, temperature, top_p, top_k, min_p, stop, max_tokens, logit_bias, frequency_penalty, presence_penalty, repetition_penalty, seed, response_format, structured_outputs, logprobs, top_logprobs, reasoning_effort, parallel_tool_calls, top_a
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, stop, seed, response_format, top_p, frequency_penalty, presence_penalty, top_k, min_p, logit_bias, repetition_penalty, structured_outputs, tools, tool_choice, logprobs, top_logprobs, reasoning_effort, parallel_tool_calls, top_a
 
 This model always redirects to the latest model in the DeepSeek V4 Flash family.
 
@@ -9274,10 +9441,10 @@ This model always redirects to the latest model in the Gemini Pro family.
 - **Provider**: ~moonshotai
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.61/1M · 出力 $13.00/1M · キャッシュ読 $0.45/1M
+- **Pricing**: 入力 $0.6/1M · 出力 $12.30/1M · キャッシュ読 $0.4/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-27
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, stop, frequency_penalty, presence_penalty, repetition_penalty, max_tokens, tools, tool_choice, seed, min_p, logit_bias, response_format, structured_outputs, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, min_p, logit_bias, response_format, structured_outputs, tools, tool_choice, repetition_penalty, logprobs, top_logprobs
 
 This model always redirects to the latest model in the Kimi family.
 
@@ -9386,10 +9553,10 @@ This model always redirects to the latest Grok model from xAI.
 - **Provider**: ~z-ai
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.0235/1M · 出力 $0.6875/1M · キャッシュ読 $0.0235/1M
+- **Pricing**: 入力 $0.032/1M · 出力 $1.17/1M · キャッシュ読 $0.02/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-27
-- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, stop, seed, response_format, structured_outputs, tools, tool_choice, top_p, frequency_penalty, presence_penalty, top_k, min_p, logit_bias, repetition_penalty, logprobs, top_logprobs, parallel_tool_calls, reasoning_effort
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, stop, seed, response_format, structured_outputs, tools, tool_choice, top_p, frequency_penalty, presence_penalty, top_k, min_p, logit_bias, repetition_penalty, logprobs, top_logprobs, reasoning_effort, parallel_tool_calls
 
 This model always redirects to the latest model in the GLM Flash family.
 
@@ -9399,7 +9566,7 @@ This model always redirects to the latest model in the GLM Flash family.
 - **Provider**: ~z-ai
 - **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.03/1M · 出力 $12.00/1M · キャッシュ読 $0.03/1M
+- **Pricing**: 入力 $0.0392/1M · 出力 $12.00/1M · キャッシュ読 $0.0365/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-19
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice, response_format, min_p, logit_bias, structured_outputs, logprobs, top_logprobs, reasoning_effort, parallel_tool_calls
