@@ -1,7 +1,7 @@
-# OpenRouter モデルカタログ（全678モデル）
+# OpenRouter モデルカタログ（全677モデル）
 
-- 取得日時: 2026-10-19T06:52:59
-- プロバイダ数: 93 / 無料枠あり: 30
+- 取得日時: 2026-10-20T06:40:24
+- プロバイダ数: 93 / 無料枠あり: 31
 
 ## プロバイダ別サマリ
 
@@ -14,12 +14,12 @@
 | anthropic | 30 | 0.05 | 15.00 | 1,000,000 |
 | z-ai | 18 | 0.03 | 2.80 | 1,048,576 |
 | nvidia | 17 | 0.00 | 25.00 | 1,048,576 |
-| deepseek | 16 | 0.00 | 0.70 | 1,048,576 |
 | recraft | 16 | 0.00 | 0.00 | 65,536 |
+| deepseek | 15 | 0.01 | 0.50 | 1,048,576 |
 | x-ai | 15 | 0.00 | 27.78 | 2,000,000 |
-| microsoft | 13 | 0.04 | 360,000.00 | 65,535 |
-| minimax | 13 | 0.00 | 100.00 | 1,048,576 |
-| elevenlabs | 11 | 20.00 | 40.00 | 0 |
+| minimax | 14 | 0.00 | 100.00 | 1,048,576 |
+| microsoft | 12 | 0.04 | 360,000.00 | 32,768 |
+| elevenlabs | 11 | 40.00 | 80.00 | 0 |
 | bytedance-seed | 11 | 0.00 | 0.50 | 262,144 |
 | meta | 10 | 0.00 | 50.00 | 1,048,576 |
 | perplexity | 9 | 0.00 | 3.00 | 262,144 |
@@ -33,33 +33,32 @@
 | aion-labs | 6 | 0.70 | 3.00 | 262,144 |
 | alibaba | 6 | 0.00 | 0.00 | 0 |
 | bytedance | 6 | 0.00 | 0.10 | 128,000 |
+| inception | 5 | 0.00 | 0.25 | 1,000,000 |
 | liquid | 5 | 0.00 | 0.05 | 128,000 |
 | upstage | 5 | 0.05 | 0.15 | 524,288 |
-| xiaomi | 5 | 0.10 | 4.35 | 1,050,000 |
+| xiaomi | 5 | 0.03 | 4.35 | 1,050,000 |
 | ~openai | 5 | 0.10 | 10.00 | 1,050,000 |
 | amazon | 5 | 0.04 | 2.50 | 1,000,000 |
 | sentence-transformers | 5 | 0.01 | 0.01 | 512 |
 | respan | 4 | 0.00 | 0.02 | 131,072 |
 | krea | 4 | 0.00 | 0.00 | 65,536 |
 | heygen | 4 | 0.00 | 15.00 | 0 |
-| inception | 4 | 0.00 | 0.25 | 260,000 |
 | sakana | 4 | 0.95 | 5.00 | 1,000,000 |
 | thinkingmachines | 4 | 0.00 | 0.95 | 1,048,576 |
 | poolside | 4 | 0.00 | 0.09 | 1,048,576 |
 | ~anthropic | 4 | 0.10 | 10.00 | 1,000,000 |
 | sourceful | 4 | 0.00 | 0.00 | 32,768 |
 | scaledown | 3 | 0.04 | 0.04 | 1,000,000 |
-| cloudflare | 3 | 0.02 | 0.15 | 65,536 |
+| cloudflare | 3 | 0.02 | 0.15 | 65,537 |
 | stepfun | 3 | 0.10 | 1.00 | 1,048,576 |
 | inclusionai | 3 | 0.02 | 0.07 | 262,144 |
-| ~deepseek | 3 | 0.00 | 0.22 | 1,048,576 |
+| ~deepseek | 3 | 0.01 | 0.22 | 1,048,576 |
 | deepgram | 3 | 30.00 | 71.67 | 0 |
 | kwaivgi | 3 | 0.00 | 0.00 | 0 |
 | intfloat | 3 | 0.01 | 0.01 | 512 |
 | baai | 3 | 0.01 | 0.01 | 8,194 |
 | thedrummer | 3 | 0.30 | 0.55 | 1,024,000 |
 | nousresearch | 3 | 0.70 | 1.00 | 131,072 |
-| sao10k | 3 | 0.04 | 0.85 | 131,072 |
 | ~perplexity | 2 | 0.01 | 0.02 | 262,144 |
 | moondream | 2 | 0.30 | 0.30 | 32,000 |
 | unbiased | 2 | 0.80 | 2.50 | 1,048,576 |
@@ -70,13 +69,14 @@
 | inference-net | 2 | 0.03 | 0.05 | 128,000 |
 | nex-agi | 2 | 0.02 | 0.07 | 262,144 |
 | ibm-granite | 2 | 0.02 | 0.06 | 131,072 |
-| ~z-ai | 2 | 0.03 | 0.04 | 1,048,576 |
+| ~z-ai | 2 | 0.05 | 0.08 | 1,048,576 |
 | runway | 2 | 0.00 | 0.00 | 0 |
 | ~google | 2 | 0.75 | 2.00 | 1,048,576 |
 | rekaai | 2 | 0.10 | 0.10 | 65,536 |
 | relace | 2 | 0.85 | 1.00 | 256,000 |
 | thenlper | 2 | 0.01 | 0.01 | 512 |
 | morph | 2 | 0.80 | 0.90 | 262,144 |
+| sao10k | 2 | 0.04 | 0.85 | 131,072 |
 | elorian | 1 | 0.60 | 0.60 | 262,144 |
 | xingchen-agi | 1 | 0.00 | 0.00 | 262,144 |
 | reflection | 1 | 0.25 | 0.25 | 1,048,576 |
@@ -1244,7 +1244,7 @@ Orpheus 3B is an English text-to-speech model from Canopy Labs, fine-tuned for n
 
 - **ID**: `cloudflare/clef`
 - **Provider**: cloudflare
-- **Context**: 65K (65,536) tok
+- **Context**: 65K (65,537) tok
 - **Modality**: text+image->decisions  (in: text,image → out: decisions)
 - **Pricing**: 入力 $0.042/1M · 出力 無料/1M
 - **登録日**: 2026-10-01
@@ -1460,7 +1460,7 @@ Flux TTS is a text-to-speech model from Deepgram. It is suited for natural, expr
 
 Deepgram Nova-3 general-purpose speech-to-text model with monolingual and multilingual transcription support.
 
-### ▎deepseek（16）
+### ▎deepseek（15）
 
 #### DeepSeek: DeepSeek V3
 
@@ -1512,25 +1512,6 @@ It succeeds the [DeepSeek V3](/deepseek/deepseek-chat-v3) model and performs rea
 DeepSeek-V3.1 is a large hybrid reasoning model (671B parameters, 37B active) that supports both thinking and non-thinking modes via prompt templates. It extends the DeepSeek-V3 base with a two-phase long-context training process, reaching up to 128K tokens, and uses FP8 microscaling for efficient inference. Users can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)
 
 The model improves tool use, code generation, and reasoning efficiency, achieving performance comparable to DeepSeek-R1 on difficult benchmarks while responding more quickly. It supports …
-
-#### DeepSeek: R1
-
-- **ID**: `deepseek/deepseek-r1`
-- **Provider**: deepseek
-- **Context**: 64K (64,000) tok / max出力 16,000 tok
-- **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.7/1M · 出力 $2.50/1M
-- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
-- **Knowledge cutoff**: 2024-07-31T23:59:59.000Z
-- **登録日**: 2025-01-20
-- **HF**: `deepseek-ai/DeepSeek-R1`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice, response_format
-
-DeepSeek R1 is here: Performance on par with [OpenAI o1](/openai/o1), but open-sourced and with fully open reasoning tokens. It's 671B parameters in size, with 37B active in an inference pass.
-
-Fully open-source model & [technical report](https://api-docs.deepseek.com/news/news250120).
-
-MIT licensed: Distill & commercialize freely!
 
 #### DeepSeek: R1 0528
 
@@ -1617,11 +1598,11 @@ The model includes hybrid attention for efficient long-context processing. Reaso
 - **Provider**: deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.0049/1M · 出力 $0.45/1M · キャッシュ読 $0.0049/1M
-- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力
+- **Pricing**: 入力 $0.0052/1M · 出力 $0.12/1M · キャッシュ読 $0.0034/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-07-31
 - **HF**: `deepseek-ai/DeepSeek-V4-Flash-0731`
-- **対応パラメータ**: reasoning, include_reasoning, tools, temperature, top_p, top_k, min_p, stop, max_tokens, logit_bias, frequency_penalty, presence_penalty, repetition_penalty, tool_choice, response_format
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, stop, seed, response_format, top_p, frequency_penalty, presence_penalty, top_k, min_p, logit_bias, repetition_penalty, structured_outputs, tools, tool_choice
 
 DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows. This is the GA release of DeepSeek V4 Flash.
 
@@ -1677,7 +1658,7 @@ DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. Th
 - **Provider**: deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.0456/1M · 出力 $0.08/1M · キャッシュ読 $0.0016/1M
+- **Pricing**: 入力 $0.0352/1M · 出力 $0.0112/1M · キャッシュ読 $0.0016/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-09-10
 - **HF**: `deepseek-ai/DeepSeek-V4.1-Flash`
@@ -1693,7 +1674,7 @@ It is suited for coding, terminal, and computer-use agents, along with long-hori
 - **Provider**: deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.05/1M · 出力 $0.15/1M · キャッシュ読 $0.012/1M
+- **Pricing**: 入力 $0.05/1M · 出力 $0.024/1M · キャッシュ読 $0.01/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-10-17
 - **HF**: `deepseek-ai/DeepSeek-V4.1-Flash-1017`
@@ -1740,7 +1721,7 @@ Dots3-Note Preview is an open-weight mixture-of-experts model from Dots Studio, 
 - **Provider**: elevenlabs
 - **Context**: — tok
 - **Modality**: text->speech  (in: text → out: speech)
-- **Pricing**: 入力 $20.00/1M · 出力 無料/1M · Characters $2e-05/M characters
+- **Pricing**: 入力 $40.00/1M · 出力 無料/1M · Characters $4e-05/M characters
 - **登録日**: 2026-10-07
 
 Eleven Flash v2 is an English-only, ultra-low-latency text-to-speech model from ElevenLabs. It is suited for conversational and real-time English use cases, and has a 30,000-character request limit.
@@ -1751,7 +1732,7 @@ Eleven Flash v2 is an English-only, ultra-low-latency text-to-speech model from 
 - **Provider**: elevenlabs
 - **Context**: — tok
 - **Modality**: text->speech  (in: text → out: speech)
-- **Pricing**: 入力 $20.00/1M · 出力 無料/1M · Characters $2e-05/M characters
+- **Pricing**: 入力 $40.00/1M · 出力 無料/1M · Characters $4e-05/M characters
 - **登録日**: 2026-10-07
 
 Eleven Flash v2.5 is an ultra-low-latency text-to-speech model from ElevenLabs. It is suited for conversational and real-time use cases, supports 32 languages, and has a 40,000-character request limit.
@@ -1762,7 +1743,7 @@ Eleven Flash v2.5 is an ultra-low-latency text-to-speech model from ElevenLabs. 
 - **Provider**: elevenlabs
 - **Context**: — tok
 - **Modality**: text->speech  (in: text → out: speech)
-- **Pricing**: 入力 $40.00/1M · 出力 無料/1M · Characters $4e-05/M characters
+- **Pricing**: 入力 $80.00/1M · 出力 無料/1M · Characters $8e-05/M characters
 - **登録日**: 2026-10-07
 
 Eleven Multilingual v2 is a text-to-speech model from ElevenLabs. It is suited for lifelike, consistent long-form narration such as voice-overs and audiobooks, supports 29 languages, and has a 10,000-character request limit.
@@ -1773,7 +1754,7 @@ Eleven Multilingual v2 is a text-to-speech model from ElevenLabs. It is suited f
 - **Provider**: elevenlabs
 - **Context**: — tok
 - **Modality**: text->speech  (in: text → out: speech)
-- **Pricing**: 入力 $20.00/1M · 出力 無料/1M · Characters $2e-05/M characters
+- **Pricing**: 入力 $40.00/1M · 出力 無料/1M · Characters $4e-05/M characters
 - **登録日**: 2026-10-07
 
 Eleven Turbo v2 is an English-only, low-latency text-to-speech model from ElevenLabs. It is suited for developer use cases where speed matters and only English is needed, and has a 30,000-character request limit.
@@ -1784,7 +1765,7 @@ Eleven Turbo v2 is an English-only, low-latency text-to-speech model from Eleven
 - **Provider**: elevenlabs
 - **Context**: — tok
 - **Modality**: text->speech  (in: text → out: speech)
-- **Pricing**: 入力 $20.00/1M · 出力 無料/1M · Characters $2e-05/M characters
+- **Pricing**: 入力 $40.00/1M · 出力 無料/1M · Characters $4e-05/M characters
 - **登録日**: 2026-10-07
 
 Eleven Turbo v2.5 is a low-latency text-to-speech model from ElevenLabs. It balances quality and speed for developer use cases that need non-English languages, supports 32 languages, and has a 40,000-character request limit.
@@ -1795,7 +1776,7 @@ Eleven Turbo v2.5 is a low-latency text-to-speech model from ElevenLabs. It bala
 - **Provider**: elevenlabs
 - **Context**: — tok
 - **Modality**: text->speech  (in: text → out: speech)
-- **Pricing**: 入力 $40.00/1M · 出力 無料/1M · Characters $4e-05/M characters
+- **Pricing**: 入力 $80.00/1M · 出力 無料/1M · Characters $8e-05/M characters
 - **登録日**: 2026-10-07
 
 Eleven v3 is a text-to-speech model from ElevenLabs. It produces emotionally rich, highly expressive speech with inline audio tags, supports 70+ languages, and has a 5,000-character request limit.
@@ -1806,7 +1787,7 @@ Eleven v3 is a text-to-speech model from ElevenLabs. It produces emotionally ric
 - **Provider**: elevenlabs
 - **Context**: — tok
 - **Modality**: text->speech  (in: text → out: speech)
-- **Pricing**: 入力 $20.00/1M · 出力 無料/1M · Characters $2e-05/M characters
+- **Pricing**: 入力 $40.00/1M · 出力 無料/1M · Characters $4e-05/M characters
 - **登録日**: 2026-10-07
 
 Eleven v3 Conversational is a text-to-speech model from ElevenLabs, a variant of Eleven v3 optimized for natural dialogue in conversational agents. It supports 70+ languages and has a 5,000-character request limit.
@@ -1817,7 +1798,7 @@ Eleven v3 Conversational is a text-to-speech model from ElevenLabs, a variant of
 - **Provider**: elevenlabs
 - **Context**: — tok
 - **Modality**: text->speech  (in: text → out: speech)
-- **Pricing**: 入力 $40.00/1M · 出力 無料/1M · Characters $4e-05/M characters
+- **Pricing**: 入力 $80.00/1M · 出力 無料/1M · Characters $8e-05/M characters
 - **登録日**: 2026-10-07
 
 Eleven v4 is a text-to-speech model from ElevenLabs. It is ElevenLabs' most expressive model, with inline audio tags for emotional and delivery control, support for 90+ languages, and a 10,000-character request limit.
@@ -1828,7 +1809,7 @@ Eleven v4 is a text-to-speech model from ElevenLabs. It is ElevenLabs' most expr
 - **Provider**: elevenlabs
 - **Context**: — tok
 - **Modality**: text->speech  (in: text → out: speech)
-- **Pricing**: 入力 $20.00/1M · 出力 無料/1M · Characters $2e-05/M characters
+- **Pricing**: 入力 $40.00/1M · 出力 無料/1M · Characters $4e-05/M characters
 - **登録日**: 2026-10-07
 
 Eleven v4 Turbo is a low-latency text-to-speech model from ElevenLabs. It keeps Eleven v4's expressive delivery and audio tags while being tuned for faster generation, with support for 90+ languages and a 10,000-character request limit.
@@ -1839,7 +1820,7 @@ Eleven v4 Turbo is a low-latency text-to-speech model from ElevenLabs. It keeps 
 - **Provider**: elevenlabs
 - **Context**: — tok
 - **Modality**: audio->transcription  (in: audio → out: transcription)
-- **Pricing**: 入力 $30.56/1M · 出力 無料/1M · Audio Seconds $3.05556e-05/second
+- **Pricing**: 入力 $61.11/1M · 出力 無料/1M · Audio Seconds $6.11111e-05/second
 - **登録日**: 2026-10-07
 
 ElevenLabs Scribe v2 is a speech-to-text model that transcribes audio in 90+ languages with word-level timestamps, optional speaker diarization, and audio-event tagging.
@@ -1850,7 +1831,7 @@ ElevenLabs Scribe v2 is a speech-to-text model that transcribes audio in 90+ lan
 - **Provider**: elevenlabs
 - **Context**: — tok
 - **Modality**: audio->transcription  (in: audio → out: transcription)
-- **Pricing**: 入力 $30.56/1M · 出力 無料/1M · Audio Seconds $3.05556e-05/second
+- **Pricing**: 入力 $61.11/1M · 出力 無料/1M · Audio Seconds $6.11111e-05/second
 - **登録日**: 2026-10-07
 
 ElevenLabs Scribe v2 Medical is a speech-to-text model tuned for clinical and medical terminology, with word-level timestamps, optional speaker diarization, and audio-event tagging.
@@ -2847,7 +2828,7 @@ Granite 4.2 8B is a dense reasoning model from IBM. It is suited for mathematics
 
 The model supports 12 languages: English, German, Spanish, French, Japanese, Portuguese, Arabic, Czech, Italian, Korean, Dutch, and Chinese.
 
-### ▎inception（4）
+### ▎inception（5）
 
 #### Inception: Mercury 2
 
@@ -2878,6 +2859,19 @@ Mercury 2 supports tunable reasoning levels, 128K context, native tool use, and 
 Mercury 2.5 is the fastest reasoning LLM, and the latest diffusion LLM (dLLM) from Inception.
 Instead of generating tokens sequentially, Mercury 2.5 produces and refines multiple tokens in parallel, achieving 1,107 tokens/sec on standard GPUs. It delivers a 10+ point jump in intelligence over Mercury 2, comparable quality to cost-optimized frontier models like GPT-5.6 Luna (Low), Gemini 3.5 Flash-Lite, and Claude Haiku 4.5.
 Mercury 2.5 supports tunable reasoning levels, parallel tool calls, and schema-aligned JSON output. It's built for production workloads where latency compounds: search agents, voice pipelines, and coding subagents. Read more in the [blog …
+
+#### Inception: Mercury 3
+
+- **ID**: `inception/mercury-3`
+- **Provider**: inception
+- **Context**: 1M (1,000,000) tok / max出力 131,072 tok
+- **Modality**: text->text  (in: text → out: text)
+- **Pricing**: 入力 $0.1/1M · 出力 $0.35/1M · キャッシュ読 $0.01/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
+- **登録日**: 2026-10-16
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, stop, temperature, tools, tool_choice, response_format, structured_outputs
+
+Mercury 3 is a diffusion-based language model from Inception, and the lab's most capable model to date. It is suited for agentic workflows and real-time applications where latency compounds, such as search agents, voice pipelines, and coding subagents. Its distinguishing trait is speed: more than 40x larger than the first Mercury model while generating at the same throughput, because it produces and refines tokens in parallel rather than one at a time.
 
 #### Inception: Mercury Decide
 
@@ -2937,12 +2931,12 @@ Ling 3.0 Flash VL builds on Ling 3.0 Flash (124B total / 5.5B active MoE from In
 
 - **ID**: `inclusionai/ling-3.1-flash`
 - **Provider**: inclusionai
-- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Context**: 262K (262,144) tok
 - **Modality**: text->text  (in: text → out: text)
 - **Pricing**: 入力 $0.075/1M · 出力 $0.225/1M · キャッシュ読 $0.015/1M
-- **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-10-02
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, logit_bias, structured_outputs, tools, tool_choice, response_format
 
 Ling 3.1 Flash is a hybrid reasoning mixture-of-experts model from inclusionAI, with 25B active parameters out of 560B total.
 
@@ -3460,7 +3454,7 @@ Supported languages: English, German, French, Italian, Portuguese, Hindi, Spanis
 
 - **ID**: `meta-llama/llama-4-maverick`
 - **Provider**: meta-llama
-- **Context**: 1.04858M (1,048,576) tok / max出力 16,384 tok
+- **Context**: 524K (524,288) tok / max出力 16,384 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
 - **Pricing**: 入力 $0.1875/1M · 出力 $0.6525/1M · キャッシュ読 $0.05/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, logprobs
@@ -3507,7 +3501,7 @@ Llama Guard 4 is a Llama 4 Scout-derived multimodal pretrained model, fine-tuned
 
 Llama Guard 4 was aligned to safeguard against the standardized MLCommons hazards taxonomy and designed to support multimodal Llama 4 capabilities. Specifically, it combines features from previous Llama Guard models, providing content moderation …
 
-### ▎microsoft（13）
+### ▎microsoft（12）
 
 #### Microsoft AI: MAI-Image-2.5
 
@@ -3661,28 +3655,7 @@ At 14 billion parameters, it was trained on a mix of high-quality synthetic data
 
 For more information, please see [Phi-4 Technical Report](https://arxiv.org/pdf/2412.08905)
 
-#### WizardLM-2 8x22B
-
-- **ID**: `microsoft/wizardlm-2-8x22b`
-- **Provider**: microsoft
-- **Context**: 65K (65,535) tok / max出力 8,000 tok
-- **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.62/1M · 出力 $0.62/1M
-- **Capabilities**: JSON mode, Seed固定
-- **Knowledge cutoff**: 2024-04-30T23:59:59.000Z
-- **登録日**: 2024-04-16
-- **HF**: `microsoft/WizardLM-2-8x22B`
-- **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, response_format
-
-WizardLM-2 8x22B is Microsoft AI's most advanced Wizard model. It demonstrates highly competitive performance compared to leading proprietary models, and it consistently outperforms all existing state-of-the-art opensource models.
-
-It is an instruct finetune of [Mixtral 8x22B](/models/mistralai/mixtral-8x22b).
-
-To read more about the model release, [click here](https://wizardlm.github.io/WizardLM2/).
-
-#moe
-
-### ▎minimax（13）
+### ▎minimax（14）
 
 #### MiniMax: Hailuo 2.3
 
@@ -3847,6 +3820,19 @@ Trained for production-grade performance, M2.7 handles workflows such as live de
 MiniMax-M3 is a multimodal foundation model from MiniMax. It supports text, image, and video inputs with text output, a 1M-token context window, and is suited for long-horizon agentic work, coding, and tool use. It is built on MiniMax Sparse Attention (MSA), which replaces full attention with KV-block selection to cut per-token compute at long context — roughly 1/20 the cost of the previous generation at 1M tokens, with substantially faster prefill and decode while retaining quality across most tasks.
 
 Trained as a native multimodal model on interleaved data and tuned for multi-turn, production-like collaboration via an interactive user-simulator framework, the model is oriented toward …
+
+#### MiniMax: MiniMax M3.1 Flash (free)
+
+- **ID**: `minimax/minimax-m3.1-flash:free`
+- **Provider**: minimax
+- **Context**: 1M (1,000,000) tok / max出力 524,288 tok
+- **Modality**: text+image+video->text  (in: text,image,video → out: text)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力
+- **登録日**: 2026-10-19
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, tools, tool_choice, response_format
+
+MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex, multi-step co-work automation, understanding real codebases, fixing bugs, and building features, and visual understanding and creation, including frontend and presentation creation. Open weights are planned.
 
 #### MiniMax: Speech 2.8 HD
 
@@ -8173,7 +8159,7 @@ Sakana Namazu is a Japanese-specialized reasoning model from Sakana AI, based on
 
 Sakana AI may use inputs for model training and improvement by default, with an opt-out available in the Sakana Console. Processing entirely within Japan is not guaranteed.
 
-### ▎sao10k（3）
+### ▎sao10k（2）
 
 #### Sao10K: Llama 3 8B Lunaris
 
@@ -8208,21 +8194,6 @@ For best results, use with Llama 3 Instruct context template, temperature 1.4, a
 - **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, logit_bias, structured_outputs
 
 Euryale L3.1 70B v2.2 is a model focused on creative roleplay from [Sao10k](https://ko-fi.com/sao10k). It is the successor of [Euryale L3 70B v2.1](/models/sao10k/l3-euryale-70b).
-
-#### Sao10K: Llama 3.3 Euryale 70B
-
-- **ID**: `sao10k/l3.3-euryale-70b`
-- **Provider**: sao10k
-- **Context**: 131K (131,072) tok / max出力 16,384 tok
-- **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.65/1M · 出力 $0.75/1M
-- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, logprobs, Seed固定
-- **Knowledge cutoff**: 2023-12-31T23:59:59.000Z
-- **登録日**: 2024-12-18
-- **HF**: `Sao10K/L3.3-70B-Euryale-v2.3`
-- **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, response_format, structured_outputs, logprobs, top_logprobs, repetition_penalty, seed
-
-Euryale L3.3 70B is a model focused on creative roleplay from [Sao10k](https://ko-fi.com/sao10k). It is the successor of [Euryale L3 70B v2.2](/models/sao10k/l3-euryale-70b).
 
 ### ▎scaledown（3）
 
@@ -8861,7 +8832,7 @@ Solar Pro 3 is Upstage's powerful Mixture-of-Experts (MoE) language model. With 
 - **Provider**: upstage
 - **Context**: 524K (524,288) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.09/1M · 出力 $0.36/1M · キャッシュ読 $0.018/1M
+- **Pricing**: 入力 $0.15/1M · 出力 $0.6/1M · キャッシュ読 $0.03/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-08-10
 - **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, response_format, structured_outputs, tools, tool_choice, top_p, frequency_penalty, presence_penalty, parallel_tool_calls
@@ -9232,11 +9203,11 @@ MiMo-V2.5-Pro is Xiaomi’s flagship model, delivering strong performance in gen
 - **Provider**: xiaomi
 - **Context**: 1.05M (1,050,000) tok / max出力 131,072 tok
 - **Modality**: text+image+audio+video->text  (in: text,image,audio,video → out: text)
-- **Pricing**: 入力 $0.1/1M · 出力 $0.28/1M · キャッシュ読 $0.05/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.03/1M · 出力 $0.08/1M · キャッシュ読 $0.003/1M
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-09-21
 - **HF**: `XiaomiMiMo/MiMo-V2.6-Flash-RL`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice, response_format
 
 MiMo-V2.6-Flash is an open-source foundation model developed by Xiaomi. Built on a Mixture-of-Experts architecture with 309B total parameters and 15B activated per token, it employs a hybrid attention mechanism for greater computational efficiency. The model features a 1M-token context window and native multimodal capabilities. Optimized for agentic workflows, it delivers strong performance across coding, visual, general, and research scenarios, excelling at complex, long-horizon tasks with robust generalization across a diverse range of agent harnesses.
 
@@ -9246,7 +9217,7 @@ MiMo-V2.6-Flash is an open-source foundation model developed by Xiaomi. Built on
 - **Provider**: xiaomi
 - **Context**: 1.05M (1,050,000) tok
 - **Modality**: text+image+audio+video->text  (in: text,image,audio,video → out: text)
-- **Pricing**: 入力 $0.43/1M · 出力 $0.87/1M · キャッシュ読 $0.0036/1M
+- **Pricing**: 入力 $0.387/1M · 出力 $0.783/1M · キャッシュ読 $0.0032/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-09-21
 - **HF**: `XiaomiMiMo/MiMo-V2.6-Pro-RL`
@@ -9382,13 +9353,13 @@ GLM-4.7 is Z.ai’s latest flagship model, featuring upgrades in two key areas: 
 
 - **ID**: `z-ai/glm-4.7-flash`
 - **Provider**: z-ai
-- **Context**: 200K (200,000) tok / max出力 16,384 tok
+- **Context**: 200K (200,000) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.06/1M · 出力 $0.4/1M · キャッシュ読 $0.01/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
+- **Pricing**: 入力 $0.0605/1M · 出力 $0.4/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-01-19
 - **HF**: `zai-org/GLM-4.7-Flash`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, seed, repetition_penalty, frequency_penalty, presence_penalty, tools, tool_choice, structured_outputs, response_format, min_p, stop, logit_bias, logprobs, top_logprobs
 
 As a 30B-class SOTA model, GLM-4.7-Flash offers a new option that balances performance and efficiency. It is further optimized for agentic coding use cases, strengthening coding capabilities, long-horizon task planning, and tool collaboration, and has achieved leading performance among open-source models of the same size on several current public benchmark leaderboards.
 
@@ -9455,11 +9426,11 @@ Reasoning efforts `high` and `xhigh` are supported; `xhigh` maps to max reasonin
 - **Provider**: z-ai
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.04/1M · 出力 $6.00/1M · キャッシュ読 $0.025/1M
+- **Pricing**: 入力 $0.079/1M · 出力 $1.40/1M · キャッシュ読 $0.078/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-18
 - **HF**: `zai-org/GLM-5.3`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, stop, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, seed, logit_bias, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, logit_bias, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
 
 GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves on GLM-5.2 in coding and in the balance between performance and token efficiency.
 
@@ -9471,7 +9442,7 @@ Reasoning is always on and cannot be disabled. Reasoning efforts `low`, `high`, 
 - **Provider**: z-ai
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.0312/1M · 出力 $0.2/1M · キャッシュ読 $0.006/1M
+- **Pricing**: 入力 $0.048/1M · 出力 $0.16/1M · キャッシュ読 $0.006/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-08-26
 - **HF**: `zai-org/GLM-5.3-Flash`
@@ -9612,7 +9583,7 @@ This model always redirects to the latest model in the Claude Sonnet family.
 - **Provider**: ~deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.05/1M · 出力 $0.15/1M · キャッシュ読 $0.012/1M
+- **Pricing**: 入力 $0.05/1M · 出力 $0.024/1M · キャッシュ読 $0.01/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-09-14
 - **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, stop, max_tokens, logit_bias, frequency_penalty, presence_penalty, repetition_penalty, response_format, structured_outputs, tools, tool_choice, seed, logprobs, top_logprobs, max_completion_tokens, parallel_tool_calls, reasoning_effort
@@ -9638,10 +9609,10 @@ This model always redirects to the latest model in the DeepSeek Pro family.
 - **Provider**: ~deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.0049/1M · 出力 $0.45/1M · キャッシュ読 $0.0049/1M
+- **Pricing**: 入力 $0.0052/1M · 出力 $0.12/1M · キャッシュ読 $0.0034/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-01
-- **対応パラメータ**: reasoning, include_reasoning, tools, temperature, top_p, top_k, min_p, stop, max_tokens, logit_bias, frequency_penalty, presence_penalty, repetition_penalty, tool_choice, response_format, seed, structured_outputs, logprobs, top_logprobs, reasoning_effort, parallel_tool_calls, top_a
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, stop, seed, response_format, top_p, frequency_penalty, presence_penalty, top_k, min_p, logit_bias, repetition_penalty, structured_outputs, tools, tool_choice, logprobs, top_logprobs, reasoning_effort, parallel_tool_calls, top_a
 
 This model always redirects to the latest model in the DeepSeek V4 Flash family.
 
@@ -9832,7 +9803,7 @@ This model always redirects to the latest Grok model from xAI.
 - **Provider**: ~z-ai
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.0312/1M · 出力 $0.2/1M · キャッシュ読 $0.006/1M
+- **Pricing**: 入力 $0.048/1M · 出力 $0.16/1M · キャッシュ読 $0.006/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-27
 - **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, stop, seed, response_format, structured_outputs, top_p, frequency_penalty, presence_penalty, top_k, min_p, logit_bias, repetition_penalty, tools, tool_choice, logprobs, top_logprobs, reasoning_effort, parallel_tool_calls
@@ -9845,9 +9816,9 @@ This model always redirects to the latest model in the GLM Flash family.
 - **Provider**: ~z-ai
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.04/1M · 出力 $6.00/1M · キャッシュ読 $0.025/1M
+- **Pricing**: 入力 $0.079/1M · 出力 $1.40/1M · キャッシュ読 $0.078/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-19
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, stop, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, seed, logit_bias, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, reasoning_effort, parallel_tool_calls
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, logit_bias, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, reasoning_effort, parallel_tool_calls
 
 This model always redirects to the latest GLM model from Z.ai.
