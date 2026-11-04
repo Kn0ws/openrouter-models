@@ -1,7 +1,7 @@
-# OpenRouter モデルカタログ（全677モデル）
+# OpenRouter モデルカタログ（全688モデル）
 
-- 取得日時: 2026-11-03T06:26:50
-- プロバイダ数: 96 / 無料枠あり: 31
+- 取得日時: 2026-11-04T06:27:19
+- プロバイダ数: 97 / 無料枠あり: 34
 
 ## プロバイダ別サマリ
 
@@ -14,22 +14,22 @@
 | anthropic | 30 | 0.05 | 15.00 | 1,000,000 |
 | nvidia | 20 | 0.00 | 33.30 | 1,048,576 |
 | z-ai | 19 | 0.01 | 2.80 | 1,048,576 |
+| x-ai | 16 | 0.00 | 27.78 | 2,000,000 |
 | recraft | 16 | 0.00 | 0.00 | 65,536 |
-| deepseek | 15 | 0.04 | 0.90 | 1,048,576 |
+| deepseek | 15 | 0.03 | 0.90 | 1,048,576 |
 | minimax | 14 | 0.00 | 100.00 | 1,048,576 |
-| x-ai | 14 | 0.00 | 27.78 | 2,000,000 |
+| cohere | 13 | 0.00 | 2.50 | 256,000 |
 | microsoft | 12 | 0.04 | 360,000.00 | 32,768 |
 | elevenlabs | 11 | 40.00 | 80.00 | 0 |
 | bytedance-seed | 11 | 0.00 | 0.50 | 262,144 |
 | meta | 10 | 0.00 | 50.00 | 1,048,576 |
-| moonshotai | 9 | 0.15 | 2.28 | 1,048,576 |
+| tencent | 9 | 0.00 | 0.83 | 1,048,576 |
+| moonshotai | 9 | 0.19 | 2.28 | 1,048,576 |
 | perplexity | 9 | 0.00 | 3.00 | 262,144 |
 | black-forest-labs | 9 | 0.00 | 0.00 | 67,344 |
-| voyageai | 9 | 0.00 | 0.12 | 32,000 |
-| cohere | 9 | 0.00 | 2.50 | 256,000 |
+| mongodb | 9 | 0.00 | 0.12 | 32,000 |
 | amazon | 8 | 0.02 | 2.50 | 1,000,000 |
-| tencent | 8 | 0.00 | 0.83 | 1,048,576 |
-| meta-llama | 8 | 0.02 | 0.40 | 1,310,720 |
+| meta-llama | 8 | 0.02 | 0.72 | 1,310,720 |
 | liquid | 7 | 0.00 | 0.35 | 128,000 |
 | fish-audio | 7 | 0.00 | 100.00 | 0 |
 | aion-labs | 6 | 0.70 | 3.00 | 262,144 |
@@ -40,6 +40,7 @@
 | xiaomi | 5 | 0.10 | 4.35 | 1,050,000 |
 | ~openai | 5 | 0.10 | 10.00 | 1,050,000 |
 | sentence-transformers | 5 | 0.01 | 0.01 | 512 |
+| cloudflare | 4 | 0.02 | 0.19 | 65,537 |
 | inception | 4 | 0.02 | 0.25 | 1,000,000 |
 | respan | 4 | 0.00 | 0.02 | 131,072 |
 | krea | 4 | 0.00 | 0.00 | 65,536 |
@@ -47,14 +48,15 @@
 | sakana | 4 | 0.95 | 5.00 | 1,000,000 |
 | thinkingmachines | 4 | 0.00 | 1.00 | 1,048,576 |
 | ~anthropic | 4 | 0.10 | 10.00 | 1,000,000 |
+| morph | 3 | 0.04 | 0.90 | 262,144 |
+| moondream | 3 | 0.30 | 16.67 | 32,000 |
 | baseten | 3 | 0.01 | 0.10 | 16,384 |
 | assemblyai | 3 | 15.00 | 83.33 | 0 |
 | nace-ai | 3 | 0.04 | 0.06 | 262,144 |
 | scaledown | 3 | 0.04 | 0.04 | 1,000,000 |
-| cloudflare | 3 | 0.02 | 0.19 | 65,537 |
 | stepfun | 3 | 0.10 | 1.00 | 1,048,576 |
 | inclusionai | 3 | 0.02 | 0.07 | 1,000,000 |
-| ~deepseek | 3 | 0.04 | 0.10 | 1,048,576 |
+| ~deepseek | 3 | 0.03 | 0.10 | 1,048,576 |
 | deepgram | 3 | 30.00 | 71.67 | 0 |
 | kwaivgi | 3 | 0.00 | 0.00 | 0 |
 | intfloat | 3 | 0.01 | 0.01 | 512 |
@@ -63,7 +65,6 @@
 | ~liquid | 2 | 0.02 | 0.04 | 65,536 |
 | ~perplexity | 2 | 0.01 | 0.02 | 262,144 |
 | prism-ml | 2 | 0.07 | 0.08 | 262,144 |
-| moondream | 2 | 0.30 | 0.30 | 32,000 |
 | unbiased | 2 | 0.80 | 2.50 | 1,048,576 |
 | typesafe | 2 | 0.04 | 0.04 | 262,144 |
 | perceptron | 2 | 0.15 | 0.15 | 36,864 |
@@ -75,8 +76,8 @@
 | rekaai | 2 | 0.10 | 0.10 | 65,536 |
 | relace | 2 | 0.85 | 1.00 | 256,000 |
 | thenlper | 2 | 0.01 | 0.01 | 512 |
-| morph | 2 | 0.80 | 0.90 | 262,144 |
 | sao10k | 2 | 0.04 | 0.85 | 131,072 |
+| stealth | 1 | 0.00 | 0.00 | 1,048,576 |
 | tbc | 1 | 0.00 | 0.00 | 0 |
 | particle-ai | 1 | 0.05 | 0.05 | 1,048,576 |
 | recursive | 1 | 0.00 | 0.00 | 262,144 |
@@ -92,7 +93,7 @@
 | dots-studio | 1 | 0.00 | 0.00 | 512,000 |
 | meituan | 1 | 0.30 | 0.30 | 1,048,756 |
 | ~x-ai | 1 | 2.00 | 2.00 | 500,000 |
-| ~moonshotai | 1 | 0.15 | 0.15 | 1,048,576 |
+| ~moonshotai | 1 | 0.19 | 0.19 | 1,048,576 |
 | sesame | 1 | 7.00 | 7.00 | 4,096 |
 | canopylabs | 1 | 7.00 | 7.00 | 4,096 |
 | hexgrad | 1 | 0.62 | 0.62 | 4,096 |
@@ -1305,7 +1306,19 @@ Seedream 5.0 Pro is an image generation and editing model from ByteDance Seed. I
 
 Orpheus 3B is an English text-to-speech model from Canopy Labs, fine-tuned for natural prosody and expressive delivery. It offers 7 preset voices and is suited for narration, voice assistants, and interactive applications where naturalistic speech is a priority.
 
-### ▎cloudflare（3）
+### ▎cloudflare（4）
+
+#### Cloudflare: Clairic
+
+- **ID**: `cloudflare/clairic`
+- **Provider**: cloudflare
+- **Context**: 65K (65,536) tok / max出力 65,536 tok
+- **Modality**: text+image->decisions  (in: text,image → out: decisions)
+- **Pricing**: 入力 $0.1/1M · 出力 無料/1M
+- **登録日**: 2026-11-03
+- **HF**: `Cloudflare/clairic`
+
+Clairic is Cloudflare's System One-style extraction model served on Workers AI. Given a text state and optional images plus a schema of typed fields, it extracts, computes, estimates, and forecasts strongly typed values (text spans, numbers, dates, times, durations, lists, estimates, forecasts) in a single pass, returning a confidence score and null probability for every field instead of generating tokens. Served through the Extractions API (/api/alpha/extractions); not available on /api/alpha/decisions.
 
 #### Cloudflare: Clef
 
@@ -1360,7 +1373,7 @@ Clef Omni is the mixture-of-experts member of Cloudflare's open-source Clef deci
 
 Venice Uncensored Dolphin Mistral 24B Venice Edition is a fine-tuned variant of Mistral-Small-24B-Instruct-2501, developed by dphn.ai in collaboration with Venice.ai. This model is designed as an “uncensored” instruct-tuned LLM, preserving user control over alignment, system prompts, and behavior. Intended for advanced and unrestricted use cases, Venice Uncensored emphasizes steerability and transparent behavior, removing default safety and alignment layers typically found in mainstream assistant models.
 
-### ▎cohere（9）
+### ▎cohere（13）
 
 #### Cohere: Command A
 
@@ -1443,6 +1456,32 @@ Command R7B (12-2024) is a small, fast update of the Command R+ model, delivered
 
 Use of this model is subject to Cohere's [Usage Policy](https://docs.cohere.com/docs/usage-policy) and [SaaS Agreement](https://cohere.com/saas-agreement).
 
+#### Cohere: Embed 5 Fast
+
+- **ID**: `cohere/embed-5-fast`
+- **Provider**: cohere
+- **Context**: 128K (128,000) tok
+- **Modality**: text+image->embeddings  (in: text,image → out: embeddings)
+- **Pricing**: 入力 $0.12/1M · 出力 無料/1M
+- **登録日**: 2026-11-03
+
+Embed 5 Fast is the lower-latency, cost-efficient tier of Cohere's Embed 5 family of multimodal embedding models (about 1B parameters). It embeds text, images, and interleaved text and image content into a single vector space and is suited for high-volume query embedding, agent loops, and multilingual semantic search across 100+ languages.
+
+It shares its embedding space with Embed 5 Pro, so documents indexed with Pro can be queried with Fast. Output dimensions are selectable from 256 to 2048, and `input_type` defaults to `search_document` when not set.
+
+#### Cohere: Embed 5 Pro
+
+- **ID**: `cohere/embed-5-pro`
+- **Provider**: cohere
+- **Context**: 128K (128,000) tok
+- **Modality**: text+image->embeddings  (in: text,image → out: embeddings)
+- **Pricing**: 入力 $0.12/1M · 出力 無料/1M
+- **登録日**: 2026-11-03
+
+Embed 5 Pro is the higher-accuracy tier of Cohere's Embed 5 family of multimodal embedding models (about 2.4B parameters). It embeds text, images, and interleaved text and image content into a single vector space and is suited for retrieval and RAG over long or domain-specific documents, visual and document search, and multilingual semantic search across 100+ languages.
+
+It shares its embedding space with Embed 5 Fast, so a common pattern is to index a corpus with Pro and embed queries with Fast. Output dimensions are selectable from 256 to 2048, and `input_type` defaults to `search_document` when not set.
+
 #### Cohere: North Mini Code (free)
 
 - **ID**: `cohere/north-mini-code:free`
@@ -1480,6 +1519,32 @@ Cohere's AI search foundation model for enhancing the relevance of information s
 - **登録日**: 2026-04-06
 
 Cohere's AI search foundation model for enhancing the relevance of information surfaced within search and RAG systems. Features a 32K context window, multilingual support across 100+ languages, no data pre-processing required, and state of the art performance with low latency.
+
+#### Cohere: Rerank 5 Fast
+
+- **ID**: `cohere/rerank-5-fast`
+- **Provider**: cohere
+- **Context**: 32K (32,768) tok
+- **Modality**: text->rerank  (in: text → out: rerank)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **登録日**: 2026-11-03
+
+Rerank 5 Fast is the low-latency tier of Cohere's Rerank 5 family of reranking models. It scores and reorders candidate documents against a query and is suited for high-throughput retrieval such as high-volume search, agent tool loops, and first-pass filtering before a more expensive step.
+
+Relevance scores are calibrated to a 0-1 range so a fixed threshold behaves consistently across queries. Rerank 5 Pro is the higher-accuracy sibling for complex queries and long or domain-specific documents.
+
+#### Cohere: Rerank 5 Pro
+
+- **ID**: `cohere/rerank-5-pro`
+- **Provider**: cohere
+- **Context**: 32K (32,768) tok
+- **Modality**: text->rerank  (in: text → out: rerank)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **登録日**: 2026-11-03
+
+Rerank 5 Pro is the higher-accuracy tier of Cohere's Rerank 5 family of reranking models. It scores and reorders candidate documents against a query and is suited for retrieval pipelines where ranking quality matters most: complex or reasoning-heavy queries, long or domain-specific documents, and RAG systems that feed a small number of passages to a generator.
+
+Relevance scores are calibrated to a 0-1 range so a fixed threshold behaves consistently across queries. Rerank 5 Fast is the lower-latency sibling for high-volume search and agent loops.
 
 #### Cohere: Rerank v3.5
 
@@ -1741,11 +1806,11 @@ It is suited for coding, terminal, and computer-use agents, along with long-hori
 - **Provider**: deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.035/1M · 出力 $0.315/1M · キャッシュ読 $0.006/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $0.0333/1M · 出力 $0.475/1M · キャッシュ読 $0.0048/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-10-17
 - **HF**: `deepseek-ai/DeepSeek-V4.1-Flash-1017`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, stop, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, seed, logit_bias, tools, tool_choice, structured_outputs, response_format, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, stop, seed, structured_outputs, tools, tool_choice, response_format, top_p, top_k, min_p, logit_bias, frequency_penalty, presence_penalty, repetition_penalty
 
 DeepSeek V4.1 Flash 1017 is the October 17, 2026 snapshot of DeepSeek V4.1 Flash, served by DeepSeek under the `deepseek-flash` API model name. V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on output from a 552B-parameter backbone, an asymmetric split that keeps per-token compute low relative to the model's total size. Image understanding is native to the architecture, with visual and text embeddings trained jointly from the start of pre-training rather than added afterward as in the earlier experimental [V4 Flash Vision …
 
@@ -2650,13 +2715,13 @@ Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from G
 
 - **ID**: `google/gemma-4-31b-it`
 - **Provider**: google
-- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Context**: 262K (262,144) tok / max出力 16,384 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.1/1M · 出力 $0.34/1M · キャッシュ読 $0.1/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $0.085/1M · 出力 $0.143/1M · キャッシュ読 $0.043/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-04-02
 - **HF**: `google/gemma-4-31B-it`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, repetition_penalty, frequency_penalty, presence_penalty, stop, seed, response_format, structured_outputs, logprobs, top_logprobs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, presence_penalty, frequency_penalty, repetition_penalty, seed, stop, max_tokens, max_completion_tokens, response_format, structured_outputs, tools, tool_choice
 
 Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function calling, and multilingual support across 140+ languages. Strong on coding, reasoning, and document understanding tasks. Apache 2.0 license.
 
@@ -3180,7 +3245,7 @@ Prompts and outputs may be retained and used to train Liquid models.
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-11
 - **HF**: `LiquidAI/LFM2.5-2.6B`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, stop, frequency_penalty, presence_penalty, seed, top_k, min_p, repetition_penalty, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, max_completion_tokens
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, min_p, repetition_penalty, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, max_completion_tokens
 
 LFM2.5-2.6B is a compact reasoning model from Liquid AI. It is suited for agent workflows, data extraction, RAG, and long-context processing. Liquid advises against using it for agentic coding or knowledge-heavy tasks.
 
@@ -3196,7 +3261,7 @@ Prompts and outputs may be retained and used to train Liquid models.
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-10-13
 - **HF**: `LiquidAI/LFM2.5-24B-A2B`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, stop, frequency_penalty, presence_penalty, seed, top_k, min_p, repetition_penalty, max_completion_tokens, tools, tool_choice, response_format, structured_outputs, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, min_p, repetition_penalty, tools, tool_choice, response_format, structured_outputs, logprobs, top_logprobs, max_completion_tokens
 
 LFM2.5-24B-A2B is a mixture-of-experts reasoning model from Liquid AI with 24B total and 2.45B active parameters. It always reasons before answering and is built for agents that call tools. Liquid recommends pairing it with retrieval or web search for knowledge-heavy tasks.
 
@@ -3393,14 +3458,13 @@ The model handles long-horizon work: it plans, delegates to sub-agents, calls to
 
 - **ID**: `meta-llama/llama-3.1-70b-instruct`
 - **Provider**: meta-llama
-- **Context**: 131K (131,072) tok / max出力 16,384 tok
+- **Context**: 131K (131,072) tok / max出力 8,192 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.4/1M · 出力 $0.4/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Seed固定
+- **Pricing**: 入力 $0.72/1M · 出力 $0.72/1M
 - **Knowledge cutoff**: 2023-12-31T23:59:59.000Z
 - **登録日**: 2024-07-23
 - **HF**: `meta-llama/Meta-Llama-3.1-70B-Instruct`
-- **対応パラメータ**: response_format, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, tools, tool_choice, logit_bias, structured_outputs
+- **対応パラメータ**: max_tokens, temperature, top_p, top_k, stop
 
 Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 70B instruct-tuned version is optimized for high quality dialogue usecases.
 
@@ -4318,7 +4382,108 @@ Voxtral Small 24B 2507 STT is a speech transcription model from Mistral AI. It i
 
 Voxtral Small Transcribe 3 is Mistral's flagship speech-to-text model. It takes audio input and returns a transcript with timestamps and speaker diarization, and supports context biasing for domain-specific vocabulary. Suited for high-accuracy multilingual transcription of meetings, interviews, media, and support calls.
 
-### ▎moondream（2）
+### ▎mongodb（9）
+
+#### VoyageAI by MongoDB: rerank-2.5
+
+- **ID**: `mongodb/rerank-2.5`
+- **Provider**: mongodb
+- **Context**: 32K (32,000) tok
+- **Modality**: text->rerank  (in: text → out: rerank)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **登録日**: 2026-07-27
+
+rerank-2.5 is a cutting-edge reranker optimized for quality, delivering a 7.94% improvement in retrieval accuracy over Cohere Rerank v3.5 across 93 datasets. It also outperformed Cohere Rerank v3.5 by 12.70% on the Massive Instructed Retrieval Benchmark (MAIR). The model supports a combined context length of 32K tokens per query–document pair, including up to 8K tokens for the query, enabling more accurate retrieval over longer documents. Additionally, rerank-2.5 supports instruction following, allowingbout rerank-2.5 here: …
+
+#### VoyageAI by MongoDB: rerank-2.5-lite
+
+- **ID**: `mongodb/rerank-2.5-lite`
+- **Provider**: mongodb
+- **Context**: 32K (32,000) tok
+- **Modality**: text->rerank  (in: text → out: rerank)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **登録日**: 2026-07-27
+
+rerank-2.5-lite is a reranker optimized for both latency and quality, delivering a 7.16% improvement in retrieval accuracy over Cohere Rerank v3.5 across 93 datasets. It also outperformed Cohere Rerank v3.5 by 10.36% on the Massive Instructed Retrieval Benchmark (MAIR). The model supports a combined context length of 32K tokens per query–document pair, including up to 8K tokens for the query, enabling more accurate retrieval over longer documents. Additionally, rerank-2.5-lite supports instruction following, allowrerank-2.5-lite here: …
+
+#### VoyageAI by MongoDB: rerank-3
+
+- **ID**: `mongodb/rerank-3`
+- **Provider**: mongodb
+- **Context**: 32K (32,000) tok
+- **Modality**: text->rerank  (in: text → out: rerank)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **登録日**: 2026-09-30
+
+rerank-3 is a reranker optimized for quality and a drop-in upgrade to rerank-2.5, improving on it by 0.80% NDCG@10 on average across domain evaluations and by 3.35% on long-document evaluations, with code retrieval gains of 2.01% atop voyage-3-large and 1.96% atop voyage-4-large. Across 93 retrieval datasets it outperforms Cohere Rerank v4.0 Pro by 2.14% and Qwen3-Reranker-8B by 3.31%. The model supports a combined context length of 32K tokens per query-document pair, including up to 8K tokens for the query, enabling more accurate retrieval over longer documents. Additionally, rerank-3 supports instruction following, allowing users to guide relevance sco about rerank-3 here: …
+
+#### VoyageAI by MongoDB: rerank-3-lite
+
+- **ID**: `mongodb/rerank-3-lite`
+- **Provider**: mongodb
+- **Context**: 32K (32,000) tok
+- **Modality**: text->rerank  (in: text → out: rerank)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **登録日**: 2026-09-30
+
+rerank-3-lite is a reranker optimized for both latency and quality and a drop-in upgrade to rerank-2.5-lite, improving on it by 0.94% NDCG@10 on average across domain evaluations and by 1.86% on long-document evaluations, with code retrieval gains of 2.77% atop voyage-3-large and 2.59% atop voyage-4-large. It matches the retrieval quality of rerank-2.5, and across 93 retrieval datasets it outperforms Cohere Rerank v4.0 Pro by 1.44% and Qwen3-Reranker-8B by 2.61%. The model supports a combined context length of 32K tokens per query-document pair, including up to 8K tokens for the query, enabling more accurate retrieval over longer documents. Additionally, rerank-3-lite supports instruction …
+
+#### VoyageAI by MongoDB: voyage-4
+
+- **ID**: `mongodb/voyage-4`
+- **Provider**: mongodb
+- **Context**: 32K (32,000) tok
+- **Modality**: text->embeddings  (in: text → out: embeddings)
+- **Pricing**: 入力 $0.06/1M · 出力 無料/1M
+- **登録日**: 2026-07-27
+
+voyage-4 is a general-purpose (including multilingual) embedding model optimized for retrieval/search and AI applications. voyage-4 supports embedd about voyage-4 here: [mongodb.com/products/platform/ai-search-and-retrieval/models](https://www.mongodb.com/products/platform/ai-search-and-retrieval/models?utm_source=openrouter&utm_medium=referral)
+
+#### VoyageAI by MongoDB: voyage-4-large
+
+- **ID**: `mongodb/voyage-4-large`
+- **Provider**: mongodb
+- **Context**: 32K (32,000) tok
+- **Modality**: text->embeddings  (in: text → out: embeddings)
+- **Pricing**: 入力 $0.12/1M · 出力 無料/1M
+- **登録日**: 2026-07-27
+
+voyage-4-large is a state-of-the-art general-purpose and multilingual embedding optimized for retrieval quality. Enabled by Matryoshka learning and quantization-aware training, voyage-4-large supports embeddings  voyage-4-large here: [mongodb.com/products/platform/ai-search-and-retrieval/models](https://www.mongodb.com/products/platform/ai-search-and-retrieval/models?utm_source=openrouter&utm_medium=referral)
+
+#### VoyageAI by MongoDB: voyage-4-lite
+
+- **ID**: `mongodb/voyage-4-lite`
+- **Provider**: mongodb
+- **Context**: 32K (32,000) tok
+- **Modality**: text->embeddings  (in: text → out: embeddings)
+- **Pricing**: 入力 $0.02/1M · 出力 無料/1M
+- **登録日**: 2026-07-27
+
+voyage-4-lite is a lightweight, general-purpose embedding model optimized for low latency and cost. Enabled by Matryoshka learning and quantization-aware training, voyage-4-lite supports embeddings t voyage-4-lite here: [mongodb.com/products/platform/ai-search-and-retrieval/models](https://www.mongodb.com/products/platform/ai-search-and-retrieval/models?utm_source=openrouter&utm_medium=referral)
+
+#### VoyageAI by MongoDB: voyage-code-4
+
+- **ID**: `mongodb/voyage-code-4`
+- **Provider**: mongodb
+- **Context**: 32K (32,000) tok
+- **Modality**: text->embeddings  (in: text → out: embeddings)
+- **Pricing**: 入力 $0.12/1M · 出力 無料/1M
+- **登録日**: 2026-08-13
+
+voyage-code-4 is a code embedding model from Voyage AI, a MongoDB company. It is designed for coding agents and code retrieval, with Matryoshka embeddings at 2048t voyage-code-4 here: [mongodb.com/products/platform/ai-search-and-retrieval/models](https://www.mongodb.com/products/platform/ai-search-and-retrieval/models?utm_source=openrouter&utm_medium=referral)
+
+#### VoyageAI by MongoDB: voyage-multimodal-3.5
+
+- **ID**: `mongodb/voyage-multimodal-3.5`
+- **Provider**: mongodb
+- **Context**: 32K (32,000) tok
+- **Modality**: text+image->embeddings  (in: text,image → out: embeddings)
+- **Pricing**: 入力 $0.12/1M · 出力 無料/1M · Image Input $6e-10/B pixels
+- **登録日**: 2026-07-27
+
+voyage-multimodal-3.5 is a state-of-the-art multimodal embedding model capable of vectorizing not only text, images, and video individually, but also content that interleaves all three modalities. It delivers excellent performance for mixed-modality searches involving text and visual content such as PDF screenshots, figures, tables, videos, and more. Enabled by Matryoshka learning and quantization-aware training, voyage-multimodal-3.5 supports embeddings in 2048, 1024, 512, and 256 dimen-multimodal-3.5 here: [mongodb.com/products/platform/ai-search-and-retrieval/models](https://www.mongodb.com/products/platform/ai-search-and-retrieval/models?utm_source=openrouter&utm_medium=referral)
+
+### ▎moondream（3）
 
 #### Moondream: Moondream 3 Preview
 
@@ -4347,6 +4512,18 @@ Moondream 3 Preview is a vision-language model from Moondream with 9B total para
 - **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, max_completion_tokens
 
 Moondream 3.1 is a vision-language model from Moondream, the successor to Moondream 3 Preview, with 9B total parameters and 2B active (mixture-of-experts). It handles visual question answering, captioning, OCR, and visual reasoning over images, with a 32K-token context and an optional reasoning mode.
+
+#### Moondream: Parakeet Ultra
+
+- **ID**: `moondream/parakeet-ultra`
+- **Provider**: moondream
+- **Context**: — tok
+- **Modality**: audio->transcription  (in: audio → out: transcription)
+- **Pricing**: 入力 $16.67/1M · 出力 無料/1M · Audio Seconds $1.66667e-05/second
+- **登録日**: 2026-11-03
+- **HF**: `moondream/parakeet-ultra`
+
+Parakeet Ultra is Moondream's post-trained version of NVIDIA's Parakeet TDT 0.6B v3 speech-to-text model, with the same architecture, tokenizer, and 0.6B parameters. It lowers word error rate on the Open ASR Leaderboard English sets (5.80% vs 6.26%) and the 25-language FLEURS set (9.55% vs 11.62%), with larger gains on noisy and long-form audio. Supports 25 European languages and returns transcribed text with segment and word timestamps.
 
 ### ▎moonshotai（9）
 
@@ -4446,7 +4623,7 @@ MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 fa
 - **Provider**: moonshotai
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.1539/1M · 出力 $10.55/1M · キャッシュ読 $0.15/1M
+- **Pricing**: 入力 $0.19/1M · 出力 $8.94/1M · キャッシュ読 $0.19/1M
 - **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-07-16
 - **HF**: `moonshotai/Kimi-K3`
@@ -4463,7 +4640,7 @@ Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot
 - **Pricing**: 入力 $2.00/1M · 出力 $10.00/1M · キャッシュ読 $0.2/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-10-23
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, stop, frequency_penalty, presence_penalty, structured_outputs, response_format, tool_choice, tools, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, structured_outputs, response_format, tool_choice, tools, logprobs, top_logprobs
 
 Kimi K3.1 Pro is Moonshot AI's flagship open-weight multimodal reasoning model and a post-trained successor to Kimi K3, with a 1M-token context window. It is built for long-horizon coding, 3D creation, financial research, and end-to-end agentic knowledge work, with native image and video understanding.
 
@@ -4481,7 +4658,7 @@ Kimi K3.1 Pro is Moonshot AI's flagship open-weight multimodal reasoning model a
 
 Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at navigating large repositories, using tools, debugging, and iterating against images, logs, tests, and runtime feedback. Its architecture uses KDA and Attention Residuals for computational efficiency.
 
-### ▎morph（2）
+### ▎morph（3）
 
 #### Morph: Morph V3 Fast
 
@@ -4522,6 +4699,17 @@ The model requires the prompt to be in the following format:
 <update>{edit_snippet}</update>
 
 Zero Data Retention is enabled for Morph. Learn more about this model in their [documentation](https://docs.morphllm.com/quickstart)
+
+#### Morph: Reflex
+
+- **ID**: `morph/reflex`
+- **Provider**: morph
+- **Context**: 65K (65,536) tok
+- **Modality**: text+image->decisions  (in: text,image → out: decisions)
+- **Pricing**: 入力 $0.042/1M · 出力 無料/1M · キャッシュ読 $0.01/1M
+- **登録日**: 2026-11-03
+
+Morph's decision model. Answers typed choice, noul and score questions about a state. The state is prefix-cached across requests, so repeat questions on the same state bill at the cached-input rate. 65k context window.
 
 ### ▎nace-ai（3）
 
@@ -4600,11 +4788,11 @@ Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes
 - **Context**: 131K (131,072) tok
 - **Modality**: text->text  (in: text → out: text)
 - **Pricing**: 入力 $1.00/1M · 出力 $3.00/1M · キャッシュ読 $0.2/1M
-- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
+- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **Knowledge cutoff**: 2024-08-31T23:59:59.000Z
 - **登録日**: 2025-08-26
 - **HF**: `NousResearch/Hermes-4-405B`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, frequency_penalty, presence_penalty, top_k, logprobs, top_logprobs, repetition_penalty, response_format, structured_outputs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, logit_bias, logprobs, top_logprobs, response_format, structured_outputs, repetition_penalty
 
 Hermes 4 is a large-scale reasoning model built on Meta-Llama-3.1-405B and released by Nous Research. It introduces a hybrid reasoning mode, where the model can choose to deliberate internally with <think>...</think> traces or respond directly, offering flexibility between speed and depth. Users can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config)
 
@@ -4650,13 +4838,13 @@ NVIDIA Nemotron 3 Embed 1B is an open text embedding model from NVIDIA, optimize
 
 - **ID**: `nvidia/nemotron-3-nano-30b-a3b`
 - **Provider**: nvidia
-- **Context**: 262K (262,144) tok / max出力 32,768 tok
+- **Context**: 262K (262,144) tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.05/1M · 出力 $0.2/1M
-- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $0.06/1M · 出力 $0.24/1M · キャッシュ読 $0.012/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2025-12-14
 - **HF**: `nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, response_format, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, logit_bias, repetition_penalty, response_format, structured_outputs, tools, tool_choice
 
 NVIDIA Nemotron 3 Nano 30B A3B is a small language MoE model with highest compute efficiency and accuracy for developers to build specialized agentic AI systems.
 
@@ -4684,13 +4872,13 @@ Built on a hybrid MoE Transformer-Mamba architecture with Conv3D video layers an
 
 - **ID**: `nvidia/nemotron-3-super-120b-a12b`
 - **Provider**: nvidia
-- **Context**: 1.04858M (1,048,576) tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 16,384 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.08/1M · 出力 $0.45/1M
-- **Capabilities**: Function calling, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $0.075/1M · 出力 $0.4/1M
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-03-11
 - **HF**: `nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8`
-- **対応パラメータ**: reasoning, include_reasoning, frequency_penalty, logit_bias, max_tokens, presence_penalty, seed, stop, temperature, top_p, response_format, tools, logprobs, top_logprobs, structured_outputs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, tools, tool_choice, logit_bias, response_format
 
 NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer Mixture-of-Experts architecture with multi-token prediction (MTP), it delivers over 50% higher token generation compared to leading open models.
  
@@ -4881,7 +5069,7 @@ Nemotron 3.5 Transcribe is an open-weight speech recognition model from NVIDIA, 
 - **Provider**: nvidia
 - **Context**: — tok
 - **Modality**: audio->transcription  (in: audio → out: transcription)
-- **Pricing**: 入力 $25.00/1M · 出力 無料/1M · Audio Seconds $2.5e-05/second
+- **Pricing**: 入力 $16.67/1M · 出力 無料/1M · Audio Seconds $1.66667e-05/second
 - **登録日**: 2026-05-27
 
 Parakeet TDT 0.6B v3 is NVIDIA's 600M-parameter multilingual speech-to-text model built on the FastConformer-TDT architecture. Trained on the Granary dataset (670,000+ hours of audio), it supports automatic language detection across all official EU languages and achieves a 6.34% average word error rate on the HuggingFace Open ASR Leaderboard. Returns transcribed text with punctuation and segment timestamps.
@@ -6160,7 +6348,7 @@ GPT-6.1 Sol is an upgrade to GPT-6 Sol from OpenAI, positioned below the flagshi
 - **Pricing**: 入力 $1.00/1M · 出力 $5.00/1M · キャッシュ読 $0.05/1M · キャッシュ書 $1.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-10-26
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
+- **対応パラメータ**: reasoning, include_reasoning, max_completion_tokens, tools, tool_choice, verbosity, response_format, seed, structured_outputs
 
 GPT-6.1 Terra is the mid-tier model in OpenAI's GPT-6.1 series, priced below GPT-6.1 Sol. It is suited for everyday agentic, coding, and writing work, is particularly strong at understanding screenshots and on-screen content, and is efficient enough for high-volume workloads.
 
@@ -6173,7 +6361,7 @@ GPT-6.1 Terra is the mid-tier model in OpenAI's GPT-6.1 series, priced below GPT
 - **Pricing**: 入力 $1.00/1M · 出力 $5.00/1M · キャッシュ読 $0.05/1M · キャッシュ書 $1.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-10-26
-- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
+- **対応パラメータ**: reasoning, include_reasoning, max_completion_tokens, tools, tool_choice, verbosity, response_format, seed, structured_outputs
 
 GPT-6.1 Terra Pro is the same underlying model as [GPT-6.1 Terra](https://openrouter.ai/openai/gpt-6.1-terra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.
 
@@ -6323,7 +6511,7 @@ GPT Image 2.5 Sunburst is an image generation and editing model from OpenAI, pos
 - **Provider**: openai
 - **Context**: 131K (131,072) tok / max出力 65,536 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.026/1M · 出力 $0.098/1M · キャッシュ読 $0.024/1M
+- **Pricing**: 入力 $0.029/1M · 出力 $0.108/1M · キャッシュ読 $0.026/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2024-06-30T23:59:59.000Z
 - **登録日**: 2025-08-05
@@ -6353,7 +6541,7 @@ gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language
 - **Provider**: openai
 - **Context**: 131K (131,072) tok / max出力 32,768 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.007/1M · 出力 $0.028/1M · キャッシュ読 $0.006/1M
+- **Pricing**: 入力 $0.006/1M · 出力 $0.027/1M · キャッシュ読 $0.005/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **Knowledge cutoff**: 2024-06-30T23:59:59.000Z
 - **登録日**: 2025-08-05
@@ -7318,13 +7506,13 @@ The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid a
 
 - **ID**: `qwen/qwen3.5-9b`
 - **Provider**: qwen
-- **Context**: 262K (262,144) tok / max出力 40,960 tok
+- **Context**: 262K (262,144) tok / max出力 65,536 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.05/1M · 出力 $0.073/1M · キャッシュ読 $0.045/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
+- **Pricing**: 入力 $0.08/1M · 出力 $0.13/1M · キャッシュ読 $0.04/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-03-10
 - **HF**: `Qwen/Qwen3.5-9B`
-- **対応パラメータ**: reasoning, include_reasoning, response_format, structured_outputs, tools, tool_choice, temperature, top_p, top_k, min_p, presence_penalty, repetition_penalty, stop, max_tokens, max_completion_tokens
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
 
 Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified vision-language design with early fusion of multimodal tokens, allowing the model to process and reason across text and images within the same context.
 
@@ -7389,7 +7577,7 @@ The model is designed for agentic coding and reasoning tasks, with particular st
 - **Provider**: qwen
 - **Context**: 262K (262,144) tok / max出力 32,768 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.01/1M · 出力 $0.092/1M · キャッシュ読 $0.009/1M
+- **Pricing**: 入力 $0.015/1M · 出力 $0.141/1M · キャッシュ読 $0.014/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-04-27
 - **HF**: `Qwen/Qwen3.6-35B-A3B`
@@ -7495,7 +7683,7 @@ Qwen3.8 2.4T A95B is an open-weight sparse mixture-of-experts model from Qwen an
 - **Provider**: qwen
 - **Context**: 1.024M (1,024,000) tok / max出力 32,768 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.006/1M · 出力 $0.342/1M · キャッシュ読 $0.005/1M
+- **Pricing**: 入力 $0.022/1M · 出力 $1.22/1M · キャッシュ読 $0.02/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-08-14
 - **HF**: `Qwen/Qwen3.8-27B`
@@ -8273,6 +8461,23 @@ Riverflow 2.6 Pro is the flagship model of Sourceful's Riverflow 2.6 lineup, a u
 
 Riverflow 2.6 adds custom output dimensions: pass `size` as `WIDTHxHEIGHT` (up to 16,384 px per edge, 16.8 megapixels total, 16:1 aspect ratio) instead …
 
+### ▎stealth（1）
+
+#### Crouton Alpha
+
+- **ID**: `stealth/crouton-alpha`
+- **Provider**: stealth
+- **Context**: 1.04858M (1,048,576) tok
+- **Modality**: text+image+file+audio+video->text  (in: text,image,file,audio,video → out: text)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
+- **登録日**: 2026-11-03
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, structured_outputs, tool_choice, tools, response_format
+
+Crouton Alpha  is a lightweight model built for scalable coding, agentic, and multimodal workflows. It's ideal for executing agentic sub-tasks, tool use, and document analysis in high-volume, repeated work. Developers can combine it with frontier reasoning models to execute the bounded steps that turn plans and information into action.
+
+Crouton Alpha is a stealth model. It is developed and operated by a third-party provider who has chosen to remain anonymous during this preview. OpenRouter routes requests to it and is not its developer, owner, or provider. Prompts and completions may be retained by the provider but are not used for training; all other use is governed by the [Stealth Model …
+
 ### ▎stepfun（3）
 
 #### StepFun: Step 3.5 Flash
@@ -8335,7 +8540,7 @@ It is designed for extended tasks that span large codebases and documents, using
 
 TBC mischief 1 is the world's first neuron-derived video model from The Biological Computing Co. It supports image to video and is a fast and affordable way to bring ideas to life. Ideal for ideation, previsualization, moodboarding and variant testing.
 
-### ▎tencent（8）
+### ▎tencent（9）
 
 #### Tencent: Hunyuan A13B Instruct
 
@@ -8433,6 +8638,20 @@ Tencent positions it as a reliable, cost-effective option across coding, documen
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, tool_choice, tools
 
 Hy3 preview is a high-efficiency Mixture-of-Experts model from Tencent designed for agentic workflows and production use. It supports configurable reasoning levels across disabled, low, and high modes, allowing it to balance speed and depth depending on the task, while delivering strong code generation and reliable performance across multi-step, real-world workflows.
+
+#### Tencent: Hy4
+
+- **ID**: `tencent/hy4`
+- **Provider**: tencent
+- **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
+- **Modality**: text+image->text  (in: text,image → out: text)
+- **Pricing**: 入力 $0.417/1M · 出力 $1.25/1M · キャッシュ読 $0.021/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
+- **登録日**: 2026-11-04
+- **HF**: `tencent/Hy4`
+- **対応パラメータ**: reasoning, include_reasoning, temperature, stop, max_completion_tokens, reasoning_effort, max_tokens, response_format, structured_outputs, tools, tool_choice
+
+The official release of Hy4 delivers comprehensive and substantial improvements over Hy4 Preview, with particularly strong gains in agentic capabilities and performance across a wide range of long-horizon, real-world productivity tasks. It also introduces visual understanding for the first time.
 
 #### Tencent: Hy4 preview
 
@@ -8724,107 +8943,6 @@ Solar Pro 4 is Upstage's cost-efficient large language model, featuring a 524K c
 
 When using BYOK with ZDR enforcement, the Console API key must belong to a ZDR-enabled Upstage organization. Contact Upstage to enable ZDR on your org.
 
-### ▎voyageai（9）
-
-#### VoyageAI by MongoDB: rerank-2.5
-
-- **ID**: `voyageai/rerank-2.5`
-- **Provider**: voyageai
-- **Context**: 32K (32,000) tok
-- **Modality**: text->rerank  (in: text → out: rerank)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
-- **登録日**: 2026-07-27
-
-rerank-2.5 is a cutting-edge reranker optimized for quality, delivering a 7.94% improvement in retrieval accuracy over Cohere Rerank v3.5 across 93 datasets. It also outperformed Cohere Rerank v3.5 by 12.70% on the Massive Instructed Retrieval Benchmark (MAIR). The model supports a combined context length of 32K tokens per query–document pair, including up to 8K tokens for the query, enabling more accurate retrieval over longer documents. Additionally, rerank-2.5 supports instruction following, allowingbout rerank-2.5 here: …
-
-#### VoyageAI by MongoDB: rerank-2.5-lite
-
-- **ID**: `voyageai/rerank-2.5-lite`
-- **Provider**: voyageai
-- **Context**: 32K (32,000) tok
-- **Modality**: text->rerank  (in: text → out: rerank)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
-- **登録日**: 2026-07-27
-
-rerank-2.5-lite is a reranker optimized for both latency and quality, delivering a 7.16% improvement in retrieval accuracy over Cohere Rerank v3.5 across 93 datasets. It also outperformed Cohere Rerank v3.5 by 10.36% on the Massive Instructed Retrieval Benchmark (MAIR). The model supports a combined context length of 32K tokens per query–document pair, including up to 8K tokens for the query, enabling more accurate retrieval over longer documents. Additionally, rerank-2.5-lite supports instruction following, allowrerank-2.5-lite here: …
-
-#### VoyageAI by MongoDB: rerank-3
-
-- **ID**: `voyageai/rerank-3`
-- **Provider**: voyageai
-- **Context**: 32K (32,000) tok
-- **Modality**: text->rerank  (in: text → out: rerank)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
-- **登録日**: 2026-09-30
-
-rerank-3 is a reranker optimized for quality and a drop-in upgrade to rerank-2.5, improving on it by 0.80% NDCG@10 on average across domain evaluations and by 3.35% on long-document evaluations, with code retrieval gains of 2.01% atop voyage-3-large and 1.96% atop voyage-4-large. Across 93 retrieval datasets it outperforms Cohere Rerank v4.0 Pro by 2.14% and Qwen3-Reranker-8B by 3.31%. The model supports a combined context length of 32K tokens per query-document pair, including up to 8K tokens for the query, enabling more accurate retrieval over longer documents. Additionally, rerank-3 supports instruction following, allowing users to guide relevance sco about rerank-3 here: …
-
-#### VoyageAI by MongoDB: rerank-3-lite
-
-- **ID**: `voyageai/rerank-3-lite`
-- **Provider**: voyageai
-- **Context**: 32K (32,000) tok
-- **Modality**: text->rerank  (in: text → out: rerank)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
-- **登録日**: 2026-09-30
-
-rerank-3-lite is a reranker optimized for both latency and quality and a drop-in upgrade to rerank-2.5-lite, improving on it by 0.94% NDCG@10 on average across domain evaluations and by 1.86% on long-document evaluations, with code retrieval gains of 2.77% atop voyage-3-large and 2.59% atop voyage-4-large. It matches the retrieval quality of rerank-2.5, and across 93 retrieval datasets it outperforms Cohere Rerank v4.0 Pro by 1.44% and Qwen3-Reranker-8B by 2.61%. The model supports a combined context length of 32K tokens per query-document pair, including up to 8K tokens for the query, enabling more accurate retrieval over longer documents. Additionally, rerank-3-lite supports instruction …
-
-#### VoyageAI by MongoDB: voyage-4
-
-- **ID**: `voyageai/voyage-4`
-- **Provider**: voyageai
-- **Context**: 32K (32,000) tok
-- **Modality**: text->embeddings  (in: text → out: embeddings)
-- **Pricing**: 入力 $0.06/1M · 出力 無料/1M
-- **登録日**: 2026-07-27
-
-voyage-4 is a general-purpose (including multilingual) embedding model optimized for retrieval/search and AI applications. voyage-4 supports embedd about voyage-4 here: [mongodb.com/products/platform/ai-search-and-retrieval/models](https://www.mongodb.com/products/platform/ai-search-and-retrieval/models?utm_source=openrouter&utm_medium=referral)
-
-#### VoyageAI by MongoDB: voyage-4-large
-
-- **ID**: `voyageai/voyage-4-large`
-- **Provider**: voyageai
-- **Context**: 32K (32,000) tok
-- **Modality**: text->embeddings  (in: text → out: embeddings)
-- **Pricing**: 入力 $0.12/1M · 出力 無料/1M
-- **登録日**: 2026-07-27
-
-voyage-4-large is a state-of-the-art general-purpose and multilingual embedding optimized for retrieval quality. Enabled by Matryoshka learning and quantization-aware training, voyage-4-large supports embeddings  voyage-4-large here: [mongodb.com/products/platform/ai-search-and-retrieval/models](https://www.mongodb.com/products/platform/ai-search-and-retrieval/models?utm_source=openrouter&utm_medium=referral)
-
-#### VoyageAI by MongoDB: voyage-4-lite
-
-- **ID**: `voyageai/voyage-4-lite`
-- **Provider**: voyageai
-- **Context**: 32K (32,000) tok
-- **Modality**: text->embeddings  (in: text → out: embeddings)
-- **Pricing**: 入力 $0.02/1M · 出力 無料/1M
-- **登録日**: 2026-07-27
-
-voyage-4-lite is a lightweight, general-purpose embedding model optimized for low latency and cost. Enabled by Matryoshka learning and quantization-aware training, voyage-4-lite supports embeddings t voyage-4-lite here: [mongodb.com/products/platform/ai-search-and-retrieval/models](https://www.mongodb.com/products/platform/ai-search-and-retrieval/models?utm_source=openrouter&utm_medium=referral)
-
-#### VoyageAI by MongoDB: voyage-code-4
-
-- **ID**: `voyageai/voyage-code-4`
-- **Provider**: voyageai
-- **Context**: 32K (32,000) tok
-- **Modality**: text->embeddings  (in: text → out: embeddings)
-- **Pricing**: 入力 $0.12/1M · 出力 無料/1M
-- **登録日**: 2026-08-13
-
-voyage-code-4 is a code embedding model from Voyage AI, a MongoDB company. It is designed for coding agents and code retrieval, with Matryoshka embeddings at 2048t voyage-code-4 here: [mongodb.com/products/platform/ai-search-and-retrieval/models](https://www.mongodb.com/products/platform/ai-search-and-retrieval/models?utm_source=openrouter&utm_medium=referral)
-
-#### VoyageAI by MongoDB: voyage-multimodal-3.5
-
-- **ID**: `voyageai/voyage-multimodal-3.5`
-- **Provider**: voyageai
-- **Context**: 32K (32,000) tok
-- **Modality**: text+image->embeddings  (in: text,image → out: embeddings)
-- **Pricing**: 入力 $0.12/1M · 出力 無料/1M · Image Input $6e-10/B pixels
-- **登録日**: 2026-07-27
-
-voyage-multimodal-3.5 is a state-of-the-art multimodal embedding model capable of vectorizing not only text, images, and video individually, but also content that interleaves all three modalities. It delivers excellent performance for mixed-modality searches involving text and visual content such as PDF screenshots, figures, tables, videos, and more. Enabled by Matryoshka learning and quantization-aware training, voyage-multimodal-3.5 supports embeddings in 2048, 1024, 512, and 256 dimen-multimodal-3.5 here: [mongodb.com/products/platform/ai-search-and-retrieval/models](https://www.mongodb.com/products/platform/ai-search-and-retrieval/models?utm_source=openrouter&utm_medium=referral)
-
 ### ▎writer（1）
 
 #### Writer: Palmyra X5
@@ -8839,7 +8957,7 @@ voyage-multimodal-3.5 is a state-of-the-art multimodal embedding model capable o
 
 Palmyra X5 is Writer's most advanced model, purpose-built for building and scaling AI agents across the enterprise. It delivers industry-leading speed and efficiency on context windows up to 1 million tokens, powered by a novel transformer architecture and hybrid attention mechanisms. This enables faster inference and expanded memory for processing large volumes of enterprise data, critical for scaling AI agents.
 
-### ▎x-ai（14）
+### ▎x-ai（16）
 
 #### SpaceXAI: Grok 4.20
 
@@ -8931,6 +9049,19 @@ Grok 4.5 is a model from SpaceXAI with frontier performance on coding, knowledge
 
 Grok 4.6 is a model from SpaceXAI with frontier performance on coding, knowledge work, and STEM. It is succeeded by [Grok 4.7](/x-ai/grok-4.7).
 
+#### SpaceXAI: Grok 4.6 (batch)
+
+- **ID**: `x-ai/grok-4.6:batch`
+- **Provider**: x-ai
+- **Context**: 500K (500,000) tok
+- **Modality**: text+image+file->text  (in: text,image,file → out: text)
+- **Pricing**: 入力 $1.60/1M · 出力 $4.80/1M · キャッシュ読 $0.4/1M · Web検索 $0.005 · Web Search $0.005/1K calls
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **登録日**: 2026-08-12
+- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, max_tokens, temperature, top_p, seed, logprobs, top_logprobs, tools, tool_choice
+
+Grok 4.6 is a model from SpaceXAI with frontier performance on coding, knowledge work, and STEM. It is succeeded by [Grok 4.7](/x-ai/grok-4.7).
+
 #### SpaceXAI: Grok 4.7
 
 - **ID**: `x-ai/grok-4.7`
@@ -8941,6 +9072,21 @@ Grok 4.6 is a model from SpaceXAI with frontier performance on coding, knowledge
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-09-21
 - **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, max_tokens, temperature, top_p, top_k, stop, tools, tool_choice
+
+Grok 4.7 is SpaceXAI's flagship model for coding, agentic tasks, and knowledge work, succeeding Grok 4.6. It is particularly strong at long-running software engineering tasks, verifying its own work, and managing long context, and it improves on its predecessor at professional knowledge work such as drafting documents and presentations.
+
+The model was trained with a longer reinforcement learning run weighted toward problems that take many hours to complete, and natively understands the Grok Bot harness for conversational tasks. It ships with a new safeguard stack that pairs strong jailbreak resistance with low refusal rates for legitimate cybersecurity and biology work. SpaceXAI's reported …
+
+#### SpaceXAI: Grok 4.7 (batch)
+
+- **ID**: `x-ai/grok-4.7:batch`
+- **Provider**: x-ai
+- **Context**: 500K (500,000) tok
+- **Modality**: text+image+file->text  (in: text,image,file → out: text)
+- **Pricing**: 入力 $1.60/1M · 出力 $4.80/1M · キャッシュ読 $0.4/1M · Web検索 $0.005 · Web Search $0.005/1K calls
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **登録日**: 2026-09-21
+- **対応パラメータ**: reasoning, include_reasoning, structured_outputs, response_format, max_tokens, temperature, top_p, seed, logprobs, top_logprobs, tools, tool_choice
 
 Grok 4.7 is SpaceXAI's flagship model for coding, agentic tasks, and knowledge work, succeeding Grok 4.6. It is particularly strong at long-running software engineering tasks, verifying its own work, and managing long context, and it improves on its predecessor at professional knowledge work such as drafting documents and presentations.
 
@@ -9071,11 +9217,11 @@ MiMo-V2.5-Pro is Xiaomi’s flagship model, delivering strong performance in gen
 - **Provider**: xiaomi
 - **Context**: 1.05M (1,050,000) tok / max出力 131,072 tok
 - **Modality**: text+image+audio+video->text  (in: text,image,audio,video → out: text)
-- **Pricing**: 入力 $0.1/1M · 出力 $0.28/1M · キャッシュ読 $0.003/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $0.1/1M · 出力 $0.28/1M · キャッシュ読 $0.05/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-09-21
 - **HF**: `XiaomiMiMo/MiMo-V2.6-Flash-RL`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, seed, stop, top_k, top_p, presence_penalty, frequency_penalty, repetition_penalty, tools, tool_choice, logprobs, top_logprobs, response_format, structured_outputs
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, response_format, structured_outputs, tools, tool_choice
 
 MiMo-V2.6-Flash is an open-source foundation model developed by Xiaomi. Built on a Mixture-of-Experts architecture with 309B total parameters and 15B activated per token, it employs a hybrid attention mechanism for greater computational efficiency. The model features a 1M-token context window and native multimodal capabilities. Optimized for agentic workflows, it delivers strong performance across coding, visual, general, and research scenarios, excelling at complex, long-horizon tasks with robust generalization across a diverse range of agent harnesses.
 
@@ -9310,7 +9456,7 @@ Reasoning is always on and cannot be disabled. Reasoning efforts `low`, `high`, 
 - **Provider**: z-ai
 - **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.0285/1M · 出力 $0.0923/1M · キャッシュ読 $0.0285/1M
+- **Pricing**: 入力 $0.0269/1M · 出力 $0.0996/1M · キャッシュ読 $0.0269/1M
 - **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-08-26
 - **HF**: `zai-org/GLM-5.3-Flash`
@@ -9466,7 +9612,7 @@ This model always redirects to the latest model in the Claude Sonnet family.
 - **Provider**: ~deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.035/1M · 出力 $0.315/1M · キャッシュ読 $0.006/1M
+- **Pricing**: 入力 $0.0333/1M · 出力 $0.475/1M · キャッシュ読 $0.0048/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-09-14
 - **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, max_tokens, stop, seed, frequency_penalty, presence_penalty, repetition_penalty, reasoning_effort, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, logit_bias, max_completion_tokens, parallel_tool_calls
@@ -9559,10 +9705,10 @@ This model always redirects to the latest model in the d1-ultra family.
 - **Provider**: ~moonshotai
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.1539/1M · 出力 $10.55/1M · キャッシュ読 $0.15/1M
+- **Pricing**: 入力 $0.19/1M · 出力 $8.94/1M · キャッシュ読 $0.19/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-27
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, logit_bias, response_format, structured_outputs, logprobs, top_logprobs, tools, tool_choice, max_completion_tokens, parallel_tool_calls, reasoning_effort
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, stop, frequency_penalty, presence_penalty, repetition_penalty, max_tokens, tools, tool_choice, min_p, seed, logit_bias, response_format, structured_outputs, logprobs, top_logprobs, max_completion_tokens, parallel_tool_calls, reasoning_effort
 
 This model always redirects to the latest model in the Kimi family.
 
@@ -9709,7 +9855,7 @@ This model always redirects to the latest Grok model from xAI.
 - **Provider**: ~z-ai
 - **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.0285/1M · 出力 $0.0923/1M · キャッシュ読 $0.0285/1M
+- **Pricing**: 入力 $0.0269/1M · 出力 $0.0996/1M · キャッシュ読 $0.0269/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-27
 - **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice, response_format, structured_outputs, min_p, logit_bias, logprobs, top_logprobs, reasoning_effort, parallel_tool_calls
