@@ -1,13 +1,13 @@
-# OpenRouter モデルカタログ（全718モデル）
+# OpenRouter モデルカタログ（全731モデル）
 
-- 取得日時: 2026-11-17T06:28:00
+- 取得日時: 2026-11-18T06:27:59
 - プロバイダ数: 100 / 無料枠あり: 35
 
 ## プロバイダ別サマリ
 
 | Provider | モデル数 | 最安入力($/1M) | 最高入力($/1M) | 最大Context |
 |---|--:|--:|--:|--:|
-| openai | 118 | 0.01 | 100.00 | 1,050,000 |
+| openai | 126 | 0.01 | 100.00 | 1,050,000 |
 | google | 61 | 0.00 | 266.67 | 1,048,576 |
 | qwen | 55 | 0.00 | 20.00 | 1,048,576 |
 | anthropic | 32 | 0.05 | 15.00 | 1,000,000 |
@@ -17,21 +17,21 @@
 | nvidia | 17 | 0.00 | 16.67 | 1,048,576 |
 | deepseek | 17 | 0.04 | 0.90 | 1,048,576 |
 | x-ai | 16 | 0.00 | 27.78 | 2,000,000 |
+| microsoft | 15 | 0.04 | 360,000.00 | 32,768 |
 | cohere | 13 | 0.00 | 2.50 | 256,000 |
 | minimax | 12 | 0.00 | 100.00 | 1,048,576 |
 | meta | 12 | 0.00 | 50.00 | 1,048,576 |
-| microsoft | 12 | 0.04 | 360,000.00 | 32,768 |
 | perplexity | 11 | 0.00 | 3.00 | 262,144 |
 | elevenlabs | 11 | 40.00 | 80.00 | 0 |
 | tencent | 10 | 0.00 | 0.83 | 1,048,576 |
 | moonshotai | 10 | 0.18 | 2.28 | 1,048,576 |
+| heygen | 9 | 0.00 | 15.00 | 262,144 |
 | bytedance-seed | 9 | 0.00 | 0.50 | 262,144 |
 | black-forest-labs | 9 | 0.00 | 0.00 | 67,344 |
 | mongodb | 9 | 0.00 | 0.12 | 32,000 |
 | liquid | 8 | 0.00 | 0.08 | 262,144 |
 | amazon | 8 | 0.02 | 2.50 | 1,000,000 |
 | meta-llama | 8 | 0.02 | 0.72 | 1,310,720 |
-| heygen | 7 | 0.00 | 15.00 | 262,144 |
 | fish-audio | 7 | 0.00 | 100.00 | 0 |
 | bytedance | 6 | 0.00 | 0.10 | 128,000 |
 | aion-labs | 6 | 0.70 | 3.00 | 262,144 |
@@ -41,7 +41,7 @@
 | morph | 5 | 0.04 | 0.90 | 262,144 |
 | sourceful | 5 | 0.00 | 0.00 | 32,768 |
 | xiaomi | 5 | 0.10 | 4.35 | 1,050,000 |
-| ~openai | 5 | 0.10 | 10.00 | 1,050,000 |
+| ~openai | 5 | 0.10 | 8.00 | 1,050,000 |
 | sentence-transformers | 5 | 0.01 | 0.01 | 512 |
 | nace-ai | 4 | 0.04 | 0.06 | 262,144 |
 | cloudflare | 4 | 0.02 | 0.19 | 65,537 |
@@ -1152,7 +1152,7 @@ Seedance 2.0 is a video generation model from ByteDance. It supports text-to-vid
 - **Provider**: bytedance
 - **Context**: — tok
 - **Modality**: text+image+audio+video->video  (in: text,image,audio,video → out: video)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M · Video (with audio) $0.0403536〜$0.81648/second · Video (no audio) $0.0403536〜$0.81648/second · Video (with video input) $0.0237798〜$0.48114/second · Video Tokens (with audio) $4.2e-06/M tokens · Video Tokens (no audio) $4.2e-06/M tokens · Video Tokens (with video input) $2.475e-06/M tokens
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Video (with audio) $0.0538048〜$1.08864/second · Video (no audio) $0.0538048〜$1.08864/second · Video (with video input) $0.0317064〜$0.64152/second · Video Tokens (with audio) $5.6e-06/M tokens · Video Tokens (no audio) $5.6e-06/M tokens · Video Tokens (with video input) $3.3e-06/M tokens
 - **登録日**: 2026-04-15
 - **対応パラメータ**: frequency_penalty
 
@@ -2858,13 +2858,13 @@ Gemma 3 introduces multimodality, supporting vision-language input and text outp
 
 - **ID**: `google/gemma-4-26b-a4b-it`
 - **Provider**: google
-- **Context**: 262K (262,144) tok / max出力 32,768 tok
+- **Context**: 262K (262,144) tok / max出力 131,072 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.024/1M · 出力 $0.073/1M · キャッシュ読 $0.012/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
+- **Pricing**: 入力 $0.04/1M · 出力 $0.15/1M · キャッシュ読 $0.01/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-03
 - **HF**: `google/gemma-4-26B-A4B-it`
-- **対応パラメータ**: reasoning, include_reasoning, response_format, structured_outputs, tools, tool_choice, temperature, top_p, top_k, min_p, presence_penalty, repetition_penalty, stop, max_tokens, max_completion_tokens
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, response_format, structured_outputs, logprobs, top_logprobs, tools, tool_choice
 
 Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at a fraction of the compute cost. Supports multimodal input including text, images, and video (up to 60s at 1fps). Features a 256K token context window, native function calling, configurable thinking/reasoning mode, and structured output support. Released under Apache 2.0.
 
@@ -2886,13 +2886,13 @@ Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from G
 
 - **ID**: `google/gemma-4-31b-it`
 - **Provider**: google
-- **Context**: 262K (262,144) tok / max出力 16,384 tok
+- **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.068/1M · 出力 $0.114/1M · キャッシュ読 $0.034/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.1/1M · 出力 $0.34/1M · キャッシュ読 $0.1/1M
+- **Capabilities**: JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-04-02
 - **HF**: `google/gemma-4-31B-it`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, presence_penalty, frequency_penalty, repetition_penalty, seed, stop, max_tokens, max_completion_tokens, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, frequency_penalty, presence_penalty, repetition_penalty, temperature, top_k, top_p, max_tokens, response_format, logprobs, top_logprobs
 
 Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function calling, and multilingual support across 140+ languages. Strong on coding, reasoning, and document understanding tasks. Apache 2.0 license.
 
@@ -3005,7 +3005,7 @@ One of the highest performing and most popular fine-tunes of Llama 2 13B, with r
 
 Kokoro 82M is a lightweight, open-weight text-to-speech model from hexgrad. It converts text to speech across 8 languages (American and British English, Spanish, French, Hindi, Italian, Japanese, Portuguese, and Chinese) using 54 preset voices organized by language and gender. At 82M parameters, it is well-suited for multilingual TTS deployments where footprint and cost efficiency matter.
 
-### ▎heygen（7）
+### ▎heygen（9）
 
 #### HeyGen: Avatar IV
 
@@ -3019,6 +3019,32 @@ Kokoro 82M is a lightweight, open-weight text-to-speech model from hexgrad. It c
 HeyGen: Avatar IV is an image-to-video model that animates a single photo into an expressive, lip-synced talking-head video. Rather than only matching mouth shapes to words, it interprets the vocal tone, rhythm, and emotion of the audio to drive head motion, facial expression, and gestures, producing output at up to 1080p.
 
 The spoken audio comes from one of two inputs: a text script, which the model voices with HeyGen text-to-speech, or a supplied audio track, which the image is lip-synced to directly. Passthrough parameters let you choose a voice, tune voice settings, set expressiveness, prompt specific motion, replace or remove the background, add captions, and title the video.
+
+#### HeyGen: Avatar 6
+
+- **ID**: `heygen/heygen-avatar-6`
+- **Provider**: heygen
+- **Context**: — tok
+- **Modality**: text+image+audio+video->video  (in: text,image,audio,video → out: video)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Video Output $0.1〜$0.145/second
+- **登録日**: 2026-11-17
+
+HeyGen: Avatar 6 is HeyGen's avatar video model for turning a single photo, a short reference video, or both into an expressive, lip-synced talking video driven by a supplied audio track. It reads the tone, rhythm, and emotion of the speech to drive head motion, facial expression, and gestures, and renders at 1080p or 2K; the audio sets the video length.
+
+Supply exactly one audio reference plus one reference image, one reference video, or a same-person photo alongside the video. The prompt becomes a motion prompt describing how the subject should move, and the `motion_expressiveness` passthrough parameter can tone the motion down.
+
+#### HeyGen: Avatar 6 Turbo
+
+- **ID**: `heygen/heygen-avatar-6-turbo`
+- **Provider**: heygen
+- **Context**: — tok
+- **Modality**: text+image+audio+video->video  (in: text,image,audio,video → out: video)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M · Video Output $0.05〜$0.0875/second
+- **登録日**: 2026-11-17
+
+HeyGen: Avatar 6 Turbo is the faster, lower-cost variant of HeyGen's Avatar 6 avatar video model. It turns a single photo, a short reference video, or both into a lip-synced talking video driven by a supplied audio track, reading the speech's tone and rhythm to drive head motion, facial expression, and gestures, and renders at 1080p or 2K; the audio sets the video length.
+
+Supply exactly one audio reference plus one reference image, one reference video, or a same-person photo alongside the video. The prompt becomes a motion prompt describing how the subject should move, and the `motion_expressiveness` passthrough parameter can tone the motion down.
 
 #### HeyGen: HeyGen Decision
 
@@ -3816,7 +3842,7 @@ Llama Guard 4 is a Llama 4 Scout-derived multimodal pretrained model, fine-tuned
 
 Llama Guard 4 was aligned to safeguard against the standardized MLCommons hazards taxonomy and designed to support multimodal Llama 4 capabilities. Specifically, it combines features from previous Llama Guard models, providing content moderation …
 
-### ▎microsoft（12）
+### ▎microsoft（15）
 
 #### Microsoft AI: MAI-Image-2.5
 
@@ -3865,6 +3891,30 @@ MAI-Image-2.6 is an image generation and editing model from Microsoft AI, the pr
 - **対応パラメータ**: max_tokens, temperature, max_completion_tokens
 
 MAI-Image-2.6 Flash is the lower-latency, lower-cost member of the [MAI-Image-2.6](/microsoft/mai-image-2.6) family from Microsoft AI, built for latency-sensitive, high-throughput production image generation and editing at comparable quality to the precision tier. It supports the same multi-reference editing with up to five input images and the same fixed or model-chosen aspect ratios.
+
+#### Microsoft AI: MAI-Image-2.7
+
+- **ID**: `microsoft/mai-image-2.7`
+- **Provider**: microsoft
+- **Context**: 4K (4,096) tok / max出力 1,024 tok
+- **Modality**: text+image->image  (in: text,image → out: image)
+- **Pricing**: 入力 $5.00/1M · 出力 無料/1M
+- **登録日**: 2026-11-17
+- **対応パラメータ**: max_tokens, temperature, max_completion_tokens
+
+MAI-Image-2.7 is an image generation and editing model from Microsoft AI, the precision tier of the MAI-Image-2.7 family alongside the faster [MAI-Image-2.7 Flash](/microsoft/mai-image-2.7-flash). It is suited for design-ready visuals and controlled, iterative editing, including multi-reference edits that combine people, products, styles, and scenes from up to five input images while preserving composition and detail. Aspect ratio can be fixed or left to the model to choose for the composition.
+
+#### Microsoft AI: MAI-Image-2.7 Flash
+
+- **ID**: `microsoft/mai-image-2.7-flash`
+- **Provider**: microsoft
+- **Context**: 4K (4,096) tok / max出力 1,024 tok
+- **Modality**: text+image->image  (in: text,image → out: image)
+- **Pricing**: 入力 $1.75/1M · 出力 無料/1M
+- **登録日**: 2026-11-17
+- **対応パラメータ**: max_tokens, temperature, max_completion_tokens
+
+MAI-Image-2.7 Flash is the lower-latency, lower-cost member of the [MAI-Image-2.7](/microsoft/mai-image-2.7) family from Microsoft AI, built for latency-sensitive, high-throughput image generation and editing at comparable quality to the precision tier. It supports the same multi-reference editing with up to five input images and the same fixed or model-chosen aspect ratios.
 
 #### Microsoft AI: MAI-Transcribe 1.5
 
@@ -3950,6 +4000,17 @@ On OpenRouter, set `voice` to a full voice ID with the model suffix, such as `"e
 Microsoft-Decision-1 is a small model built for fast decision-making. Instead of generating text, it reads the provided content and returns a calibrated probability for each fixed answer option, so the response carries its own confidence and can determine when an application acts, defers, or asks for review. It is post-trained from Qwen3.5-9B for single-pass scoring and suited to classification, routing, prioritization, verification, workflow control, agent guardrails, and AI judging. It is not intended for open-ended generation, conversation, translation, or summarization. Weights are updated continually while the API shape stays the same.
 
 Learn more in Microsoft's announcement: …
+
+#### Microsoft: Microsoft-Decision-1.1
+
+- **ID**: `microsoft/microsoft-decision-1.1`
+- **Provider**: microsoft
+- **Context**: 32K (32,768) tok
+- **Modality**: text+image->decisions  (in: text,image → out: decisions)
+- **Pricing**: 入力 $0.042/1M · 出力 無料/1M
+- **登録日**: 2026-11-17
+
+Microsoft-Decision-1.1 is a model from Microsoft built for fast decision-making, and the successor to Microsoft-Decision-1. Instead of generating text, it reads the provided content and returns a calibrated probability for each fixed answer option, so the response carries its own confidence and can determine when an application acts, defers, or asks for review. It is suited to classification, routing, prioritization, verification, workflow control, agent guardrails, and AI judging. It is not intended for open-ended generation, conversation, translation, or summarization.
 
 #### Microsoft: Phi 4
 
@@ -4085,13 +4146,13 @@ Trained as a native multimodal model on interleaved data and tuned for multi-tur
 
 - **ID**: `minimax/minimax-m3.1-flash`
 - **Provider**: minimax
-- **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 512,000 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.075/1M · 出力 $0.3/1M · キャッシュ読 $0.0075/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $0.135/1M · 出力 $0.54/1M · キャッシュ読 $0.0135/1M
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-10-19
 - **HF**: `MiniMaxAI/MiniMax-M3.1-Flash`
-- **対応パラメータ**: reasoning, include_reasoning, frequency_penalty, max_tokens, presence_penalty, reasoning_effort, repetition_penalty, seed, stop, temperature, top_k, top_p, tools, tool_choice, response_format, structured_outputs, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, response_format, tools, tool_choice
 
 MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex, multi-step co-work automation, understanding real codebases, fixing bugs, and building features, and visual understanding and creation, including frontend and presentation creation. It is an open-weight mixture-of-experts model with 23B active / 428B total parameters.
 
@@ -4296,9 +4357,9 @@ Mistral Large 4 is a frontier multimodal (text and image input) model from Mistr
 
 - **ID**: `mistralai/mistral-medium-3`
 - **Provider**: mistralai
-- **Context**: 131K (131,072) tok / max出力 131,072 tok
+- **Context**: 131K (131,072) tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $0.4/1M · 出力 $2.00/1M · キャッシュ読 $0.04/1M
+- **Pricing**: 入力 $0.44/1M · 出力 $2.20/1M · キャッシュ読 $0.044/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Seed固定
 - **Knowledge cutoff**: 2025-03-31T23:59:59.000Z
 - **登録日**: 2025-05-07
@@ -4340,9 +4401,9 @@ Mistral Medium 3.5 is a dense 128B instruction-following model from Mistral AI. 
 
 - **ID**: `mistralai/mistral-medium-3.1`
 - **Provider**: mistralai
-- **Context**: 131K (131,072) tok / max出力 131,072 tok
+- **Context**: 131K (131,072) tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $0.4/1M · 出力 $2.00/1M · キャッシュ読 $0.04/1M
+- **Pricing**: 入力 $0.44/1M · 出力 $2.20/1M · キャッシュ読 $0.044/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Seed固定
 - **Knowledge cutoff**: 2025-06-30T23:59:59.000Z
 - **登録日**: 2025-08-13
@@ -4358,7 +4419,7 @@ The model excels in domains such as coding, STEM reasoning, and enterprise adapt
 - **Provider**: mistralai
 - **Context**: 131K (131,072) tok / max出力 128,000 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.0154/1M · 出力 $0.0201/1M · キャッシュ読 $0.01/1M
+- **Pricing**: 入力 $0.0166/1M · 出力 $0.0216/1M · キャッシュ読 $0.0108/1M
 - **Capabilities**: Function calling, Tool choice, logprobs, Seed固定
 - **Knowledge cutoff**: 2024-04-30T00:00:00.000Z
 - **登録日**: 2024-07-19
@@ -5312,7 +5373,7 @@ Nemotron 3.5 Transcribe is an open-weight speech recognition model from NVIDIA, 
 
 Parakeet TDT 0.6B v3 is NVIDIA's 600M-parameter multilingual speech-to-text model built on the FastConformer-TDT architecture. Trained on the Granary dataset (670,000+ hours of audio), it supports automatic language detection across all official EU languages and achieves a 6.34% average word error rate on the HuggingFace Open ASR Leaderboard. Returns transcribed text with punctuation and segment timestamps.
 
-### ▎openai（118）
+### ▎openai（126）
 
 #### OpenAI: GPT-3.5 Turbo (older v0613)
 
@@ -6637,6 +6698,126 @@ Learn more in OpenAI's docs: …
 
 GPT-6.1 Terra is the mid-tier model in OpenAI's GPT-6.1 series, priced below GPT-6.1 Sol. It is suited for everyday agentic, coding, and writing work, is particularly strong at understanding screenshots and on-screen content, and is efficient enough for high-volume workloads.
 
+#### OpenAI: GPT-6.2 Astra
+
+- **ID**: `openai/gpt-6.2-astra`
+- **Provider**: openai
+- **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
+- **Modality**: text+image+file->text  (in: text,image,file → out: text)
+- **Pricing**: 入力 $8.00/1M · 出力 $40.00/1M · キャッシュ読 $0.4/1M · キャッシュ書 $10.00/1M · Web検索 $0.01 · Web Search $0.01/1K calls
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **登録日**: 2026-11-17
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
+
+GPT-6.2 Astra is the flagship model in the GPT-6.2 series from OpenAI, built for the hardest projects. It is suited for real-world engineering, professional work and scientific research, with stronger visual reasoning for websites, slideshows and 3D designs. OpenAI reports new highs on its evals at less than a third of the cost per task of GPT-6 Astra.
+
+#### OpenAI: GPT-6.2 Astra Pro
+
+- **ID**: `openai/gpt-6.2-astra-pro`
+- **Provider**: openai
+- **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
+- **Modality**: text+image+file->text  (in: text,image,file → out: text)
+- **Pricing**: 入力 $8.00/1M · 出力 $40.00/1M · キャッシュ読 $0.4/1M · キャッシュ書 $10.00/1M · Web検索 $0.01 · Web Search $0.01/1K calls
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **登録日**: 2026-11-17
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
+
+GPT-6.2 Astra Pro is the same underlying model as [GPT-6.2 Astra](https://openrouter.ai/openai/gpt-6.2-astra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.
+
+**Cost note:** pro mode spends far more reasoning tokens per request, so a typical request costs several times more than the same request on GPT-6.2 Astra and takes much longer to complete. It is intended for hard, high-stakes problems where the extra accuracy justifies the cost. For everyday coding, agentic, and chat workloads, use [GPT-6.2 Astra](https://openrouter.ai/openai/gpt-6.2-astra) instead.
+
+Learn more in OpenAI's docs: …
+
+#### OpenAI: GPT-6.2 Astra Pro (batch)
+
+- **ID**: `openai/gpt-6.2-astra-pro:batch`
+- **Provider**: openai
+- **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
+- **Modality**: text+image+file->text  (in: text,image,file → out: text)
+- **Pricing**: 入力 $4.00/1M · 出力 $20.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $5.00/1M · Web検索 $0.01 · Web Search $0.01/1K calls
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **登録日**: 2026-11-17
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
+
+GPT-6.2 Astra Pro is the same underlying model as [GPT-6.2 Astra](https://openrouter.ai/openai/gpt-6.2-astra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.
+
+**Cost note:** pro mode spends far more reasoning tokens per request, so a typical request costs several times more than the same request on GPT-6.2 Astra and takes much longer to complete. It is intended for hard, high-stakes problems where the extra accuracy justifies the cost. For everyday coding, agentic, and chat workloads, use [GPT-6.2 Astra](https://openrouter.ai/openai/gpt-6.2-astra) instead.
+
+Learn more in OpenAI's docs: …
+
+#### OpenAI: GPT-6.2 Astra (batch)
+
+- **ID**: `openai/gpt-6.2-astra:batch`
+- **Provider**: openai
+- **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
+- **Modality**: text+image+file->text  (in: text,image,file → out: text)
+- **Pricing**: 入力 $4.00/1M · 出力 $20.00/1M · キャッシュ読 $0.2/1M · キャッシュ書 $5.00/1M · Web検索 $0.01 · Web Search $0.01/1K calls
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **登録日**: 2026-11-17
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
+
+GPT-6.2 Astra is the flagship model in the GPT-6.2 series from OpenAI, built for the hardest projects. It is suited for real-world engineering, professional work and scientific research, with stronger visual reasoning for websites, slideshows and 3D designs. OpenAI reports new highs on its evals at less than a third of the cost per task of GPT-6 Astra.
+
+#### OpenAI: GPT-6.2 Sol
+
+- **ID**: `openai/gpt-6.2-sol`
+- **Provider**: openai
+- **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
+- **Modality**: text+image+file->text  (in: text,image,file → out: text)
+- **Pricing**: 入力 $2.00/1M · 出力 $10.00/1M · キャッシュ読 $0.1/1M · キャッシュ書 $2.50/1M · Web検索 $0.01 · Web Search $0.01/1K calls
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **登録日**: 2026-11-17
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
+
+GPT-6.2 Sol is an upgrade to GPT-6.1 Sol from OpenAI, positioned below the flagship GPT-6.2 Astra in the GPT-6.2 series. It is an efficient, versatile model for everyday work, suited for multistep agentic workflows and clear, natural writing across technical and non-technical tasks.
+
+#### OpenAI: GPT-6.2 Sol Pro
+
+- **ID**: `openai/gpt-6.2-sol-pro`
+- **Provider**: openai
+- **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
+- **Modality**: text+image+file->text  (in: text,image,file → out: text)
+- **Pricing**: 入力 $2.00/1M · 出力 $10.00/1M · キャッシュ読 $0.1/1M · キャッシュ書 $2.50/1M · Web検索 $0.01 · Web Search $0.01/1K calls
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **登録日**: 2026-11-17
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
+
+GPT-6.2 Sol Pro is the same underlying model as [GPT-6.2 Sol](https://openrouter.ai/openai/gpt-6.2-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.
+
+**Cost note:** pro mode spends far more reasoning tokens per request, so a typical request costs several times more than the same request on GPT-6.2 Sol and takes much longer to complete. It is intended for hard, high-stakes problems where the extra accuracy justifies the cost. For everyday coding, agentic, and chat workloads, use [GPT-6.2 Sol](https://openrouter.ai/openai/gpt-6.2-sol) instead.
+
+Learn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode
+
+#### OpenAI: GPT-6.2 Sol Pro (batch)
+
+- **ID**: `openai/gpt-6.2-sol-pro:batch`
+- **Provider**: openai
+- **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
+- **Modality**: text+image+file->text  (in: text,image,file → out: text)
+- **Pricing**: 入力 $1.00/1M · 出力 $5.00/1M · キャッシュ読 $0.05/1M · キャッシュ書 $1.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **登録日**: 2026-11-17
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
+
+GPT-6.2 Sol Pro is the same underlying model as [GPT-6.2 Sol](https://openrouter.ai/openai/gpt-6.2-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.
+
+**Cost note:** pro mode spends far more reasoning tokens per request, so a typical request costs several times more than the same request on GPT-6.2 Sol and takes much longer to complete. It is intended for hard, high-stakes problems where the extra accuracy justifies the cost. For everyday coding, agentic, and chat workloads, use [GPT-6.2 Sol](https://openrouter.ai/openai/gpt-6.2-sol) instead.
+
+Learn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode
+
+#### OpenAI: GPT-6.2 Sol (batch)
+
+- **ID**: `openai/gpt-6.2-sol:batch`
+- **Provider**: openai
+- **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
+- **Modality**: text+image+file->text  (in: text,image,file → out: text)
+- **Pricing**: 入力 $1.00/1M · 出力 $5.00/1M · キャッシュ読 $0.05/1M · キャッシュ書 $1.25/1M · Web検索 $0.01 · Web Search $0.01/1K calls
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **登録日**: 2026-11-17
+- **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity
+
+GPT-6.2 Sol is an upgrade to GPT-6.1 Sol from OpenAI, positioned below the flagship GPT-6.2 Astra in the GPT-6.2 series. It is an efficient, versatile model for everyday work, suited for multistep agentic workflows and clear, natural writing across technical and non-technical tasks.
+
 #### OpenAI: GPT Audio
 
 - **ID**: `openai/gpt-audio`
@@ -7586,14 +7767,14 @@ Pricing for the Alibaba endpoints varies by context length. Once a request is gr
 
 - **ID**: `qwen/qwen3-coder-30b-a3b-instruct`
 - **Provider**: qwen
-- **Context**: 262K (262,144) tok
+- **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.15/1M · 出力 $0.6/1M
-- **Capabilities**: Function calling, Tool choice
+- **Pricing**: 入力 $0.07/1M · 出力 $0.28/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode
 - **Knowledge cutoff**: 2025-06-30T00:00:00.000Z
 - **登録日**: 2025-07-31
 - **HF**: `Qwen/Qwen3-Coder-30B-A3B-Instruct`
-- **対応パラメータ**: max_tokens, temperature, top_p, top_k, stop, tool_choice, tools
+- **対応パラメータ**: structured_outputs, response_format, temperature, top_p, top_k, frequency_penalty, tools, tool_choice, max_tokens
 
 Qwen3-Coder-30B-A3B-Instruct is a 30.5B parameter Mixture-of-Experts (MoE) model with 128 experts (8 active per forward pass), designed for advanced code generation, repository-scale understanding, and agentic tool use. Built on the Qwen3 architecture, it supports a native context length of 256K tokens (extendable to 1M with Yarn) and performs strongly in tasks involving function calls, browser use, and structured code completion.
 
@@ -7873,11 +8054,11 @@ The model is designed for agentic coding and reasoning tasks, with particular st
 - **Provider**: qwen
 - **Context**: 262K (262,144) tok / max出力 65,536 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.024/1M · 出力 $0.216/1M · キャッシュ読 $0.021/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.05/1M · 出力 $0.7/1M · キャッシュ読 $0.025/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-27
 - **HF**: `Qwen/Qwen3.6-35B-A3B`
-- **対応パラメータ**: reasoning, include_reasoning, frequency_penalty, logit_bias, max_tokens, min_p, presence_penalty, repetition_penalty, seed, stop, temperature, top_k, top_p, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, response_format, structured_outputs, logprobs, top_logprobs, tools, tool_choice
 
 Qwen3.6-35B-A3B is an open-weight multimodal model from Alibaba Cloud with 35 billion total parameters and 3 billion active parameters per token. It uses a hybrid sparse mixture-of-experts architecture combining Gated DeltaNet linear attention with standard gated attention layers, enabling efficient inference at a fraction of the compute cost. The model supports a 262K token native context window (extensible to 1M via YaRN) and accepts text, image, and video inputs. It includes integrated thinking mode with reasoning traces preserved across multi-turn conversations, function calling, and structured output. Released under the Apache 2.0 license.
 
@@ -10120,7 +10301,7 @@ This model always redirects to the latest model in the Kimi family.
 - **Provider**: ~openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $10.00/1M · 出力 $50.00/1M · キャッシュ読 $1.00/1M · キャッシュ書 $12.50/1M · Web検索 $0.01
+- **Pricing**: 入力 $8.00/1M · 出力 $40.00/1M · キャッシュ読 $0.4/1M · キャッシュ書 $10.00/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-09-11
 - **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity, max_completion_tokens
@@ -10160,7 +10341,7 @@ This model always redirects to the latest model in the GPT Mini family.
 - **Provider**: ~openai
 - **Context**: 1.05M (1,050,000) tok / max出力 128,000 tok
 - **Modality**: text+image+file->text  (in: text,image,file → out: text)
-- **Pricing**: 入力 $2.00/1M · 出力 $10.00/1M · キャッシュ読 $0.1/1M · キャッシュ書 $2.50/1M · Web検索 $0.01
+- **Pricing**: 入力 $2.00/1M · 出力 $10.00/1M · キャッシュ読 $0.1/1M · キャッシュ書 $2.50/1M · Web検索 $0.01 · Web Search $0.01/1K calls
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-09-11
 - **対応パラメータ**: reasoning, include_reasoning, seed, max_tokens, response_format, structured_outputs, tools, tool_choice, verbosity, max_completion_tokens
