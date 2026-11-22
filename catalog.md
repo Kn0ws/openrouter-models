@@ -1,6 +1,6 @@
 # OpenRouter モデルカタログ（全730モデル）
 
-- 取得日時: 2026-11-21T06:25:33
+- 取得日時: 2026-11-22T06:26:07
 - プロバイダ数: 98 / 無料枠あり: 32
 
 ## プロバイダ別サマリ
@@ -35,7 +35,7 @@
 | meta-llama | 7 | 0.02 | 0.72 | 1,310,720 |
 | bytedance | 6 | 0.00 | 0.10 | 128,000 |
 | aion-labs | 6 | 0.70 | 3.00 | 262,144 |
-| thinkingmachines | 5 | 0.10 | 1.00 | 1,048,576 |
+| thinkingmachines | 5 | 0.07 | 1.00 | 1,048,576 |
 | baseten | 5 | 0.01 | 0.10 | 32,768 |
 | inclusionai | 5 | 0.00 | 0.06 | 1,048,576 |
 | morph | 5 | 0.04 | 0.90 | 262,144 |
@@ -2872,7 +2872,7 @@ Gemma 3 introduces multimodality, supporting vision-language input and text outp
 
 - **ID**: `google/gemma-4-26b-a4b-it`
 - **Provider**: google
-- **Context**: 262K (262,144) tok / max出力 131,072 tok
+- **Context**: 262K (262,144) tok / max出力 235,929 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
 - **Pricing**: 入力 $0.05/1M · 出力 $0.19/1M · キャッシュ読 $0.0125/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
@@ -4804,7 +4804,7 @@ MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 fa
 - **Provider**: moonshotai
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.1805/1M · 出力 $11.01/1M · キャッシュ読 $0.18/1M
+- **Pricing**: 入力 $0.1824/1M · 出力 $11.01/1M · キャッシュ読 $0.18/1M
 - **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-07-16
 - **HF**: `moonshotai/Kimi-K3`
@@ -5145,11 +5145,11 @@ The model features a 1M token context window for long-term agent coherence, cros
 - **Provider**: nvidia
 - **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.5/1M · 出力 $2.20/1M · キャッシュ読 $0.1/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
+- **Pricing**: 入力 $0.5/1M · 出力 $2.15/1M · キャッシュ読 $0.1/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-06-04
 - **HF**: `nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16`
-- **対応パラメータ**: reasoning, include_reasoning, frequency_penalty, presence_penalty, repetition_penalty, temperature, top_k, top_p, max_tokens, response_format, structured_outputs, logprobs, top_logprobs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, top_k, repetition_penalty, frequency_penalty, presence_penalty, stop, seed, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
 
 NVIDIA Nemotron 3 Ultra is an open frontier-reasoning and orchestration model from NVIDIA, with 55B active parameters out of 550B total (MoE). Built on a hybrid Transformer-Mamba mixture-of-experts architecture, it supports text input and output with a context window of up to 1M tokens. It is suited for long-running agentic workflows, including agent orchestration, coding agents, deep research, and complex enterprise tasks.
 
@@ -7181,7 +7181,7 @@ It suits fact checks, entity screening, and classification that depend on curren
 - **Provider**: particle-ai
 - **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.07/1M · 出力 $0.5/1M · キャッシュ読 $0.006/1M
+- **Pricing**: 入力 $0.07/1M · 出力 $0.5/1M · キャッシュ読 $0.03/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-10-28
 - **対応パラメータ**: reasoning, include_reasoning, frequency_penalty, logprobs, max_tokens, min_p, presence_penalty, reasoning_effort, repetition_penalty, seed, stop, temperature, tool_choice, tools, top_k, top_logprobs, top_p, response_format, structured_outputs
@@ -8123,13 +8123,13 @@ Qwen3.7-Plus is a cost-effective model in Alibaba's Qwen3.7 series. It supports 
 
 - **ID**: `qwen/qwen3.8-2.4t-a95b`
 - **Provider**: qwen
-- **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
+- **Context**: 1.04858M (1,048,576) tok
 - **Modality**: text->text  (in: text → out: text)
 - **Pricing**: 入力 $2.00/1M · 出力 $6.00/1M · キャッシュ読 $0.25/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
 - **登録日**: 2026-08-12
 - **HF**: `Qwen/Qwen3.8-2.4T-A95B`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, repetition_penalty, logit_bias, logprobs, top_logprobs, response_format, structured_outputs, tools, tool_choice
 
 Qwen3.8 2.4T A95B is an open-weight sparse mixture-of-experts model from Qwen and the open-weight variant of [Qwen3.8 Max](/qwen/qwen3.8-max), with 95 billion active parameters out of 2.4 trillion total. It is suited for coding, research, complex reasoning, and agentic workflows.
 
@@ -9300,7 +9300,7 @@ Inkling is an open-weight multimodal mixture-of-experts model from Thinking Mach
 - **Provider**: thinkingmachines
 - **Context**: 1.04858M (1,048,576) tok / max出力 65,536 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.1/1M · 出力 $0.4/1M · キャッシュ読 $0.02/1M
+- **Pricing**: 入力 $0.075/1M · 出力 $0.3/1M · キャッシュ読 $0.015/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-11-21
 - **HF**: `thinkingmachines/Inkling-2-Mini`
@@ -9767,7 +9767,7 @@ MiMo-V2.5-Pro is Xiaomi’s flagship model, delivering strong performance in gen
 
 - **ID**: `xiaomi/mimo-v2.6-flash`
 - **Provider**: xiaomi
-- **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 32,768 tok
 - **Modality**: text+image+audio+video->text  (in: text,image,audio,video → out: text)
 - **Pricing**: 入力 $0.1/1M · 出力 $0.28/1M · キャッシュ読 $0.0028/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
@@ -10257,7 +10257,7 @@ This model always redirects to the latest model in the d1-ultra family.
 - **Provider**: ~moonshotai
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.1805/1M · 出力 $11.01/1M · キャッシュ読 $0.18/1M
+- **Pricing**: 入力 $0.1824/1M · 出力 $11.01/1M · キャッシュ読 $0.18/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-27
 - **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, logit_bias, response_format, structured_outputs, logprobs, top_logprobs, tools, tool_choice, reasoning_effort
