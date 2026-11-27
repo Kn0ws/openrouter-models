@@ -1,7 +1,7 @@
-# OpenRouter モデルカタログ（全727モデル）
+# OpenRouter モデルカタログ（全731モデル）
 
-- 取得日時: 2026-11-26T06:29:35
-- プロバイダ数: 97 / 無料枠あり: 32
+- 取得日時: 2026-11-27T06:29:27
+- プロバイダ数: 98 / 無料枠あり: 33
 
 ## プロバイダ別サマリ
 
@@ -26,19 +26,19 @@
 | bytedance-seed | 10 | 0.00 | 20.00 | 262,144 |
 | heygen | 9 | 0.00 | 15.00 | 262,144 |
 | tencent | 9 | 0.00 | 0.83 | 1,048,576 |
+| moonshotai | 9 | 0.18 | 2.28 | 1,048,576 |
 | black-forest-labs | 9 | 0.00 | 0.00 | 67,344 |
 | mongodb | 9 | 0.00 | 0.12 | 32,000 |
 | amazon | 8 | 0.02 | 2.50 | 1,000,000 |
-| moonshotai | 7 | 0.18 | 2.28 | 1,048,576 |
 | fish-audio | 7 | 0.00 | 100.00 | 0 |
 | meta-llama | 7 | 0.02 | 0.72 | 1,310,720 |
+| inclusionai | 6 | 0.00 | 0.07 | 1,048,576 |
 | upstage | 6 | 0.01 | 0.15 | 524,288 |
 | bytedance | 6 | 0.00 | 0.10 | 128,000 |
 | liquid | 6 | 0.00 | 0.08 | 262,144 |
 | aion-labs | 6 | 0.70 | 3.00 | 262,144 |
 | thinkingmachines | 5 | 0.03 | 1.00 | 1,048,576 |
 | baseten | 5 | 0.01 | 0.10 | 32,768 |
-| inclusionai | 5 | 0.00 | 0.07 | 1,048,576 |
 | morph | 5 | 0.04 | 0.90 | 262,144 |
 | sourceful | 5 | 0.00 | 0.00 | 32,768 |
 | ~openai | 5 | 0.10 | 8.00 | 1,050,000 |
@@ -55,7 +55,7 @@
 | moondream | 3 | 0.30 | 16.67 | 32,000 |
 | assemblyai | 3 | 15.00 | 83.33 | 0 |
 | scaledown | 3 | 0.04 | 0.04 | 1,000,000 |
-| ~deepseek | 3 | 0.04 | 0.11 | 1,048,576 |
+| ~deepseek | 3 | 0.04 | 0.10 | 1,048,576 |
 | deepgram | 3 | 30.00 | 71.67 | 0 |
 | intfloat | 3 | 0.01 | 0.01 | 512 |
 | baai | 3 | 0.01 | 0.01 | 8,194 |
@@ -76,6 +76,7 @@
 | relace | 2 | 0.85 | 1.00 | 256,000 |
 | thenlper | 2 | 0.01 | 0.01 | 512 |
 | sao10k | 2 | 0.04 | 0.85 | 131,072 |
+| antdigital | 1 | 0.00 | 0.00 | 32,768 |
 | radixark | 1 | 0.15 | 0.15 | 262,144 |
 | speechify | 1 | 11.25 | 11.25 | 0 |
 | parallel | 1 | 0.00 | 0.00 | 32,000 |
@@ -352,6 +353,22 @@ Amazon Titan Embeddings G1 - Text is the first-generation Titan text embedding m
 - **登録日**: 2026-10-26
 
 Amazon Titan Text Embeddings V2 is a text embedding model for retrieval, search, and clustering. It accepts up to 8,192 tokens per input and returns normalized vectors of 1,024 dimensions by default, with 512 and 256 also selectable via the `dimensions` parameter.
+
+### ▎antdigital（1）
+
+#### Ant Digital: LingDT Decision Fast 1.0 (free)
+
+- **ID**: `antdigital/lingdt-decision-fast-1.0:free`
+- **Provider**: antdigital
+- **Context**: 32K (32,768) tok
+- **Modality**: text->decisions  (in: text → out: decisions)
+- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **登録日**: 2026-11-26
+- **HF**: `antdigital-ai/LingDT-Decision-Fast-1.0`
+
+LingDT Decision Fast 1.0 is a Ling-based decision model from Ant Digital. It is suited for software engineering decision tasks such as classifying, scoring, and yes/no judgments over code and text, and returns calibrated probabilities instead of generated text.
+
+It answers choice, score, and yes/no questions, and can also extract text spans with confidence values for up to 96 named fields in a single request.
 
 ### ▎anthracite-org（1）
 
@@ -1816,13 +1833,13 @@ Built on the same architecture as DeepSeek V4 Flash, it introduces a hybrid atte
 
 - **ID**: `deepseek/deepseek-v4-pro-0813`
 - **Provider**: deepseek
-- **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 393,216 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.111/1M · 出力 $4.44/1M · キャッシュ読 $0.097/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $0.0999/1M · 出力 $5.00/1M · キャッシュ読 $0.0999/1M
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-08-12
 - **HF**: `deepseek-ai/DeepSeek-V4-Pro-0813`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, logit_bias, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, stop, max_tokens, logit_bias, frequency_penalty, presence_penalty, repetition_penalty, tools, tool_choice, response_format
 
 DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.
 
@@ -3164,7 +3181,7 @@ Granite 4.2 8B is a dense reasoning model from IBM. It is suited for mathematics
 
 The model supports 12 languages: English, German, Spanish, French, Japanese, Portuguese, Arabic, Czech, Italian, Korean, Dutch, and Chinese.
 
-### ▎inclusionai（5）
+### ▎inclusionai（6）
 
 #### inclusionAI: Ling 3.0 Flash
 
@@ -3237,6 +3254,20 @@ Ling 3.1 Flash is a hybrid reasoning mixture-of-experts model from inclusionAI, 
 - **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, max_tokens, stop, seed, frequency_penalty, presence_penalty, response_format, tools, tool_choice, structured_outputs
 
 Ling 3.2 Flash is a hybrid reasoning model from inclusionAI that accepts text and image input, with a 1M-token context window and up to 200 images per request. Thinking can be switched off per request.
+
+#### inclusionAI: LingSante 3.1 Air VL
+
+- **ID**: `inclusionai/lingsante-3.1-air-vl`
+- **Provider**: inclusionai
+- **Context**: 131K (131,072) tok / max出力 32,768 tok
+- **Modality**: text+image->text  (in: text,image → out: text)
+- **Pricing**: 入力 $0.06/1M · 出力 $0.18/1M · キャッシュ読 $0.012/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **登録日**: 2026-11-26
+- **HF**: `inclusionAI/LingSante-3.1-air-VL`
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, logit_bias, tools, tool_choice, structured_outputs, response_format
+
+LingSante 3.1 Air VL is inclusionAI's medical vision-language model, a 124B total / 5.5B active MoE. It takes text and up to 16 images (scans, skin and meal photos, lab reports) and returns careful, structured answers for imaging report drafts, health questions, clinical Q&A and medical agents with tool calling and JSON output. Thinking is on by default. It is a research model, not a medical device, so qualified professionals should review its output.
 
 ### ▎inference-net（2）
 
@@ -4739,7 +4770,39 @@ Moondream 3.1 is a vision-language model from Moondream, the successor to Moondr
 
 Parakeet Ultra is Moondream's post-trained version of NVIDIA's Parakeet TDT 0.6B v3 speech-to-text model, with the same architecture, tokenizer, and 0.6B parameters. It lowers word error rate on the Open ASR Leaderboard English sets (5.80% vs 6.26%) and the 25-language FLEURS set (9.55% vs 11.62%), with larger gains on noisy and long-form audio. Supports 25 European languages and returns transcribed text with segment and word timestamps.
 
-### ▎moonshotai（7）
+### ▎moonshotai（9）
+
+#### MoonshotAI: Kimi K2 0711
+
+- **ID**: `moonshotai/kimi-k2`
+- **Provider**: moonshotai
+- **Context**: 131K (131,072) tok / max出力 98,304 tok
+- **Modality**: text->text  (in: text → out: text)
+- **Pricing**: 入力 $0.57/1M · 出力 $2.30/1M
+- **Capabilities**: Function calling, Tool choice, Seed固定
+- **Knowledge cutoff**: 2024-12-31T23:59:59.000Z
+- **登録日**: 2025-07-11
+- **HF**: `moonshotai/Kimi-K2-Instruct`
+- **対応パラメータ**: max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice
+
+Kimi K2 Instruct is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32 billion active per forward pass. It is optimized for agentic capabilities, including advanced tool use, reasoning, and code synthesis. Kimi K2 excels across a broad range of benchmarks, particularly in coding (LiveCodeBench, SWE-bench), reasoning (ZebraLogic, GPQA), and tool-use (Tau2, AceBench) tasks. It supports long-context inference up to 128K tokens and is designed with a novel training stack that includes the MuonClip optimizer for stable large-scale MoE training.
+
+#### MoonshotAI: Kimi K2 0905
+
+- **ID**: `moonshotai/kimi-k2-0905`
+- **Provider**: moonshotai
+- **Context**: 262K (262,144) tok / max出力 98,304 tok
+- **Modality**: text->text  (in: text → out: text)
+- **Pricing**: 入力 $0.6/1M · 出力 $2.50/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, logprobs, Seed固定
+- **Knowledge cutoff**: 2024-12-31T23:59:59.000Z
+- **登録日**: 2025-09-04
+- **HF**: `moonshotai/Kimi-K2-Instruct-0905`
+- **対応パラメータ**: response_format, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, tools, tool_choice, structured_outputs, logprobs, top_logprobs
+
+Kimi K2 0905 is the September update of [Kimi K2 0711](moonshotai/kimi-k2). It is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32 billion active per forward pass. It supports long-context inference up to 256k tokens, extended from the previous 128k.
+
+This update improves agentic coding with higher accuracy and better generalization across scaffolds, and enhances frontend coding with more aesthetic and functional outputs for web, 3D, and related tasks. Kimi K2 is optimized for agentic capabilities, including advanced tool use, reasoning, and code synthesis. It excels across coding (LiveCodeBench, SWE-bench), …
 
 #### MoonshotAI: Kimi K2.5
 
@@ -6911,7 +6974,7 @@ gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language
 - **Provider**: openai
 - **Context**: 131K (131,072) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.017/1M · 出力 $0.085/1M · キャッシュ読 $0.0085/1M
+- **Pricing**: 入力 $0.0153/1M · 出力 $0.0765/1M · キャッシュ読 $0.0077/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **Knowledge cutoff**: 2024-06-30T23:59:59.000Z
 - **登録日**: 2025-08-05
@@ -7164,7 +7227,7 @@ It suits fact checks, entity screening, and classification that depend on curren
 
 - **ID**: `particle-ai/particle-1`
 - **Provider**: particle-ai
-- **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
 - **Pricing**: 入力 $0.07/1M · 出力 $0.5/1M · キャッシュ読 $0.03/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
@@ -7177,7 +7240,7 @@ Particle-1 is a token-efficient agentic coding model from Particle AI, post-trai
 
 - **ID**: `particle-ai/particle-1:free`
 - **Provider**: particle-ai
-- **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
 - **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
@@ -8016,13 +8079,13 @@ The model is designed for agentic coding and reasoning tasks, with particular st
 
 - **ID**: `qwen/qwen3.6-35b-a3b`
 - **Provider**: qwen
-- **Context**: 262K (262,144) tok / max出力 235,929 tok
+- **Context**: 262K (262,144) tok / max出力 262,144 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.05/1M · 出力 $0.7/1M · キャッシュ読 $0.025/1M
+- **Pricing**: 入力 $0.05/1M · 出力 $0.69/1M · キャッシュ読 $0.024/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-27
 - **HF**: `Qwen/Qwen3.6-35B-A3B`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, response_format, structured_outputs, logprobs, top_logprobs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, frequency_penalty, logit_bias, min_p, presence_penalty, repetition_penalty, seed, stop, top_k, top_p, response_format, structured_outputs, tools, logprobs, top_logprobs, tool_choice
 
 Qwen3.6-35B-A3B is an open-weight multimodal model from Alibaba Cloud with 35 billion total parameters and 3 billion active parameters per token. It uses a hybrid sparse mixture-of-experts architecture combining Gated DeltaNet linear attention with standard gated attention layers, enabling efficient inference at a fraction of the compute cost. The model supports a 262K token native context window (extensible to 1M via YaRN) and accepts text, image, and video inputs. It includes integrated thinking mode with reasoning traces preserved across multi-turn conversations, function calling, and structured output. Released under the Apache 2.0 license.
 
@@ -9836,7 +9899,7 @@ GLM-4.5V is a vision-language foundation model for multimodal agent applications
 
 - **ID**: `z-ai/glm-4.6`
 - **Provider**: z-ai
-- **Context**: 204K (204,800) tok / max出力 16,384 tok
+- **Context**: 202K (202,752) tok / max出力 16,384 tok
 - **Modality**: text->text  (in: text → out: text)
 - **Pricing**: 入力 $0.43/1M · 出力 $1.75/1M · キャッシュ読 $0.08/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
@@ -9939,13 +10002,13 @@ GLM-5.1 delivers a major leap in coding capability, with particularly significan
 
 - **ID**: `z-ai/glm-5.2`
 - **Provider**: z-ai
-- **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.007/1M · 出力 $6.80/1M · キャッシュ読 $0.006/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $0.0069/1M · 出力 $2.61/1M · キャッシュ読 $0.13/1M
+- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-06-16
 - **HF**: `zai-org/GLM-5.2`
-- **対応パラメータ**: reasoning, include_reasoning, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, temperature, top_p, top_k, min_p, presence_penalty, frequency_penalty, repetition_penalty, stop, seed, max_tokens, logit_bias
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, response_format, tools, tool_choice
 
 GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering, and complex multi-step automation.
 
@@ -10148,7 +10211,7 @@ This model always redirects to the latest model in the Claude Sonnet family.
 - **Pricing**: 入力 $0.036/1M · 出力 $0.5/1M · キャッシュ読 $0.01/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-09-14
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, max_tokens, stop, seed, frequency_penalty, presence_penalty, repetition_penalty, reasoning_effort, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, logit_bias, max_completion_tokens, parallel_tool_calls
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, logit_bias, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, reasoning_effort, parallel_tool_calls, max_completion_tokens
 
 This model always redirects to the latest model in the DeepSeek Flash family.
 
@@ -10156,12 +10219,12 @@ This model always redirects to the latest model in the DeepSeek Flash family.
 
 - **ID**: `~deepseek/deepseek-pro-latest`
 - **Provider**: ~deepseek
-- **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 393,216 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.111/1M · 出力 $4.44/1M · キャッシュ読 $0.097/1M
+- **Pricing**: 入力 $0.0999/1M · 出力 $5.00/1M · キャッシュ読 $0.0999/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-09-14
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, logit_bias, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, reasoning_effort
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, stop, max_tokens, logit_bias, frequency_penalty, presence_penalty, repetition_penalty, tools, tool_choice, response_format, seed, structured_outputs, logprobs, top_logprobs, reasoning_effort
 
 This model always redirects to the latest model in the DeepSeek Pro family.
 
