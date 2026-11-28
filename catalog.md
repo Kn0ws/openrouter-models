@@ -1,7 +1,7 @@
-# OpenRouter モデルカタログ（全731モデル）
+# OpenRouter モデルカタログ（全727モデル）
 
-- 取得日時: 2026-11-27T06:29:27
-- プロバイダ数: 98 / 無料枠あり: 33
+- 取得日時: 2026-11-28T06:26:44
+- プロバイダ数: 98 / 無料枠あり: 31
 
 ## プロバイダ別サマリ
 
@@ -9,16 +9,16 @@
 |---|--:|--:|--:|--:|
 | openai | 126 | 0.01 | 100.00 | 1,050,000 |
 | google | 65 | 0.00 | 266.67 | 1,048,576 |
-| qwen | 56 | 0.00 | 20.00 | 1,048,576 |
+| qwen | 55 | 0.00 | 20.00 | 1,024,000 |
 | mistralai | 33 | 0.02 | 66.67 | 1,048,576 |
 | anthropic | 32 | 0.05 | 15.00 | 1,000,000 |
 | z-ai | 20 | 0.01 | 1.68 | 1,048,576 |
-| recraft | 18 | 0.00 | 0.00 | 65,536 |
+| recraft | 17 | 0.00 | 0.00 | 65,536 |
 | nvidia | 17 | 0.00 | 16.67 | 1,048,576 |
-| deepseek | 17 | 0.04 | 0.89 | 1,048,576 |
-| microsoft | 15 | 0.04 | 360,000.00 | 32,768 |
+| deepseek | 17 | 0.03 | 0.50 | 1,048,576 |
 | x-ai | 15 | 0.00 | 27.78 | 2,000,000 |
 | perplexity | 13 | 0.00 | 3.00 | 262,144 |
+| microsoft | 13 | 0.04 | 360,000.00 | 32,768 |
 | minimax | 12 | 0.00 | 100.00 | 1,048,576 |
 | meta | 12 | 0.00 | 50.00 | 1,048,576 |
 | cohere | 12 | 0.00 | 2.50 | 256,000 |
@@ -32,7 +32,7 @@
 | amazon | 8 | 0.02 | 2.50 | 1,000,000 |
 | fish-audio | 7 | 0.00 | 100.00 | 0 |
 | meta-llama | 7 | 0.02 | 0.72 | 1,310,720 |
-| inclusionai | 6 | 0.00 | 0.07 | 1,048,576 |
+| inclusionai | 6 | 0.01 | 0.30 | 1,048,576 |
 | upstage | 6 | 0.01 | 0.15 | 524,288 |
 | bytedance | 6 | 0.00 | 0.10 | 128,000 |
 | liquid | 6 | 0.00 | 0.08 | 262,144 |
@@ -1759,7 +1759,7 @@ The model was trained under conditions aligned with V3.1-Terminus to enable dire
 - **Provider**: deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.05/1M · 出力 $0.45/1M · キャッシュ読 $0.05/1M
+- **Pricing**: 入力 $0.0284/1M · 出力 $0.45/1M · キャッシュ読 $0.0284/1M
 - **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-04-24
 - **HF**: `deepseek-ai/DeepSeek-V4-Flash`
@@ -1773,13 +1773,13 @@ The model includes hybrid attention for efficient long-context processing. Reaso
 
 - **ID**: `deepseek/deepseek-v4-flash-0731`
 - **Provider**: deepseek
-- **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.047/1M · 出力 $0.3/1M · キャッシュ読 $0.035/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
+- **Pricing**: 入力 $0.0453/1M · 出力 $0.136/1M · キャッシュ読 $0.0014/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-07-31
 - **HF**: `deepseek-ai/DeepSeek-V4-Flash-0731`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, logit_bias, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, stop, response_format, structured_outputs, tools, tool_choice
 
 DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows. This is the GA release of DeepSeek V4 Flash.
 
@@ -1819,11 +1819,11 @@ It is suited for document and chart understanding, visual question answering, an
 - **Provider**: deepseek
 - **Context**: 1.04858M (1,048,576) tok / max出力 393,216 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.8882/1M · 出力 $1.51/1M · キャッシュ読 $0.2/1M
-- **Capabilities**: Function calling, Tool choice, JSON mode, Reasoning(思考), Reasoning出力
+- **Pricing**: 入力 $0.3194/1M · 出力 $0.6388/1M · キャッシュ読 $0.0265/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-04-24
 - **HF**: `deepseek-ai/DeepSeek-V4-Pro`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, stop, max_tokens, logit_bias, frequency_penalty, presence_penalty, repetition_penalty, tools, tool_choice, response_format
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, stop, response_format, structured_outputs, tools, tool_choice
 
 DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding, and long-horizon agent workflows, with strong performance across knowledge, math, and software engineering benchmarks.
 
@@ -1847,13 +1847,13 @@ DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. Th
 
 - **ID**: `deepseek/deepseek-v4.1-flash`
 - **Provider**: deepseek
-- **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 393,216 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 $0.051/1M · 出力 $0.567/1M · キャッシュ読 $0.018/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.0507/1M · 出力 $0.2028/1M · キャッシュ読 $0.001/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-09-10
 - **HF**: `deepseek-ai/DeepSeek-V4.1-Flash`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, logit_bias, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, stop, response_format, structured_outputs, tools, tool_choice
 
 DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on output from a 552B-parameter backbone, an asymmetric split that keeps per-token compute low relative to the model's total size. Image understanding is native to the architecture, with visual and text embeddings trained jointly from the start of pre-training rather than added afterward as in the earlier experimental [V4 Flash Vision Exp](https://openrouter.ai/deepseek/deepseek-v4-flash-vision-exp).
 
@@ -3241,13 +3241,13 @@ Ling 3.0 Tiny is a mixture-of-experts model from InclusionAI, with 1.3B active p
 
 Ling 3.1 Flash is a hybrid reasoning mixture-of-experts model from inclusionAI, with 25B active parameters out of 560B total.
 
-#### inclusionAI: Ling 3.2 Flash (free)
+#### inclusionAI: Ling 3.2 Flash
 
-- **ID**: `inclusionai/ling-3.2-flash:free`
+- **ID**: `inclusionai/ling-3.2-flash`
 - **Provider**: inclusionai
 - **Context**: 1.04858M (1,048,576) tok / max出力 262,144 tok
 - **Modality**: text+image->text  (in: text,image → out: text)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
+- **Pricing**: 入力 $0.3/1M · 出力 $0.9/1M · キャッシュ読 $0.06/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
 - **登録日**: 2026-11-13
 - **HF**: `inclusionAI/Ling-3.2-flash`
@@ -3808,31 +3808,7 @@ Llama Guard 4 is a Llama 4 Scout-derived multimodal pretrained model, fine-tuned
 
 Llama Guard 4 was aligned to safeguard against the standardized MLCommons hazards taxonomy and designed to support multimodal Llama 4 capabilities. Specifically, it combines features from previous Llama Guard models, providing content moderation …
 
-### ▎microsoft（15）
-
-#### Microsoft AI: MAI-Image-2.5
-
-- **ID**: `microsoft/mai-image-2.5`
-- **Provider**: microsoft
-- **Context**: 4K (4,096) tok / max出力 1,024 tok
-- **Modality**: text+image->image  (in: text,image → out: image)
-- **Pricing**: 入力 $5.00/1M · 出力 無料/1M
-- **登録日**: 2026-06-02
-- **対応パラメータ**: max_tokens, temperature, max_completion_tokens
-
-Microsoft AI's MAI-Image-2.5 is a high-quality image generation model available via Azure AI Foundry. It produces photorealistic and artistic images from text prompts with support for various aspect ratios.
-
-#### Microsoft AI: MAI-Image-2.5 Pro
-
-- **ID**: `microsoft/mai-image-2.5-pro`
-- **Provider**: microsoft
-- **Context**: 4K (4,096) tok / max出力 1,024 tok
-- **Modality**: text+image->image  (in: text,image → out: image)
-- **Pricing**: 入力 $5.00/1M · 出力 無料/1M
-- **登録日**: 2026-07-23
-- **対応パラメータ**: max_tokens, temperature, max_completion_tokens
-
-Microsoft AI's MAI-Image-2.5 is a high-quality image generation model available via Azure AI Foundry. It produces photorealistic and artistic images from text prompts with support for various aspect ratios.
+### ▎microsoft（13）
 
 #### Microsoft AI: MAI-Image-2.6
 
@@ -4852,7 +4828,7 @@ MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 fa
 - **Provider**: moonshotai
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.1824/1M · 出力 $11.01/1M · キャッシュ読 $0.18/1M
+- **Pricing**: 入力 $0.1824/1M · 出力 $12.29/1M · キャッシュ読 $0.18/1M
 - **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-07-16
 - **HF**: `moonshotai/Kimi-K3`
@@ -6974,7 +6950,7 @@ gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language
 - **Provider**: openai
 - **Context**: 131K (131,072) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.0153/1M · 出力 $0.0765/1M · キャッシュ読 $0.0077/1M
+- **Pricing**: 入力 $0.017/1M · 出力 $0.085/1M · キャッシュ読 $0.0085/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **Knowledge cutoff**: 2024-06-30T23:59:59.000Z
 - **登録日**: 2025-08-05
@@ -7494,7 +7470,7 @@ Bonsai 2 27B is a 27B-parameter reasoning model from PrismML derived from Qwen3.
 
 Ternary Bonsai 2 9B is PrismML’s compact, open-weight language model for conversational AI, reasoning, and tool use. Built on Qwen3.5, it uses ternary weights packed into 2 bits for efficient inference. It accepts text and image input. Its 262K-token context window supports long conversations and document-heavy workflows, with up to 64K output tokens per response.
 
-### ▎qwen（56）
+### ▎qwen（55）
 
 #### Qwen2.5 72B Instruct
 
@@ -7673,23 +7649,6 @@ Qwen3-14B is a dense 14.8B parameter causal language model from the Qwen3 series
 Qwen3-235B-A22B-Instruct-2507 is a multilingual, instruction-tuned mixture-of-experts language model based on the Qwen3-235B architecture, with 22B active parameters per forward pass. It is optimized for general-purpose text generation, including instruction following, logical reasoning, math, code, and tool usage. The model supports a native 262K context length and does not implement "thinking mode" (<think> blocks).
 
 Compared to its base variant, this version delivers significant gains in knowledge coverage, long-context reasoning, coding benchmarks, and alignment with open-ended tasks. It is particularly strong on multilingual understanding, math reasoning (e.g., AIME, HMMT), and …
-
-#### Qwen: Qwen3 235B A22B Thinking 2507
-
-- **ID**: `qwen/qwen3-235b-a22b-thinking-2507`
-- **Provider**: qwen
-- **Context**: 128K (128,000) tok / max出力 16,384 tok
-- **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.45/1M · 出力 $3.50/1M
-- **Capabilities**: Function calling, Tool choice, Reasoning(思考), Reasoning出力
-- **Knowledge cutoff**: 2025-06-30T23:59:59.000Z
-- **登録日**: 2025-07-25
-- **HF**: `Qwen/Qwen3-235B-A22B-Thinking-2507`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, top_k, tools, tool_choice
-
-Qwen3-235B-A22B-Thinking-2507 is a high-performance, open-weight Mixture-of-Experts (MoE) language model optimized for complex reasoning tasks. It activates 22B of its 235B parameters per forward pass and natively supports up to 262,144 tokens of context. This "thinking-only" variant enhances structured logical reasoning, mathematics, science, and long-form generation, showing strong benchmark performance across AIME, SuperGPQA, LiveCodeBench, and MMLU-Redux. It enforces a special reasoning mode (</think>) and is designed for high-token outputs (up to 81,920 tokens) in challenging domains.
-
-The model is instruction-tuned and excels at step-by-step reasoning, tool use, agentic workflows, and …
 
 #### Qwen: Qwen3 30B A3B
 
@@ -7954,13 +7913,13 @@ The model supports a native 256K-token context window, extensible to 1M tokens, 
 
 - **ID**: `qwen/qwen3.5-122b-a10b`
 - **Provider**: qwen
-- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Context**: 262K (262,144) tok / max出力 65,536 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
 - **Pricing**: 入力 $0.26/1M · 出力 $2.08/1M
-- **Capabilities**: Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-02-25
 - **HF**: `Qwen/Qwen3.5-122B-A10B`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, frequency_penalty, repetition_penalty, presence_penalty, max_tokens, response_format, structured_outputs
+- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, seed, presence_penalty, response_format, tools, tool_choice, structured_outputs, logprobs, top_logprobs, top_k, frequency_penalty, stop
 
 The Qwen3.5 122B-A10B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. In terms of overall performance, this model is second only to Qwen3.5-397B-A17B. Its text capabilities significantly outperform those of Qwen3-235B-2507, and its visual capabilities surpass those of Qwen3-VL-235B.
 
@@ -8079,13 +8038,13 @@ The model is designed for agentic coding and reasoning tasks, with particular st
 
 - **ID**: `qwen/qwen3.6-35b-a3b`
 - **Provider**: qwen
-- **Context**: 262K (262,144) tok / max出力 262,144 tok
+- **Context**: 262K (262,144) tok / max出力 235,929 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.05/1M · 出力 $0.69/1M · キャッシュ読 $0.024/1M
+- **Pricing**: 入力 $0.05/1M · 出力 $0.7/1M · キャッシュ読 $0.025/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-27
 - **HF**: `Qwen/Qwen3.6-35B-A3B`
-- **対応パラメータ**: reasoning, include_reasoning, temperature, max_tokens, frequency_penalty, logit_bias, min_p, presence_penalty, repetition_penalty, seed, stop, top_k, top_p, response_format, structured_outputs, tools, logprobs, top_logprobs, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, response_format, structured_outputs, logprobs, top_logprobs, tools, tool_choice
 
 Qwen3.6-35B-A3B is an open-weight multimodal model from Alibaba Cloud with 35 billion total parameters and 3 billion active parameters per token. It uses a hybrid sparse mixture-of-experts architecture combining Gated DeltaNet linear attention with standard gated attention layers, enabling efficient inference at a fraction of the compute cost. The model supports a 262K token native context window (extensible to 1M via YaRN) and accepts text, image, and video inputs. It includes integrated thinking mode with reasoning traces preserved across multi-turn conversations, function calling, and structured output. Released under the Apache 2.0 license.
 
@@ -8171,7 +8130,7 @@ Qwen3.7-Plus is a cost-effective model in Alibaba's Qwen3.7 series. It supports 
 
 - **ID**: `qwen/qwen3.8-2.4t-a95b`
 - **Provider**: qwen
-- **Context**: 1.04858M (1,048,576) tok
+- **Context**: 1M (1,000,000) tok
 - **Modality**: text->text  (in: text → out: text)
 - **Pricing**: 入力 $2.00/1M · 出力 $6.00/1M · キャッシュ読 $0.25/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs
@@ -8312,7 +8271,7 @@ DaisyRose 27B is an open-weight multimodal reasoning model from RadixArk, traine
 
 It is a 27.8B-parameter dense model that accepts text and image input, returns text, and has a 262K-token context window. Thinking is on by default and can be disabled. It keeps the base model's architecture, tokenizer, and chat template, and is released under the Apache 2.0 license.
 
-### ▎recraft（18）
+### ▎recraft（17）
 
 #### Recraft: Recraft V3
 
@@ -8478,19 +8437,6 @@ It is generation only: image inputs, styles, and style references are not suppor
 - **Context**: 65K (65,536) tok
 - **Modality**: text->image  (in: text → out: image)
 - **Pricing**: 入力 無料/1M · 出力 無料/1M · Image Output $0.007/image
-- **登録日**: 2026-11-13
-
-Recraft V4.1 Flash V2 is a text-to-image model from Recraft, an updated version of [Recraft V4.1 Flash](/recraft/recraft-v4.1-flash) in the speed tier of the V4.1 family. It is suited for rapid iteration, prototyping, and high-volume generation, and improves on its predecessor in generation speed and in rendering text inside images.
-
-It is generation only: image inputs, styles, and style references are not supported. Supports the same aspect ratios as V4.1 Flash and the `image_config` parameters `rgb_colors` (sets a color palette) and `background_rgb_color` (sets the background color). See the image generation docs for details: https://openrouter.ai/docs/features/multimodal/image-generation
-
-#### Recraft: Recraft V4.1 Flash V2 (free)
-
-- **ID**: `recraft/recraft-v4.1-flash-v2:free`
-- **Provider**: recraft
-- **Context**: 65K (65,536) tok
-- **Modality**: text->image  (in: text → out: image)
-- **Pricing**: 入力 無料/1M · 出力 無料/1M  🆓
 - **登録日**: 2026-11-13
 
 Recraft V4.1 Flash V2 is a text-to-image model from Recraft, an updated version of [Recraft V4.1 Flash](/recraft/recraft-v4.1-flash) in the speed tier of the V4.1 family. It is suited for rapid iteration, prototyping, and high-volume generation, and improves on its predecessor in generation speed and in rendering text inside images.
@@ -9243,13 +9189,13 @@ Hy4 flash is a cost-efficient variant of [Hy4](https://openrouter.ai/tencent/hy4
 
 - **ID**: `tencent/hy4-preview`
 - **Provider**: tencent
-- **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 262,144 tok
 - **Modality**: text->text  (in: text → out: text)
 - **Pricing**: 入力 $0.834/1M · 出力 $2.50/1M · キャッシュ読 $0.042/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-08-28
 - **HF**: `tencent/Hy4-preview`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, repetition_penalty, top_k, seed, min_p, logit_bias, response_format, structured_outputs, tools, tool_choice
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, frequency_penalty, max_tokens, response_format, structured_outputs, tools, tool_choice
 
 Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that require planning, context continuity, and sustained multi-step execution.
 
@@ -9988,13 +9934,13 @@ GLM-5 Turbo is a new model from Z.ai designed for fast inference and strong perf
 
 - **ID**: `z-ai/glm-5.1`
 - **Provider**: z-ai
-- **Context**: 204K (204,800) tok / max出力 65,535 tok
+- **Context**: 204K (204,800) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.9/1M · 出力 $2.90/1M · キャッシュ読 $0.09/1M
-- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, Seed固定
+- **Pricing**: 入力 $0.8988/1M · 出力 $2.82/1M · キャッシュ読 $0.1669/1M
+- **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力
 - **登録日**: 2026-04-07
 - **HF**: `zai-org/GLM-5.1`
-- **対応パラメータ**: reasoning, include_reasoning, max_tokens, temperature, top_p, stop, frequency_penalty, presence_penalty, seed, top_k, repetition_penalty, structured_outputs, tools, tool_choice, response_format
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, frequency_penalty, presence_penalty, repetition_penalty, stop, response_format, structured_outputs, tools, tool_choice
 
 GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on a single task for more than 8 hours, autonomously planning, executing, and improving itself throughout the process, ultimately delivering complete, engineering-grade results.
 
@@ -10232,12 +10178,12 @@ This model always redirects to the latest model in the DeepSeek Pro family.
 
 - **ID**: `~deepseek/deepseek-v4-flash-latest`
 - **Provider**: ~deepseek
-- **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
+- **Context**: 1.04858M (1,048,576) tok / max出力 131,072 tok
 - **Modality**: text->text  (in: text → out: text)
-- **Pricing**: 入力 $0.047/1M · 出力 $0.3/1M · キャッシュ読 $0.035/1M
+- **Pricing**: 入力 $0.0453/1M · 出力 $0.136/1M · キャッシュ読 $0.0014/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-08-01
-- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, logit_bias, response_format, structured_outputs, tools, tool_choice, logprobs, top_logprobs, parallel_tool_calls, reasoning_effort, top_a
+- **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, max_tokens, stop, response_format, structured_outputs, tools, tool_choice, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, seed, logit_bias, logprobs, top_logprobs, parallel_tool_calls, reasoning_effort, top_a
 
 This model always redirects to the latest model in the DeepSeek V4 Flash family.
 
@@ -10301,7 +10247,7 @@ This model always redirects to the latest model in the d1-ultra family.
 - **Provider**: ~moonshotai
 - **Context**: 1.04858M (1,048,576) tok / max出力 1,048,576 tok
 - **Modality**: text+image+video->text  (in: text,image,video → out: text)
-- **Pricing**: 入力 $0.1824/1M · 出力 $11.01/1M · キャッシュ読 $0.18/1M
+- **Pricing**: 入力 $0.1824/1M · 出力 $12.29/1M · キャッシュ読 $0.18/1M
 - **Capabilities**: Function calling, Tool choice, Structured outputs(JSONスキーマ), JSON mode, Reasoning(思考), Reasoning出力, logprobs, Seed固定
 - **登録日**: 2026-04-27
 - **対応パラメータ**: reasoning, include_reasoning, temperature, top_p, top_k, min_p, frequency_penalty, presence_penalty, repetition_penalty, stop, seed, max_tokens, logit_bias, response_format, structured_outputs, logprobs, top_logprobs, tools, tool_choice, reasoning_effort
